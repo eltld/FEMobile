@@ -35,6 +35,17 @@ public final class ListItemGrid {
 		listItemGrid.add(new ItemGrid("Facebook",res.getDrawable((R.drawable.ic_launcher))));
 		listItemGrid.add(new ItemGrid("Twitter",res.getDrawable((R.drawable.ic_launcher))));
 		listItemGrid.add(new ItemGrid("Skype",res.getDrawable(R.drawable.ic_launcher)));
+		listItemGrid.add(new ItemGrid("Yahoo",res.getDrawable((R.drawable.ic_launcher))));
+		listItemGrid.add(new ItemGrid("Patch",res.getDrawable(R.drawable.ic_launcher)));
+		listItemGrid.add(new ItemGrid("Skype",res.getDrawable(R.drawable.ic_launcher)));
+		listItemGrid.add(new ItemGrid("Yahoo",res.getDrawable((R.drawable.ic_launcher))));
+		listItemGrid.add(new ItemGrid("Patch",res.getDrawable(R.drawable.ic_launcher)));
+		listItemGrid.add(new ItemGrid("Yahoo",res.getDrawable((R.drawable.ic_launcher))));
+		listItemGrid.add(new ItemGrid("Patch",res.getDrawable(R.drawable.ic_launcher)));
+		listItemGrid.add(new ItemGrid("Facebook",res.getDrawable((R.drawable.ic_launcher))));
+		listItemGrid.add(new ItemGrid("Facebook",res.getDrawable((R.drawable.ic_launcher))));
+		listItemGrid.add(new ItemGrid("Facebook",res.getDrawable((R.drawable.ic_launcher))));
+		
 		return listItemGrid;
 	}
 	
