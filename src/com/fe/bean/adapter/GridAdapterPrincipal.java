@@ -38,7 +38,8 @@ public class GridAdapterPrincipal extends ArrayAdapter<ItemGrid>{
 	    
 	  }
 	  
-	  @Override
+	  @SuppressWarnings("null")
+	@Override
 	  public View getView(int position, View convertView, ViewGroup parent) {
 	      // TODO Auto-generated method stub
 	      View itemView=convertView;
@@ -55,6 +56,7 @@ public class GridAdapterPrincipal extends ArrayAdapter<ItemGrid>{
 	    	  holder=new RecordHolder();
 	    	  holder.imgItem=(ImageView)itemView.findViewById(R.id.imageItem);
 	    	  holder.txtItem=(TextView)itemView.findViewById(R.id.textItem);
+	    	  System.out.println("aqui llego");
 	    	  convertView.setTag(holder);
 	      }
 	      else
