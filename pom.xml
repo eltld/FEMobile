@@ -1,0 +1,109 @@
+<project>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.fe</groupId>
+    <artifactId>appFeProject</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>apk</packaging>
+    <name>AppFe</name>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.google.android</groupId>
+            <artifactId>android</artifactId>
+            <version>1.6_r3</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <finalName>${project.artifactId}</finalName>
+        <sourceDirectory>src</sourceDirectory>
+        <plugins>
+            <plugin>
+                <groupId>com.jayway.maven.plugins.android.generation2</groupId>
+                <artifactId>maven-android-plugin</artifactId>
+                <version>2.8.3</version>
+                <configuration>
+                    <sdk>
+                        <path>/home/ddewaele/dev/android-sdk-linux_86</path>
+                        <platform>4</platform>
+                    </sdk>
+                    <emulator>
+                        <!-- the name of the avd device to use for starting the emulator -->
+                        <avd>16</avd>
+                    </emulator>
+                    <deleteConflictingFiles>true</deleteConflictingFiles>
+                    <undeployBeforeDeploy>true</undeployBeforeDeploy>
+                </configuration>
+                <extensions>true</extensions>
+            </plugin>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <!-- version 2.3 defaults to java 1.5, so no further configuration needed-->
+                <version>2.3</version>
+            </plugin>
+        </plugins>
+    </build>
+</project>
+17
+ 
+18
+    <build>
+19
+        <finalName>${project.artifactId}</finalName>
+20
+        <sourceDirectory>src</sourceDirectory>
+21
+        <plugins>
+22
+            <plugin>
+23
+                <groupId>com.jayway.maven.plugins.android.generation2</groupId>
+24
+                <artifactId>maven-android-plugin</artifactId>
+25
+                <version>2.8.3</version>
+26
+                <configuration>
+27
+                    <sdk>
+28
+                        <path>/home/ddewaele/dev/android-sdk-linux_86</path>
+29
+                        <platform>4</platform>
+30
+                    </sdk>
+31
+                    <emulator>
+32
+                        <!-- the name of the avd device to use for starting the emulator -->
+33
+                        <avd>16</avd>
+34
+                    </emulator>
+35
+                    <deleteConflictingFiles>true</deleteConflictingFiles>
+36
+                    <undeployBeforeDeploy>true</undeployBeforeDeploy>
+37
+                </configuration>
+38
+                <extensions>true</extensions>
+39
+            </plugin>
+40
+            <plugin>
+41
+                <artifactId>maven-compiler-plugin</artifactId>
+42
+                <!-- version 2.3 defaults to java 1.5, so no further configuration needed-->
+43
+                <version>2.3</version>
+44
+            </plugin>
+45
+        </plugins>
+46
+    </build>
+47
+</project>
