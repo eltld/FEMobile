@@ -32,22 +32,27 @@ public final class ListItemGrid {
 	 */
 	public static List<ItemGrid> loadItemGridPrincipal(Resources res)
 	{
-		listItemGrid.add(new ItemGrid("Facebook",res.getDrawable((R.drawable.ic_launcher))));
-		listItemGrid.add(new ItemGrid("Twitter",res.getDrawable((R.drawable.ic_launcher))));
-		listItemGrid.add(new ItemGrid("Skype",res.getDrawable(R.drawable.ic_launcher)));
-		listItemGrid.add(new ItemGrid("Yahoo",res.getDrawable((R.drawable.ic_launcher))));
-		listItemGrid.add(new ItemGrid("Patch",res.getDrawable(R.drawable.ic_launcher)));
-		listItemGrid.add(new ItemGrid("Skype",res.getDrawable(R.drawable.ic_launcher)));
-		listItemGrid.add(new ItemGrid("Yahoo",res.getDrawable((R.drawable.ic_launcher))));
-		listItemGrid.add(new ItemGrid("Patch",res.getDrawable(R.drawable.ic_launcher)));
-		listItemGrid.add(new ItemGrid("Yahoo",res.getDrawable((R.drawable.ic_launcher))));
-		listItemGrid.add(new ItemGrid("Patch",res.getDrawable(R.drawable.ic_launcher)));
-		listItemGrid.add(new ItemGrid("Facebook",res.getDrawable((R.drawable.ic_launcher))));
-		listItemGrid.add(new ItemGrid("Facebook",res.getDrawable((R.drawable.ic_launcher))));
-		listItemGrid.add(new ItemGrid("Facebook",res.getDrawable((R.drawable.ic_launcher))));
-		
+		listItemGrid.add(new ItemGrid("Facultad",res.getDrawable((R.drawable.ic_launcher))));
+		listItemGrid.add(new ItemGrid("Comedor",res.getDrawable(R.drawable.ic_launcher)));
+		listItemGrid.add(new ItemGrid("Calendario",res.getDrawable((R.drawable.ic_launcher))));
+		listItemGrid.add(new ItemGrid("Secretarias",res.getDrawable(R.drawable.ic_launcher)));
 		return listItemGrid;
 	}
+	
+	
+	public static List<String> loadSecretaria()
+	{
+		ArrayList<String> list=new ArrayList<String>();
+		list.add("Secretaria Bienestar");
+		list.add("Secretaria Deporte");
+		list.add("Secretaria Universitario");
+		return list;
+	}
+  
+	
+	
+	
+	
 	
 	
 	

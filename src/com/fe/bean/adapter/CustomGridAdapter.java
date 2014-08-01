@@ -54,7 +54,6 @@ public class CustomGridAdapter extends ArrayAdapter<ItemGrid>{
 	    	  holder=new RecordHolder();
 	    	  holder.imgItem=(ImageView)itemView.findViewById(R.id.imageItem);
 	    	  holder.txtItem=(TextView)itemView.findViewById(R.id.textItem);
-	    	  System.out.println("holder convertViewNull: "+convertView);
 	    	  itemView.setTag(holder);
 	      }
 	      else
