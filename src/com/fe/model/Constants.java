@@ -18,5 +18,8 @@ public final class Constants {
 	private static final String TABLE_NEWS="TB_NEWS";
 	
 	
+	//HEADER XML 
+	
+	
 	
 }

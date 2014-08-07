@@ -5,10 +5,10 @@ import java.util.ArrayList;
 
 
 
-import com.fe.activity.ActivityOficina;
+import com.fe.activity.ActivitySecretaria;
 import com.fe.bean.ItemGrid;
 import com.fe.bean.adapter.CustomGridAdapter;
-import com.fe.bean.util.ListItemGrid;
+import com.fe.bean.util.UtilList;
 
 import android.os.Bundle;
 import android.app.Activity;
@@ -53,7 +53,7 @@ public class MainActivity extends Activity  implements OnItemClickListener {
 		//load content 
 		gridView=(GridView)findViewById(R.id.grid_principal);
 		//load listItemGridImages
-		listItemGridImage=(ArrayList<ItemGrid>) ListItemGrid.loadItemGridPrincipal(this.getResources());
+		listItemGridImage=(ArrayList<ItemGrid>) UtilList.loadItemGridPrincipal(this.getResources());
 	    
 		gridAdapterPrincipal=new CustomGridAdapter(this, R.layout.grid_single, listItemGridImage);
 	    gridView.setAdapter(gridAdapterPrincipal);
@@ -76,10 +76,10 @@ public class MainActivity extends Activity  implements OnItemClickListener {
 			    case 2: logger.debug("Calendario");break;
 			    case 3: { 
 			    	
-			    	logger.debug("Oficina"); 
-			         final Intent intent=new Intent(MainActivity.this,ActivityOficina.class);
-			       
-			        startActivity(intent);
+			    	 logger.debug("Secretarias"); 
+			         final Intent intent=new Intent(MainActivity.this,ActivitySecretaria.class);
+			         intent.putExtra("title_header","Secretarias");
+			         startActivity(intent);
 			        }
 			    }
 				

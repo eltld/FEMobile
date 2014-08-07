@@ -32,7 +32,7 @@
             </intent-filter>
         </activity>
         <activity 
-            android:name="com.fe.activity.ActivityOficina"
+            android:name="com.fe.activity.ActivitySecretaria"
             android:label="@string/activity_secretaria">
          <intent-filter>
              <action android:name="android.intent.action.MAIN"/>
