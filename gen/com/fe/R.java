@@ -41,7 +41,8 @@ public final class R {
         public static final int header=0x7f030005;
         public static final int header_news=0x7f030006;
         public static final int layout_secretaria=0x7f030007;
-        public static final int single_text=0x7f030008;
+        public static final int line_separator=0x7f030008;
+        public static final int single_text=0x7f030009;
     }
     public static final class string {
         public static final int action_settings=0x7f050001;

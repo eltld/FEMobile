@@ -41,8 +41,9 @@ public class ActivityOficina extends Activity {
 	    
 		
 		listView=(ListView)findViewById(R.id.list_secretaria);
-	    
-	    listAdapter=new ArrayAdapter<String>(this,R.id.text_secretaria, ListItemGrid.loadSecretaria());
+	    logger.debug("Antes de load Secretaria");
+	   // listAdapter=new ArrayAdapter<String>(this,, ListItemGrid.loadSecretaria());
+	    logger.debug("load despues listAdapter"+listAdapter);
 	    listView.setAdapter(listAdapter);
 	    
 		
