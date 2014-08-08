@@ -13,6 +13,7 @@ public final class R {
     public static final class color {
         public static final int header_background=0x7f070000;
         public static final int header_background_image=0x7f070002;
+        public static final int header_banner=0x7f070003;
         public static final int header_text=0x7f070001;
     }
     public static final class dimen {
@@ -33,13 +34,22 @@ public final class R {
         public static final int grid_principal=0x7f080003;
         public static final int header=0x7f080007;
         public static final int imageItem=0x7f080004;
+        public static final int imageView1=0x7f080014;
         public static final int image_header=0x7f080008;
         public static final int image_news=0x7f080006;
+        public static final int label_objetivo=0x7f080010;
+        public static final int label_secretario=0x7f08000c;
+        public static final int label_telefono=0x7f080012;
         public static final int linearHeader=0x7f080000;
         public static final int list_secretaria=0x7f08000b;
         public static final int scro1=0x7f080002;
         public static final int textItem=0x7f080005;
-        public static final int text_secretaria=0x7f08000c;
+        public static final int textView1=0x7f080013;
+        public static final int textView2=0x7f08000e;
+        public static final int text_direccion=0x7f080011;
+        public static final int text_divider=0x7f08000f;
+        public static final int text_secretaria=0x7f080015;
+        public static final int text_secretario=0x7f08000d;
         public static final int txtTextView=0x7f080001;
         public static final int txtView_header=0x7f080009;
     }
