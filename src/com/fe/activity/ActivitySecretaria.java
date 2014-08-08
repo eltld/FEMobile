@@ -1,6 +1,7 @@
 package com.fe.activity;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -8,6 +9,7 @@ import org.slf4j.helpers.Util;
 
 import com.fe.MainActivity;
 import com.fe.R;
+import com.fe.bean.Secretaria;
 import com.fe.bean.util.UtilList;
 
 import android.app.Activity;
@@ -55,7 +57,12 @@ public class ActivitySecretaria extends Activity {
 		//load list view
 		logger.info("onCreate ActivityOficina");
 		listView=(ListView)findViewById(R.id.list_secretaria);
-	    listAdapter=new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, UtilList.loadSecretaria());
+		
+		List<String> listSecretaria = new ArrayList<String>();
+		for (Secretaria obj : UtilList.loadListSecretaria() ) {
+		  listSecretaria.add(obj.getTitulo_secretaria());
+		}
+	    listAdapter=new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, listSecretaria);
 	    logger.debug("load despues listAdapter"+listAdapter);
 	    listView.setAdapter(listAdapter);
 	    
