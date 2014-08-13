@@ -1,6 +1,7 @@
 package com.fe.client;
 
 import android.app.IntentService;
+import android.os.AsyncTask;
 
 
 /**
@@ -9,13 +10,18 @@ import android.app.IntentService;
  * @author David Garcia
  *
  */
-public class NoticiaClient extends Client{
+public class NoticiaClient extends AsyncTask<String,Void, String>{
 
-	IntentService intentService;
-	
-	public NoticiaClient()
-	{
-		
+	@Override
+	protected String doInBackground(String... arg0) {
+		// TODO Auto-generated method stub
+		return null;
 	}
+	
+	
+	   protected void onPreExecute() {
+         
+       }
+ 
 	
 }

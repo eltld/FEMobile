@@ -30,40 +30,45 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int content=0x7f08000a;
+        public static final int content=0x7f080004;
         public static final int grid_principal=0x7f080003;
-        public static final int header=0x7f080007;
-        public static final int imageItem=0x7f080004;
-        public static final int imageView1=0x7f080014;
-        public static final int image_header=0x7f080008;
-        public static final int image_news=0x7f080006;
-        public static final int label_objetivo=0x7f080010;
-        public static final int label_secretario=0x7f08000c;
-        public static final int label_telefono=0x7f080012;
+        public static final int header=0x7f080005;
+        public static final int imageItem=0x7f080008;
+        public static final int imageView1=0x7f080016;
+        public static final int image_header=0x7f08000b;
+        public static final int image_news=0x7f08000a;
+        public static final int label_objetivo=0x7f080013;
+        public static final int label_secretario=0x7f08000f;
+        public static final int label_telefono=0x7f080015;
         public static final int linearHeader=0x7f080000;
-        public static final int list_secretaria=0x7f08000b;
+        public static final int list_comedor=0x7f080007;
+        public static final int list_secretaria=0x7f08000e;
+        public static final int map=0x7f08000d;
         public static final int scro1=0x7f080002;
-        public static final int textItem=0x7f080005;
-        public static final int textView1=0x7f080013;
-        public static final int textView2=0x7f08000e;
-        public static final int text_direccion=0x7f080011;
-        public static final int text_divider=0x7f08000f;
-        public static final int text_secretaria=0x7f080015;
-        public static final int text_secretario=0x7f08000d;
+        public static final int textItem=0x7f080009;
+        public static final int textView1=0x7f080006;
+        public static final int textView2=0x7f080011;
+        public static final int text_direccion=0x7f080014;
+        public static final int text_divider=0x7f080012;
+        public static final int text_secretaria=0x7f080017;
+        public static final int text_secretario=0x7f080010;
         public static final int txtTextView=0x7f080001;
-        public static final int txtView_header=0x7f080009;
+        public static final int txtView_header=0x7f08000c;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
-        public static final int footer=0x7f030001;
-        public static final int footer_news=0x7f030002;
-        public static final int grid_single=0x7f030003;
-        public static final int grid_single_news=0x7f030004;
-        public static final int header=0x7f030005;
-        public static final int header_news=0x7f030006;
-        public static final int secretaria=0x7f030007;
-        public static final int secretaria_content=0x7f030008;
-        public static final int single_text=0x7f030009;
+        public static final int comedor=0x7f030001;
+        public static final int comedor_content=0x7f030002;
+        public static final int footer=0x7f030003;
+        public static final int footer_news=0x7f030004;
+        public static final int grid_single=0x7f030005;
+        public static final int grid_single_news=0x7f030006;
+        public static final int header=0x7f030007;
+        public static final int header_news=0x7f030008;
+        public static final int map_unju=0x7f030009;
+        public static final int secretaria=0x7f03000a;
+        public static final int secretaria_content=0x7f03000b;
+        public static final int single_text=0x7f03000c;
     }
     public static final class string {
         public static final int action_settings=0x7f050001;
@@ -71,6 +76,7 @@ public final class R {
         public static final int app_name=0x7f050000;
         public static final int descripcion=0x7f050003;
         public static final int hello_world=0x7f050002;
+        public static final int str_almuerzo=0x7f050005;
     }
     public static final class style {
         /** 

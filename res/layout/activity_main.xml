@@ -8,7 +8,7 @@
     
     
   <!-- Header -->  
- <LinearLayout 
+ <RelativeLayout
       android:id="@+id/linearHeader"
    
       android:layout_width="match_parent"
@@ -32,9 +32,15 @@
     android:layout_height="wrap_content"
     android:text="@string/hello_world"
      android:gravity="center" />
- 
+  <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentLeft="true"
+            android:background="#555"
+       
+             />
   
-  </LinearLayout>
+  </RelativeLayout>
  
  <ScrollView
     android:id="@+id/scro1"
@@ -42,23 +48,28 @@
     android:layout_height="wrap_content"
    
    >
-  <LinearLayout
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical" 
-   >
 
-    <GridView
-        android:id="@+id/grid_principal"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_margin="4dp"
-        android:columnWidth="80dp"
-        android:gravity="center"
-        android:numColumns="auto_fit"
-        android:stretchMode="columnWidth" 
-        />
-    </LinearLayout>
+  <RelativeLayout
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical" >
+
+      <GridView
+          android:id="@+id/grid_principal"
+          android:layout_width="fill_parent"
+          android:layout_height="360dp"
+          android:layout_alignParentBottom="true"
+          android:layout_alignParentLeft="true"
+          android:layout_margin="4dp"
+          android:layout_weight="10.36"
+          android:columnWidth="80dp"
+          android:gravity="center"
+          android:numColumns="auto_fit"
+          android:stretchMode="columnWidth" >
+      </GridView>
+
+  </RelativeLayout>
+
     </ScrollView>
     
     

@@ -5,6 +5,8 @@ import java.util.ArrayList;
 
 
 
+import com.fe.activity.ActivityComedor;
+import com.fe.activity.ActivityMapUnju;
 import com.fe.activity.ActivitySecretaria;
 import com.fe.bean.ItemGrid;
 import com.fe.bean.adapter.CustomGridAdapter;
@@ -71,16 +73,26 @@ public class MainActivity extends Activity  implements OnItemClickListener {
 				logger.info("Click item : "+songTitle.getText().toString() + " arg2 : "+arg2);
 			    switch(arg2)
 			    {
-			    case 0: logger.debug("Facultad");break;
-			    case 1: logger.debug("Comedor");break;
-			    case 2: logger.debug("Calendario");break;
+			    case 0:
+			       {
+			    	 logger.debug("Mapa") ;
+			         final Intent intent=new Intent(MainActivity.this,ActivityMapUnju.class);
+			         startActivity(intent);
+			        };break;
+			    case 1: logger.debug("Noticias");break;
+			    case 2:
+			           { 
+			    	     logger.debug("Comedor");
+			             Intent intent=new Intent(MainActivity.this,ActivityComedor.class);
+			             startActivity(intent);
+			             };break;
 			    case 3: { 
 			    	
 			    	 logger.debug("Secretarias"); 
 			         final Intent intent=new Intent(MainActivity.this,ActivitySecretaria.class);
 			         intent.putExtra("title_header","Secretarias");
 			         startActivity(intent);
-			        }
+			        };break;
 			    }
 				
 			}

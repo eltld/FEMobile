@@ -6,11 +6,21 @@
     
     
     <!-- PERMISO DE APLICACION -->
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <permission android:name="com.fe.permission.MAPS_RECEIVE" android:protectionLevel="signature"/>
+      <uses-permission android:name="com.fe.permission.MAPS_RECEIVE" />
+
+    <!-- Specify OpenGL ES 2.0 as a requirement -->
+    <uses-feature android:glEsVersion="0x00020000" android:required="true"/>
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+   
     
     
     <uses-sdk
@@ -22,6 +32,10 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
+        
+          <!--  Add Google Map Library -->
+       <!--   <uses-library android:name="com.google.android.maps" /> -->
+       
         <!--  Activity -->
         <activity
             android:name="com.fe.MainActivity"
@@ -46,7 +60,28 @@
              <action android:name="android.intent.action.MAIN"/>
              <category android:name="android.intent.category.LAUNCHER"/>
          </intent-filter>
-         </activity> 
+         </activity>
+          <activity 
+            android:name="com.fe.activity.ActivityMapUnju"
+            android:label="@string/activity_secretaria">
+         <intent-filter>
+             <action android:name="android.intent.action.MAIN"/>
+             <category android:name="android.intent.category.LAUNCHER"/>
+         </intent-filter>
+         </activity>
+            <activity 
+            android:name="com.fe.activity.ActivityComedor"
+            android:label="@string/activity_secretaria">
+         <intent-filter>
+             <action android:name="android.intent.action.MAIN"/>
+             <category android:name="android.intent.category.LAUNCHER"/>
+         </intent-filter>
+         </activity>
+         <!-- apy key -->
+         <meta-data 
+             android:name="com.google.android.maps.v2.API_KEY"
+             android:value="AIzaSyAjiXgifxnR_p3950DD2XQ67rxmGp1N7mY"
+             /> 
     </application>
      
     

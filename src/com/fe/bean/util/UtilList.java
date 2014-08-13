@@ -9,6 +9,7 @@ import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 
 import com.fe.R;
+import com.fe.bean.Comedor;
 import com.fe.bean.ItemGrid;
 import com.fe.bean.Secretaria;
 
@@ -22,6 +23,7 @@ public final class UtilList {
   
 	private static final List<ItemGrid> listItemGrid=new ArrayList<ItemGrid>();
 	private static final List<Secretaria> listSecretarias=new ArrayList<Secretaria>();
+	private static final List<Comedor> listComedor=new ArrayList<Comedor>();
 	
 	
 	/**
@@ -33,10 +35,15 @@ public final class UtilList {
 	 */
 	public static List<ItemGrid> loadItemGridPrincipal(Resources res)
 	{
-		listItemGrid.add(new ItemGrid("Facultad",res.getDrawable((R.drawable.ic_launcher))));
-		listItemGrid.add(new ItemGrid("Comedor",res.getDrawable(R.drawable.ic_launcher)));
-		listItemGrid.add(new ItemGrid("Calendario",res.getDrawable((R.drawable.ic_launcher))));
+		listItemGrid.add(new ItemGrid("Mapa",res.getDrawable((R.drawable.ic_launcher))));
+		listItemGrid.add(new ItemGrid("Noticias",res.getDrawable(R.drawable.ic_launcher)));
+		listItemGrid.add(new ItemGrid("Comedor",res.getDrawable((R.drawable.ic_launcher))));
 		listItemGrid.add(new ItemGrid("Secretarias",res.getDrawable(R.drawable.ic_launcher)));
+	    listItemGrid.add(new ItemGrid("Fotos",res.getDrawable(R.drawable.ic_launcher)));
+	    listItemGrid.add(new ItemGrid("Eventos",res.getDrawable(R.drawable.ic_launcher)));
+	    listItemGrid.add(new ItemGrid("Calendario",res.getDrawable(R.drawable.ic_launcher)));
+	    listItemGrid.add(new ItemGrid("Autoridades",res.getDrawable(R.drawable.ic_launcher))); 		
+	    
 		return listItemGrid;
 	}
 	
@@ -97,6 +104,15 @@ public final class UtilList {
 		return listSecretarias;
 		
 		
+	}
+	
+	public static List<Comedor> loadListComedor()
+	{
+		listComedor.add(new Comedor(1, "Bustamante","Comedor Bustamante", "00","00"));
+	    listComedor.add(new Comedor(2,"Sociedad Obrera","Sociedad","00","00"));
+	    listComedor.add(new Comedor(3, "Balcarce","Balcarce","0","0"));
+		
+	    return listComedor;
 	}
   
 	
