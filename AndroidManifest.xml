@@ -8,7 +8,7 @@
     <!-- PERMISO DE APLICACION -->
     <permission android:name="com.fe.permission.MAPS_RECEIVE" android:protectionLevel="signature"/>
       <uses-permission android:name="com.fe.permission.MAPS_RECEIVE" />
-
+     
     <!-- Specify OpenGL ES 2.0 as a requirement -->
     <uses-feature android:glEsVersion="0x00020000" android:required="true"/>
     <uses-permission android:name="android.permission.CALL_PHONE" />
@@ -63,7 +63,7 @@
          </activity>
           <activity 
             android:name="com.fe.activity.ActivityMapUnju"
-            android:label="@string/activity_secretaria">
+            android:label="@string/activity_map_unju">
          <intent-filter>
              <action android:name="android.intent.action.MAIN"/>
              <category android:name="android.intent.category.LAUNCHER"/>
@@ -77,11 +77,21 @@
              <category android:name="android.intent.category.LAUNCHER"/>
          </intent-filter>
          </activity>
+          <activity 
+            android:name="com.fe.activity.ActivityNoticia"
+            android:label="@string/activity_noticias">
+         <intent-filter>
+             <action android:name="android.intent.action.MAIN"/>
+             <category android:name="android.intent.category.LAUNCHER"/>
+         </intent-filter>
+         </activity>
          <!-- apy key -->
          <meta-data 
              android:name="com.google.android.maps.v2.API_KEY"
              android:value="AIzaSyAjiXgifxnR_p3950DD2XQ67rxmGp1N7mY"
              /> 
+              <meta-data android:name="com.google.android.gms.version"
+                   android:value="@integer/google_play_services_version" />
     </application>
      
     

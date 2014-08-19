@@ -7,5 +7,7 @@
     <string name="descripcion">Image</string>
     <string name="activity_secretaria">Secretarias</string>
     <string name="str_almuerzo">Almuerzos</string>
+    <string name="activity_map_unju">Mapa</string>
+    <string name="activity_noticias">Noticias</string>
 
 </resources>

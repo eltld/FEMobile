@@ -7,6 +7,7 @@ import java.util.ArrayList;
 
 import com.fe.activity.ActivityComedor;
 import com.fe.activity.ActivityMapUnju;
+import com.fe.activity.ActivityNoticia;
 import com.fe.activity.ActivitySecretaria;
 import com.fe.bean.ItemGrid;
 import com.fe.bean.adapter.CustomGridAdapter;
@@ -79,7 +80,13 @@ public class MainActivity extends Activity  implements OnItemClickListener {
 			         final Intent intent=new Intent(MainActivity.this,ActivityMapUnju.class);
 			         startActivity(intent);
 			        };break;
-			    case 1: logger.debug("Noticias");break;
+			    case 1:  
+			           { 
+			        	  logger.debug("Noticias");
+			        	  final Intent intent=new Intent(MainActivity.this,ActivityNoticia.class);
+			        	  startActivity(intent);
+			    	      
+			             };break;
 			    case 2:
 			           { 
 			    	     logger.debug("Comedor");
