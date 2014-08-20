@@ -28,8 +28,9 @@ public class ActivityNoticia extends Activity{
        // setContentView(R.layout.rest_ful_webservice);  
          
        logger.debug("Inicio Noticias"); 
-        new NoticiasClient().execute();
+       new NoticiasClient().execute();
           
+       
        
           
     }

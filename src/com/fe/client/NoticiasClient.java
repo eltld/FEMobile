@@ -1,11 +1,17 @@
 package com.fe.client;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.fe.activity.ActivityNoticia;
 import com.fe.model.ConstantRest;
 import com.fe.service.ServiceHandler;
+
 
 import android.app.IntentService;
 import android.os.AsyncTask;
@@ -20,7 +26,7 @@ import android.os.AsyncTask;
 public class NoticiasClient extends AsyncTask<String,Void, String>{
 
 	private static final Logger logger = (Logger) LoggerFactory.getLogger(NoticiasClient.class);
-
+    private ArrayList<HashMap<String, String>> listNoticias;
 	
 
 	
@@ -33,8 +39,24 @@ public class NoticiasClient extends AsyncTask<String,Void, String>{
 		
 		// TODO Auto-generated method stub
 		ServiceHandler serviceHandler=new ServiceHandler();
-		String json=serviceHandler.makeServiceCall(ConstantRest.getUrlNoticias(),serviceHandler.GET);
-		logger.info("json : "+json);
+		String jsonString=serviceHandler.makeServiceCall(ConstantRest.getUrlNoticias(),serviceHandler.GET);
+		logger.info("json : "+jsonString);
+		
+		
+		if(jsonString!=null)
+		{
+			try
+			{
+			
+				JSONObject jsonObject=new JSONObject(jsonString);
+				
+			}catch(JSONException e)
+			{
+				
+			}
+			
+		}
+		
 		
 		}catch(Exception ex)
 		{
