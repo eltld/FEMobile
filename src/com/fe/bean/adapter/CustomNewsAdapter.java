@@ -2,16 +2,21 @@ package com.fe.bean.adapter;
 
 import java.util.ArrayList;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 
 import com.fe.R;
+import com.fe.activity.ActivityNoticia;
 import com.fe.bean.Noticia;
-import com.fe.client.ImageDownloaderTask;
+import com.fe.task.ImageDownloaderTask;
 
 
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -23,14 +28,15 @@ import android.widget.TextView;
  * @Dathe  : 20-08-2014 
  *
  */
-public class CustomListNoticiaAdapter extends BaseAdapter {
+public class CustomNewsAdapter extends BaseAdapter {
 
-	private ArrayList listData;
-	
+	private ArrayList<Noticia> listData;
 	private LayoutInflater layoutInflater;
-	
-	public CustomListNoticiaAdapter(Context context,ArrayList listData)
+	private java.util.logging.Logger logger;
+	public CustomNewsAdapter(Context context,ArrayList<Noticia> listData)
 	{
+		
+		System.out.println("CustonNewsAdapter");
 		this.listData=listData;
 		layoutInflater=LayoutInflater.from(context);
 	}
@@ -56,11 +62,15 @@ public class CustomListNoticiaAdapter extends BaseAdapter {
 	 
 
 
-	
+	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
 		ViewHolder holder;
+		System.out.println("getView");
+		logger.info("getView");
 		if (convertView == null) {
-			convertView = layoutInflater.inflate(R.layout.grid_single_news,null);
+			
+			 //se obtiene 
+			convertView = layoutInflater.inflate(R.layout.noticias_single,null);
 			holder = new ViewHolder();
 			holder.noticiaHead = (TextView) convertView.findViewById(R.id.text_noticiaTitulo);
 			holder.noticiaBajada = (TextView) convertView.findViewById(R.id.text_noticiaBajada);
@@ -82,6 +92,7 @@ public class CustomListNoticiaAdapter extends BaseAdapter {
 			new ImageDownloaderTask(holder.noticiaImageView).execute(noticias.getUrlImageNoticia());
 		}
  
+		System.out.println("customlistnoticiaadapter");
 		return convertView;
 	}
  

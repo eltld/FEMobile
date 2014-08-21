@@ -4,17 +4,23 @@ import android.graphics.drawable.Drawable;
 
 public class Noticia {
 
-	private int idNoticia;
+	private String idNoticia;
 	private String tituloNoticia;
 	private String bajadaNoticia;
 	private String dateNoticia;
 	private String urlImageNoticia;
 	private Drawable imageNoticia;
 	
-	public int getIdNoticia() {
+
+	
+	public Noticia()
+	{}
+	
+	
+	public String getIdNoticia() {
 		return idNoticia;
 	}
-	public void setIdNoticia(int idNoticia) {
+	public void setIdNoticia(String idNoticia) {
 		this.idNoticia = idNoticia;
 	}
 	public String getTituloNoticia() {
@@ -48,6 +54,13 @@ public class Noticia {
 		this.urlImageNoticia = urlImageNoticia;
 	}
 	
-
+    @Override
+	public String toString()
+	{
+		
+		return " idNoticia : "+this.idNoticia + " tituloNoticia : "+this.tituloNoticia+
+				" bajadaNoticia : "+this.bajadaNoticia +  " imageNoticia : "+this.imageNoticia
+				+" urlImageNoticia : "+this.urlImageNoticia;
+	}
 	
 }

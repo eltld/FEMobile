@@ -1,4 +1,4 @@
-package com.fe.client;
+package com.fe.task;
 
 import java.io.InputStream;
 import java.lang.ref.WeakReference;
