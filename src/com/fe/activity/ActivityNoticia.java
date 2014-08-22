@@ -22,7 +22,10 @@ import com.google.gson.Gson;
 import android.app.Activity;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 
 
 /**
@@ -47,16 +50,24 @@ public class ActivityNoticia extends Activity{
          
        logger.debug("Inicio Noticias"); 
        new NoticiasClient().execute(); 
+       
+     
     }
       
-	
-    
-    
-    
     
     private class NoticiasClient extends AsyncTask<String,Void, String>{
 
-    
+    	LinearLayout linHeaderProgress;
+    	
+    	private ProgressBar progressBar;
+    	
+    	protected void onPreExecute() {
+            logger.debug("onPreExecute");
+           linHeaderProgress=(LinearLayout)findViewById(R.id.linlaHeaderProgress);
+           linHeaderProgress.setVisibility(View.VISIBLE);
+           
+       }
+    	
     	@Override
     	protected String doInBackground(String... arg0) {
     		logger.debug("doInBackground NoticiasClient");
@@ -106,7 +117,6 @@ public class ActivityNoticia extends Activity{
     			
     		}
     		
-    		
     		}catch(Exception ex)
     		{
     			logger.debug("Error :"+ex.toString());
@@ -120,18 +130,16 @@ public class ActivityNoticia extends Activity{
     	}
     	
     	
-    	protected void onPreExecute() {
-             logger.debug("onPreExecute");
-             
-        }
+    
     	
 		protected void onPostExecute(String result)
     	{
-    		
     		if(listData.size()!=0)
     		{
     			
     			System.out.println("informacion de datos");
+    			 // HIDE THE SPINNER AFTER LOADING FEEDS
+    		    linHeaderProgress.setVisibility(View.GONE);
     			displayContent(result);
     			
     		}
@@ -139,8 +147,7 @@ public class ActivityNoticia extends Activity{
     		{
     			System.out.println("no contiene datos");
     		}
-      		
-    		
+      			
     	}
 		
 		public void displayContent(String result)

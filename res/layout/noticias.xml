@@ -6,12 +6,40 @@
    
     <include layout="@layout/header"/>
     
+      <LinearLayout
+        android:id="@+id/linlaHeaderProgress"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ProgressBar
+            android:id="@+id/pbHeaderProgress"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+        </ProgressBar>
+    </LinearLayout>
+    
+    
+    <RelativeLayout 
+        android:id="@+id/content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/header"
+        android:gravity="center"
+        android:background="@color/header_text">
+     
+         
+         
     <ListView
         android:id="@+id/custom_list_noticia"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:dividerHeight="1dp"
+        android:layout_above="@layout/header"
          />
     
-    
+    </RelativeLayout>
     </RelativeLayout>
