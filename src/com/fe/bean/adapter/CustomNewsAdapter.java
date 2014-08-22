@@ -33,18 +33,20 @@ public class CustomNewsAdapter extends BaseAdapter {
 	private ArrayList<Noticia> listData;
 	private LayoutInflater layoutInflater;
 	private java.util.logging.Logger logger;
+	
 	public CustomNewsAdapter(Context context,ArrayList<Noticia> listData)
 	{
-		
-		System.out.println("CustonNewsAdapter");
+	
+		System.out.println("CustonNewsAdapter count : "+listData.size());
 		this.listData=listData;
+		
 		layoutInflater=LayoutInflater.from(context);
 	}
 	
 	@Override
 	public int getCount() {
 		// TODO Auto-generated method stub
-		return 0;
+		return this.listData.size();
 	}
 
 	@Override
@@ -66,9 +68,10 @@ public class CustomNewsAdapter extends BaseAdapter {
 	public View getView(int position, View convertView, ViewGroup parent) {
 		ViewHolder holder;
 		System.out.println("getView");
-		logger.info("getView");
+	
 		if (convertView == null) {
-			
+	
+			System.out.println("convertview null");
 			 //se obtiene 
 			convertView = layoutInflater.inflate(R.layout.noticias_single,null);
 			holder = new ViewHolder();

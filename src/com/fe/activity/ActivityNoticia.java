@@ -34,17 +34,19 @@ import android.widget.ListView;
 public class ActivityNoticia extends Activity{
 
 	private static final Logger logger = (Logger) LoggerFactory.getLogger(ActivityNoticia.class);
-
+	private ListView listViewNoticias;
+	private ArrayList<Noticia> listData;
+    private CustomNewsAdapter adapter;
+	 
 	  /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
       
         super.onCreate(savedInstanceState);
-       // setContentView(R.layout.rest_ful_webservice);  
+        setContentView(R.layout.noticias);  
          
        logger.debug("Inicio Noticias"); 
-       new NoticiasClient().execute();
-   
+       new NoticiasClient().execute(); 
     }
       
 	
@@ -54,10 +56,7 @@ public class ActivityNoticia extends Activity{
     
     private class NoticiasClient extends AsyncTask<String,Void, String>{
 
-    	private ArrayList<Noticia> listNoticia;
-        private ListView listViewNoticias;
-        private CustomNewsAdapter adapter;
-    	
+    
     	@Override
     	protected String doInBackground(String... arg0) {
     		logger.debug("doInBackground NoticiasClient");
@@ -77,7 +76,7 @@ public class ActivityNoticia extends Activity{
     			{
     			
     				logger.debug("Recorro el listado de json");
-    				listNoticia=new ArrayList<Noticia>();
+    				listData=new ArrayList<Noticia>();
     				Gson gson=new Gson();
     				JSONArray jsonArray=new JSONArray(jsonString);
     				for(int i=0; i<jsonArray.length();i++)
@@ -89,12 +88,12 @@ public class ActivityNoticia extends Activity{
     				   noticia.setBajadaNoticia(jsonObject.getString(NoticiaTag.getBajada()));
     				   noticia.setDateNoticia(jsonObject.getString(NoticiaTag.getFecha()));
     				   noticia.setUrlImageNoticia(jsonObject.getString(NoticiaTag.getUrl()));
-    				   listNoticia.add(noticia);
+    				   listData.add(noticia);
     					
     				}
     				
     			
-    				for(Noticia a: listNoticia)
+    				for(Noticia a: listData)
     				{
     					logger.info(a.toString());
     				}
@@ -129,21 +128,30 @@ public class ActivityNoticia extends Activity{
 		protected void onPostExecute(String result)
     	{
     		
-    		
-    		logger.debug("onPostExecute result");
-    	    listViewNoticias=(ListView)findViewById(R.id.custom_list_noticia);
-    	    /* Update parsing  json to ListView */ 
-    	    adapter=new CustomNewsAdapter(ActivityNoticia.this, listNoticia);
-    	    if(adapter==null)
-    	    	logger.debug("adapter is null");
-    	    else 
-    	    	logger.debug("adapter no es null");
-    	    
-    	    
-    	    //listViewNoticias.setAdapter(adapter);
-    		
+    		if(listData.size()!=0)
+    		{
+    			
+    			System.out.println("informacion de datos");
+    			displayContent(result);
+    			
+    		}
+    		else
+    		{
+    			System.out.println("no contiene datos");
+    		}
+      		
     		
     	}
+		
+		public void displayContent(String result)
+		{
+			System.out.println("Result : "+result);
+			adapter=new CustomNewsAdapter(ActivityNoticia.this, listData);
+			listViewNoticias=(ListView)findViewById(R.id.custom_list_noticia);
+			listViewNoticias.setAdapter(adapter);
+			
+			
+		}
 
     }
 
