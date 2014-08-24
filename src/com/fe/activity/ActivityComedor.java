@@ -7,9 +7,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.fe.R;
-import com.fe.bean.Comedor;
-import com.fe.bean.Secretaria;
 import com.fe.bean.util.UtilList;
+import com.fe.model.Comedor;
+import com.fe.model.Secretaria;
 
 import android.app.Activity;
 import android.os.Bundle;

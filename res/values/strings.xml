@@ -9,5 +9,6 @@
     <string name="str_almuerzo">Almuerzos</string>
     <string name="activity_map_unju">Mapa</string>
     <string name="activity_noticias">Noticias</string>
+    <string name="str_titulo_principal">UNJU</string>
 
 </resources>

@@ -9,8 +9,11 @@ import org.slf4j.helpers.Util;
 
 import com.fe.MainActivity;
 import com.fe.R;
-import com.fe.bean.Secretaria;
+import com.fe.R.id;
+import com.fe.bean.adapter.CustomGridAdapter;
+import com.fe.bean.adapter.CustomSecretariaAdapter;
 import com.fe.bean.util.UtilList;
+import com.fe.model.Secretaria;
 
 import android.app.Activity;
 import android.app.ListActivity;
@@ -38,7 +41,7 @@ public class ActivitySecretaria extends Activity {
 	private static final Logger logger = (Logger) LoggerFactory.getLogger(ActivitySecretaria.class);
 	
 	ListView listView;
-	ArrayAdapter<String> listAdapter;
+	CustomSecretariaAdapter adapter;
 	TextView textViewHeader;
 	 
 	@Override
@@ -58,13 +61,10 @@ public class ActivitySecretaria extends Activity {
 		logger.info("onCreate ActivityOficina");
 		listView=(ListView)findViewById(R.id.list_secretaria);
 		
-		List<String> listSecretaria = new ArrayList<String>();
-		for (Secretaria obj : UtilList.loadListSecretaria() ) {
-		  listSecretaria.add(obj.getTitulo_secretaria());
-		}
-	    listAdapter=new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, listSecretaria);
-	    logger.debug("load despues listAdapter"+listAdapter);
-	    listView.setAdapter(listAdapter);
+		ArrayList<Secretaria> listSecretaria = new ArrayList<Secretaria>();
+		listSecretaria=(ArrayList<Secretaria>) UtilList.loadListSecretaria();
+	    adapter=new CustomSecretariaAdapter(this,R.layout.secretaria_single ,listSecretaria);
+	    listView.setAdapter(adapter);
 	    
 		
 	    //events
@@ -74,21 +74,22 @@ public class ActivitySecretaria extends Activity {
 			public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
 					long arg3) {
 				// TODO Auto-generated method stub
-				logger.debug("on Item Click secretarias : "+arg2);
-				
+				TextView text_secretariaTitulo=(TextView)arg1.findViewById(id.text_secretariaTitulo);
+				TextView text_secretariaId=(TextView)arg1.findViewById(R.id.text_secretariaId);
+				logger.debug("on Item Click secretaria Id : "+text_secretariaId.getText().toString());
+				logger.debug("on item clicks secretaria : "+text_secretariaTitulo.getText().toString());
 				Intent intent=new Intent(ActivitySecretaria.this,ActivitySecretariaContent.class);
-				startActivity(intent);
+				intent.putExtra("id_secretaria",text_secretariaId.getText().toString());
+		        startActivity(intent);
 				
 			}
 		});
 	    
 	    
-	
+	    
 	
 	}
 
-	
 	 
-	
 	
 }

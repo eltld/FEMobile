@@ -12,14 +12,15 @@ import org.slf4j.LoggerFactory;
 
 import com.fe.R;
 import com.fe.activity.ActivityNoticia;
-import com.fe.bean.Noticia;
 import com.fe.bean.adapter.CustomNewsAdapter;
 import com.fe.bean.json.NoticiaTag;
 import com.fe.model.ConstantRest;
+import com.fe.model.Noticia;
 import com.fe.service.ServiceHandler;
 import com.google.gson.Gson;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
+
 
 
 import android.app.IntentService;

@@ -6,10 +6,12 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 
+
 import com.fe.R;
 import com.fe.activity.ActivityNoticia;
-import com.fe.bean.Noticia;
+import com.fe.model.Noticia;
 import com.fe.task.ImageDownloaderTask;
+
 
 
 import android.content.Context;

@@ -1,14 +1,7 @@
 package com.fe.bean.adapter;
 
 import java.util.ArrayList;
-import java.util.List;
 
-import com.fe.R;
-
-
-import com.fe.model.ItemGrid;
-
-import android.R.id;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,20 +10,27 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.fe.R;
+import com.fe.bean.adapter.CustomGridAdapter.RecordHolder;
+import com.fe.model.ItemGrid;
+import com.fe.model.Secretaria;
+
 
 /**
- * Clase Adapter load image, text
- * @author Administrador
+ * 
+ * @author David Garcia
+ * @Dathe : 24-08-2014
  *
  */
-public class CustomGridAdapter extends ArrayAdapter<ItemGrid>{
+public class CustomSecretariaAdapter extends ArrayAdapter<Secretaria>{
 
-	  Context myContext;
-	  int resourceId;
-	  ArrayList<ItemGrid> data=new ArrayList<ItemGrid>();
 	
-	  public CustomGridAdapter(Context context, int textViewResourceId,
-			ArrayList<ItemGrid> objects) {
+	Context myContext;
+	  int resourceId;
+	  ArrayList<Secretaria> data=new ArrayList<Secretaria>();
+	
+	  public CustomSecretariaAdapter(Context context, int textViewResourceId,
+			ArrayList<Secretaria> objects) {
 		super(context, textViewResourceId, objects);
 	  
 		this.myContext=context;
@@ -53,8 +53,8 @@ public class CustomGridAdapter extends ArrayAdapter<ItemGrid>{
 	                  (LayoutInflater) myContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 	    	  itemView= layoutInflater.inflate(this.resourceId, parent, false);
 	    	  holder=new RecordHolder();
-	    	  holder.imgItem=(ImageView)itemView.findViewById(R.id.imageItem);
-	    	  holder.txtItem=(TextView)itemView.findViewById(R.id.textItem);
+	    	  holder.txtSecretaria=(TextView)itemView.findViewById(R.id.text_secretariaTitulo);
+	    	  holder.txtIdSecretaria=(TextView)itemView.findViewById(R.id.text_secretariaId);
 	    	  itemView.setTag(holder);
 	      }
 	      else
@@ -63,9 +63,11 @@ public class CustomGridAdapter extends ArrayAdapter<ItemGrid>{
 
 	      }
 	      
-	      ItemGrid item=data.get(position);
-	      holder.txtItem.setText(item.getText());
-	      holder.imgItem.setImageDrawable(item.getImage());
+	      Secretaria item=data.get(position);
+	      holder.txtSecretaria.setText(item.getTitulo_secretaria());
+	      holder.txtIdSecretaria.setText(item.getId_secretaria());
+	      //visibilidad del identificador de noticia
+	      holder.txtIdSecretaria.setVisibility(View.GONE);
 	     
 	      return itemView;
 		  
@@ -74,14 +76,10 @@ public class CustomGridAdapter extends ArrayAdapter<ItemGrid>{
 	  //representa al image and text del grid custom
 	  static class RecordHolder
 	  {
-		  ImageView imgItem;
-	      TextView txtItem;
+		  TextView txtSecretaria;
+	      TextView txtIdSecretaria;
 	  }
 	  
 	  
 	
-	 
-	  
-	  
-
 }

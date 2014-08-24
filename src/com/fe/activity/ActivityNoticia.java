@@ -11,11 +11,11 @@ import org.slf4j.LoggerFactory;
 
 import com.fe.MainActivity;
 import com.fe.R;
-import com.fe.bean.Noticia;
 import com.fe.bean.adapter.CustomNewsAdapter;
 import com.fe.bean.json.NoticiaTag;
 import com.fe.client.NoticiasClient2;
 import com.fe.model.ConstantRest;
+import com.fe.model.Noticia;
 import com.fe.service.ServiceHandler;
 import com.google.gson.Gson;
 

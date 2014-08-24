@@ -9,9 +9,9 @@ import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 
 import com.fe.R;
-import com.fe.bean.Comedor;
-import com.fe.bean.ItemGrid;
-import com.fe.bean.Secretaria;
+import com.fe.model.Comedor;
+import com.fe.model.ItemGrid;
+import com.fe.model.Secretaria;
 
 /**
  * Clase que permite generar la carga de elementos 
@@ -60,38 +60,49 @@ public final class UtilList {
 	public static List<Secretaria> loadListSecretaria()
 	{
 		listSecretarias.add(
-				new Secretaria("Secretaria General Legal y Tecnica",
+				new Secretaria("1",
+						      "SECRETARIA GENERAL LEGAL Y TECNICA",
 						      "descripcion",
 						      " Dr. César Guillermo FARFÁN", 
 						      "", 
 						      "+54-(388)-4221-517",
 						      "gfarfan@unju.edu.ar "));
-		listSecretarias.add( new Secretaria("SECRETARIA DE ADMINISTRACION",
+		listSecretarias.add( new Secretaria(
+				                 "2",
+				                 "SECRETARIA DE ADMINISTRACION",
 				                 "descripcion",
 				                 "CPN Fernanda COLQUE",
 				                 "direccion",
 				                 "+54-(388)-4221-514",
 				                 "secadmin@unju.edu.ar "));
 		
-		listSecretarias.add(new Secretaria("SECRETARIA DE CIENCIA Y TECNICA",
+		listSecretarias.add(new Secretaria(
+				                           "3",
+				                           "SECRETARIA DE CIENCIA Y TECNICA",
 				                           "descripcion",
 				                           "Dra. María Graciela del Valle BOVI MITRE",
 				                           "direccion",
 				                           "+54-(388)-4221-505",
 				                           "secretariasectergb@unju.edu.ar"));
-		listSecretarias.add(new Secretaria("SECRETARIA DE EXTENSION UNIVERSITARIA",
+		listSecretarias.add(new Secretaria(
+				                            "4",
+				                           "SECRETARIA DE EXTENSION UNIVERSITARIA",
 				                            "descripcion",
 				                            "Dra. Elena Ester BELLI",
 				                            "direccion",
 				                            "+54-(388)-4244-100 ",
 				                            "seu@unju.edu.ar"));
-		listSecretarias.add(new Secretaria("SECRETARIO DE ASUNTOS ACADEMICOS",
+		listSecretarias.add(new Secretaria(
+				                           "5",
+				                           "SECRETARIO DE ASUNTOS ACADEMICOS",
 				                           "descripcion",
 				                           "Dr. Julio César ARRUETA",
 				                           "direccion",
 				                           "+54-(388)-4221-504",
 				                           "c.arrueta@unju.edu.ar"));
-		listSecretarias.add(new Secretaria("SECRETARIO DE BIENESTAR UNIVERSITARIO",
+		listSecretarias.add(new Secretaria(
+				                          "6",
+				                         "SECRETARIO DE BIENESTAR UNIVERSITARIO",
 				                         "Sr. Diego Esteban GUTIERREZ", "descripcion"
 				                         , "direccion", 
 				                         " +54-(388)-4221-500", 
