@@ -55,7 +55,7 @@ public class ActivitySecretaria extends Activity {
 		
 		String title_header=intent.getStringExtra("title_header");
 		logger.debug("title_header : "+title_header);
-		textViewHeader=(TextView)findViewById(R.id.txtView_header);
+		textViewHeader=(TextView)findViewById(R.id.text_header);
 		textViewHeader.setText(title_header);
 		
 		//load list view
@@ -85,6 +85,7 @@ public class ActivitySecretaria extends Activity {
 				logger.debug("on item clicks secretaria : "+text_secretariaTitulo.getText().toString());
 				
 				Intent intent=new Intent(ActivitySecretaria.this,ActivitySecretariaContent.class);
+				intent.putExtra("titulo_secretaria",text_secretariaTitulo.getText().toString());
 				intent.putExtra("id_secretaria",text_secretariaId.getText().toString());
 		        startActivity(intent);
 				

@@ -62,8 +62,8 @@ public final class UtilList {
 		listSecretarias.add(
 				new Secretaria("1",
 						      "SECRETARIA GENERAL LEGAL Y TECNICA",
-						      "descripcion",
 						      " Dr. César Guillermo FARFÁN", 
+						      "descripcion",
 						      "", 
 						      "+54-(388)-4221-517",
 						      "gfarfan@unju.edu.ar "));
@@ -79,31 +79,33 @@ public final class UtilList {
 		listSecretarias.add(new Secretaria(
 				                           "3",
 				                           "SECRETARIA DE CIENCIA Y TECNICA",
-				                           "descripcion",
 				                           "Dra. María Graciela del Valle BOVI MITRE",
+				                           "descripcion",
 				                           "direccion",
 				                           "+54-(388)-4221-505",
 				                           "secretariasectergb@unju.edu.ar"));
 		listSecretarias.add(new Secretaria(
 				                            "4",
 				                           "SECRETARIA DE EXTENSION UNIVERSITARIA",
-				                            "descripcion",
 				                            "Dra. Elena Ester BELLI",
+				                            "descripcion",
 				                            "direccion",
 				                            "+54-(388)-4244-100 ",
 				                            "seu@unju.edu.ar"));
 		listSecretarias.add(new Secretaria(
 				                           "5",
 				                           "SECRETARIO DE ASUNTOS ACADEMICOS",
-				                           "descripcion",
+				                          
 				                           "Dr. Julio César ARRUETA",
 				                           "direccion",
+				                           "descripcion",
 				                           "+54-(388)-4221-504",
 				                           "c.arrueta@unju.edu.ar"));
 		listSecretarias.add(new Secretaria(
 				                          "6",
 				                         "SECRETARIO DE BIENESTAR UNIVERSITARIO",
-				                         "Sr. Diego Esteban GUTIERREZ", "descripcion"
+				                         "Sr. Diego Esteban GUTIERREZ", 
+				                         "descripcion"
 				                         , "direccion", 
 				                         " +54-(388)-4221-500", 
 				                         "sbu@unju.edu.ar"));

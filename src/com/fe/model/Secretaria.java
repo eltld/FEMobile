@@ -79,7 +79,14 @@ public class Secretaria  extends BaseBean{
 		this.email = email;
 	}
 	
+	@Override
+	public String toString()
+	{
+		return "Id_secretaria : "+ this.id_secretaria + " titulo : "+this.titulo_secretaria
+				+ " secretario: "+this.secretario +" descripcion : "+this.descripcion +
+				" direccion : "+this.direccion + " telefono : "+this.telefono + " email: "+this.email;
 	
+	}
 
 	
 }

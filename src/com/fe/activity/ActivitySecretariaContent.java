@@ -28,6 +28,8 @@ public class ActivitySecretariaContent extends Activity {
 	TextView text_secretario;
 	TextView text_direccion;
 	TextView text_telefono;
+	TextView text_email;
+	TextView text_header;
 	private SecretariaBean secretariaBean;
 	private int numSecretaria=0;
 	private int currentSecretaria=0;
@@ -42,6 +44,7 @@ public class ActivitySecretariaContent extends Activity {
 		//obtenemos la secretaria a cargar
 		Intent intent=this.getIntent();
 		String id_secretaria=intent.getStringExtra("id_secretaria");
+		String titulo_secretaria=intent.getStringExtra("titulo_secretaria");
 		logger.debug("Secretaria Id: "+id_secretaria);
 		
 		//cargo objectos 
@@ -51,19 +54,18 @@ public class ActivitySecretariaContent extends Activity {
 	    
 		
 		image_telefonoCall=(ImageView)findViewById(id.image_secretariaTelefono);
-		/*text_secretario=(TextView)findViewById(R.id.text_secretariaSecretario);
+		text_header=(TextView)findViewById(R.id.text_header);
+		text_secretario=(TextView)findViewById(R.id.text_secretariaSecretario);
 		text_direccion=(TextView)findViewById(R.id.text_secretariaDireccion);
 		text_telefono=(TextView)findViewById(R.id.text_secretariaTelefono);
+		text_email=(TextView)findViewById(R.id.text_secretariaEmail);
 		
-		text_secretario.setText(secretaria.getDireccion());
+		
+		text_secretario.setText(secretaria.getSecretario());
 		text_direccion.setText(secretaria.getDireccion());
 		text_telefono.setText(secretaria.getTelefono());
-		*/
-		
-		
-		
-		
-		
+	    text_email.setText(secretaria.getEmail());
+	    text_header.setText(titulo_secretaria);
 		
 	}
 	
