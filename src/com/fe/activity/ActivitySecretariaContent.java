@@ -24,8 +24,10 @@ public class ActivitySecretariaContent extends Activity {
 	
 	
 	LinearLayout linearCall;
-	TextView text_number;
 	ImageView image_telefonoCall;
+	TextView text_secretario;
+	TextView text_direccion;
+	TextView text_telefono;
 	private SecretariaBean secretariaBean;
 	private int numSecretaria=0;
 	private int currentSecretaria=0;
@@ -39,23 +41,25 @@ public class ActivitySecretariaContent extends Activity {
 		logger.debug("Content Secretaria");
 		//obtenemos la secretaria a cargar
 		Intent intent=this.getIntent();
-		String id_secretaria=intent.getStringExtra("text_secretariaId");
+		String id_secretaria=intent.getStringExtra("id_secretaria");
 		logger.debug("Secretaria Id: "+id_secretaria);
 		
 		//cargo objectos 
 		secretariaBean=new SecretariaBean();
-		Secretaria secretaria=secretariaBean.getSecretaria(id_secretaria);
-		
+		Secretaria secretaria=secretariaBean.GetBean(id_secretaria);
+		logger.debug("secretaria : "+secretaria.toString());
 	    
-		image_telefonoCall=(ImageView)findViewById(id.image_secretaria_telefono);
-		image_telefonoCall.setOnClickListener(new OnClickListener() {
-			
-			@Override
-			public void onClick(View arg0) {
-				 
-				
-			}
-		});
+		
+		image_telefonoCall=(ImageView)findViewById(id.image_secretariaTelefono);
+		/*text_secretario=(TextView)findViewById(R.id.text_secretariaSecretario);
+		text_direccion=(TextView)findViewById(R.id.text_secretariaDireccion);
+		text_telefono=(TextView)findViewById(R.id.text_secretariaTelefono);
+		
+		text_secretario.setText(secretaria.getDireccion());
+		text_direccion.setText(secretaria.getDireccion());
+		text_telefono.setText(secretaria.getTelefono());
+		*/
+		
 		
 		
 		
@@ -63,7 +67,7 @@ public class ActivitySecretariaContent extends Activity {
 		
 	}
 	
-	View.OnClickListener callSecretaria =new OnClickListener() {
+	/*View.OnClickListener callSecretaria =new OnClickListener() {
 		
 		@Override
 		public void onClick(View v) {
@@ -74,7 +78,7 @@ public class ActivitySecretariaContent extends Activity {
 			
 		}
 	};
-	
+	*/
 	
 	
 	

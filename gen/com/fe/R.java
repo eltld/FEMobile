@@ -39,7 +39,7 @@ public final class R {
         public static final int imageView1=0x7f080001;
         public static final int image_header=0x7f080009;
         public static final int image_noticiaImage=0x7f08000f;
-        public static final int image_secretaria_telefono=0x7f08001e;
+        public static final int image_secretariaTelefono=0x7f08001e;
         public static final int label_objetivo=0x7f080019;
         public static final int label_secretario=0x7f080015;
         public static final int label_telefono=0x7f08001b;
@@ -54,16 +54,16 @@ public final class R {
         public static final int textItem=0x7f080008;
         public static final int textView1=0x7f080000;
         public static final int textView2=0x7f080017;
-        public static final int text_direccion=0x7f08001a;
         public static final int text_divider=0x7f080018;
         public static final int text_noticiaBajada=0x7f080011;
         public static final int text_noticiaFecha=0x7f080012;
         public static final int text_noticiaTitulo=0x7f080010;
         public static final int text_secretaria=0x7f080021;
+        public static final int text_secretariaDireccion=0x7f08001a;
         public static final int text_secretariaId=0x7f080020;
+        public static final int text_secretariaSecretario=0x7f080016;
+        public static final int text_secretariaTelefono=0x7f08001d;
         public static final int text_secretariaTitulo=0x7f08001f;
-        public static final int text_secretario=0x7f080016;
-        public static final int text_telefono=0x7f08001d;
         public static final int txtView_header=0x7f08000a;
     }
     public static final class layout {

@@ -18,6 +18,7 @@ import com.fe.model.Secretaria;
 import android.app.Activity;
 import android.app.ListActivity;
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
 import android.view.View;
@@ -41,8 +42,8 @@ public class ActivitySecretaria extends Activity {
 	private static final Logger logger = (Logger) LoggerFactory.getLogger(ActivitySecretaria.class);
 	
 	ListView listView;
-	CustomSecretariaAdapter adapter;
 	TextView textViewHeader;
+	ArrayList<Secretaria> listSecretaria;
 	 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -61,9 +62,11 @@ public class ActivitySecretaria extends Activity {
 		logger.info("onCreate ActivityOficina");
 		listView=(ListView)findViewById(R.id.list_secretaria);
 		
-		ArrayList<Secretaria> listSecretaria = new ArrayList<Secretaria>();
 		listSecretaria=(ArrayList<Secretaria>) UtilList.loadListSecretaria();
-	    adapter=new CustomSecretariaAdapter(this,R.layout.secretaria_single ,listSecretaria);
+	    CustomSecretariaAdapter adapter;
+		
+		adapter=new CustomSecretariaAdapter(this,R.layout.secretaria_single ,listSecretaria);
+	    adapter.notifyDataSetChanged();
 	    listView.setAdapter(adapter);
 	    
 		
@@ -73,23 +76,53 @@ public class ActivitySecretaria extends Activity {
 			@Override
 			public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
 					long arg3) {
+				
+				
 				// TODO Auto-generated method stub
 				TextView text_secretariaTitulo=(TextView)arg1.findViewById(id.text_secretariaTitulo);
 				TextView text_secretariaId=(TextView)arg1.findViewById(R.id.text_secretariaId);
 				logger.debug("on Item Click secretaria Id : "+text_secretariaId.getText().toString());
 				logger.debug("on item clicks secretaria : "+text_secretariaTitulo.getText().toString());
+				
 				Intent intent=new Intent(ActivitySecretaria.this,ActivitySecretariaContent.class);
 				intent.putExtra("id_secretaria",text_secretariaId.getText().toString());
 		        startActivity(intent);
 				
 			}
 		});
-	    
-	    
-	    
-	
-	}
 
+	}
+	
+	protected class ExampleAsyncTask extends AsyncTask<Void, Void, Boolean>
+   	{
+	    	private ArrayList<String> tempList = new ArrayList<String>();
+	
+        	@Override
+        	protected Boolean doInBackground( Void... params ) 
+        	{    	
+    	    		
+    	    	return true;
+        	}
+            
+        	@Override
+        	protected void onPreExecute() 
+        	{
+    	    	super.onPreExecute();
+        	}
+            
+        	@Override
+        	protected void onCancelled()
+        	{
+    	    	super.onCancelled();
+        	}
+            
+        	@Override
+        	protected void onPostExecute(Boolean b) {
+    	    	
+        	}
+}
+
+	
 	 
 	
 }
