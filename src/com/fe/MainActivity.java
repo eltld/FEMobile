@@ -78,12 +78,14 @@ public class MainActivity extends Activity  implements OnItemClickListener {
 			       {
 			    	 logger.debug("Mapa") ;
 			         final Intent intent=new Intent(MainActivity.this,ActivityMapUnju.class);
+			         
 			         startActivity(intent);
 			        };break;
 			    case 1:  
 			           { 
 			        	  logger.debug("Noticias");
 			        	  final Intent intent=new Intent(MainActivity.this,ActivityNoticia.class);
+			        	  intent.putExtra("title_header","Noticias");
 			        	  startActivity(intent);
 			    	      
 			             };break;
@@ -91,6 +93,7 @@ public class MainActivity extends Activity  implements OnItemClickListener {
 			           { 
 			    	     logger.debug("Comedor");
 			             Intent intent=new Intent(MainActivity.this,ActivityComedor.class);
+			             intent.putExtra("title_header", "Comedor");
 			             startActivity(intent);
 			             };break;
 			    case 3: { 

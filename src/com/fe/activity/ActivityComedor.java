@@ -7,16 +7,33 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.fe.R;
+import com.fe.R.id;
+import com.fe.bean.adapter.CustomComedorAdapter;
+import com.fe.bean.adapter.CustomSecretariaAdapter;
 import com.fe.bean.util.UtilList;
 import com.fe.model.Comedor;
+import com.fe.model.Constants;
 import com.fe.model.Secretaria;
 
 import android.app.Activity;
+import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Adapter;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 
+
+/**
+ * 
+ * @author David Garcia
+ * @Dathe  26-08-2014
+ *
+ */
 public class ActivityComedor extends Activity{
 
 	private static final Logger logger = (Logger) LoggerFactory.getLogger(ActivityComedor.class);
@@ -24,27 +41,89 @@ public class ActivityComedor extends Activity{
 	 /*private GoogleMap map;
 	 */
 	
-	ListView listView;
-	ArrayAdapter<String> listAdapter;
+	private ListView listView;
+	private CustomComedorAdapter adapter;
+	private TextView textViewHeader;
+	private ArrayList<Comedor> listComedor;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.comedor);
 	    
 		logger.debug("inicializar pagina comedor");
-		listView=(ListView)findViewById(R.id.list_comedor);
+		//obtenemos parametros
+		Intent intent=getIntent();
+		String title_header=intent.getStringExtra("title_header");
+		logger.debug("title_header : "+title_header);
+		textViewHeader=(TextView)findViewById(R.id.text_header);
+		textViewHeader.setText(title_header);
 		
-	    
-
-		List<String> listComedor = new ArrayList<String>();
-		for (Comedor obj : UtilList.loadListComedor()) {
-		  listComedor.add(obj.getNombre_comedor());
-		}
-	    listAdapter=new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, listComedor);
-	    logger.debug("load despues listAdapter"+listAdapter);
-	    listView.setAdapter(listAdapter);
+		new ComedorAsyncTask().execute();
 	
+		
 	}
+	
+	
+	
+	protected class ComedorAsyncTask extends AsyncTask<Void, Void, Boolean>
+   	{
+
+		@Override
+    	protected void onPreExecute() 
+    	{
+	    	super.onPreExecute();
+	    	
+    	}
+        
+    	@Override
+    	protected void onCancelled()
+    	{
+	    	super.onCancelled();
+    	}
+        	
+		@Override
+		protected Boolean doInBackground(Void... arg0) {
+			listComedor=new ArrayList<Comedor>();
+			listComedor.add(new Comedor(1, "Bustamante","Comedor Bustamante", "00","00"));
+		    listComedor.add(new Comedor(2,"Sociedad Obrera","Sociedad","00","00"));
+		    listComedor.add(new Comedor(3, "Balcarce","Balcarce","0","0"));
+			
+			return true;
+		}
+		
+		@Override
+    	protected void onPostExecute(Boolean b) {
+	    	
+    		//load list view
+    		logger.info("onCreate Activity Comedor");
+    		listView=(ListView)findViewById(R.id.list_comedor);
+    	    adapter=new CustomComedorAdapter(ActivityComedor.this,listComedor);
+    	    listView.setAdapter(adapter);
+    	
+		    listView.setOnItemClickListener(new OnItemClickListener() {
+
+				@Override
+				public void onItemClick(AdapterView<?> arg0, View arg1,
+						int arg2, long arg3) {
+					
+					TextView text_comedorTitulo=(TextView)arg1.findViewById(id.text_comedorTitulo);
+					TextView text_comedorId=(TextView)arg1.findViewById(R.id.text_comedorId);
+					
+					Intent intent=new Intent(ActivityComedor.this,ActivityComedorContent.class);
+					intent.putExtra(Constants.getPutTitulo(),text_comedorTitulo.getText().toString());
+					intent.putExtra(Constants.getPutTitulo(),text_comedorId.getText().toString());
+			        startActivity(intent);
+				}
+			});
+		}
+   	
+   	    
+   	
+   	}
+	
+	
+	
 	
 	
 }

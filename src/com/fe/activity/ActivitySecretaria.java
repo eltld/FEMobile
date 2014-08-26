@@ -44,6 +44,7 @@ public class ActivitySecretaria extends Activity {
 	ListView listView;
 	TextView textViewHeader;
 	ArrayList<Secretaria> listSecretaria;
+	CustomSecretariaAdapter adapter;
 	 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -52,23 +53,14 @@ public class ActivitySecretaria extends Activity {
 		
 		//obtenemos parametros
 		Intent intent=getIntent();
-		
 		String title_header=intent.getStringExtra("title_header");
 		logger.debug("title_header : "+title_header);
 		textViewHeader=(TextView)findViewById(R.id.text_header);
 		textViewHeader.setText(title_header);
 		
-		//load list view
-		logger.info("onCreate ActivityOficina");
-		listView=(ListView)findViewById(R.id.list_secretaria);
-		
-		listSecretaria=(ArrayList<Secretaria>) UtilList.loadListSecretaria();
-	    CustomSecretariaAdapter adapter;
-		
-		adapter=new CustomSecretariaAdapter(this,R.layout.secretaria_single ,listSecretaria);
-	    adapter.notifyDataSetChanged();
-	    listView.setAdapter(adapter);
+		new SecretariaAsyncTask().execute();
 	    
+		listView=(ListView)findViewById(R.id.list_secretaria);
 		
 	    //events
 	    listView.setOnItemClickListener(new OnItemClickListener() {
@@ -78,7 +70,6 @@ public class ActivitySecretaria extends Activity {
 					long arg3) {
 				
 				
-				// TODO Auto-generated method stub
 				TextView text_secretariaTitulo=(TextView)arg1.findViewById(id.text_secretariaTitulo);
 				TextView text_secretariaId=(TextView)arg1.findViewById(R.id.text_secretariaId);
 				logger.debug("on Item Click secretaria Id : "+text_secretariaId.getText().toString());
@@ -94,14 +85,67 @@ public class ActivitySecretaria extends Activity {
 
 	}
 	
-	protected class ExampleAsyncTask extends AsyncTask<Void, Void, Boolean>
+	protected class SecretariaAsyncTask extends AsyncTask<Void, Void, Boolean>
    	{
 	    	private ArrayList<String> tempList = new ArrayList<String>();
 	
         	@Override
         	protected Boolean doInBackground( Void... params ) 
-        	{    	
-    	    		
+        	{    
+        		listSecretaria=new ArrayList<Secretaria>();
+        		//listSecretaria=(ArrayList<Secretaria>) UtilList.loadListSecretaria();
+        		listSecretaria.add(
+        				new Secretaria("1",
+        						      "SECRETARIA GENERAL LEGAL Y TECNICA",
+        						      " Dr. César Guillermo FARFÁN", 
+        						      "descripcion",
+        						      "", 
+        						      "+54-(388)-4221-517",
+        						      "gfarfan@unju.edu.ar "));
+        		listSecretaria.add( new Secretaria(
+        				                 "2",
+        				                 "SECRETARIA DE ADMINISTRACION",
+        				                 "descripcion",
+        				                 "CPN Fernanda COLQUE",
+        				                 "direccion",
+        				                 "+54-(388)-4221-514",
+        				                 "secadmin@unju.edu.ar "));
+        		
+        		listSecretaria.add(new Secretaria(
+        				                           "3",
+        				                           "SECRETARIA DE CIENCIA Y TECNICA",
+        				                           "Dra. María Graciela del Valle BOVI MITRE",
+        				                           "descripcion",
+        				                           "direccion",
+        				                           "+54-(388)-4221-505",
+        				                           "secretariasectergb@unju.edu.ar"));
+        		listSecretaria.add(new Secretaria(
+        				                            "4",
+        				                           "SECRETARIA DE EXTENSION UNIVERSITARIA",
+        				                            "Dra. Elena Ester BELLI",
+        				                            "descripcion",
+        				                            "direccion",
+        				                            "+54-(388)-4244-100 ",
+        				                            "seu@unju.edu.ar"));
+        		listSecretaria.add(new Secretaria(
+        				                           "5",
+        				                           "SECRETARIO DE ASUNTOS ACADEMICOS",
+        				                          
+        				                           "Dr. Julio César ARRUETA",
+        				                           "direccion",
+        				                           "descripcion",
+        				                           "+54-(388)-4221-504",
+        				                           "c.arrueta@unju.edu.ar"));
+        		listSecretaria.add(new Secretaria(
+        				                          "6",
+        				                         "SECRETARIO DE BIENESTAR UNIVERSITARIO",
+        				                         "Sr. Diego Esteban GUTIERREZ", 
+        				                         "descripcion"
+        				                         , "direccion", 
+        				                         " +54-(388)-4221-500", 
+        				                         "sbu@unju.edu.ar"));
+        		
+        	
     	    	return true;
         	}
             
@@ -120,6 +164,12 @@ public class ActivitySecretaria extends Activity {
         	@Override
         	protected void onPostExecute(Boolean b) {
     	    	
+        		//load list view
+        		logger.info("onCreate ActivityOficina");
+        		
+        	    adapter=new CustomSecretariaAdapter(ActivitySecretaria.this,listSecretaria);
+        	  
+        	    listView.setAdapter(adapter);
         	}
 }
 

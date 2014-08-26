@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -22,23 +23,48 @@ import com.fe.model.Secretaria;
  * @Dathe : 24-08-2014
  *
  */
-public class CustomSecretariaAdapter extends ArrayAdapter<Secretaria>{
+public class CustomSecretariaAdapter extends BaseAdapter{
 
 	
 	Context myContext;
 	  int resourceId;
-	  ArrayList<Secretaria> data=new ArrayList<Secretaria>();
+	  LayoutInflater layoutInflater;
+	  ArrayList<Secretaria> data;
+	  
+	  
+	  
 	
-	  public CustomSecretariaAdapter(Context context, int textViewResourceId,
+	  public CustomSecretariaAdapter(Context context, 
 			ArrayList<Secretaria> objects) {
-		super(context, textViewResourceId, objects);
 	  
 		this.myContext=context;
-	    this.resourceId=textViewResourceId;
 	    this.data= objects;
+	    this.layoutInflater=LayoutInflater.from(this.myContext);
 	    
 	  }
 	  
+	  
+
+		@Override
+		public int getCount() {
+			// TODO Auto-generated method stub
+		  return this.data.size();
+		}
+
+
+		@Override
+		public Object getItem(int arg0) {
+			// TODO Auto-generated method stub
+			return null;
+		}
+
+
+		@Override
+		public long getItemId(int arg0) {
+			// TODO Auto-generated method stub
+			return 0;
+		}
+		  
 	 
 	@Override
 	  public View getView(int position, View convertView, ViewGroup parent) {
@@ -49,9 +75,9 @@ public class CustomSecretariaAdapter extends ArrayAdapter<Secretaria>{
 	      if(convertView==null)
 	      {
 	    	  //se obtiene 
-	    	  final LayoutInflater layoutInflater =
-	                  (LayoutInflater) myContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-	    	  itemView= layoutInflater.inflate(this.resourceId, parent, false);
+	    	 
+	    	  itemView= layoutInflater.inflate(R.layout.secretaria_single,null);
+	    	
 	    	  holder=new RecordHolder();
 	    	  holder.txtSecretaria=(TextView)itemView.findViewById(R.id.text_secretariaTitulo);
 	    	  holder.txtIdSecretaria=(TextView)itemView.findViewById(R.id.text_secretariaId);
@@ -62,7 +88,7 @@ public class CustomSecretariaAdapter extends ArrayAdapter<Secretaria>{
 	    	  holder=(RecordHolder)convertView.getTag();
 
 	      }
-	      
+	    
 	      Secretaria item=data.get(position);
 	      holder.txtSecretaria.setText(item.getTitulo_secretaria());
 	      holder.txtIdSecretaria.setText(item.getId_secretaria());
@@ -79,7 +105,7 @@ public class CustomSecretariaAdapter extends ArrayAdapter<Secretaria>{
 		  TextView txtSecretaria;
 	      TextView txtIdSecretaria;
 	  }
-	  
+
 	  
 	
 }

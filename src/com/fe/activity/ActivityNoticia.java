@@ -20,12 +20,14 @@ import com.fe.service.ServiceHandler;
 import com.google.gson.Gson;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 
 
 /**
@@ -40,16 +42,20 @@ public class ActivityNoticia extends Activity{
 	private ListView listViewNoticias;
 	private ArrayList<Noticia> listData;
     private CustomNewsAdapter adapter;
+    private TextView textViewHeader;
+    
 	 
+    private String string_header;
 	  /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
       
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.noticias);  
-         
-       logger.debug("Inicio Noticias"); 
-       new NoticiasClient().execute(); 
+         super.onCreate(savedInstanceState);
+         setContentView(R.layout.noticias);  
+         Intent intent=new Intent();
+         string_header=intent.getStringExtra("title_header");
+         logger.debug("Inicio Noticias"); 
+         new NoticiasClient().execute(); 
        
      
     }
@@ -153,6 +159,8 @@ public class ActivityNoticia extends Activity{
 		public void displayContent(String result)
 		{
 			System.out.println("Result : "+result);
+			textViewHeader=(TextView)findViewById(R.id.text_header);
+			textViewHeader.setText(string_header);
 			adapter=new CustomNewsAdapter(ActivityNoticia.this, listData);
 			listViewNoticias=(ListView)findViewById(R.id.custom_list_noticia);
 			listViewNoticias.setAdapter(adapter);

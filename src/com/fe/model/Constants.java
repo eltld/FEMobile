@@ -18,8 +18,24 @@ public final class Constants {
 	private static final String TABLE_NEWS="TB_NEWS";
 	
 	
+	//TAG INTENT NOTICIAS
+	private static final String  PUT_TITULO="TITULO";
+    private static final String  PUT_ID="ID";
+	
+    
+    public static String getPutTitulo() {
+		return PUT_TITULO;
+	}
+	public static String getPutId() {
+		return PUT_ID;
+	}
+    
+    
+    
 	//HEADER XML 
 	
 	
+    
+    
 	
 }
