@@ -107,11 +107,11 @@ public class ActivityComedor extends Activity{
 				public void onItemClick(AdapterView<?> arg0, View arg1,
 						int arg2, long arg3) {
 					
-					TextView text_comedorTitulo=(TextView)arg1.findViewById(id.text_comedorTitulo);
+					TextView text_comedorNombre=(TextView)arg1.findViewById(id.text_comedorNombre);
 					TextView text_comedorId=(TextView)arg1.findViewById(R.id.text_comedorId);
 					
 					Intent intent=new Intent(ActivityComedor.this,ActivityComedorContent.class);
-					intent.putExtra(Constants.getPutTitulo(),text_comedorTitulo.getText().toString());
+					intent.putExtra(Constants.getPutTitulo(),text_comedorNombre.getText().toString());
 					intent.putExtra(Constants.getPutTitulo(),text_comedorId.getText().toString());
 			        startActivity(intent);
 				}

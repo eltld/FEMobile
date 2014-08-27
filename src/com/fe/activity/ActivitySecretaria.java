@@ -71,7 +71,7 @@ public class ActivitySecretaria extends Activity {
 				
 				
 				TextView text_secretariaTitulo=(TextView)arg1.findViewById(id.text_secretariaTitulo);
-				TextView text_secretariaId=(TextView)arg1.findViewById(R.id.text_secretariaId);
+				TextView text_secretariaId=(TextView)arg1.findViewById(R.id.text_idSecretaria);
 				logger.debug("on Item Click secretaria Id : "+text_secretariaId.getText().toString());
 				logger.debug("on item clicks secretaria : "+text_secretariaTitulo.getText().toString());
 				

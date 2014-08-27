@@ -80,7 +80,7 @@ public class CustomSecretariaAdapter extends BaseAdapter{
 	    	
 	    	  holder=new RecordHolder();
 	    	  holder.txtSecretaria=(TextView)itemView.findViewById(R.id.text_secretariaTitulo);
-	    	  holder.txtIdSecretaria=(TextView)itemView.findViewById(R.id.text_secretariaId);
+	    	  holder.txtIdSecretaria=(TextView)itemView.findViewById(R.id.text_idSecretaria);
 	    	  itemView.setTag(holder);
 	      }
 	      else

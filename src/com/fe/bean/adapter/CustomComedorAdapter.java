@@ -57,41 +57,38 @@ public class CustomComedorAdapter extends BaseAdapter {
 	}
 
 	@Override
-	public View getView(int arg0, View arg1, ViewGroup arg2) {
-		// TODO Auto-generated method stub
-		
-		// TODO Auto-generated method stub
-	      View itemView=arg1;
+	public View getView(int position, View convertView, ViewGroup parent) {
+	      View itemView=convertView;
 	      RecordHolder holder=null;
 	      
-	      if(arg1==null)
+	      if(convertView==null)
 	      {
 	    	  //se obtiene 
 	    	 
 	    	  itemView= layoutInflater.inflate(R.layout.comedor_single,null);
 	    	
 	    	  holder=new RecordHolder();
-	    	  holder.txtComedor=(TextView)itemView.findViewById(R.id.text_comedorTitulo);
+	    	  holder.txtComedor=(TextView)itemView.findViewById(R.id.text_comedorNombre);
 	    	  holder.txtIdComedor=(TextView)itemView.findViewById(R.id.text_comedorId);
 	    	  itemView.setTag(holder);
 	      }
 	      else
 	      {
-	    	  holder=(RecordHolder)arg1.getTag();
+	    	  holder=(RecordHolder)itemView.getTag();
 
 	      }
 	    
-	      Comedor item=data.get(arg0);
+	      Comedor item=data.get(position);
 	      System.out.println("getNombreComedor : "+item.getNombre_comedor() +" Id_comedor : "+item.getId_comedor());
 	      holder.txtComedor.setText(item.getNombre_comedor());
-	      holder.txtIdComedor.setText(item.getId_comedor());
+	      holder.txtIdComedor.setText(String.valueOf(item.getId_comedor()));
 	      //visibilidad del identificador de noticia
 	      holder.txtIdComedor.setVisibility(View.GONE);
 	     
 	      return itemView;
 	}
 
-	  //representa al image and text del grid custom
+	  //representa 
 	  static class RecordHolder
 	  {
 		  TextView txtComedor;

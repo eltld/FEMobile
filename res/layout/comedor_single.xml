@@ -5,12 +5,13 @@
     android:orientation="vertical" >
 
     <TextView
-        android:id="@+id/text_comedorTitulo"
+        android:id="@+id/text_comedorNombre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="tituloComedor" />
 
-    <TextView
+  
+     <TextView
         android:id="@+id/text_comedorId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
