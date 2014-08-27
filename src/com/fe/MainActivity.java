@@ -7,6 +7,7 @@ import java.util.ArrayList;
 
 
 import com.fe.activity.ActivityComedor;
+import com.fe.activity.ActivityGaleria;
 import com.fe.activity.ActivityMapUnju;
 import com.fe.activity.ActivityNoticia;
 import com.fe.activity.ActivitySecretaria;
@@ -103,6 +104,11 @@ public class MainActivity extends Activity  implements OnItemClickListener {
 			         intent.putExtra("title_header","Secretarias");
 			         startActivity(intent);
 			        };break;
+			    case 4 :{
+			    	 logger.debug("Gallery");
+			    	 final Intent intent=new Intent(MainActivity.this,ActivityGaleria.class);
+			    	 startActivity(intent);
+			    };break;
 			    }
 				
 			}

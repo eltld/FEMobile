@@ -16,6 +16,8 @@
     <style name="AppTheme" parent="AppBaseTheme">
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
+    
+    <style name="ProgressBarStyle" parent="@android:style/Widget.ProgressBar.Horizontal"/>
     <color name="header_background">#a51c30</color>
     <color name="header_text">#fff</color>
     <color name="header_background_image">#444</color>
