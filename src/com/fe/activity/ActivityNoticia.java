@@ -13,7 +13,6 @@ import com.fe.MainActivity;
 import com.fe.R;
 import com.fe.bean.adapter.CustomNewsAdapter;
 import com.fe.bean.json.NoticiaTag;
-import com.fe.client.NoticiasClient2;
 import com.fe.model.ConstantRest;
 import com.fe.model.Noticia;
 import com.fe.service.ServiceHandler;
@@ -83,7 +82,7 @@ public class ActivityNoticia extends Activity{
     		
     		// TODO Auto-generated method stub
     		ServiceHandler serviceHandler=new ServiceHandler();
-    		String jsonString=serviceHandler.makeServiceCall(ConstantRest.getUrlNoticias(),serviceHandler.GET);
+    		String jsonString=serviceHandler.makeServiceCall(ConstantRest.URL_NOTICIAS,serviceHandler.GET);
     		logger.info("json : "+jsonString);
     		
     		

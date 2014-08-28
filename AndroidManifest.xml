@@ -98,9 +98,9 @@
              android:name="com.google.android.maps.v2.API_KEY"
              android:value="AIzaSyAjiXgifxnR_p3950DD2XQ67rxmGp1N7mY"
              /> 
-           <meta-data android:name="com.google.android.gms.version"
+          <!--   <meta-data android:name="com.google.android.gms.version"
                    android:value="@integer/google_play_services_version" />
-           
+           -->
     </application>
      
     

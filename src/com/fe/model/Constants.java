@@ -19,9 +19,11 @@ public final class Constants {
 	
 	
 	//TAG INTENT NOTICIAS
-	private static final String  PUT_TITULO="TITULO";
-    private static final String  PUT_ID="ID";
+	public static final String  PUT_TITULO="TITULO";
+    public static final String  PUT_ID="ID";
 	
+    
+    
     
     public static String getPutTitulo() {
 		return PUT_TITULO;

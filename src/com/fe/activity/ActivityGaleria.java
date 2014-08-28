@@ -1,6 +1,22 @@
 package com.fe.activity;
 
+import java.util.ArrayList;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import com.fe.R;
+import com.fe.bean.adapter.CustomGaleriaAdapter;
+import com.fe.bean.json.GaleriaTag;
+import com.fe.bean.json.NoticiaTag;
+import com.fe.model.ConstantRest;
+import com.fe.model.Galeria;
+import com.fe.model.Noticia;
+import com.fe.service.ServiceHandler;
+import com.google.gson.Gson;
 import com.nostra13.universalimageloader.cache.disc.naming.Md5FileNameGenerator;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
@@ -19,6 +35,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 
 
@@ -30,15 +47,12 @@ import android.widget.ProgressBar;
  */
 public class ActivityGaleria extends Activity{
 
+	private static final Logger logger = (Logger) LoggerFactory.getLogger(ActivityGaleria.class);
+		
 	DisplayImageOptions options;
 	protected ImageLoader imageLoader;
-	String[] imageUrls={"http://i.stack.imgur.com/pMhDh.png",
-			            "http://javatechig.com/wp-content/uploads/2013/06/Async_ListView.png",
-			            "http://i.stack.imgur.com/pMhDh.png",
-			            "http://img4.wikia.nocookie.net/__cb20120718024112/fantendo/images/thumb/6/6e/Small-mario.png/381px-Small-mario.png",
-			            "http://2.bp.blogspot.com/-t-BKJl51VlM/UM8quCWcoYI/AAAAAAAAA8M/hs9lWDSf0fQ/s400/base_faixa+(1)gerteerewrwsdsasdsd.png",
-			            "http://1.bp.blogspot.com/-prQSKUayZtw/T8HrQ5H_LWI/AAAAAAAASzs/4znOQs2kXto/s1600/rosas%252Bpng%252B(0).png"};
-
+	ArrayList<Galeria> listData;
+	
 	private GridView listView;
 	
 	@Override
@@ -70,89 +84,98 @@ public class ActivityGaleria extends Activity{
     ImageLoader.getInstance().init(config);
 	imageLoader=ImageLoader.getInstance();
 	
-	listView = (GridView) findViewById(R.id.grid_gallery_image);
-	((GridView) listView).setAdapter(new ImageAdapter());
+	logger.debug("Execute asyntask");
+	new GaleriaAsyncTask().execute();
+	
 	
 	}
 	
- protected class FotoAsyncTask extends AsyncTask<String,Void, String>{
+ protected class GaleriaAsyncTask extends AsyncTask<String,Void, String>{
 
+	 
+	 protected void onPreExecute() {
+        logger.debug("onPreExecute");
+      
+        
+    }   
 	@Override
 	protected String doInBackground(String... arg0) {
+	
+		try
+		{
+		
 		// TODO Auto-generated method stub
-		return null;
-	}
- 
-  
- 
- }
- 
-	static class ViewHolder {
-		ImageView imageView;
-		ProgressBar progressBar;
-	}
-
- 
- public class ImageAdapter extends BaseAdapter {
-		@Override
-		public int getCount() {
-			return imageUrls.length;
-		}
-
-		@Override
-		public Object getItem(int position) {
-			return null;
-		}
-
-		@Override
-		public long getItemId(int position) {
-			return position;
-		}
-
-		@Override
-		public View getView(int position, View convertView, ViewGroup parent) {
-			final ViewHolder holder;
-			View view = convertView;
-			if (view == null) {
-				view = getLayoutInflater().inflate(R.layout.gallery_image_single, parent, false);
-				holder = new ViewHolder();
-				assert view != null;
-				holder.imageView = (ImageView) view.findViewById(R.id.image);
-				holder.progressBar = (ProgressBar) view.findViewById(R.id.progress);
-				view.setTag(holder);
-			} else {
-				holder = (ViewHolder) view.getTag();
+		ServiceHandler serviceHandler=new ServiceHandler();
+		String jsonString=serviceHandler.makeServiceCall(ConstantRest.URL_IMAGES,serviceHandler.GET);
+		logger.info("json : "+jsonString);
+		
+		if(jsonString!=null && jsonString.length()!=0)
+		{
+			try
+			{
+			
+				logger.debug("Recorro el listado de json");
+				logger.debug("jsonString : "+jsonString);
+				listData=new ArrayList<Galeria>();
+				Gson gson=new Gson();
+				JSONArray jsonArray=new JSONArray(jsonString);
+				for(int i=0; i<jsonArray.length();i++)
+				{
+				   Galeria galeria=new Galeria();
+				   JSONObject jsonObject=jsonArray.getJSONObject(i);
+				   galeria.setId_galeria(Integer.parseInt(jsonObject.getString(GaleriaTag.GALERIA_ID)));
+				   galeria.setUrl_image(jsonObject.getString(GaleriaTag.GALERIA_URL));
+				   listData.add(galeria);
+					
+				}
+			
+				
+			}catch(JSONException e)
+			{
+				logger.error("Error JSONExcetion : "+e.toString());
 			}
-
-			imageLoader.displayImage(imageUrls[position], holder.imageView, options, new SimpleImageLoadingListener() {
-										 @Override
-										 public void onLoadingStarted(String imageUri, View view) {
-											 holder.progressBar.setProgress(0);
-											 holder.progressBar.setVisibility(View.VISIBLE);
-										 }
-
-										 @Override
-										 public void onLoadingFailed(String imageUri, View view,
-												 FailReason failReason) {
-											 holder.progressBar.setVisibility(View.GONE);
-										 }
-
-										 @Override
-										 public void onLoadingComplete(String imageUri, View view, Bitmap loadedImage) {
-											 holder.progressBar.setVisibility(View.GONE);
-										 }
-									 }, new ImageLoadingProgressListener() {
-										 @Override
-										 public void onProgressUpdate(String imageUri, View view, int current,
-												 int total) {
-											 holder.progressBar.setProgress(Math.round(100.0f * current / total));
-										 }
-									 }
-			);
-
-			return view;
+			
 		}
+		
+		}catch(Exception ex)
+		{
+			logger.debug("Error :"+ex.toString());
+			
+			
+		}
+		
+		return null;
+		
+	}
+	
+	@Override
+	protected void onPostExecute(String result)
+	{
+		if(listData!=null)
+		{
+			logger.debug("listData informacion");
+			//((GridView) listView).setAdapter(new ImageAdapter());
+			String[] imageUrls=new String[listData.size()];
+			int i=0;
+			for(Galeria galeria : listData)
+			{
+				imageUrls[i]=galeria.getUrl_image();
+				i++;
+			}
+			
+			logger.debug("mostrar informacion");
+			listView = (GridView) findViewById(R.id.grid_gallery_image);
+			((GridView) listView).setAdapter(new CustomGaleriaAdapter(ActivityGaleria.this, imageLoader, options, imageUrls));
+
+		}else
+		{
+			logger.debug("no contiene datos");
+			
+		}
+  			
+	}
  
  }
+ 
  
 }
