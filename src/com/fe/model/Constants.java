@@ -19,24 +19,15 @@ public final class Constants {
 	
 	
 	//TAG INTENT NOTICIAS
-	public static final String  PUT_TITULO="TITULO";
-    public static final String  PUT_ID="ID";
+	public static final String  NOTICIA_TITULO="TITULO";
+    public static final String  NOTICIA_ID="ID";
 	
+    //TAG INTENT IMAGES
+    public static final String IMAGE="IMAGE";
+    public static final String IMAGE_POSITION="POSITION";
     
     
-    
-    public static String getPutTitulo() {
-		return PUT_TITULO;
-	}
-	public static String getPutId() {
-		return PUT_ID;
-	}
-    
-    
-    
-	//HEADER XML 
-	
-	
+   
     
     
 	

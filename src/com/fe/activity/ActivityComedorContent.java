@@ -42,8 +42,8 @@ public class ActivityComedorContent extends Activity {
 	
 	//obtenemos la secretaria a cargar
 	Intent intent=this.getIntent();
-	String idComedor=intent.getStringExtra(Constants.getPutId());
-	String tituloComedor=intent.getStringExtra(Constants.getPutTitulo());
+	String idComedor=intent.getStringExtra(Constants._ID);
+	String tituloComedor=intent.getStringExtra(Constants.PUT_TITULO);
 	
 	//cargo objectos 
 	comedorBean=new ComedorBean();

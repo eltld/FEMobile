@@ -13,10 +13,13 @@ import com.fe.bean.adapter.CustomGaleriaAdapter;
 import com.fe.bean.json.GaleriaTag;
 import com.fe.bean.json.NoticiaTag;
 import com.fe.model.ConstantRest;
+import com.fe.model.Constants;
 import com.fe.model.Galeria;
 import com.fe.model.Noticia;
 import com.fe.service.ServiceHandler;
 import com.google.gson.Gson;
+import com.nostra13.example.universalimageloader.ImagePagerActivity;
+import com.nostra13.example.universalimageloader.Constants.Extra;
 import com.nostra13.universalimageloader.cache.disc.naming.Md5FileNameGenerator;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
@@ -27,11 +30,15 @@ import com.nostra13.universalimageloader.core.listener.ImageLoadingProgressListe
 import com.nostra13.universalimageloader.core.listener.SimpleImageLoadingListener;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AbsListView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
@@ -53,7 +60,7 @@ public class ActivityGaleria extends Activity{
 	protected ImageLoader imageLoader;
 	ArrayList<Galeria> listData;
 	
-	private GridView listView;
+	private AbsListView gridView;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -86,6 +93,8 @@ public class ActivityGaleria extends Activity{
 	
 	logger.debug("Execute asyntask");
 	new GaleriaAsyncTask().execute();
+	
+	
 	
 	
 	}
@@ -155,24 +164,40 @@ public class ActivityGaleria extends Activity{
 		{
 			logger.debug("listData informacion");
 			//((GridView) listView).setAdapter(new ImageAdapter());
-			String[] imageUrls=new String[listData.size()];
+			final String[] imageUrls=new String[listData.size()];
 			int i=0;
 			for(Galeria galeria : listData)
 			{
 				imageUrls[i]=galeria.getUrl_image();
 				i++;
 			}
-			
+			//se carga la informacion
 			logger.debug("mostrar informacion");
-			listView = (GridView) findViewById(R.id.grid_gallery_image);
-			((GridView) listView).setAdapter(new CustomGaleriaAdapter(ActivityGaleria.this, imageLoader, options, imageUrls));
-
+			gridView = (GridView) findViewById(R.id.grid_gallery_image);
+			((GridView) gridView).setAdapter(new CustomGaleriaAdapter(ActivityGaleria.this, imageLoader, options, imageUrls));
+			gridView.setOnItemClickListener(new OnItemClickListener() {
+				@Override
+				public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+					startImagePagerActivity(position,imageUrls);
+				}
+			});
+			
+			
 		}else
 		{
 			logger.debug("no contiene datos");
 			
 		}
   			
+	}
+	
+	public void  startImagePagerActivity(int position,String[] imageUrls)
+	{
+		Intent intent = new Intent(ActivityGaleria.this, ActivityGaleriaImage.class);
+		intent.putExtra(Constants.PUT_IMAGE, imageUrls);
+		intent.putExtra(, position);
+		startActivity(intent);
+		
 	}
  
  }
