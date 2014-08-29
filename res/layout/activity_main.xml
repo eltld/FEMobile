@@ -5,6 +5,9 @@
   android:layout_height="match_parent"
  >
 
+       
+   <include android:id="@+id/footer" layout="@layout/footer"  /> 
+
     
     
   <!-- Header -->
@@ -45,11 +48,14 @@
          android:numColumns="auto_fit"
          android:stretchMode="columnWidth" 
          android:scrollbars="none"
-         android:layout_below="@+id/textView1">
+         android:layout_below="@+id/textView1"
+         android:layout_above="@+id/footer">
 
      </GridView>
  <!--  </ScrollView>
 -->
+
+
  
     
 </RelativeLayout>

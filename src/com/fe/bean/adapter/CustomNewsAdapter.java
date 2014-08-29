@@ -81,6 +81,7 @@ public class CustomNewsAdapter extends BaseAdapter {
 			holder.noticiaBajada = (TextView) convertView.findViewById(R.id.text_noticiaBajada);
 			holder.noticiaDateView = (TextView) convertView.findViewById(R.id.text_noticiaFecha);
 			holder.noticiaImageView = (ImageView) convertView.findViewById(R.id.image_noticiaImage);
+			holder.noticiaId=(TextView)convertView.findViewById(R.id.text_noticiaId);
 			convertView.setTag(holder);
 		} else {
 			holder = (ViewHolder) convertView.getTag();
@@ -91,8 +92,10 @@ public class CustomNewsAdapter extends BaseAdapter {
 		holder.noticiaHead.setText(noticias.getTituloNoticia());
 		holder.noticiaBajada.setText(noticias.getBajadaNoticia());
 		holder.noticiaDateView.setText(noticias.getDateNoticia());
- 
-		//envio a cargar asyncTask la image   
+        holder.noticiaId.setText(noticias.getIdNoticia());
+        holder.noticiaId.setVisibility(View.GONE);
+		
+        //envio a cargar asyncTask la image   
 		if (holder.noticiaImageView != null) {
 			new ImageDownloaderTask(holder.noticiaImageView).execute(noticias.getUrlImageNoticia());
 		}
@@ -105,6 +108,7 @@ public class CustomNewsAdapter extends BaseAdapter {
 		TextView noticiaHead;
 		TextView noticiaBajada;
 		TextView noticiaDateView;
+		TextView noticiaId;
 		ImageView noticiaImageView;
 	}
 }

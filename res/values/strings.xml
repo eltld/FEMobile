@@ -10,7 +10,9 @@
     <string name="activity_map_unju">Mapa</string>
     <string name="activity_noticias">Noticias</string>
     <string name="activity_galeria">Galeria</string>
+    <string name="activity_galeriaImage">Galeria</string>
     <string name="str_titulo_principal">UNJU</string>
     <string name="str_descImage">Imagen</string>
+   
 
 </resources>

@@ -11,6 +11,7 @@ import org.slf4j.LoggerFactory;
 
 import com.fe.MainActivity;
 import com.fe.R;
+import com.fe.R.id;
 import com.fe.bean.adapter.CustomNewsAdapter;
 import com.fe.bean.json.NoticiaTag;
 import com.fe.model.ConstantRest;
@@ -23,6 +24,9 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.ProgressBar;
@@ -164,7 +168,18 @@ public class ActivityNoticia extends Activity{
 			listViewNoticias=(ListView)findViewById(R.id.custom_list_noticia);
 			listViewNoticias.setAdapter(adapter);
 			
-			
+			listViewNoticias.setOnItemClickListener(new OnItemClickListener() {
+
+				@Override
+				public void onItemClick(AdapterView<?> arg0, View arg1,
+						int arg2, long arg3) {
+					logger.debug("click noticia");
+					
+					
+					TextView text_noticiaId=(TextView)arg1.findViewById(R.id.text_noticiaId);
+					
+				}
+			});
 		}
 
     }

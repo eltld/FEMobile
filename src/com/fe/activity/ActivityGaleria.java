@@ -18,8 +18,6 @@ import com.fe.model.Galeria;
 import com.fe.model.Noticia;
 import com.fe.service.ServiceHandler;
 import com.google.gson.Gson;
-import com.nostra13.example.universalimageloader.ImagePagerActivity;
-import com.nostra13.example.universalimageloader.Constants.Extra;
 import com.nostra13.universalimageloader.cache.disc.naming.Md5FileNameGenerator;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
@@ -52,7 +50,7 @@ import android.widget.ProgressBar;
  * @dathe  : 27-08-2014
  *
  */
-public class ActivityGaleria extends Activity{
+public class ActivityGaleria extends ActivityBase{
 
 	private static final Logger logger = (Logger) LoggerFactory.getLogger(ActivityGaleria.class);
 		
@@ -194,8 +192,8 @@ public class ActivityGaleria extends Activity{
 	public void  startImagePagerActivity(int position,String[] imageUrls)
 	{
 		Intent intent = new Intent(ActivityGaleria.this, ActivityGaleriaImage.class);
-		intent.putExtra(Constants.PUT_IMAGE, imageUrls);
-		intent.putExtra(, position);
+		intent.putExtra(Constants.IMAGE, imageUrls);
+		intent.putExtra(Constants.IMAGE_POSITION, position);
 		startActivity(intent);
 		
 	}

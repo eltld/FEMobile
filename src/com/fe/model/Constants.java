@@ -27,7 +27,9 @@ public final class Constants {
     public static final String IMAGE_POSITION="POSITION";
     
     
-   
+   //TAG INTENT COMEDOR 
+    public static final String COMEDOR_TITULO="TITULO";
+    public static final String COMEDOR_ID="ID";
     
     
 	

@@ -13,6 +13,6 @@ public abstract  class ConstantRest {
 	
 	//private final static String URL_NOTICIAS="http://10.2.2.245/WebRest/noticias.json.txt";
 	public final static String URL_NOTICIAS="http://10.2.2.245/WebRest/noticias.php";
-    public final static String URL_IMAGES="http://192.168.80.51/image.php";
+    public final static String URL_IMAGES="http://10.2.2.245/WebRest//fotos.php";
 	
 }

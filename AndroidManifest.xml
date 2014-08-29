@@ -93,6 +93,14 @@
              <category android:name="android.intent.category.LAUNCHER"/>
          </intent-filter>
          </activity>
+          <activity 
+            android:name="com.fe.activity.ActivityGaleriaImage"
+            android:label="@string/activity_galeriaImage">
+         <intent-filter>
+             <action android:name="android.intent.action.MAIN"/>
+             <category android:name="android.intent.category.LAUNCHER"/>
+         </intent-filter>
+         </activity>
          <!-- apy key -->
          <meta-data 
              android:name="com.google.android.maps.v2.API_KEY"

@@ -111,8 +111,8 @@ public class ActivityComedor extends Activity{
 					TextView text_comedorId=(TextView)arg1.findViewById(R.id.text_comedorId);
 					
 					Intent intent=new Intent(ActivityComedor.this,ActivityComedorContent.class);
-					intent.putExtra(Constants.getPutTitulo(),text_comedorNombre.getText().toString());
-					intent.putExtra(Constants.getPutTitulo(),text_comedorId.getText().toString());
+					intent.putExtra(Constants.COMEDOR_TITULO,text_comedorNombre.getText().toString());
+					intent.putExtra(Constants.COMEDOR_ID,text_comedorId.getText().toString());
 			        startActivity(intent);
 				}
 			});
