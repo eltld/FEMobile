@@ -9,6 +9,7 @@ public class Noticia {
 	private String bajadaNoticia;
 	private String dateNoticia;
 	private String urlImageNoticia;
+	private String cuerpoNoticia;
 	private Drawable imageNoticia;
 	
 
@@ -54,13 +55,24 @@ public class Noticia {
 		this.urlImageNoticia = urlImageNoticia;
 	}
 	
-    @Override
+	
+    public String getCuerpoNoticia() {
+		return cuerpoNoticia;
+	}
+
+
+	public void setCuerpoNoticia(String cuerpoNoticia) {
+		this.cuerpoNoticia = cuerpoNoticia;
+	}
+
+
+	@Override
 	public String toString()
 	{
 		
 		return " idNoticia : "+this.idNoticia + " tituloNoticia : "+this.tituloNoticia+
 				" bajadaNoticia : "+this.bajadaNoticia +  " imageNoticia : "+this.imageNoticia
-				+" urlImageNoticia : "+this.urlImageNoticia;
+				+" urlImageNoticia : "+this.urlImageNoticia+ " cuerpoNoticia : "+this.cuerpoNoticia;
 	}
 	
 }

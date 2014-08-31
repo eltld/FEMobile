@@ -12,19 +12,29 @@ import org.slf4j.LoggerFactory;
 import com.fe.MainActivity;
 import com.fe.R;
 import com.fe.R.id;
+import com.fe.bean.NoticiaBean;
 import com.fe.bean.adapter.CustomNewsAdapter;
 import com.fe.bean.json.NoticiaTag;
 import com.fe.model.ConstantRest;
+import com.fe.model.Constants;
 import com.fe.model.Noticia;
 import com.fe.service.ServiceHandler;
 import com.google.gson.Gson;
+import com.nostra13.universalimageloader.cache.disc.naming.Md5FileNameGenerator;
+import com.nostra13.universalimageloader.core.DisplayImageOptions;
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
+import com.nostra13.universalimageloader.core.assist.QueueProcessingType;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.LinearLayout;
@@ -46,7 +56,11 @@ public class ActivityNoticia extends Activity{
 	private ArrayList<Noticia> listData;
     private CustomNewsAdapter adapter;
     private TextView textViewHeader;
-    
+    ProgressDialog pDialog;
+    ProgressBar pB;
+    DisplayImageOptions options;
+	protected ImageLoader imageLoader;
+	NoticiaBean noticiaBean=null;
 	 
     private String string_header;
 	  /** Called when the activity is first created. */
@@ -58,22 +72,53 @@ public class ActivityNoticia extends Activity{
          Intent intent=new Intent();
          string_header=intent.getStringExtra("title_header");
          logger.debug("Inicio Noticias"); 
+         
+         pB=(ProgressBar)findViewById(R.id.marker_progress);
+      	
+         noticiaBean=new NoticiaBean(getApplicationContext());
+
+         
+         options = new DisplayImageOptions.Builder()
+     	.showImageOnLoading(R.drawable.ic_stub)
+     	.showImageForEmptyUri(R.drawable.ic_empty)
+     	.showImageOnFail(R.drawable.ic_error)
+     	.cacheInMemory(true)
+     	.cacheOnDisk(true)
+     	.considerExifParams(true)
+     	.bitmapConfig(Bitmap.Config.RGB_565)
+     	.build();
+     	
+     	ImageLoaderConfiguration config = new ImageLoaderConfiguration.Builder(getApplicationContext())
+     	.threadPriority(Thread.NORM_PRIORITY - 2)
+     	.denyCacheImageMultipleSizesInMemory()
+     	.diskCacheFileNameGenerator(new Md5FileNameGenerator())
+     	.diskCacheSize(50 * 1024 * 1024) // 50 Mb
+     	.tasksProcessingOrder(QueueProcessingType.LIFO)
+     	.writeDebugLogs() // Remove for release app
+     	.build();
+         // Initialize ImageLoader with configuration.
+         ImageLoader.getInstance().init(config);
+     	imageLoader=ImageLoader.getInstance();
+         
+     	
+     	 
          new NoticiasClient().execute(); 
        
      
+         
     }
       
     
     private class NoticiasClient extends AsyncTask<String,Void, String>{
 
-    	LinearLayout linHeaderProgress;
+    	
     	
     	private ProgressBar progressBar;
     	
     	protected void onPreExecute() {
             logger.debug("onPreExecute");
-           linHeaderProgress=(LinearLayout)findViewById(R.id.linlaHeaderProgress);
-           linHeaderProgress.setVisibility(View.VISIBLE);
+           
+             pB.setVisibility(View.VISIBLE);
            
        }
     	
@@ -103,21 +148,16 @@ public class ActivityNoticia extends Activity{
     				{
     				   Noticia noticia=new Noticia();
     				   JSONObject jsonObject=jsonArray.getJSONObject(i);
-    				   noticia.setIdNoticia(jsonObject.getString(NoticiaTag.getId()));
-    				   noticia.setTituloNoticia(jsonObject.getString(NoticiaTag.getTitulo()));
-    				   noticia.setBajadaNoticia(jsonObject.getString(NoticiaTag.getBajada()));
-    				   noticia.setDateNoticia(jsonObject.getString(NoticiaTag.getFecha()));
-    				   noticia.setUrlImageNoticia(jsonObject.getString(NoticiaTag.getUrl()));
+    				   noticia.setIdNoticia(jsonObject.getString(NoticiaTag.ID));
+    				   noticia.setTituloNoticia(jsonObject.getString(NoticiaTag.TITULO));
+    				   noticia.setBajadaNoticia(jsonObject.getString(NoticiaTag.BAJADA));
+    				   noticia.setDateNoticia(jsonObject.getString(NoticiaTag.FECHA));
+    				   noticia.setUrlImageNoticia(jsonObject.getString(NoticiaTag.URL));
+    				   noticia.setCuerpoNoticia(jsonObject.getString(NoticiaTag.CUERPO));
     				   listData.add(noticia);
     					
     				}
-    				
     			
-    				for(Noticia a: listData)
-    				{
-    					logger.info(a.toString());
-    				}
-    				
     				
     			}catch(JSONException e)
     			{
@@ -139,16 +179,20 @@ public class ActivityNoticia extends Activity{
     	}
     	
     	
-    
+    	protected void onProgressUpdate(Integer... progress){
+    		pB.setProgress(progress[0]);
+    		}
     	
 		protected void onPostExecute(String result)
     	{
     		if(listData.size()!=0)
     		{
+    			for(Noticia noticia : listData)
+    			{ noticiaBean.add(noticia);}
     			
     			System.out.println("informacion de datos");
     			 // HIDE THE SPINNER AFTER LOADING FEEDS
-    		    linHeaderProgress.setVisibility(View.GONE);
+    			  pB.setVisibility(View.GONE);
     			displayContent(result);
     			
     		}
@@ -164,7 +208,8 @@ public class ActivityNoticia extends Activity{
 			System.out.println("Result : "+result);
 			textViewHeader=(TextView)findViewById(R.id.text_header);
 			textViewHeader.setText(string_header);
-			adapter=new CustomNewsAdapter(ActivityNoticia.this, listData);
+			adapter=new CustomNewsAdapter(ActivityNoticia.this, listData,imageLoader,
+					options);
 			listViewNoticias=(ListView)findViewById(R.id.custom_list_noticia);
 			listViewNoticias.setAdapter(adapter);
 			
@@ -177,7 +222,10 @@ public class ActivityNoticia extends Activity{
 					
 					
 					TextView text_noticiaId=(TextView)arg1.findViewById(R.id.text_noticiaId);
-					
+					Intent intent = new Intent(ActivityNoticia.this, ActivityNoticiaContent.class);
+					intent.putExtra(Constants.NOTICIA_ID, text_noticiaId.getText().toString());
+		
+					startActivity(intent);
 				}
 			});
 		}

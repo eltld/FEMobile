@@ -6,12 +6,14 @@ import java.util.ArrayList;
 
 
 
+
 import com.fe.activity.ActivityComedor;
 import com.fe.activity.ActivityGaleria;
 import com.fe.activity.ActivityMapUnju;
 import com.fe.activity.ActivityNoticia;
 import com.fe.activity.ActivitySecretaria;
 import com.fe.bean.adapter.CustomGridAdapter;
+import com.fe.bean.util.ScrollableGridView;
 import com.fe.bean.util.UtilList;
 import com.fe.model.ItemGrid;
 
@@ -41,8 +43,9 @@ public class MainActivity extends Activity  implements OnItemClickListener {
 
 	private static final Logger logger = (Logger) LoggerFactory.getLogger(MainActivity.class);
 	  
-	  GridView gridView;
-	  ArrayList<ItemGrid> listItemGridImage=new ArrayList<ItemGrid>();
+	  //GridView gridView;
+	  ScrollableGridView gridView;
+	   ArrayList<ItemGrid> listItemGridImage=new ArrayList<ItemGrid>();
 	  //adapter principal
 	  CustomGridAdapter gridAdapterPrincipal;
 	  
@@ -55,7 +58,9 @@ public class MainActivity extends Activity  implements OnItemClickListener {
 		logger.info("onCreate MainActivity");
 		
 		//load content 
-		gridView=(GridView)findViewById(R.id.grid_principal);
+		//comento esto no se la verdad gridView=(GridView)findViewById(R.id.grid_principal);
+		 gridView = (ScrollableGridView) findViewById(R.id.grid_principal);
+		 gridView.setExpanded(true);
 		//load listItemGridImages
 		listItemGridImage=(ArrayList<ItemGrid>) UtilList.loadItemGridPrincipal(this.getResources());
 	    

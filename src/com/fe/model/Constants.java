@@ -21,6 +21,8 @@ public final class Constants {
 	//TAG INTENT NOTICIAS
 	public static final String  NOTICIA_TITULO="TITULO";
     public static final String  NOTICIA_ID="ID";
+    public static final String  NOTICIA_BAJADA="BAJADA";
+    public static final String  NOTICIA_CONTENT="CONTENT";
 	
     //TAG INTENT IMAGES
     public static final String IMAGE="IMAGE";

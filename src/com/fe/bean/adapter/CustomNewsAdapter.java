@@ -7,12 +7,19 @@ import org.slf4j.LoggerFactory;
 
 
 
+
+
+
 import com.fe.R;
 import com.fe.activity.ActivityNoticia;
+import com.fe.model.Galeria;
 import com.fe.model.Noticia;
 import com.fe.task.ImageDownloaderTask;
 
 
+
+import com.nostra13.universalimageloader.core.DisplayImageOptions;
+import com.nostra13.universalimageloader.core.ImageLoader;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -35,12 +42,27 @@ public class CustomNewsAdapter extends BaseAdapter {
 	private ArrayList<Noticia> listData;
 	private LayoutInflater layoutInflater;
 	private java.util.logging.Logger logger;
+	private ImageLoader imageLoader;
+	private String[] imageUrls;
+	private Context myContext;
+	private DisplayImageOptions options;
 	
-	public CustomNewsAdapter(Context context,ArrayList<Noticia> listData)
+	
+	public CustomNewsAdapter(Context context,ArrayList<Noticia> listData,
+			ImageLoader imageLoader,DisplayImageOptions options)
 	{
-	
+	   int i=0;  
+		imageUrls=new String[listData.size()];
+		for(Noticia noticia : listData)
+		{
+			imageUrls[i]=noticia.getUrlImageNoticia();
+			i++;
+		}
 		System.out.println("CustonNewsAdapter count : "+listData.size());
 		this.listData=listData;
+		this.imageLoader=imageLoader;
+		this.options=options;
+		
 		
 		layoutInflater=LayoutInflater.from(context);
 	}
@@ -95,9 +117,14 @@ public class CustomNewsAdapter extends BaseAdapter {
         holder.noticiaId.setText(noticias.getIdNoticia());
         holder.noticiaId.setVisibility(View.GONE);
 		
+    	
+        
         //envio a cargar asyncTask la image   
 		if (holder.noticiaImageView != null) {
-			new ImageDownloaderTask(holder.noticiaImageView).execute(noticias.getUrlImageNoticia());
+			 
+			imageLoader.displayImage(imageUrls[position], holder.noticiaImageView, options);
+
+			//new ImageDownloaderTask(holder.noticiaImageView).execute(noticias.getUrlImageNoticia());
 		}
  
 		System.out.println("customlistnoticiaadapter");
