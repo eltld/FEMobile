@@ -34,5 +34,10 @@ public final class Constants {
     public static final String COMEDOR_ID="ID";
     
     
+    //TAG INTENT MAIN ACTIVITY
+    public static final String PARAMETER="parameter";
+    public static final String TAG_UNIVERSITY_HEADER="OFERTA ACADEMICA";
+    public static final String UNIVERSITY_ID="id";
+    
 	
 }

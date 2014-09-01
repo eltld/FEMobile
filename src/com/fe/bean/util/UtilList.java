@@ -35,14 +35,15 @@ public final class UtilList {
 	 */
 	public static List<ItemGrid> loadItemGridPrincipal(Resources res)
 	{
-		listItemGrid.add(new ItemGrid("Mapa",res.getDrawable((R.drawable.ic_launcher))));
+		listItemGrid.add(new ItemGrid("Mapa",res.getDrawable((R.drawable.mapa75))));
 		listItemGrid.add(new ItemGrid("Noticias",res.getDrawable(R.drawable.ic_launcher)));
-		listItemGrid.add(new ItemGrid("Comedor",res.getDrawable((R.drawable.ic_launcher))));
+		listItemGrid.add(new ItemGrid("Comedor",res.getDrawable((R.drawable.comedor50))));
 		listItemGrid.add(new ItemGrid("Secretarias",res.getDrawable(R.drawable.ic_launcher)));
-	    listItemGrid.add(new ItemGrid("Fotos",res.getDrawable(R.drawable.ic_launcher)));
-	    listItemGrid.add(new ItemGrid("Eventos",res.getDrawable(R.drawable.ic_launcher)));
+	    listItemGrid.add(new ItemGrid("Fotos",res.getDrawable(R.drawable.foto75)));
+	    listItemGrid.add(new ItemGrid("Eventos",res.getDrawable(R.drawable.evento75)));
 	    listItemGrid.add(new ItemGrid("Calendario",res.getDrawable(R.drawable.ic_launcher)));
-	    listItemGrid.add(new ItemGrid("Autoridades",res.getDrawable(R.drawable.ic_launcher))); 		
+	    listItemGrid.add(new ItemGrid("Autoridades",res.getDrawable(R.drawable.ic_launcher))); 	
+	    listItemGrid.add(new ItemGrid("Oferta Academica",res.getDrawable(R.drawable.ic_launcher)));
 	    
 		return listItemGrid;
 	}

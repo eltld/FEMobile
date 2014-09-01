@@ -5,37 +5,20 @@
   android:layout_height="match_parent"
  >
 
-       
- 
-    
-  <!-- Header -->
-
- <TextView
-     android:id="@+id/textView1"
-     android:layout_width="wrap_content"
-     android:layout_height="wrap_content"
-     android:layout_alignBottom="@+id/imageView1"
-     android:layout_centerHorizontal="true"
-     android:layout_marginBottom="26dp"
-     android:text="@string/str_titulo_principal" />
-
  <ImageView
-     android:id="@+id/imageView1"
-     android:layout_width="75dp"
-     android:layout_height="75dp"
-     android:layout_alignParentTop="true"
-     android:layout_marginTop="33dp"
-     android:layout_toLeftOf="@+id/textView1"
-     android:src="@drawable/ic_launcher" />
-
-  
+      android:id="@+id/image_principal"
+      android:layout_width="75dp"
+      android:layout_height="75dp"
+      android:layout_marginLeft="100dp"
+      android:src="@drawable/ic_launcher"
+      android:contentDescription="@string/descripcion" />
  
   <ScrollView
      android:id="@+id/scro1"
      android:layout_width="match_parent"
      android:layout_height="wrap_content"
      android:layout_alignParentLeft="true"
-     android:layout_below="@+id/textView1"
+     android:layout_below="@+id/image_principal"
      android:layout_marginTop="42dp" 
      android:fillViewport="true">
 
@@ -49,12 +32,12 @@
          android:numColumns="auto_fit"
          android:stretchMode="columnWidth" 
          android:scrollbars="none"
-         android:layout_below="@+id/textView1"
-         android:layout_above="@+id/footer"/>
+        />
 
   
     
 </ScrollView>
+
  
     
 </RelativeLayout>

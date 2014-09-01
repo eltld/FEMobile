@@ -12,9 +12,11 @@ import com.fe.activity.ActivityGaleria;
 import com.fe.activity.ActivityMapUnju;
 import com.fe.activity.ActivityNoticia;
 import com.fe.activity.ActivitySecretaria;
+import com.fe.activity.ActivityUniversity;
 import com.fe.bean.adapter.CustomGridAdapter;
 import com.fe.bean.util.ScrollableGridView;
 import com.fe.bean.util.UtilList;
+import com.fe.model.Constants;
 import com.fe.model.ItemGrid;
 
 	import android.os.Bundle;
@@ -62,6 +64,7 @@ public class MainActivity extends Activity  implements OnItemClickListener {
 		 gridView = (ScrollableGridView) findViewById(R.id.grid_principal);
 		 gridView.setExpanded(true);
 		//load listItemGridImages
+		 logger.debug("listItemGridImage");
 		listItemGridImage=(ArrayList<ItemGrid>) UtilList.loadItemGridPrincipal(this.getResources());
 	    
 		gridAdapterPrincipal=new CustomGridAdapter(this, R.layout.grid_single, listItemGridImage);
@@ -114,6 +117,14 @@ public class MainActivity extends Activity  implements OnItemClickListener {
 			    	 final Intent intent=new Intent(MainActivity.this,ActivityGaleria.class);
 			    	 startActivity(intent);
 			    };break;
+			    
+			  
+			    case 8: {
+			    	     logger.debug("Universidades");
+			    	     final Intent intent=new Intent(MainActivity.this,ActivityUniversity.class);
+			    	     //intent.putExtra(Constants.PARAMETER, "OFERTA ACADEMICA");
+			             startActivity(intent); 	    
+			            };break;          
 			    }
 				
 			}
