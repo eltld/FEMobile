@@ -132,7 +132,9 @@ public final class UtilList {
 	
 	public static List<Carrera> loadListCarrera()
 	{
-		listCarrera.add(new Carrera(1,"Ingenieria en Informatica","Descripcion Informatica",
+		
+		//Carreras Facultad de Ingenieria 
+		listCarrera.add(new Carrera(1,"Ingeniero Químico","Descripcion Informatica",
 				 "5 años",1));
 		listCarrera.add(new Carrera(2,"Analista Programador","Descripcion analista programador",
 				 "3 años",1));
