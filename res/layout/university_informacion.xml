@@ -1,8 +1,86 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
-    
+   
 
-</LinearLayout>
+    <include
+       
+        layout="@layout/header" />
+
+    <RelativeLayout
+        android:id="@+id/content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header"
+        android:background="@color/header_text" >
+    
+     <LinearLayout
+         android:orientation="vertical"
+         android:layout_height="fill_parent"
+         android:layout_width="fill_parent" >   
+        <TextView
+            android:id="@+id/label_secretario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:textStyle="bold"
+            android:typeface="sans"
+            android:textSize="20dp"
+            android:text="Secretario" />
+
+        <TextView
+            android:id="@+id/text_secretariaSecretario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/textView2"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/text_divider"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentLeft="true"
+            android:background="#555"
+             />
+
+        <TextView
+            android:id="@+id/label_objetivo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Direccion"
+            android:textStyle="bold"
+            android:typeface="sans"
+            android:textSize="20dp"
+             />
+        <TextView android:id="@+id/text_secretariaDireccion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="text_direccion"
+            />
+
+       
+
+         <RelativeLayout android:id="@+id/linear_telefono"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                      >
+          
+           </RelativeLayout>
+         
+          <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentLeft="true"
+            android:background="#555"
+       
+             />
+            
+        
+       </LinearLayout>
+
+    </RelativeLayout>
+    
+</RelativeLayout>

@@ -9,6 +9,7 @@ import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 
 import com.fe.R;
+import com.fe.model.Carrera;
 import com.fe.model.Comedor;
 import com.fe.model.ItemGrid;
 import com.fe.model.Secretaria;
@@ -24,7 +25,7 @@ public final class UtilList {
 	private static final List<ItemGrid> listItemGrid=new ArrayList<ItemGrid>();
 	private static final List<Secretaria> listSecretarias=new ArrayList<Secretaria>();
 	private static final List<Comedor> listComedor=new ArrayList<Comedor>();
-	
+	private static final List<Carrera> listCarrera=new ArrayList<Carrera>();
 	
 	/**
 	 * Load Items Grid Principal
@@ -127,6 +128,48 @@ public final class UtilList {
 	    listComedor.add(new Comedor(3, "Balcarce","Balcarce","0","0"));
 		
 	    return listComedor;
+	}
+	
+	public static List<Carrera> loadListCarrera()
+	{
+		listCarrera.add(new Carrera(1,"Ingenieria en Informatica","Descripcion Informatica",
+				 "5 años",1));
+		listCarrera.add(new Carrera(2,"Analista Programador","Descripcion analista programador",
+				 "3 años",1));
+		listCarrera.add(new Carrera(3,"Licenciatura en sistemas","Descripcion licenciatura",
+				 " 4 años",1));
+		
+		return listCarrera;
+		
+	}
+	
+	public static List<Carrera> getListCarrera(int id_university)
+	{
+		ArrayList<Carrera> listado=new ArrayList<Carrera>();
+		
+		for(Carrera carrera: listCarrera)
+		{
+			if(carrera.getId_university()==id_university)
+			{
+				listado.add(carrera);
+			}
+		}
+		
+		return listado;
+	}
+	
+	public static Carrera getCarrera(int id_carrera)
+	{
+		Carrera obj;
+		for(Carrera carrera: listCarrera)
+		{
+			if(carrera.getId_carrera()==id_carrera)
+			{
+				return carrera;
+			}
+		}
+		
+		return null;
 	}
   
 	

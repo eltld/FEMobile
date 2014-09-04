@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <include
+        android:id="@+id/include1"
+        layout="@layout/header" />
+
+       <ScrollView
+           android:id="@+id/scrollView1"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_alignParentLeft="true"
+           android:layout_below="@+id/include1" >
+
+           <LinearLayout
+               android:orientation="vertical"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent" >
+          
+            <TextView
+                android:id="@+id/text_carreraContentTitulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:text="Titulo"
+                android:textSize="19dp"
+                android:textStyle="bold"
+                android:typeface="serif" />
+               
+           <TextView
+            android:id="@+id/text_carreraLineaUno"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentLeft="true"
+            android:background="@color/gray_claro"
+            android:layout_below="@+id/text_carrearContentTitulo"
+            android:layout_marginTop="3dp"
+       
+             />
+
+           <TextView
+               android:id="@+id/text_carreraContentNivel"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginLeft="26dp"
+               android:layout_marginTop="20dp"
+               android:text="Nivel" />
+                <TextView
+            android:id="@+id/text_carreraLineaDos"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentLeft="true"
+            android:background="@color/gray_claro"
+            android:layout_below="@+id/text_carreraContentCuerpo"
+            android:layout_marginTop="3dp"
+       
+             />
+           
+          <TextView
+           android:id="@+id/text_carreraContentAcreditacion"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_alignParentLeft="true"
+           android:layout_below="@+id/text_carreraLineaUno"
+           android:layout_marginLeft="26dp"
+           android:layout_marginTop="20dp"
+           android:text="Acreditacion" />
+            <TextView
+            android:id="@+id/text_carreraLineaTres"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentLeft="true"
+            android:background="@color/gray_claro"
+            android:layout_below="@+id/text_carreraContentCuerpo"
+            android:layout_marginTop="3dp"/>
+             <TextView
+           android:id="@+id/text_carreraContentPerfil"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_alignParentLeft="true"
+           android:layout_below="@+id/text_carreraLineaUno"
+           android:layout_marginLeft="26dp"
+           android:layout_marginTop="20dp"
+           android:text="Perfil" />
+            <TextView
+            android:id="@+id/text_carreraLineaCuatro"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentLeft="true"
+            android:background="@color/gray_claro"
+            android:layout_below="@+id/text_carreraContentCuerpo"
+            android:layout_marginTop="3dp"/>
+                  <TextView
+           android:id="@+id/text_carreraContentAlcance"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_alignParentLeft="true"
+           android:layout_below="@+id/text_carreraLineaUno"
+           android:layout_marginLeft="26dp"
+           android:layout_marginTop="20dp"
+           android:text="Alcance" />
+        
+           </LinearLayout>
+           
+        
+           
+           
+           </ScrollView>
+
+      
+
+    
+
+      
+
+</RelativeLayout>

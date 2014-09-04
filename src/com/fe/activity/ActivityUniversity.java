@@ -62,9 +62,7 @@ public class ActivityUniversity extends Activity {
 			public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
 					long arg3) {
 				
-				
-				
-				
+	
 				final TextView text_id=(TextView)arg1.findViewById(R.id.text_universityId);
 				
 				final CharSequence items[] = new CharSequence[] {"Informacion Administrativa", 
@@ -76,7 +74,7 @@ public class ActivityUniversity extends Activity {
 				    @Override
 				    public void onClick(DialogInterface dialog, int which) {
 				     
-				    	logger.debug("seleccionado : "+items[which] + " item");
+				    	logger.debug("seleccionado : "+items[which] + " item :"+which);
 				        switch(which)
 				        {
 				        case 0 : 
@@ -89,6 +87,10 @@ public class ActivityUniversity extends Activity {
 				        	
 				        };break;
 				        case 1 : {
+				        	logger.debug("Carreras");
+				        	Intent intent=new Intent(ActivityUniversity.this, ActivityCarrera.class);
+				        	intent.putExtra(Constants.UNIVERSITY_ID,text_id.getText().toString());
+				        	startActivity(intent);
 				        	
 				        };break;
 				        case 2 : {};break;
@@ -98,10 +100,7 @@ public class ActivityUniversity extends Activity {
 				});
 				builder.show();
 				
-				//Intent intent = new Intent(ActivityUniversity.this, ActivityUniversityContent.class);
-				//intent.putExtra(Constants.UNIVERSITY_ID, text_id.getText().toString());
-				//startActivity(intent);
-				
+			
 			}
 		});
 		

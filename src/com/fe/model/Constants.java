@@ -37,7 +37,9 @@ public final class Constants {
     //TAG INTENT MAIN ACTIVITY
     public static final String PARAMETER="parameter";
     public static final String TAG_UNIVERSITY_HEADER="OFERTA ACADEMICA";
+    public static final String TAG_UNIVERSITY_HEADER_CARRERA="CARRERAS";
     public static final String UNIVERSITY_ID="id";
+    public static final String CARRERA_ID="id";
     
 	
 }

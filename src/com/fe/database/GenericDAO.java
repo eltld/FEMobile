@@ -1,6 +1,6 @@
 package com.fe.database;
 
-import com.fe.model.ConstantDabase;
+import com.fe.model.ConstantDatabase;
 
 import android.content.ContentValues;
 import android.content.Context;

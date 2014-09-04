@@ -6,7 +6,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.fe.activity.ActivityNoticia;
-import com.fe.model.ConstantDabase;
+import com.fe.model.ConstantDatabase;
 import com.fe.model.Noticia;
 
 import android.content.ContentValues;
@@ -24,12 +24,12 @@ public class NoticiaDao {
 	String result="";
     Cursor cursor = null;
     String[] columns = new String[] { 
-    		            ConstantDabase.NOT_ID,
-    		            ConstantDabase.NOT_TITULO,
-    		            ConstantDabase.NOT_BAJADA,
-    		            ConstantDabase.NOT_FECHA,	
-    		            ConstantDabase.NOT_URL,
-    		            ConstantDabase.NOT_CUERPO};
+    		            ConstantDatabase.NOT_ID,
+    		            ConstantDatabase.NOT_TITULO,
+    		            ConstantDatabase.NOT_BAJADA,
+    		            ConstantDatabase.NOT_FECHA,	
+    		            ConstantDatabase.NOT_URL,
+    		            ConstantDatabase.NOT_CUERPO};
     
     GenericDAO dao ;
 	
@@ -37,10 +37,10 @@ public class NoticiaDao {
 	{
        
 		dao = GenericDAO.getInstance(
-				ctx, ConstantDabase.DATABASE_NAME, 
-				ConstantDabase.QUERY_CREATE_NOTICIA, 
-				ConstantDabase.T_NOTICIA,
-				ConstantDabase.DATABASE_VERSION);
+				ctx, ConstantDatabase.DATABASE_NAME, 
+				ConstantDatabase.QUERY_CREATE_NOTICIA, 
+				ConstantDatabase.T_NOTICIA,
+				ConstantDatabase.DATABASE_VERSION);
 		noticia=new Noticia();
 
 		
@@ -52,29 +52,29 @@ public class NoticiaDao {
 		{
 			logger.debug("Insert Noticia : "+obj.toString());
 			ContentValues values=new ContentValues();
-			values.put(ConstantDabase.NOT_ID, obj.getIdNoticia());
-			values.put(ConstantDabase.NOT_TITULO, obj.getTituloNoticia());
-			values.put(ConstantDabase.NOT_BAJADA, obj.getBajadaNoticia());
-			values.put(ConstantDabase.NOT_FECHA,  obj.getDateNoticia());
-			values.put(ConstantDabase.NOT_URL,    obj.getUrlImageNoticia());
-			values.put(ConstantDabase.NOT_CUERPO, obj.getCuerpoNoticia());
-			dao.insert(ConstantDabase.T_NOTICIA, values);
+			values.put(ConstantDatabase.NOT_ID, obj.getIdNoticia());
+			values.put(ConstantDatabase.NOT_TITULO, obj.getTituloNoticia());
+			values.put(ConstantDatabase.NOT_BAJADA, obj.getBajadaNoticia());
+			values.put(ConstantDatabase.NOT_FECHA,  obj.getDateNoticia());
+			values.put(ConstantDatabase.NOT_URL,    obj.getUrlImageNoticia());
+			values.put(ConstantDatabase.NOT_CUERPO, obj.getCuerpoNoticia());
+			dao.insert(ConstantDatabase.T_NOTICIA, values);
 			
 		}
 	}
 	
 	public Noticia get(Long id)
 	{
-		cursor=dao.get(ConstantDabase.T_NOTICIA,this.columns,ConstantDabase.NOT_ID,id);
+		cursor=dao.get(ConstantDatabase.T_NOTICIA,this.columns,ConstantDatabase.NOT_ID,id);
 	
 		if(cursor!=null)
 		{
-	     int not_id =cursor.getColumnIndex(ConstantDabase.NOT_ID);
-	     int not_titulo=cursor.getColumnIndex(ConstantDabase.NOT_TITULO);
-	     int not_bajada=cursor.getColumnIndex(ConstantDabase.NOT_BAJADA);
-	     int not_fecha=cursor.getColumnIndex(ConstantDabase.NOT_FECHA);
-	     int not_url=cursor.getColumnIndex(ConstantDabase.NOT_URL);
-	     int not_cuerpo=cursor.getColumnIndex(ConstantDabase.NOT_CUERPO);
+	     int not_id =cursor.getColumnIndex(ConstantDatabase.NOT_ID);
+	     int not_titulo=cursor.getColumnIndex(ConstantDatabase.NOT_TITULO);
+	     int not_bajada=cursor.getColumnIndex(ConstantDatabase.NOT_BAJADA);
+	     int not_fecha=cursor.getColumnIndex(ConstantDatabase.NOT_FECHA);
+	     int not_url=cursor.getColumnIndex(ConstantDatabase.NOT_URL);
+	     int not_cuerpo=cursor.getColumnIndex(ConstantDatabase.NOT_CUERPO);
 	     
 	     noticia.setTituloNoticia(cursor.getString(not_id));
 	     noticia.setTituloNoticia(cursor.getString(not_titulo));
