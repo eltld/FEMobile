@@ -40,20 +40,19 @@ public class ActivityCarreraContent extends Activity {
 		
 		logger.debug("Activity Carrera Content : "+idCarrera);
 		
-	    objCarrera =UtilList.getCarrera(Integer.parseInt(idCarrera));	
-	    logger.debug("Carrera : "+objCarrera.toString());
+	   
 	    
 		if(objCarrera!=null)
 		{
 	      text_titulo=(TextView)findViewById(R.id.text_carreraContentTitulo);
 	      text_descripcion=(TextView)findViewById(R.id.text_carreraContentCuerpo);
-	      text_duracion=(TextView)findViewById(R.id.text_carreraContentDuracion);
+	      //text_duracion=(TextView)findViewById(R.id.text_carreraContentDuracion);
 	      
 	      if(text_titulo!=null)
 			text_titulo.setText(objCarrera.getTitulo_carrera());
 		
 	        text_duracion.setText(objCarrera.getDuracion_carrera());
-			text_descripcion.setText(objCarrera.getDescripcion_carrera());
+			//text_descripcion.setText(objCarrera.getDescripcion_carrera());
 			
 	      
 		}

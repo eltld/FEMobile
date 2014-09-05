@@ -71,8 +71,7 @@ public class CustomCarreraAdapter extends BaseAdapter {
 	      }
 	      Carrera item=data.get(position);
 
-		    System.out.println("Nombre : "+item.getTitulo_carrera() + " id: "+item.getId_carrera());
-	       holder.txtCarrera.setText(item.getTitulo_carrera());
+		   holder.txtCarrera.setText(item.getTitulo_carrera());
 	       holder.txtIdCarrera.setText(String.valueOf( item.getId_carrera()));
 	      //visibilidad del identificador de noticia
 	      holder.txtIdCarrera.setVisibility(View.GONE);

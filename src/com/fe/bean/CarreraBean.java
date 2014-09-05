@@ -22,6 +22,7 @@ public class CarreraBean {
 
 		public CarreraBean(Context ctx)
 		{
+			System.out.println("CarrearBean ");
 			carreraDao=new CarreraDao(ctx);
 			
 		}

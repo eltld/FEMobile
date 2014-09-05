@@ -10,6 +10,7 @@ public class Carrera {
     private String alcance_carrera;
     private String duracion_carrera;
     private int id_university;
+    private int id_grado;
     
   
     
@@ -17,12 +18,6 @@ public class Carrera {
 	public Carrera()
 	{}
     
-   
-	
-
-
-
-
 	public int getId_carrera() {
 		return id_carrera;
 	}
@@ -38,15 +33,9 @@ public class Carrera {
 		this.id_university = id_university;
 	}
 
-
-
-
 	public String getTitulo_carrera() {
 		return titulo_carrera;
 	}
-
-
-
 
 	public void setTitulo_carrera(String titulo_carrera) {
 		this.titulo_carrera = titulo_carrera;
@@ -91,6 +80,27 @@ public class Carrera {
 	}
      
 	
+	
+	public int getId_grado() {
+		return id_grado;
+	}
+
+
+
+
+
+
+
+	public void setId_grado(int id_grado) {
+		this.id_grado = id_grado;
+	}
+
+
+
+
+
+
+
 	@Override
 	public String toString()
 	{

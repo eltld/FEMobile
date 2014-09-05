@@ -42,4 +42,13 @@ public final class Constants {
     public static final String CARRERA_ID="id";
     
 	
+   //TAG GRADOS 
+    public static final int CARRERA_GRADO=1;
+    public static final int CARRERA_PREGADO=2;
+    
+   public static final int FACU_INGENIERIA_ID=1;
+   public static final int FACU_ECONOMICA_ID=2;
+   public static final int FACU_AGRAGRIA_ID=3;
+   public static final int FACU_HUMANIDADES_ID=4;
+   public static final int ESC_MINAS=5; 
 }

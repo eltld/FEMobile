@@ -41,18 +41,27 @@ public final class ConstantDatabase {
 	
 	
   //TABLE CARRERA  
-   public static final String T_CARRERA="carrera";
+   public static final String T_CARRERA="carreras";
    public static final String CARR_ID="carr_id";
    public static final String CARR_TITULO="carr_titulo";
-   public static final String CARR_DESCRIPCION="carr_descripcion";
+   public static final String CARR_NIVEL="carr_nivel";
+   public static final String CARR_ACREDITACION="carr_acreditacion";
+   public static final String CARR_PERFIL="carr_perfil";
+   public static final String CARR_ALCANCE="carr_alcance";
    public static final String CARR_DURACION="carr_duracion";
+   public static final String CARR_GRADO="carr_grado";
+   
    
 	public static final String QUERY_CREATE_CARRERA=
-			"CREATE TABLE carrera("+
+			"CREATE TABLE carreras("+
 	        "carr_id integer ,"+
 			"carr_titulo text,"+
-	        "carr_descripcion text,"+
-			"carr_duracion text,"+
+	        "carr_nivel text,"+
+			"carr_acreditacion text,"+
+	        "carr_perfil text,"+
+			"carr_alcance text,"+
+	        "carr_duracion text,"+
+			"carr_grado text,"+
 	        "uni_id text)";
 	public static final String QUERY_DROP_CARRERA=
 			"DROP TABLE IF EXISTS "+T_CARRERA;

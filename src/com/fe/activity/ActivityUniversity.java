@@ -109,11 +109,11 @@ public class ActivityUniversity extends Activity {
 	private void loadData()
 	{
 		listData=new ArrayList<Universidad>();
-		listData.add(new Universidad(1,"FACULTAD DE INGENIERIA","Descripcion Facultad"));
-		listData.add(new Universidad(2, "FACULTAD DE CIENCIAS ECONOMICAS","Facultad ciencias"));
-		listData.add(new Universidad(3,"FACULTAD DE HUMANIDADES","humanidades"));
-		listData.add(new Universidad(4,"FACULTAD DE AGRARIAS", ""));
-		listData.add(new Universidad(5,"ESCUELA DE MINAS",""));
+		listData.add(new Universidad(Constants.FACU_INGENIERIA_ID,"FACULTAD DE INGENIERIA","Descripcion Facultad"));
+		listData.add(new Universidad(Constants.FACU_ECONOMICA_ID, "FACULTAD DE CIENCIAS ECONOMICAS","Facultad ciencias"));
+		listData.add(new Universidad(Constants.FACU_HUMANIDADES_ID,"FACULTAD DE HUMANIDADES","humanidades"));
+		listData.add(new Universidad(Constants.FACU_AGRAGRIA_ID,"FACULTAD DE AGRARIAS", ""));
+		listData.add(new Universidad(Constants.ESC_MINAS,"ESCUELA DE MINAS",""));
 		
 		
 		

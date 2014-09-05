@@ -25,7 +25,7 @@ public class GenericDAO extends SQLiteOpenHelper {
 	    
 	    private GenericDAO(Context ctx, String dbName, String sql, String tableName, int ver){
 	        super(ctx, dbName, null, ver);
-	        Log.i(TAG, "Creating or opening database [ " + dbName + " ].");
+	        Log.i(TAG, "Creating or opening database [ " + dbName + " ].GenericDao");
 	        GenericDAO.sql = sql;
 	        dName = dbName;
 	        tName = tableName;
@@ -41,6 +41,7 @@ public class GenericDAO extends SQLiteOpenHelper {
 	                Log.e(TAG, "Cound not create and/or open the database [ " + dbName + " ] that will be used for reading and writing.", se);
 	            }
 	        }
+	        
 	        return instance;
 	    }
 
@@ -54,7 +55,9 @@ public class GenericDAO extends SQLiteOpenHelper {
 	    
 	    @Override
 	    public void onCreate(SQLiteDatabase db){
-	        Log.i(TAG, "Trying to create database table if it isn't existed [ " + sql + " ].");
+	       
+	    
+	    	Log.i(TAG, "Trying to create database table if it isn't existed [ " + sql + " ].");
 	        try{
 	            db.execSQL(sql);
 	        }catch(SQLException se){
