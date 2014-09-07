@@ -34,6 +34,11 @@
             <TextView
                 android:id="@+id/text_carreraContentTitulo"
                 android:layout_width="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="3dp"
+                 android:textSize="15dp"
+                 android:typeface="normal"
+                 android:textColor="@color/gray"
                 android:layout_height="wrap_content"
                 android:text="Titulo" />
                
@@ -43,7 +48,7 @@
             android:layout_height="1dp"
             android:layout_alignParentLeft="true"
             android:background="@color/gray_claro"
-            android:layout_below="@+id/text_carrearContentTitulo"
+            android:layout_below="@+id/text_carreraContentTitulo"
             android:layout_marginTop="3dp"
        
              />
@@ -52,14 +57,22 @@
                android:id="@+id/label_carreraContentNivel"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
-               android:layout_marginLeft="26dp"
+               android:layout_marginLeft="20dp"
                android:layout_marginTop="20dp"
-               android:text="Nivel" />
+                android:textSize="19dp"
+                android:textStyle="bold"
+                android:typeface="serif"
+                android:text="Nivel" />
 
            <TextView
                android:id="@+id/text_carreraContentNivel"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
+               android:layout_marginLeft="20dp"
+               android:layout_marginTop="3dp"
+                android:textSize="15dp"
+                 android:typeface="normal"
+                 android:textColor="@color/gray"
                android:text="Nivel" />
 
                 <TextView
@@ -79,14 +92,22 @@
            android:layout_height="wrap_content"
            android:layout_alignParentLeft="true"
            android:layout_below="@+id/text_carreraLineaUno"
-           android:layout_marginLeft="26dp"
+           android:layout_marginLeft="20dp"
            android:layout_marginTop="20dp"
+           android:textSize="19dp"
+                android:textStyle="bold"
+                android:typeface="serif"
            android:text="Acreditacion" />
 
           <TextView
               android:id="@+id/text_carreraContentAcreditacion"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="3dp"
+                 android:textSize="15dp"
+                 android:typeface="normal"
+                 android:textColor="@color/gray"
               android:text="TextView" />
 
             <TextView
@@ -95,22 +116,30 @@
             android:layout_height="1dp"
             android:layout_alignParentLeft="true"
             android:background="@color/gray_claro"
-            android:layout_below="@+id/text_carreraContentCuerpo"
+            android:layout_below="@+id/text_carreraContentAcreditacion"
             android:layout_marginTop="3dp"/>
              <TextView
            android:id="@+id/label_carreraContentPerfil"
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
            android:layout_alignParentLeft="true"
-           android:layout_below="@+id/text_carreraLineaUno"
-           android:layout_marginLeft="26dp"
+           android:layout_below="@+id/label_carreraLineaTres"
+           android:layout_marginLeft="20dp"
            android:layout_marginTop="20dp"
+          android:textSize="19dp"
+                android:textStyle="bold"
+                android:typeface="serif"
            android:text="Perfil" />
 
              <TextView
                  android:id="@+id/text_carreraContentPerfil"
                  android:layout_width="wrap_content"
                  android:layout_height="wrap_content"
+                   android:layout_marginLeft="20dp"
+                android:layout_marginTop="3dp"
+                 android:textSize="15dp"
+                 android:typeface="normal"
+                 android:textColor="@color/gray"
                  android:text="TextView" />
 
             <TextView
@@ -127,16 +156,24 @@
            android:layout_height="wrap_content"
            android:layout_alignParentLeft="true"
            android:layout_below="@+id/text_carreraLineaUno"
-           android:layout_marginLeft="26dp"
+           android:layout_marginLeft="20dp"
            android:layout_marginTop="20dp"
+          android:textSize="19dp"
+                android:textStyle="bold"
+                android:typeface="serif"
            android:text="Alcance" />
                     <TextView
            android:id="@+id/text_carreraContentAlcance"
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+           android:layout_marginTop="3dp"
+            android:textSize="15dp"
+                 android:typeface="normal"
+                 android:textColor="@color/gray"
            android:layout_alignParentLeft="true"
            android:layout_below="@+id/label_carreraContentAlcance"
-           android:layout_marginLeft="24dp"
+        
            android:text="TextView" />
         
            </LinearLayout>

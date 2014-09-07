@@ -1,4 +1,4 @@
-package com.fe.model;
+package com.fe.database.helper;
 
 import android.database.sqlite.SQLiteDatabase.CursorFactory;
 
@@ -66,5 +66,20 @@ public final class ConstantDatabase {
 	public static final String QUERY_DROP_CARRERA=
 			"DROP TABLE IF EXISTS "+T_CARRERA;
    
+	
+	 //TABLE COMEDOR
+	public static final String T_COMEDOR="comedor";
+	public static final String COM_ID="com_id";
+	public static final String COM_NOMBRE="com_nombre";
+	public static final String COM_DIRECCION="com_direccion";
+
+	
+	public static final String QUERY_CREATE_COMEDOR=
+			"CREATE TABLE  "+T_COMEDOR+"("+
+	        COM_ID +" integer ,"+
+		 	COM_NOMBRE+" text,"+
+	        COM_DIRECCION+ " text)";
+	public static final String QUERY_DROP_COMEDOR="DROP TABLE IF EXISTS "+T_COMEDOR;
+	
 	
 }

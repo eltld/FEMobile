@@ -4,8 +4,8 @@ import java.util.ArrayList;
 
 import android.content.Context;
 
-import com.fe.database.CarreraDao;
-import com.fe.database.NoticiaDao;
+import com.fe.database.dao.CarreraDao;
+import com.fe.database.dao.NoticiaDao;
 import com.fe.model.Carrera;
 import com.fe.model.Noticia;
 
@@ -34,6 +34,7 @@ public class CarreraBean {
 		
 		public Carrera get(Long id)
 		{
+	      System.out.println("CarreraBean get : "+id);		
 		  return carreraDao.get(id);
 		}
 		

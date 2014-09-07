@@ -53,7 +53,7 @@ public class ActivityCarrera extends Activity {
 	ListView listView;
 	ProgressDialog pDialog;
 	ProgressBar pB;
-	CarreraBean carreraBean;
+	CarreraBean carreraBean=null;
 	ArrayList<Carrera> listData;
 	CustomCarreraAdapter adapter;
 	@Override
@@ -67,8 +67,11 @@ public class ActivityCarrera extends Activity {
 		textHeader.setText(Constants.TAG_UNIVERSITY_HEADER_CARRERA);
 		pB=(ProgressBar)findViewById(R.id.marker_progress);
 	   
-		  Intent intent=getIntent();
-	     id_university=intent.getStringExtra(Constants.UNIVERSITY_ID);
+		carreraBean=new CarreraBean(getApplicationContext());
+		
+		
+		Intent intent=getIntent();
+	    id_university=intent.getStringExtra(Constants.UNIVERSITY_ID);
 	   
 	     new ActivityCarreraClient().execute();  
       
@@ -148,7 +151,6 @@ public class ActivityCarrera extends Activity {
 				  if(listData.size()!=0)
 	    		    { 
 	    		    	System.out.println("carreraBean ActivityCarrera listSize : "+listData.size());
-	    		    	carreraBean=new CarreraBean(getApplicationContext());
 	    		    	carreraBean.addList(listData) ;
 	    		    }		
 				//load list view

@@ -2,7 +2,13 @@ package com.fe.bean;
 
 import java.util.ArrayList;
 
+import android.content.Context;
+
 import com.fe.bean.util.UtilList;
+import com.fe.database.dao.CarreraDao;
+import com.fe.database.dao.ComedorDao;
+import com.fe.database.helper.ComedorDbHelper;
+import com.fe.model.Carrera;
 import com.fe.model.Comedor;
 import com.fe.model.Secretaria;
 
@@ -15,21 +21,31 @@ import com.fe.model.Secretaria;
  */
 public class ComedorBean {
 
-	public Comedor GetBean(String id)
+	ComedorDao comedorDao=null;
+	
+	
+	public ComedorBean(Context ctx)
 	{
-		ArrayList<Comedor> list = new ArrayList<Comedor>();
-		list=(ArrayList<Comedor>) UtilList.loadListComedor();
-		
-		for(Comedor com: list)
-		{
-		   int i=Integer.parseInt(id);
-		   if(com.getId_comedor()==i)	
-		     {
-			   return com;
-		     }
-		}
-		return null;
+		comedorDao=new ComedorDao(ctx);
 	}
 	
+	public void add(Comedor obj)
+	{
+		System.out.println("comedorDao add");
+		comedorDao.add(obj);
+	}
+	
+	public Carrera get(Long id)
+	{
+	  return comedorDao.get(id);
+	}
+	
+	public void addList(ArrayList<Comedor> list)
+	{
+		for(int i=0; i<list.size();i++)
+		{ 
+			add(list.get(i));}
+		
+	}
 	
 }

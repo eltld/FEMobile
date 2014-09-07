@@ -17,6 +17,9 @@ public class Comedor {
 	private String long_comedor;
 	
 	
+	public Comedor()
+	{}
+	
 	public Comedor(int id_comedor, String nombre_comedor,
 			String descripcion_comedor, String lat_comedor, String long_comedor) {
 		super();

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import android.content.Context;
 
-import com.fe.database.NoticiaDao;
+import com.fe.database.dao.NoticiaDao;
 import com.fe.model.Noticia;
 
 /**

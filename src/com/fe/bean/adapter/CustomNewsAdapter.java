@@ -101,7 +101,6 @@ public class CustomNewsAdapter extends BaseAdapter {
 			holder = new ViewHolder();
 			holder.noticiaHead = (TextView) convertView.findViewById(R.id.text_noticiaTitulo);
 			holder.noticiaBajada = (TextView) convertView.findViewById(R.id.text_noticiaBajada);
-			holder.noticiaDateView = (TextView) convertView.findViewById(R.id.text_noticiaFecha);
 			holder.noticiaImageView = (ImageView) convertView.findViewById(R.id.image_noticiaImage);
 			holder.noticiaId=(TextView)convertView.findViewById(R.id.text_noticiaId);
 			convertView.setTag(holder);
@@ -111,10 +110,22 @@ public class CustomNewsAdapter extends BaseAdapter {
  
 		Noticia noticias = (Noticia) listData.get(position);
  
-		holder.noticiaHead.setText(noticias.getTituloNoticia());
-		holder.noticiaBajada.setText(noticias.getBajadaNoticia());
-		holder.noticiaDateView.setText(noticias.getDateNoticia());
-        holder.noticiaId.setText(noticias.getIdNoticia());
+		String titulo="";
+		String bajada="";
+		if(noticias.getTituloNoticia().length()<=60)
+			titulo=noticias.getTituloNoticia();
+		else 
+			titulo=noticias.getTituloNoticia().substring(0, 60)+"...";
+		
+		if(noticias.getBajadaNoticia().length()<=60)
+			bajada=noticias.getBajadaNoticia();
+		else 
+			bajada=noticias.getBajadaNoticia().substring(0,60)+"...";
+		
+		
+		holder.noticiaHead.setText(titulo);
+		holder.noticiaBajada.setText(bajada);
+		holder.noticiaId.setText(noticias.getIdNoticia());
         holder.noticiaId.setVisibility(View.GONE);
 		
     	
@@ -134,7 +145,6 @@ public class CustomNewsAdapter extends BaseAdapter {
 	static class ViewHolder {
 		TextView noticiaHead;
 		TextView noticiaBajada;
-		TextView noticiaDateView;
 		TextView noticiaId;
 		ImageView noticiaImageView;
 	}

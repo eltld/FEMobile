@@ -7,7 +7,9 @@ import com.fe.R;
 import com.fe.bean.NoticiaBean;
 import com.fe.model.Constants;
 import com.fe.model.Noticia;
-import com.squareup.picasso.Picasso;
+
+
+import com.koushikdutta.ion.Ion;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -30,7 +32,7 @@ public class ActivityNoticiaContent extends Activity {
 	private TextView text_noticiaFecha;
 	private TextView text_noticiaCuerpo;
 	private ImageView image_noticia;
-	
+	private TextView textHeader;
 	private NoticiaBean noticiaBean;
 	
 	
@@ -55,7 +57,8 @@ public class ActivityNoticiaContent extends Activity {
 	 text_noticiaCuerpo=(TextView)findViewById(R.id.text_noticiaContentCuerpo);
 	 text_noticiaFecha=(TextView)findViewById(R.id.text_noticiaContentFecha);
 	 image_noticia=(ImageView)findViewById(R.id.image_noticiaContentImage);
-	 
+	 textHeader=(TextView)findViewById(R.id.text_header);
+	 textHeader.setText("Noticias");
 	 
 	 //asigno los valores 
 	 if(noticia!=null)
@@ -64,7 +67,16 @@ public class ActivityNoticiaContent extends Activity {
 		 text_noticiaBajada.setText(noticia.getBajadaNoticia());
 		 text_noticiaFecha.setText(noticia.getDateNoticia());
 		 text_noticiaCuerpo.setText(noticia.getCuerpoNoticia());
-		 
+		
+		
+		 Ion.with(getApplicationContext())
+		 .load(noticia.getUrlImageNoticia())
+		 .withBitmap()
+		 .resizeHeight(100)
+		 .resizeWidth(250)
+		 .placeholder(R.drawable.ic_launcher)
+		 .error(R.drawable.ic_error)
+		 .intoImageView(image_noticia);
 	   
      }
 	}

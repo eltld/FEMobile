@@ -71,7 +71,12 @@ public class ActivityNoticia extends Activity{
          setContentView(R.layout.noticias);  
          Intent intent=new Intent();
          string_header=intent.getStringExtra("title_header");
-         logger.debug("Inicio Noticias"); 
+         textViewHeader=(TextView)findViewById(R.id.text_header);
+		
+         textViewHeader.setText("Noticias");
+			
+         logger.debug("Inicio Noticias : "+string_header); 
+         
          
          pB=(ProgressBar)findViewById(R.id.marker_progress);
       	
@@ -206,8 +211,6 @@ public class ActivityNoticia extends Activity{
 		public void displayContent(String result)
 		{
 			System.out.println("Result : "+result);
-			textViewHeader=(TextView)findViewById(R.id.text_header);
-			textViewHeader.setText(string_header);
 			adapter=new CustomNewsAdapter(ActivityNoticia.this, listData,imageLoader,
 					options);
 			listViewNoticias=(ListView)findViewById(R.id.custom_list_noticia);

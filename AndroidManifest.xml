@@ -34,8 +34,8 @@
         android:theme="@style/AppTheme" >
         
           <!--  Add Google Map Library -->
-       <!--   <uses-library android:name="com.google.android.maps" /> -->
-       
+      <!--<uses-library android:name="com.google.android.maps" /> 
+       -->
         <!--  Activity -->
         <activity
             android:name="com.fe.MainActivity"
@@ -135,7 +135,7 @@
          </activity>
             <activity 
             android:name="com.fe.activity.ActivityCarrera"
-            android:label="@string/activity_university">
+            android:label="@string/activity_carrera">
          <intent-filter>
              <action android:name="android.intent.action.MAIN"/>
              <category android:name="android.intent.category.LAUNCHER"/>
@@ -143,7 +143,7 @@
          </activity>
           <activity 
             android:name="com.fe.activity.ActivityCarreraContent"
-            android:label="@string/activity_university">
+            android:label="@string/activity_carrera">
          <intent-filter>
              <action android:name="android.intent.action.MAIN"/>
              <category android:name="android.intent.category.LAUNCHER"/>
@@ -154,9 +154,9 @@
              android:name="com.google.android.maps.v2.API_KEY"
              android:value="AIzaSyAjiXgifxnR_p3950DD2XQ67rxmGp1N7mY"
              /> 
-          <!--   <meta-data android:name="com.google.android.gms.version"
+           <meta-data android:name="com.google.android.gms.version"
                    android:value="@integer/google_play_services_version" />
-           -->
+           
     </application>
      
     

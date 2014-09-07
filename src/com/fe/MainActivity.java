@@ -7,12 +7,16 @@ import java.util.ArrayList;
 
 
 
+
+
+import com.fe.activity.ActivityBase;
 import com.fe.activity.ActivityComedor;
 import com.fe.activity.ActivityGaleria;
 import com.fe.activity.ActivityMapUnju;
 import com.fe.activity.ActivityNoticia;
 import com.fe.activity.ActivitySecretaria;
 import com.fe.activity.ActivityUniversity;
+import com.fe.bean.ActivityDbBean;
 import com.fe.bean.adapter.CustomGridAdapter;
 import com.fe.bean.util.ScrollableGridView;
 import com.fe.bean.util.UtilList;
@@ -50,7 +54,7 @@ public class MainActivity extends Activity  implements OnItemClickListener {
 	   ArrayList<ItemGrid> listItemGridImage=new ArrayList<ItemGrid>();
 	  //adapter principal
 	  CustomGridAdapter gridAdapterPrincipal;
-	  
+	  private ActivityDbBean activityBean;
 	  
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +62,7 @@ public class MainActivity extends Activity  implements OnItemClickListener {
 		setContentView(R.layout.activity_main);
 		
 		logger.info("onCreate MainActivity");
+		activityBean= new ActivityDbBean(getApplicationContext());
 		
 		//load content 
 		//comento esto no se la verdad gridView=(GridView)findViewById(R.id.grid_principal);

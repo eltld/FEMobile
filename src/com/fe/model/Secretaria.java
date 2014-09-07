@@ -1,6 +1,6 @@
 package com.fe.model;
 
-import com.fe.bean.BaseBean;
+import com.fe.bean.ActivityDbBean;
 
 
 /**
@@ -10,7 +10,7 @@ import com.fe.bean.BaseBean;
  * 
  *
  */
-public class Secretaria  extends BaseBean{
+public class Secretaria  {
 
 	private String id_secretaria;
 	private String titulo_secretaria;
@@ -67,6 +67,9 @@ public class Secretaria  extends BaseBean{
 	public void setEmail(String email) {
 		this.email = email;
 	}
+	
+	public Secretaria()
+	{}
 	public Secretaria(String id_secretaria,String titulo_secretaria, String secretario,
 			String descripcion, String direccion, String telefono, String email) {
 		super();

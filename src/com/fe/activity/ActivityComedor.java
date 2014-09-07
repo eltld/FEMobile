@@ -8,9 +8,11 @@ import org.slf4j.LoggerFactory;
 
 import com.fe.R;
 import com.fe.R.id;
+import com.fe.bean.ComedorBean;
 import com.fe.bean.adapter.CustomComedorAdapter;
 import com.fe.bean.adapter.CustomSecretariaAdapter;
 import com.fe.bean.util.UtilList;
+import com.fe.database.helper.ComedorDbHelper;
 import com.fe.model.Comedor;
 import com.fe.model.Constants;
 import com.fe.model.Secretaria;
@@ -45,7 +47,7 @@ public class ActivityComedor extends Activity{
 	private CustomComedorAdapter adapter;
 	private TextView textViewHeader;
 	private ArrayList<Comedor> listComedor;
-	
+	private ComedorBean comedorBean=null;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -59,7 +61,17 @@ public class ActivityComedor extends Activity{
 		textViewHeader=(TextView)findViewById(R.id.text_header);
 		textViewHeader.setText(title_header);
 		
-		new ComedorAsyncTask().execute();
+		//cargo objectos 
+		comedorBean=new ComedorBean(getApplicationContext());
+		
+		logger.debug("insert comedor que onda");
+		Comedor comedor=new Comedor();
+		comedor.setId_comedor(1);
+		comedor.setNombre_comedor("Comedor 1");
+		comedor.setDescripcion_comedor("comedor informacion");
+		comedorBean.add(comedor);
+		
+	
 	
 		
 	}

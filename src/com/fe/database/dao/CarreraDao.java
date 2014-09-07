@@ -1,4 +1,4 @@
-package com.fe.database;
+package com.fe.database.dao;
 
 import java.util.ArrayList;
 
@@ -9,8 +9,8 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 
+import com.fe.database.helper.ConstantDatabase;
 import com.fe.model.Carrera;
-import com.fe.model.ConstantDatabase;
 import com.fe.model.Noticia;
 
 
@@ -71,12 +71,14 @@ private static final Logger logger = (Logger) LoggerFactory.getLogger(CarreraDao
 		    values.put(ConstantDatabase.UNI_ID,obj.getId_university());
 			dao.insert(ConstantDatabase.T_CARRERA, values);
 			
+			
 		}
 	}
 	
 	public Carrera get(Long id)
 	{
 		cursor=dao.get(ConstantDatabase.T_CARRERA,this.columns,ConstantDatabase.CARR_ID,id);
+		
 	
 		if(cursor!=null)
 		{
@@ -99,7 +101,7 @@ private static final Logger logger = (Logger) LoggerFactory.getLogger(CarreraDao
 	     carrera.setDuracion_carrera(cursor.getString(carr_duracion));
 	     carrera.setId_university(Integer.parseInt(cursor.getString(uni_id)));
 	     cursor.close();
-	     return null;
+	     return carrera;
 		}
 		return null;
 	}

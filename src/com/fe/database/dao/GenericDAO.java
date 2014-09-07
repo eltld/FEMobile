@@ -1,6 +1,6 @@
-package com.fe.database;
+package com.fe.database.dao;
 
-import com.fe.model.ConstantDatabase;
+import com.fe.database.helper.ConstantDatabase;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -85,8 +85,9 @@ public class GenericDAO extends SQLiteOpenHelper {
 	    }
 	    
 	    public Cursor get(String table, String[] columns,String columnSearch ,long id){
-	        Cursor cursor =db.query(true, table, columns, columnSearch + "=" + id, null, null, null, null, null);
-	        if (cursor != null) {
+	       Cursor cursor =db.query(true, table, columns, columnSearch + "=" + id, null, null, null, null, null);
+	       if (cursor != null) {
+	    		
 	            cursor.moveToFirst();
 	        }
 	        return cursor;

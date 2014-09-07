@@ -1,4 +1,4 @@
-package com.fe.database;
+package com.fe.database.dao;
 
 import java.util.ArrayList;
 
@@ -6,7 +6,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.fe.activity.ActivityNoticia;
-import com.fe.model.ConstantDatabase;
+import com.fe.database.helper.ConstantDatabase;
 import com.fe.model.Noticia;
 
 import android.content.ContentValues;

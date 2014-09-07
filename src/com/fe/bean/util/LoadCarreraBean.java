@@ -20,7 +20,7 @@ public class LoadCarreraBean {
 	{
 		//carrera de grado
 		Carrera carrera=new Carrera();
-		/*carrera.setId_carrera(1);
+		carrera.setId_carrera(2);
 		carrera.setTitulo_carrera("INGENIERÍA QUÍMICA");
 		carrera.setNivel_carrera("Título de Grado");
 		carrera.setAcreditacion_carrera(" Ingeniero Químico");
@@ -63,20 +63,8 @@ public class LoadCarreraBean {
 		
 		carrera.setDuracion_carrera("5 años");
 		carrera.setId_grado(Constants.CARRERA_GRADO);
-		carrera.setId_university(Constants.FACU_INGENIERIA_ID);*/
-	
-	    carrera=new Carrera();
-		carrera.setId_carrera(1);
-		carrera.setTitulo_carrera("INGENIERÍA QUÍMICA");
-		carrera.setNivel_carrera("Título de Grado");
-		carrera.setAcreditacion_carrera(" Ingeniero Químico");
-		carrera.setPerfil_carrera("Perfil");
-		carrera.setAlcance_carrera("Alcance");
-		
-		carrera.setDuracion_carrera("5 años");
-		carrera.setId_grado(Constants.CARRERA_GRADO);
 		carrera.setId_university(Constants.FACU_INGENIERIA_ID);
-		
+	
 		
 		listCarrera.add(carrera);
 	   return listCarrera;

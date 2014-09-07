@@ -46,9 +46,14 @@ public class ActivityComedorContent extends Activity {
 	String tituloComedor=intent.getStringExtra(Constants.COMEDOR_TITULO);
 	
 	//cargo objectos 
-	comedorBean=new ComedorBean();
-	Comedor comedor=comedorBean.GetBean(idComedor);
-    
+	comedorBean=new ComedorBean(getApplicationContext());
+	
+	Comedor comedor=new Comedor();
+	comedor.setId_comedor(1);
+	comedor.setNombre_comedor("Comedor 1");
+	comedor.setDescripcion_comedor("comedor informacion");
+	comedorBean.add(comedor);
+	
 	
 	text_header=(TextView)findViewById(R.id.text_header);
 	text_comedor=(TextView)findViewById(R.id.text_comedorNombre);
