@@ -65,7 +65,6 @@ public class LoadCarreraBean {
 		carrera.setId_grado(Constants.CARRERA_GRADO);
 		carrera.setId_university(Constants.FACU_INGENIERIA_ID);
 	
-		
 		listCarrera.add(carrera);
 	   return listCarrera;
 	}
