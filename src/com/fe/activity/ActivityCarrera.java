@@ -112,7 +112,7 @@ public class ActivityCarrera extends Activity {
 	    		    {
 	    		    	listData=(ArrayList<Carrera>)UtilList.loadCarreraEconomica();
 	    		    }
-	    		    
+	    		  
 	    		    
 	    		    
 	    		  

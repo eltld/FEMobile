@@ -478,6 +478,13 @@ containing a value of this type.
         public static final int label_objetivo=0x7f070055;
         public static final int label_secretario=0x7f070053;
         public static final int label_telefono=0x7f070057;
+        public static final int label_universityInfoCodigo=0x7f070066;
+        public static final int label_universityInfoDireccion=0x7f070063;
+        public static final int label_universityInfoEmail=0x7f07006f;
+        public static final int label_universityInfoFax=0x7f07006c;
+        public static final int label_universityInfoTelefono=0x7f070069;
+        public static final int label_universityInfoWeb=0x7f070072;
+        public static final int label_universityInformacion=0x7f070061;
         public static final int linear_telefono=0x7f070058;
         public static final int list_carrera=0x7f070019;
         public static final int list_comedor=0x7f07002f;
@@ -519,6 +526,11 @@ containing a value of this type.
         public static final int text_comedorId=0x7f070036;
         public static final int text_comedorNombre=0x7f070031;
         public static final int text_divider=0x7f070033;
+        public static final int text_divider1=0x7f070065;
+        public static final int text_divider2=0x7f070068;
+        public static final int text_divider3=0x7f07006b;
+        public static final int text_divider4=0x7f07006e;
+        public static final int text_divider5=0x7f070071;
         public static final int text_header=0x7f07003f;
         public static final int text_idSecretaria=0x7f07005e;
         public static final int text_newsHeader=0x7f070041;
@@ -536,8 +548,15 @@ containing a value of this type.
         public static final int text_secretariaSecretario=0x7f070054;
         public static final int text_secretariaTelefono=0x7f070059;
         public static final int text_secretariaTitulo=0x7f07005d;
-        public static final int text_universityId=0x7f070062;
-        public static final int text_universityNombre=0x7f070061;
+        public static final int text_universityId=0x7f070075;
+        public static final int text_universityInfoCodigo=0x7f070067;
+        public static final int text_universityInfoDireccion=0x7f070064;
+        public static final int text_universityInfoEmail=0x7f070070;
+        public static final int text_universityInfoFax=0x7f07006d;
+        public static final int text_universityInfoTelefono=0x7f07006a;
+        public static final int text_universityInfoTitulo=0x7f070062;
+        public static final int text_universityInfoWeb=0x7f070073;
+        public static final int text_universityNombre=0x7f070074;
         public static final int title=0x7f070043;
         public static final int wrap_content=0x7f07000d;
     }

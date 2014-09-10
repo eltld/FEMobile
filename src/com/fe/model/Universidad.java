@@ -7,7 +7,14 @@ public class Universidad {
 	private String descripcion_universidad;
 	private String lat_universidad;
 	private String long_universidad;
-	
+    private String direccion;
+    private String codigoPostal;
+    private String telefono;
+    private String fax;
+    private String email;
+    private String web;
+   
+    
 	
 	public Universidad() 
 	{
@@ -100,13 +107,62 @@ public class Universidad {
 		this.long_universidad = long_universidad;
 	}
 
+	public String getDireccion() {
+		return direccion;
+	}
 
+	public void setDireccion(String direccion) {
+		this.direccion = direccion;
+	}
+
+	public String getCodigoPostal() {
+		return codigoPostal;
+	}
+
+	public void setCodigoPostal(String codigoPostal) {
+		this.codigoPostal = codigoPostal;
+	}
+
+	public String getTelefono() {
+		return telefono;
+	}
+
+	public void setTelefono(String telefono) {
+		this.telefono = telefono;
+	}
+
+	public String getFax() {
+		return fax;
+	}
+
+	public void setFax(String fax) {
+		this.fax = fax;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getWeb() {
+		return web;
+	}
+
+	public void setWeb(String web) {
+		this.web = web;
+	}
+	
 
 	@Override
 	public String toString()
 	{
 		return "id_universidad : "+id_universidad + " universidad : "+nombre_universidad + 
-				" descripcion :  "+ descripcion_universidad ;
+			   " direccion : "+direccion + " codigo : "+codigoPostal+
+			   " telefono : "+telefono + " fax : "+fax+
+			   " email : "+email+ " web : "+web;
 		
 		
 		

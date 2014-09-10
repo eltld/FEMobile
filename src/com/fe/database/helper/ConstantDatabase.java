@@ -31,13 +31,7 @@ public final class ConstantDatabase {
 	public static final String QUERY_DROP_NOTICIA="DROP TABLE IF EXISTS "+T_NOTICIA;
 	        
 
-  //TABLE UNIVERSITY 
-	public static final String T_UNIVERSITY="university";
-	public static final String UNI_ID="uni_id";
-	public static final String UNI_TITULO="uni_titulo";
-	public static final String UNI_DESCRIPCION="uni_descripcion";
-	
-	
+
 	
 	
   //TABLE CARRERA  
@@ -80,6 +74,36 @@ public final class ConstantDatabase {
 		 	COM_NOMBRE+" text,"+
 	        COM_DIRECCION+ " text)";
 	public static final String QUERY_DROP_COMEDOR="DROP TABLE IF EXISTS "+T_COMEDOR;
+	
+	
+	
+	//TABLE UNIVERSITY
+	public static final String T_UNIVERSIDAD="universidad";
+	public static final String UNI_ID="uni_id";
+	public static final String UNI_NOMBRE="uni_nombre";
+	public static final String UNI_DIRECCION="uni_direccion";
+	public static final String UNI_CODIGO_POSTAL="uni_codigo";
+	public static final String UNI_TELEFONO="uni_telefono";
+	public static final String UNI_FAX="uni_fax";
+	public static final String UNI_EMAIL="uni_email";
+	public static final String UNI_WEB="uni_web";
+	
+	
+
+	public static final String QUERY_CREATE_UNIVERSITY=
+			"CREATE TABLE "+T_UNIVERSIDAD+"("+
+	         UNI_ID +" integer ,"+
+		     UNI_NOMBRE +" text,"+
+	         UNI_DIRECCION +" text,"+
+			 UNI_CODIGO_POSTAL+" text,"+
+	         UNI_TELEFONO+" text,"+
+			 UNI_FAX+ " text,"+
+	         UNI_EMAIL+" text,"+
+			 UNI_WEB+" text)";
+	public static final String QUERY_DROP_UNIVERSITY=
+			"DROP TABLE IF EXISTS "+T_UNIVERSIDAD;
+   
+	
 	
 	
 }

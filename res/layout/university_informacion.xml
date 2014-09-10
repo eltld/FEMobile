@@ -20,7 +20,7 @@
          android:layout_height="fill_parent"
          android:layout_width="fill_parent" >   
         <TextView
-            android:id="@+id/label_secretario"
+            android:id="@+id/label_universityInformacion"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
@@ -28,15 +28,15 @@
             android:textStyle="bold"
             android:typeface="sans"
             android:textSize="20dp"
-            android:text="Secretario" />
+            android:text="Institucion" />
 
         <TextView
-            android:id="@+id/text_secretariaSecretario"
+            android:id="@+id/text_universityInfoTitulo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_below="@+id/textView2"
-            android:text="TextView" />
+            android:text="Institucion" />
 
         <TextView
             android:id="@+id/text_divider"
@@ -47,7 +47,7 @@
              />
 
         <TextView
-            android:id="@+id/label_objetivo"
+            android:id="@+id/label_universityInfoDireccion"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Direccion"
@@ -55,19 +55,129 @@
             android:typeface="sans"
             android:textSize="20dp"
              />
-        <TextView android:id="@+id/text_secretariaDireccion"
+        <TextView android:id="@+id/text_universityInfoDireccion"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="text_direccion"
             />
 
-       
+        <TextView
+            android:id="@+id/text_divider1"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentLeft="true"
+            android:background="#555"
+             />
+        
+        <TextView
+            android:id="@+id/label_universityInfoCodigo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Codigo Postal"
+            android:textStyle="bold"
+            android:typeface="sans"
+            android:textSize="20dp"
+             />
+        <TextView android:id="@+id/text_universityInfoCodigo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="text_direccion"
+            />
+        
+           <TextView
+            android:id="@+id/text_divider2"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentLeft="true"
+            android:background="#555"
+             />
 
+            <TextView
+            android:id="@+id/label_universityInfoTelefono"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Telefono"
+            android:textStyle="bold"
+            android:typeface="sans"
+            android:textSize="20dp"
+             />
+        <TextView android:id="@+id/text_universityInfoTelefono"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="text_direccion"
+            />
+        
+           <TextView
+            android:id="@+id/text_divider3"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentLeft="true"
+            android:background="#555"
+             />
+                  <TextView
+            android:id="@+id/label_universityInfoFax"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fax"
+            android:textStyle="bold"
+            android:typeface="sans"
+            android:textSize="20dp"
+             />
+        <TextView android:id="@+id/text_universityInfoFax"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="text_direccion"
+            />
+          <TextView
+            android:id="@+id/text_divider4"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentLeft="true"
+            android:background="#555"
+             />
+          <TextView
+            android:id="@+id/label_universityInfoEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:textStyle="bold"
+            android:typeface="sans"
+            android:textSize="20dp"
+             />
+             <TextView android:id="@+id/text_universityInfoEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="text_direccion"
+            />
+               <TextView
+            android:id="@+id/text_divider5"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentLeft="true"
+            android:background="#555"
+             />
+          <TextView
+            android:id="@+id/label_universityInfoWeb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Web"
+            android:textStyle="bold"
+            android:typeface="sans"
+            android:textSize="20dp"
+             />
+             <TextView android:id="@+id/text_universityInfoWeb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="text_direccion"
+            />
          <RelativeLayout android:id="@+id/linear_telefono"
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
-                      >
-          
+              >
+
+             
+             
+             
            </RelativeLayout>
          
           <TextView

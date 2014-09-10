@@ -81,14 +81,6 @@ public class ActivityMapUnju extends FragmentActivity{
 			if (mMap != null) {
 				//setUpMap();
 		
-				googleMap.setOnCameraChangeListener(new OnCameraChangeListener() {
-		             
-				     public void onCameraChange(CameraPosition arg0) {
-				    googleMap.animateCamera(CameraUpdateFactory.zoomTo(8));
-				        googleMap.setOnCameraChangeListener(YourMapActivity.this);
-				      }
-				});
-				 
                 // Creating an instance of MarkerOptions
                 MarkerOptions markerOptions = new MarkerOptions();
  

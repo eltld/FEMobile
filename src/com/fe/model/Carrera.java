@@ -12,6 +12,8 @@ public class Carrera {
     private int id_university;
     private int id_grado;
     
+    
+
   
     
     
@@ -78,18 +80,10 @@ public class Carrera {
 	public void setAlcance_carrera(String alcance_carrera) {
 		this.alcance_carrera = alcance_carrera;
 	}
-     
 	
-	
-	public int getId_grado() {
+    public int getId_grado() {
 		return id_grado;
 	}
-
-
-
-
-
-
 
 	public void setId_grado(int id_grado) {
 		this.id_grado = id_grado;

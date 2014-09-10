@@ -68,4 +68,13 @@ public class LoadCarreraBean {
 		listCarrera.add(carrera);
 	   return listCarrera;
 	}
+	
+	
+	public List<Carrera>loadCarreraAgraria()
+	{
+		
+		
+	   return null;	
+		
+	}
 }
