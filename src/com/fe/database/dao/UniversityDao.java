@@ -29,8 +29,12 @@ private static final Logger logger = (Logger) LoggerFactory.getLogger(University
     		            ConstantDatabase.UNI_TELEFONO,
     		            ConstantDatabase.UNI_FAX,
     		            ConstantDatabase.UNI_EMAIL,
-    		            ConstantDatabase.UNI_WEB
-    };
+    		            ConstantDatabase.UNI_WEB,
+    		            ConstantDatabase.UNI_INS,
+    		            ConstantDatabase.UNI_PRE,
+    		            ConstantDatabase.UNI_INF,
+    		            ConstantDatabase.UNI_REQ
+    		             };
     
     GenericDAO dao ;
 	
@@ -61,6 +65,10 @@ private static final Logger logger = (Logger) LoggerFactory.getLogger(University
 			values.put(ConstantDatabase.UNI_FAX,obj.getFax());
 			values.put(ConstantDatabase.UNI_EMAIL, obj.getEmail());
 			values.put(ConstantDatabase.UNI_WEB, obj.getWeb());
+			values.put(ConstantDatabase.UNI_INS,obj.getInscripcion());
+			values.put(ConstantDatabase.UNI_PRE, obj.getPreinscripcion());
+			values.put(ConstantDatabase.UNI_INF, obj.getInforme());
+			values.put(ConstantDatabase.UNI_REQ, obj.getRequisitos());
 			dao.insert(ConstantDatabase.T_UNIVERSIDAD, values);
 			
 			
@@ -82,6 +90,10 @@ private static final Logger logger = (Logger) LoggerFactory.getLogger(University
 	     int uni_fax=cursor.getColumnIndex(ConstantDatabase.UNI_FAX);
 	     int uni_email=cursor.getColumnIndex(ConstantDatabase.UNI_EMAIL);
 	     int uni_web=cursor.getColumnIndex(ConstantDatabase.UNI_WEB);  
+	     int uni_ins=cursor.getColumnIndex(ConstantDatabase.UNI_INS);
+	     int uni_pre=cursor.getColumnIndex(ConstantDatabase.UNI_PRE);
+	     int uni_inf=cursor.getColumnIndex(ConstantDatabase.UNI_INF);
+	     int uni_req=cursor.getColumnIndex(ConstantDatabase.UNI_REQ);
 	     
 	    
 	     universidad.setId_universidad(Integer.parseInt(cursor.getString(uni_id)));
@@ -92,6 +104,11 @@ private static final Logger logger = (Logger) LoggerFactory.getLogger(University
 	     universidad.setFax(cursor.getString(uni_fax));
 	     universidad.setEmail(cursor.getString(uni_email));
 	     universidad.setWeb(cursor.getString(uni_web));
+	     universidad.setInscripcion(cursor.getString(uni_ins));
+	     universidad.setPreinscripcion(cursor.getString(uni_pre));
+	     universidad.setInforme(cursor.getString(uni_inf));
+	     universidad.setRequisitos(cursor.getString(uni_req));
+	     
 	     cursor.close();
 	     return universidad;
 		}

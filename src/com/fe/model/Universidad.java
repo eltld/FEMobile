@@ -13,6 +13,10 @@ public class Universidad {
     private String fax;
     private String email;
     private String web;
+    private String inscripcion;
+    private String preinscripcion;
+    private String informe;
+    private String requisitos;
    
     
 	
@@ -155,6 +159,32 @@ public class Universidad {
 		this.web = web;
 	}
 	
+	public String getInscripcion() {
+		return inscripcion;
+	}
+	public void setInscripcion(String inscripcion) {
+		this.inscripcion = inscripcion;
+	}
+    public String getPreinscripcion() {
+		return preinscripcion;
+	}
+	public void setPreinscripcion(String preinscripcion) {
+		this.preinscripcion = preinscripcion;
+	}
+	public String getInforme() {
+		return informe;
+	}
+	public void setInforme(String informe) {
+		this.informe = informe;
+	}
+	public String getRequisitos() {
+		return requisitos;
+	}
+	public void setRequisitos(String requisitos) {
+		this.requisitos = requisitos;
+	}
+
+
 
 	@Override
 	public String toString()
@@ -162,7 +192,11 @@ public class Universidad {
 		return "id_universidad : "+id_universidad + " universidad : "+nombre_universidad + 
 			   " direccion : "+direccion + " codigo : "+codigoPostal+
 			   " telefono : "+telefono + " fax : "+fax+
-			   " email : "+email+ " web : "+web;
+			   " email : "+email+ " web : "+web +
+			   " preinscripcion : "+preinscripcion + 
+			   " inscripcion : "+inscripcion + 
+			   " requisito : "+requisitos+ 
+			   " informe : "+informe;
 		
 		
 		

@@ -47,6 +47,27 @@ public class ActivityUniversityInformacion extends Activity{
 		 
 		obj=universidadBean.get(Long.parseLong(id_university));
 		
+		if(obj!=null)
+		{
+			text_nombre=(TextView)findViewById(R.id.text_universityInfoTitulo);
+			text_direccion=(TextView)findViewById(R.id.text_universityInscripcion);
+			text_codigo=(TextView)findViewById(R.id.text_universityInformes);
+			text_telefono=(TextView)findViewById(R.id.text_universityRequisito);
+			text_fax=(TextView)findViewById(R.id.text_universityInfoFax);
+			text_email=(TextView)findViewById(R.id.text_universityInfoEmail);
+			text_web=(TextView)findViewById(R.id.text_universityInfoWeb);
+			
+		    
+			text_nombre.setText(obj.getNombre_universidad());
+			text_direccion.setText(obj.getDireccion());
+			text_codigo.setText(obj.getCodigoPostal());
+			text_telefono.setText(obj.getTelefono());
+			text_fax.setText(obj.getFax());
+			text_email.setText(obj.getEmail());
+			text_web.setText(obj.getWeb());
+		  
+		}
+		
 	   logger.debug("informacion :"+ obj.toString());
 	  
 		

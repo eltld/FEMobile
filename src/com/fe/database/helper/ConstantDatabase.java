@@ -87,6 +87,10 @@ public final class ConstantDatabase {
 	public static final String UNI_FAX="uni_fax";
 	public static final String UNI_EMAIL="uni_email";
 	public static final String UNI_WEB="uni_web";
+    public static final String UNI_INS="uni_ins"; //INSRIPCION
+    public static final String UNI_PRE="uni_pre"; //PREINSCRIPCION
+    public static final String UNI_INF="uni_inf"; //INFORME
+    public static final String UNI_REQ="uni_req"; //REQUISITOS
 	
 	
 
@@ -99,7 +103,11 @@ public final class ConstantDatabase {
 	         UNI_TELEFONO+" text,"+
 			 UNI_FAX+ " text,"+
 	         UNI_EMAIL+" text,"+
-			 UNI_WEB+" text)";
+			 UNI_WEB+" text ,"+
+	         UNI_INS+" text , "+
+			 UNI_PRE+ " text,"+
+	         UNI_INF+ " text,"+
+			 UNI_REQ+" text)";
 	public static final String QUERY_DROP_UNIVERSITY=
 			"DROP TABLE IF EXISTS "+T_UNIVERSIDAD;
    

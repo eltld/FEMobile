@@ -1,8 +1,164 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
-    
+   
+ <include
+        android:id="@+id/include1"
+        layout="@layout/header" />
+       <ScrollView
+           android:id="@+id/scrollView1"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_alignParentLeft="true"
+           android:layout_below="@+id/include1" >
 
-</LinearLayout>
+    <RelativeLayout
+        android:id="@+id/content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header"
+        android:background="@color/header_text" >
+    
+     <LinearLayout
+         android:orientation="vertical"
+         android:layout_height="fill_parent"
+         android:layout_width="fill_parent" >   
+
+        <TextView
+            android:id="@+id/label_universityPreinscripcion"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:text="Preinscripcion"
+            
+              android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+              
+                android:textSize="19dp"
+                android:textStyle="bold"
+                android:typeface="serif"
+            
+            />
+
+        <TextView
+            android:id="@+id/text_universityPreinscripcion"
+            
+            android:layout_below="@+id/textView2"
+            android:text="Preinscripcion"
+              android:layout_marginLeft="20dp"
+                 android:layout_marginTop="6dp"
+                 android:textColor="@color/gray"
+                 android:textSize="15dp"
+                 android:typeface="sans"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                />
+
+        <TextView
+            android:id="@+id/text_divider"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentLeft="true"
+            android:background="@color/gray_claro"
+             />
+
+        <TextView
+            android:id="@+id/label_universityInscripcion"
+           
+            android:text="Inscripcion"
+             android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:textSize="19dp"
+                android:textStyle="bold"
+                android:typeface="serif"
+            />
+
+        <TextView
+            android:id="@+id/text_universityInscripcion"
+            android:text="text_direccion"
+             android:layout_marginLeft="20dp"
+                 android:layout_marginTop="6dp"
+                 android:textColor="@color/gray"
+                 android:textSize="15dp"
+                 android:typeface="sans"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"  
+                />
+
+        <TextView
+            android:id="@+id/text_divider1"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentLeft="true"
+            android:background="@color/gray_claro"
+             />
+        
+        <TextView
+            android:id="@+id/label_universityInformes"
+             android:text="Informes"
+               android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+           
+                android:textSize="19dp"
+                android:textStyle="bold"
+                android:typeface="serif"  
+           />
+
+        <TextView
+            android:id="@+id/text_universityInformes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="text_direccion"
+             android:layout_marginLeft="20dp"
+                 android:layout_marginTop="6dp"
+                 android:textColor="@color/gray"
+                 android:textSize="15dp"
+                 android:typeface="sans"/>
+        
+           <TextView
+            android:id="@+id/text_divider2"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentLeft="true"
+            android:background="@color/gray_claro"
+             />
+
+            <TextView
+                android:id="@+id/label_universityRequisito"
+                android:text="Requisitos Obligatorios"
+                  android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:textSize="19dp"
+                android:textStyle="bold"
+                android:typeface="serif"
+                />
+
+        <TextView
+            android:id="@+id/text_universityRequisito"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="6dp"
+            android:gravity="fill_horizontal|center"
+            android:text="text_direccion"
+            android:textColor="@color/gray"
+            android:textSize="15dp"
+            android:typeface="sans" />
+        
+       </LinearLayout>
+
+    </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

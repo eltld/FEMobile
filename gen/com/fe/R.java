@@ -485,6 +485,10 @@ containing a value of this type.
         public static final int label_universityInfoTelefono=0x7f070069;
         public static final int label_universityInfoWeb=0x7f070072;
         public static final int label_universityInformacion=0x7f070061;
+        public static final int label_universityInformes=0x7f070077;
+        public static final int label_universityInscripcion=0x7f070076;
+        public static final int label_universityPreinscripcion=0x7f070074;
+        public static final int label_universityRequisito=0x7f070078;
         public static final int linear_telefono=0x7f070058;
         public static final int list_carrera=0x7f070019;
         public static final int list_comedor=0x7f07002f;
@@ -548,15 +552,16 @@ containing a value of this type.
         public static final int text_secretariaSecretario=0x7f070054;
         public static final int text_secretariaTelefono=0x7f070059;
         public static final int text_secretariaTitulo=0x7f07005d;
-        public static final int text_universityId=0x7f070075;
-        public static final int text_universityInfoCodigo=0x7f070067;
-        public static final int text_universityInfoDireccion=0x7f070064;
+        public static final int text_universityId=0x7f07007a;
         public static final int text_universityInfoEmail=0x7f070070;
         public static final int text_universityInfoFax=0x7f07006d;
-        public static final int text_universityInfoTelefono=0x7f07006a;
         public static final int text_universityInfoTitulo=0x7f070062;
         public static final int text_universityInfoWeb=0x7f070073;
-        public static final int text_universityNombre=0x7f070074;
+        public static final int text_universityInformes=0x7f070067;
+        public static final int text_universityInscripcion=0x7f070064;
+        public static final int text_universityNombre=0x7f070079;
+        public static final int text_universityPreinscripcion=0x7f070075;
+        public static final int text_universityRequisito=0x7f07006a;
         public static final int title=0x7f070043;
         public static final int wrap_content=0x7f07000d;
     }
@@ -589,10 +594,9 @@ containing a value of this type.
         public static final int secretaria_single=0x7f030016;
         public static final int single_text=0x7f030017;
         public static final int university=0x7f030018;
-        public static final int university_content=0x7f030019;
-        public static final int university_informacion=0x7f03001a;
-        public static final int university_ingreso=0x7f03001b;
-        public static final int university_single=0x7f03001c;
+        public static final int university_informacion=0x7f030019;
+        public static final int university_ingreso=0x7f03001a;
+        public static final int university_single=0x7f03001b;
     }
     public static final class string {
         public static final int action_settings=0x7f06001b;
