@@ -112,6 +112,28 @@ public final class ConstantDatabase {
 			"DROP TABLE IF EXISTS "+T_UNIVERSIDAD;
    
 	
+	//TABLE AUTORIDAD
+	public static final String T_AUTORIDAD="autoridad";
+	public static final String AUTO_ID="aut_id";
+	public static final String AUTO_NOMBRE="aut_nombre";
+	public static final String AUTO_TITULO="aut_titulo";
+	public static final String AUTO_EMAIL="aut_email";
+	public static final String AUTO_TELEFONO="aut_telefono";
+	public static final String AUTO_IMAGE_URL="aut_image";
+	
+	
+
+	public static final String QUERY_CREATE_AUTORIDAD="CREATE TABLE "+T_AUTORIDAD+"("+
+	         AUTO_ID +" integer ,"+
+		     AUTO_NOMBRE +" text,"+
+	         AUTO_TITULO +" text,"+
+			 AUTO_EMAIL+" text,"+
+	         AUTO_TELEFONO+" text,"+
+			 AUTO_IMAGE_URL+" text)";
+	public static final String QUERY_DROP_AUTORIDAD=
+			"DROP TABLE IF EXISTS "+T_AUTORIDAD;
+	
+	
 	
 	
 }
