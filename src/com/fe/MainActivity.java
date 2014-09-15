@@ -11,6 +11,7 @@ import java.util.ArrayList;
 
 import com.fe.activity.ActivityAutoridad;
 import com.fe.activity.ActivityBase;
+import com.fe.activity.ActivityCalendario;
 import com.fe.activity.ActivityComedor;
 import com.fe.activity.ActivityGaleria;
 import com.fe.activity.ActivityMapUnju;
@@ -123,6 +124,12 @@ public class MainActivity extends Activity  implements OnItemClickListener {
 			    	 final Intent intent=new Intent(MainActivity.this,ActivityGaleria.class);
 			    	 startActivity(intent);
 			    };break;
+			    case 6:{
+			    	    logger.debug("Calendario");
+			    	    final Intent intent=new Intent(MainActivity.this,ActivityCalendario.class);
+			    	    startActivity(intent);
+			    	   
+			             };break;
 			    
 			    case 7: {
 			    	     logger.debug("Autoridades");
