@@ -13,7 +13,7 @@ import android.widget.TextView;
 import com.fe.R;
 import com.fe.bean.adapter.CustomCarreraAdapter.RecordHolder;
 import com.fe.bean.adapter.CustomNewsAdapter.ViewHolder;
-import com.fe.model.Autoridades;
+import com.fe.model.Autoridad;
 import com.fe.model.Carrera;
 import com.fe.model.Noticia;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
@@ -21,7 +21,7 @@ import com.nostra13.universalimageloader.core.ImageLoader;
 
 public class CustomAutoridadAdapter extends BaseAdapter
 {
-private ArrayList<Autoridades> listData;
+private ArrayList<Autoridad> listData;
 private LayoutInflater layoutInflater;
 private java.util.logging.Logger logger;
 private ImageLoader imageLoader;
@@ -30,12 +30,12 @@ private Context myContext;
 private DisplayImageOptions options;
 
 
-public CustomAutoridadAdapter(Context context,ArrayList<Autoridades> listData,
+public CustomAutoridadAdapter(Context context,ArrayList<Autoridad> listData,
 		ImageLoader imageLoader,DisplayImageOptions options)
 {
    int i=0;  
 	imageUrls=new String[listData.size()];
-	for(Autoridades autoridades : listData)
+	for(Autoridad autoridades : listData)
 	{
 		imageUrls[i]=autoridades.getImageUrlAutoridad();
 		i++;
@@ -64,7 +64,7 @@ public Object getItem(int arg0) {
 @Override
 public long getItemId(int arg0) {
 	// TODO Auto-generated method stub
-	return 0;
+	return arg0;
 }
 
  
@@ -89,7 +89,7 @@ public View getView(int position, View convertView, ViewGroup parent) {
 		holder = (ViewHolder) convertView.getTag();
 	}
 
-	Autoridades autoridad = (Autoridades) listData.get(position);
+	Autoridad autoridad =  listData.get(position);
 
 	
 	holder.autoridadTitulo.setText(autoridad.getTituloAutoridad());

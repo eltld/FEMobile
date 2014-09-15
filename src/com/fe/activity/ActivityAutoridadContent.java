@@ -10,7 +10,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.fe.R;
+import com.fe.bean.AutoridadBean;
 import com.fe.bean.NoticiaBean;
+import com.fe.model.Autoridad;
 import com.fe.model.Constants;
 import com.fe.model.Noticia;
 import com.koushikdutta.ion.Ion;
@@ -19,56 +21,56 @@ public class ActivityAutoridadContent extends Activity {
 
 	private static final Logger logger = (Logger) LoggerFactory.getLogger(ActivityAutoridadContent.class);
 	
-	private TextView text_noticiaTitulo;
-	private TextView text_noticiaBajada;
-	private TextView text_noticiaFecha;
-	private TextView text_noticiaCuerpo;
-	private ImageView image_noticia;
+	private TextView text_autoridadTitulo;
+	private TextView text_autoridadNombre;
+	private TextView text_autoridadEmail;
+	private TextView text_autoridadTelefono;
+	private ImageView image_autoridad;
 	private TextView textHeader;
-	private NoticiaBean noticiaBean;
+	private AutoridadBean autoridadBean;
 	
 	
 	
 	@Override
     protected void onCreate(Bundle savedInstanceState) {
 	 super.onCreate(savedInstanceState);
-	 setContentView(R.layout.noticias_content);
+	 setContentView(R.layout.autoridad_content);
 	
 	  
-	 logger.debug("Noticia Content");
+	 logger.debug("Autoridad Content");
 	 
 	 Intent intent=this.getIntent();
-	 String noticia_id=intent.getStringExtra(Constants.NOTICIA_ID);
-	 noticiaBean=new NoticiaBean(getApplicationContext());
-	 Noticia noticia=noticiaBean.get(Long.parseLong(noticia_id));
+	 String autoridad_id=intent.getStringExtra(Constants.AUTORIDAD_ID);
+	 autoridadBean=new AutoridadBean(getApplicationContext());
+	 Autoridad autoridad=autoridadBean.get(Long.parseLong(autoridad_id));
 	 
-	 logger.debug("Notica getObject :"+noticia.toString());
+	 logger.debug("Autoridada getObject :"+autoridad.toString());
 	 
-	 text_noticiaTitulo=(TextView)findViewById(R.id.text_noticiaContentTitulo);
-	 text_noticiaBajada=(TextView)findViewById(R.id.text_noticiaContentBajada);
-	 text_noticiaCuerpo=(TextView)findViewById(R.id.text_noticiaContentCuerpo);
-	 text_noticiaFecha=(TextView)findViewById(R.id.text_noticiaContentFecha);
-	 image_noticia=(ImageView)findViewById(R.id.image_noticiaContentImage);
+	 text_autoridadTitulo=(TextView)findViewById(R.id.text_autoridadContentTitulo);
+	 text_autoridadNombre=(TextView)findViewById(R.id.text_autoridadContentNombre);
+	 text_autoridadEmail=(TextView)findViewById(R.id.text_autoridadContentEmail);
+	 text_autoridadTelefono=(TextView)findViewById(R.id.text_autoridadContentTelefono);
+	 image_autoridad=(ImageView)findViewById(R.id.image_autoridadContentImage);
 	 textHeader=(TextView)findViewById(R.id.text_header);
-	 textHeader.setText("Noticias");
+	 textHeader.setText("Autoridad");
 	 
 	 //asigno los valores 
-	 if(noticia!=null)
+	 if(autoridad!=null)
       {
-		 text_noticiaTitulo.setText(noticia.getTituloNoticia());
-		 text_noticiaBajada.setText(noticia.getBajadaNoticia());
-		 text_noticiaFecha.setText(noticia.getDateNoticia());
-		 text_noticiaCuerpo.setText(noticia.getCuerpoNoticia());
+		 text_autoridadTitulo.setText(autoridad.getTituloAutoridad());
+		 text_autoridadNombre.setText(autoridad.getNombreAutoridad());
+		 text_autoridadEmail.setText(autoridad.getEmailAutoridad());
+		 text_autoridadTelefono.setText(autoridad.getTelefonoAutoridad());
 		
 		
 		 Ion.with(getApplicationContext())
-		 .load(noticia.getUrlImageNoticia())
+		 .load(autoridad.getImageUrlAutoridad())
 		 .withBitmap()
 		 .resizeHeight(100)
 		 .resizeWidth(250)
 		 .placeholder(R.drawable.ic_launcher)
 		 .error(R.drawable.ic_error)
-		 .intoImageView(image_noticia);
+		 .intoImageView(image_autoridad);
 	   
      }
 	}

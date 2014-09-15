@@ -28,6 +28,7 @@ public class ActivityDbHelper extends SQLiteOpenHelper {
 		db.execSQL(ConstantDatabase.QUERY_CREATE_CARRERA);
 		db.execSQL(ConstantDatabase.QUERY_CREATE_COMEDOR);
 		db.execSQL(ConstantDatabase.QUERY_CREATE_UNIVERSITY);
+		db.execSQL(ConstantDatabase.QUERY_CREATE_AUTORIDAD);
 	}
 
 	@Override
@@ -38,7 +39,8 @@ public class ActivityDbHelper extends SQLiteOpenHelper {
 		db.execSQL(ConstantDatabase.QUERY_DROP_NOTICIA);
 		db.execSQL(ConstantDatabase.QUERY_DROP_COMEDOR);
 		db.execSQL(ConstantDatabase.QUERY_DROP_UNIVERSITY);
-        onCreate(db);
+        db.execSQL(ConstantDatabase.QUERY_DROP_AUTORIDAD);
+		onCreate(db);
 	}
 
 	

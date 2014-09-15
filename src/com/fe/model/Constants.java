@@ -33,6 +33,9 @@ public final class Constants {
     public static final String COMEDOR_TITULO="TITULO";
     public static final String COMEDOR_ID="ID";
     
+    //TAG INTENT AUTORIDAD 
+    public static final String AUTORIDAD_TITULO="TITULO";
+    public static final String AUTORIDAD_ID="ID";
     
     //TAG INTENT MAIN ACTIVITY
     public static final String PARAMETER="parameter";

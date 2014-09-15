@@ -10,7 +10,7 @@ import android.content.Context;
 import android.database.Cursor;
 
 import com.fe.database.helper.ConstantDatabase;
-import com.fe.model.Autoridades;
+import com.fe.model.Autoridad;
 import com.fe.model.Carrera;
 import com.fe.model.Noticia;
 
@@ -18,7 +18,7 @@ public class AutoridadDao {
 	
 private static final Logger logger = (Logger) LoggerFactory.getLogger(AutoridadDao.class);
 	
-	private Autoridades autoridad;
+	private Autoridad autoridad;
 	String result="";
     Cursor cursor = null;
     String[] columns = new String[] { 
@@ -40,16 +40,17 @@ private static final Logger logger = (Logger) LoggerFactory.getLogger(AutoridadD
 				ConstantDatabase.QUERY_CREATE_AUTORIDAD, 
 				ConstantDatabase.T_AUTORIDAD,
 				ConstantDatabase.DATABASE_VERSION);
-		autoridad=new Autoridades();
+		autoridad=new Autoridad();
 
 		
 	}
 	
-	public void add(Autoridades obj)
+	public void add(Autoridad obj)
 	{
 		if(dao!=null)
 		{
-			logger.debug("Insert Autoridad : "+obj.toString());
+			logger.debug("Insert Autoridad : "+obj.toString() 
+					+ " url : "+obj.getImageUrlAutoridad());
 			ContentValues values=new ContentValues();
 			values.put(ConstantDatabase.AUTO_ID, obj.getIdAutoridad());
 			values.put(ConstantDatabase.AUTO_TITULO, obj.getTituloAutoridad());
@@ -63,7 +64,7 @@ private static final Logger logger = (Logger) LoggerFactory.getLogger(AutoridadD
 		}
 	}
 	
-	public Autoridades get(Long id)
+	public Autoridad get(Long id)
 	{
 		cursor=dao.get(ConstantDatabase.T_AUTORIDAD,this.columns,ConstantDatabase.AUTO_ID,id);
 		

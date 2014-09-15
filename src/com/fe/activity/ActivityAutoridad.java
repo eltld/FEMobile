@@ -16,7 +16,7 @@ import com.fe.bean.adapter.CustomAutoridadAdapter;
 import com.fe.bean.adapter.CustomNewsAdapter;
 import com.fe.bean.json.AutoridadTag;
 import com.fe.bean.json.NoticiaTag;
-import com.fe.model.Autoridades;
+import com.fe.model.Autoridad;
 import com.fe.model.ConstantRest;
 import com.fe.model.Constants;
 import com.fe.model.Noticia;
@@ -45,7 +45,7 @@ public class ActivityAutoridad extends Activity{
 
 	private static final Logger logger = (Logger) LoggerFactory.getLogger(ActivityAutoridad.class);
 	private ListView listViewAutoridad;
-	private ArrayList<Autoridades> listData;
+	private ArrayList<Autoridad> listData;
     private CustomAutoridadAdapter adapter;
     private TextView textViewHeader;
     ProgressDialog pDialog;
@@ -53,12 +53,12 @@ public class ActivityAutoridad extends Activity{
     DisplayImageOptions options;
 	protected ImageLoader imageLoader;
 	AutoridadBean autoridadBean=null;
+	private boolean bandError;
 	 
     private String string_header;
 	  /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
-      
          super.onCreate(savedInstanceState);
          setContentView(R.layout.autoridad);  
          Intent intent=new Intent();
@@ -97,7 +97,7 @@ public class ActivityAutoridad extends Activity{
          ImageLoader.getInstance().init(config);
      	imageLoader=ImageLoader.getInstance();
          
-     	
+     	 bandError=false;
      	 
          new AutoridadClient().execute(); 
        
@@ -138,12 +138,12 @@ public class ActivityAutoridad extends Activity{
     			{
     			
     				logger.debug("Recorro el listado de json");
-    				listData=new ArrayList<Autoridades>();
+    				listData=new ArrayList<Autoridad>();
     				Gson gson=new Gson();
     				JSONArray jsonArray=new JSONArray(jsonString);
     				for(int i=0; i<jsonArray.length();i++)
     				{
-    				   Autoridades autoridad=new Autoridades();
+    				   Autoridad autoridad=new Autoridad();
     				   JSONObject jsonObject=jsonArray.getJSONObject(i);
     				   autoridad.setIdAutoridad(jsonObject.getString(AutoridadTag.AUTORIDAD_ID));
     				   autoridad.setTituloAutoridad(jsonObject.getString(AutoridadTag.AUTORIDAD_TITULO));
@@ -151,6 +151,7 @@ public class ActivityAutoridad extends Activity{
     				   autoridad.setEmailAutoridad(jsonObject.getString(AutoridadTag.AUTORIDAD_EMAIL));
     				   autoridad.setTelefonoAutoridad(jsonObject.getString(AutoridadTag.AUTORIDAD_TELEFONO));
     				   autoridad.setImageUrlAutoridad(jsonObject.getString(AutoridadTag.AUTORIDAD_URL));
+    				   logger.debug("url autoridad: " +autoridad.getImageUrlAutoridad());
     				   listData.add(autoridad);
     					
     				}
@@ -158,6 +159,7 @@ public class ActivityAutoridad extends Activity{
     				
     			}catch(JSONException e)
     			{
+    				bandError=true;
     				logger.error("Error JSONExcetion : "+e.toString());
     			}
     			
@@ -184,7 +186,7 @@ public class ActivityAutoridad extends Activity{
     	{
     		if(listData.size()!=0)
     		{
-    			for(Autoridades autoridad : listData)
+    			for(Autoridad autoridad : listData)
     			{ autoridadBean.add(autoridad);}
     			
     			System.out.println("informacion de datos");
@@ -216,9 +218,9 @@ public class ActivityAutoridad extends Activity{
 					logger.debug("click noticia");
 					
 					
-					TextView text_noticiaId=(TextView)arg1.findViewById(R.id.text_noticiaId);
-					Intent intent = new Intent(ActivityAutoridad.this, ActivityNoticiaContent.class);
-					intent.putExtra(Constants.NOTICIA_ID, text_noticiaId.getText().toString());
+					TextView text_autoridadId=(TextView)arg1.findViewById(R.id.text_autoridadId);
+					Intent intent = new Intent(ActivityAutoridad.this, ActivityAutoridadContent.class);
+					intent.putExtra(Constants.AUTORIDAD_ID, text_autoridadId.getText().toString());
 		
 					startActivity(intent);
 				}

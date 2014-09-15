@@ -16,7 +16,7 @@ public abstract  class ConstantRest {
     //public final static String URL_IMAGES="http://10.2.2.245/WebRest//fotos.php";
     
 	public final static String URL_NOTICIAS="http://mauonda.netau.net/noticias.php";
-    public final static String URL_AUTORIDADES="http://manuonda.netau.net/autoridad.php";
+    public final static String URL_AUTORIDADES="http://mauonda.netau.net/autoridad.php";
 	public final static String URL_IMAGES="http://10.2.2.245/WebRest//fotos.php";
 	
 	//IMAGES

@@ -6,7 +6,7 @@ import android.content.Context;
 
 import com.fe.database.dao.AutoridadDao;
 import com.fe.database.dao.ComedorDao;
-import com.fe.model.Autoridades;
+import com.fe.model.Autoridad;
 import com.fe.model.Carrera;
 import com.fe.model.Comedor;
 
@@ -19,17 +19,17 @@ public AutoridadBean(Context ctx)
 	autoridadDao=new AutoridadDao(ctx);
 }
 
-public void add(Autoridades obj)
+public void add(Autoridad obj)
 {
 	autoridadDao.add(obj);
 }
 
-public Autoridades get(Long id)
+public Autoridad get(Long id)
 {
   return autoridadDao.get(id);
 }
 
-public void addList(ArrayList<Autoridades> list)
+public void addList(ArrayList<Autoridad> list)
 {
 	for(int i=0; i<list.size();i++)
 	{ 
