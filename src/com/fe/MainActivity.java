@@ -13,6 +13,7 @@ import com.fe.activity.ActivityAutoridad;
 import com.fe.activity.ActivityBase;
 import com.fe.activity.ActivityCalendario;
 import com.fe.activity.ActivityComedor;
+import com.fe.activity.ActivityEvento;
 import com.fe.activity.ActivityGaleria;
 import com.fe.activity.ActivityMapUnju;
 import com.fe.activity.ActivityNoticia;
@@ -123,6 +124,11 @@ public class MainActivity extends Activity  implements OnItemClickListener {
 			    	 logger.debug("Gallery");
 			    	 final Intent intent=new Intent(MainActivity.this,ActivityGaleria.class);
 			    	 startActivity(intent);
+			    };break;
+			    case 5:{
+			    	    logger.debug("Eventos");
+			    	    final Intent intent=new Intent(MainActivity.this, ActivityEvento.class);
+			    	    startActivity(intent);
 			    };break;
 			    case 6:{
 			    	    logger.debug("Calendario");

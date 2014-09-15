@@ -17,6 +17,7 @@
     <string name="str_descImage">Imagen</string>
     <string name="activity_autoridad">Autoridad</string>
     <string name="activity_calendario">Calendario</string>
+    <string name="activity_evento">Eventos</string>
 
 
 </resources>

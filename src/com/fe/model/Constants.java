@@ -37,6 +37,10 @@ public final class Constants {
     public static final String AUTORIDAD_TITULO="TITULO";
     public static final String AUTORIDAD_ID="ID";
     
+    //TAG INTENT EVENTO 
+    public static final String EVENTO_TITULO="TITULO";
+    public static final String EVENTO_ID="ID";
+    
     //TAG INTENT MAIN ACTIVITY
     public static final String PARAMETER="parameter";
     public static final String TAG_UNIVERSITY_HEADER="OFERTA ACADEMICA";

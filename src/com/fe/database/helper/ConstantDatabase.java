@@ -134,6 +134,27 @@ public final class ConstantDatabase {
 			"DROP TABLE IF EXISTS "+T_AUTORIDAD;
 	
 	
+	//TABLE EVENTO
+		public static final String T_EVENTO="evento";
+		public static final String EVENTO_ID="eve_id";
+		public static final String EVENTO_TITULO="eve_titulo";
+		public static final String EVENTO_FECHA="eve_fecha";
+		public static final String EVENTO_HORA="eve_hora";
+		public static final String EVENTO_CUERPO="eve_cuerpo";
+		public static final String EVENTO_URL_WEB="eve_url_web";
+		
+		
+
+		public static final String QUERY_CREATE_EVENTO="CREATE TABLE "+T_EVENTO+"("+
+		         EVENTO_ID +" integer ,"+
+			     EVENTO_TITULO+" text,"+
+		         EVENTO_FECHA +" text,"+
+				 EVENTO_HORA+" text,"+
+		         EVENTO_CUERPO+" text,"+
+				 EVENTO_URL_WEB+" text)";
+		public static final String QUERY_DROP_EVENTO=
+				"DROP TABLE IF EXISTS "+T_EVENTO;
+	
 	
 	
 }
