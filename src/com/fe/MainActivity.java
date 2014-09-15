@@ -9,6 +9,7 @@ import java.util.ArrayList;
 
 
 
+import com.fe.activity.ActivityAutoridad;
 import com.fe.activity.ActivityBase;
 import com.fe.activity.ActivityComedor;
 import com.fe.activity.ActivityGaleria;
@@ -123,6 +124,12 @@ public class MainActivity extends Activity  implements OnItemClickListener {
 			    	 startActivity(intent);
 			    };break;
 			    
+			    case 7: {
+			    	     logger.debug("Autoridades");
+			    	     final Intent intent=new Intent(MainActivity.this,ActivityAutoridad.class);
+			    	     startActivity(intent);
+			    	 
+			            };break;
 			  
 			    case 8: {
 			    	     logger.debug("Universidades");

@@ -1,8 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical" >
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <include
+        android:id="@+id/include1"
+        layout="@layout/header" />
+
+       <ScrollView
+           android:id="@+id/scrollView1"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_alignParentLeft="true"
+           android:layout_below="@+id/include1" >
+
+           <LinearLayout
+               android:orientation="vertical"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent" >
+          
+            <TextView
+                android:id="@+id/text_autoridadContentTitulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:text="Titulo"
+                android:textSize="19dp"
+                android:textStyle="bold"
+                android:typeface="serif" />
+
+             <TextView
+                 android:id="@+id/text_autoridadContentNombre"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignParentLeft="true"
+                 android:layout_below="@+id/text_autoridadContentTitulo"
+                 android:layout_marginLeft="20dp"
+                 android:layout_marginTop="6dp"
+                 android:text="Nombre"
+                 android:textColor="@color/gray"
+                 android:textSize="15dp"
+                 android:typeface="sans" />
+              <TextView
+                 android:id="@+id/text_autoridadContentEmail"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignParentLeft="true"
+                 android:layout_below="@+id/text_autoridadContentNombre"
+                 android:layout_marginLeft="20dp"
+                 android:layout_marginTop="6dp"
+                 android:text="email"
+                 android:textColor="@color/gray"
+                 android:textSize="15dp"
+                 android:typeface="sans" />
+             <TextView
+                 android:id="@+id/text_autoridadContentTelefono"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignParentLeft="true"
+                 android:layout_below="@+id/text_autoridadContentEmail"
+                 android:layout_marginLeft="20dp"
+                 android:layout_marginTop="6dp"
+                 android:text="telefono"
+                 android:textColor="@color/gray"
+                 android:textSize="15dp"
+                 android:typeface="sans" />
+             <TextView
+            android:id="@+id/text_noticiaLineaUno"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentLeft="true"
+            android:background="@color/gray_claro"
+            android:layout_below="@+id/text_autoridadContentTelefono"
+            android:layout_marginTop="3dp"
+       
+             />
+
+           <ImageView
+           android:id="@+id/image_autoridadContentImage"
+           android:layout_width="300dp"
+           android:layout_height="200dp"
+           android:layout_alignParentLeft="true"
+           android:layout_below="@+id/text_noticiaLineaUno"
+           android:layout_marginLeft="10dp"
+           android:src="@drawable/call" />
+           
+         
+           </LinearLayout>
+           
+           </ScrollView>
+
+      
+
     
 
-</LinearLayout>
+      
+
+</RelativeLayout>
