@@ -16,6 +16,7 @@
     <string name="str_titulo_principal">UNJU</string>
     <string name="str_descImage">Imagen</string>
     <string name="activity_autoridad">Autoridad</string>
+    <string name="activity_calendario">Calendario</string>
 
 
 </resources>
