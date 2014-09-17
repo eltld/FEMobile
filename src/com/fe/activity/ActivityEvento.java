@@ -1,6 +1,7 @@
 package com.fe.activity;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -9,6 +10,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import android.app.Activity;
+import android.app.DatePickerDialog;
+import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -16,6 +19,8 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.DatePicker;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -58,6 +63,10 @@ public class ActivityEvento  extends Activity{
     DisplayImageOptions options;
 	protected ImageLoader imageLoader;
 	EventoBean eventoBean=null;
+    private ImageView imageViewCalendar;
+	private int yr,mon,day;
+	
+	static final int DATE_DIALOG_ID=0;
 	 
     private String string_header;
 	  /** Called when the activity is first created. */
@@ -74,38 +83,25 @@ public class ActivityEvento  extends Activity{
          pB=(ProgressBar)findViewById(R.id.marker_progress);
       	
          eventoBean=new EventoBean(getApplicationContext());
-
-         
-         options = new DisplayImageOptions.Builder()
-     	.showImageOnLoading(R.drawable.ic_stub)
-     	.showImageForEmptyUri(R.drawable.ic_empty)
-     	.showImageOnFail(R.drawable.ic_error)
-     	.cacheInMemory(true)
-     	.cacheOnDisk(true)
-     	.considerExifParams(true)
-     	.bitmapConfig(Bitmap.Config.RGB_565)
-     	.build();
-     	
-     	ImageLoaderConfiguration config = new ImageLoaderConfiguration.Builder(getApplicationContext())
-     	.threadPriority(Thread.NORM_PRIORITY - 2)
-     	.denyCacheImageMultipleSizesInMemory()
-     	.diskCacheFileNameGenerator(new Md5FileNameGenerator())
-     	.diskCacheSize(50 * 1024 * 1024) // 50 Mb
-     	.tasksProcessingOrder(QueueProcessingType.LIFO)
-     	.writeDebugLogs() // Remove for release app
-     	.build();
-         // Initialize ImageLoader with configuration.
-         ImageLoader.getInstance().init(config);
-     	imageLoader=ImageLoader.getInstance();
-         
-     	
-     	 
-         new EventoClient().execute(); 
-       
+	 
+         loadClient();
+        
      
          
     }
       
+    
+    private void loadClient()
+    {
+    	listViewEventos=(ListView)findViewById(R.id.custom_list_evento);
+    	listViewEventos.invalidate();
+    	listViewEventos.invalidateViews();
+    	listViewEventos.clearTextFilter();
+    	
+    	listViewEventos.setAdapter(null);
+    	new EventoClient().execute(); 
+         
+    }
     
     private class EventoClient extends AsyncTask<String,Void, String>{
 
@@ -116,6 +112,7 @@ public class ActivityEvento  extends Activity{
     	protected void onPreExecute() {
             logger.debug("onPreExecute");
            
+            
              pB.setVisibility(View.VISIBLE);
            
        }
@@ -206,8 +203,20 @@ public class ActivityEvento  extends Activity{
 			System.out.println("Result : "+result);
 			adapter=new CustomEventoAdapter(ActivityEvento.this, listData,imageLoader,
 					options);
-			listViewEventos=(ListView)findViewById(R.id.custom_list_evento);
-			listViewEventos.setAdapter(adapter);
+			adapter.notifyDataSetChanged();
+			 listViewEventos.setAdapter(adapter);
+			 imageViewCalendar=(ImageView)findViewById(R.id.image_eventHeaderCalendar);
+
+			
+			 imageViewCalendar.setOnClickListener(new View.OnClickListener() {
+					
+					@Override
+					public void onClick(View arg0) {
+						logger.debug("event Calendar");
+						showDatePickerDialog();
+
+					}
+				});
 			
 			listViewEventos.setOnItemClickListener(new OnItemClickListener() {
 
@@ -228,6 +237,42 @@ public class ActivityEvento  extends Activity{
 
     }
 
-    
+
+public void showDatePickerDialog()
+{
+
+	 Calendar today=Calendar.getInstance();
+     yr=today.get(Calendar.YEAR);
+     mon=today.get(Calendar.MONTH);
+     day=today.get(Calendar.DAY_OF_MONTH);
+	showDialog(DATE_DIALOG_ID);
+}
+
+protected Dialog onCreateDialog(int id)
+{
+	switch (id) {
+	case DATE_DIALOG_ID:
+		return new DatePickerDialog(ActivityEvento.this,dateSetListener,yr,mon,day);
+		
+	}
+	return null;
+}
+private DatePickerDialog.OnDateSetListener dateSetListener=new DatePickerDialog.OnDateSetListener() {
+	
+	@Override
+	public void onDateSet(DatePicker view, int year, int monthOfYear,
+			int dayOfMonth) {
+		// TODO Auto-generated method stub
+		yr=year;
+		mon=monthOfYear;
+		day=dayOfMonth;
+		loadClient();
+		//EditText it=(EditText)findViewById(R.id.editText1);
+		//it.setText(day+" - "+mon+" - "+yr);
+	}
+};
+
+
+
     
 }

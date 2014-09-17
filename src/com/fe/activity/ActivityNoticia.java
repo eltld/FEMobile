@@ -37,6 +37,7 @@ import android.view.View.OnClickListener;
 import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.ProgressBar;
@@ -71,7 +72,7 @@ public class ActivityNoticia extends Activity{
          setContentView(R.layout.noticias);  
          Intent intent=new Intent();
          string_header=intent.getStringExtra("title_header");
-         textViewHeader=(TextView)findViewById(R.id.text_header);
+         textViewHeader=(TextView)findViewById(R.id.text_newsHeader);
 		
          textViewHeader.setText("Noticias");
 			
@@ -107,12 +108,20 @@ public class ActivityNoticia extends Activity{
          
      	
      	 
-         new NoticiasClient().execute(); 
+       loadData();
        
      
          
     }
       
+    private void loadData()
+    {
+    	listViewNoticias=(ListView)findViewById(R.id.custom_list_noticia);	
+    	listViewNoticias.setAdapter(null);
+    	new NoticiasClient().execute(); 
+    	
+    }
+    
     
     private class NoticiasClient extends AsyncTask<String,Void, String>{
 
@@ -213,9 +222,19 @@ public class ActivityNoticia extends Activity{
 			System.out.println("Result : "+result);
 			adapter=new CustomNewsAdapter(ActivityNoticia.this, listData,imageLoader,
 					options);
-			listViewNoticias=(ListView)findViewById(R.id.custom_list_noticia);
 			listViewNoticias.setAdapter(adapter);
-			
+			ImageView imageViewNews=(ImageView)findViewById(R.id.image_newsHeaderUpdate);
+
+				
+			 imageViewNews.setOnClickListener(new View.OnClickListener() {
+					
+					@Override
+					public void onClick(View arg0) {
+						logger.debug("event News Update");
+						loadData();
+
+					}
+				});
 			listViewNoticias.setOnItemClickListener(new OnItemClickListener() {
 
 				@Override

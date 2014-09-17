@@ -1,11 +1,18 @@
 package com.fe.activity;
 
+import java.util.Calendar;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import android.app.Activity;
+import android.app.DatePickerDialog;
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.DatePicker;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -54,6 +61,8 @@ protected void onCreate(Bundle savedInstanceState) {
  textHeader=(TextView)findViewById(R.id.text_header);
  textHeader.setText("Evento");
  
+ 
+ 
  //asigno los valores 
  if(evento!=null)
   {
@@ -61,8 +70,9 @@ protected void onCreate(Bundle savedInstanceState) {
 	 text_eventoFecha.setText(evento.getFechaEvento());
 	 text_eventoHora.setText(evento.getHorarioEvento());
 	 text_eventoCuerpo.setText(evento.getCuerpoEvento());
-	 //text_eventoUrlWeb.setText(evento.getUrlWebEvento());
-	
+	 //text_eventoUrlWeb.setText(evento.getUrlWebEvento()); 
   }
- }
+
+}
+
 }

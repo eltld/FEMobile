@@ -130,21 +130,16 @@ public class MainActivity extends Activity  implements OnItemClickListener {
 			    	    final Intent intent=new Intent(MainActivity.this, ActivityEvento.class);
 			    	    startActivity(intent);
 			    };break;
-			    case 6:{
-			    	    logger.debug("Calendario");
-			    	    final Intent intent=new Intent(MainActivity.this,ActivityCalendario.class);
-			    	    startActivity(intent);
-			    	   
-			             };break;
+			   
 			    
-			    case 7: {
+			    case 6: {
 			    	     logger.debug("Autoridades");
 			    	     final Intent intent=new Intent(MainActivity.this,ActivityAutoridad.class);
 			    	     startActivity(intent);
 			    	 
 			            };break;
 			  
-			    case 8: {
+			    case 7: {
 			    	     logger.debug("Universidades");
 			    	     final Intent intent=new Intent(MainActivity.this,ActivityUniversity.class);
 			    	     //intent.putExtra(Constants.PARAMETER, "OFERTA ACADEMICA");
