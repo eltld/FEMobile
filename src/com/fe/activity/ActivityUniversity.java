@@ -57,6 +57,7 @@ public class ActivityUniversity extends Activity {
 		logger.info("onCreate Activity Universidades");
 		listView=(ListView)findViewById(R.id.list_university);
 	    adapter=new CustomUniversityAdapter(ActivityUniversity.this,listData);
+	    listView.setAdapter(null);
 	    listView.setAdapter(adapter);
 	    
 	    listView.setOnItemClickListener(new OnItemClickListener() {
@@ -105,6 +106,16 @@ public class ActivityUniversity extends Activity {
 				 
 				        	
 				        };break;
+				        case 3: {
+				        	logger.debug("Localizacion");
+				        	Intent intent=new Intent(ActivityUniversity.this,ActivityUniversityMap.class);
+				        	intent.putExtra(Constants.UNIVERSITY_ID, text_id.getText().toString());
+				        	startActivity(intent);
+				        	
+				        	
+				        };break;
+				        
+				        
 				        }
 				    
 				    }
@@ -145,6 +156,10 @@ public class ActivityUniversity extends Activity {
 						+ "Formulario de Preinscripción impreso (debe corresponder a la última actualización realizada en el módulo de Preinscripción)."
 						+ "Carpetín colgante."
 						+ "(*) Se deberán presentar además los originales a los efectos de constatar la veracidad de los datos ");
+		
+		universidad.setLat_universidad("-24.188101");
+		universidad.setLong_universidad("-65.293551");
+		listData.add(universidad);
 		//Universidad de Ingenieria
 		universidad=new Universidad();
 		universidad.setId_universidad(Constants.FACU_INGENIERIA_ID);
@@ -167,6 +182,12 @@ public class ActivityUniversity extends Activity {
                                   "Fotocopia autenticada de la Partida de Nacimiento"+
                                   "Asistir al Curso de Nivelación que se inicia en febrero de cada año."  +
                                   "La documentación deberá ser presentada personalmente en una carpeta colgante tamaño oficio.");
+		
+		
+		universidad.setLat_universidad("-24.188887");
+		universidad.setLong_universidad("-65.293632");
+		
+		
 		listData.add(universidad);
 		//Universidad de Ciencias Economicas
 		universidad=new Universidad();
@@ -188,6 +209,8 @@ public class ActivityUniversity extends Activity {
                                   "Dos (2) fotos tipo carnet."+
                                   "Un carpetín colgante tamaño oficio con visor y broches nepaco."+
                                   "Formulario impreso de pre-inscripción.");
+		universidad.setLat_universidad("-24.184097");
+		universidad.setLong_universidad(" -65.304802");
 		listData.add(universidad);
 		//humanidads y cs sociales
 		universidad.setId_universidad(Constants.FACU_HUMANIDADES_ID);
@@ -215,7 +238,8 @@ public class ActivityUniversity extends Activity {
 		
                                   listData.add(universidad);
 		
-		
+        universidad.setLat_universidad("-24.185753");
+        universidad.setLong_universidad("-65.301565");
 		universidadBean.addList(listData);
 		
 	}

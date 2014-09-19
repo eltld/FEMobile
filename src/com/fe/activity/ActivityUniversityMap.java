@@ -3,55 +3,31 @@ package com.fe.activity;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.fe.R;
- /* import com.google.android.gms.maps.GoogleMap; */
-
-
-
-import com.google.android.gms.common.ConnectionResult;
-import com.google.android.gms.common.GooglePlayServicesUtil;
-import com.google.android.gms.maps.CameraUpdateFactory;
-import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.GoogleMap.InfoWindowAdapter;
-import com.google.android.gms.maps.GoogleMap.OnInfoWindowClickListener;
-import com.google.android.gms.maps.MapFragment;
-import com.google.android.gms.maps.SupportMapFragment;
-import com.google.android.gms.maps.model.BitmapDescriptorFactory;
-import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.LatLngBounds;
-import com.google.android.gms.maps.model.Marker;
-import com.google.android.gms.maps.model.MarkerOptions;
-
-import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.app.Dialog;
-import android.content.Context;
-import android.graphics.Bitmap;
-import android.graphics.Canvas;
+import android.content.Intent;
 import android.location.Criteria;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
-import android.util.DisplayMetrics;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup.LayoutParams;
-import android.view.ViewTreeObserver.OnGlobalLayoutListener;
 import android.widget.TextView;
 
+import com.fe.R;
+import com.fe.bean.UniversityBean;
+import com.fe.model.Constants;
+import com.fe.model.Universidad;
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.GooglePlayServicesUtil;
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
+import com.google.android.gms.maps.model.MarkerOptions;
 
-/**
- * Clase map base de la ubicacion de la
- * unju
- * @author  : David Garcia
- * @dateh   : 13-08-2014
- *
- */
-
-public class ActivityMapUnju extends FragmentActivity implements LocationListener{
+public class ActivityUniversityMap extends FragmentActivity implements LocationListener{
 
 	private static final Logger logger = (Logger) LoggerFactory.getLogger(ActivityMapUnju.class);
 	
@@ -59,7 +35,9 @@ public class ActivityMapUnju extends FragmentActivity implements LocationListene
 	 private Marker customMarker;
 	 private LatLng markerLatLng;
 	 private TextView text_header;
-	 
+	 private UniversityBean universidadBean;
+	 private Universidad obj;
+		
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -69,9 +47,19 @@ public class ActivityMapUnju extends FragmentActivity implements LocationListene
 		
 	  text_header=(TextView)findViewById(R.id.text_header);
 	  text_header.setText("UBICACION");
+	  
+		Intent intent=getIntent();
+		String id_university=intent.getStringExtra(Constants.UNIVERSITY_ID);
+		logger.debug("id_university : "+id_university);
+		universidadBean=new UniversityBean(getApplicationContext());
+		obj=new Universidad(); 
+		obj=universidadBean.get(Long.parseLong(id_university));
 		
+		if(obj!=null)
+		{	
+	  
 		 // Getting Google Play availability status
-        int status = GooglePlayServicesUtil.isGooglePlayServicesAvailable(getBaseContext());
+         int status = GooglePlayServicesUtil.isGooglePlayServicesAvailable(getBaseContext());
  
         // Showing status
         if(status!=ConnectionResult.SUCCESS){ // Google Play Services are not available
@@ -85,15 +73,14 @@ public class ActivityMapUnju extends FragmentActivity implements LocationListene
         	  mMap= ((SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map))
 	                .getMap();
    
-        	   
-		      markerLatLng = new LatLng(-24.179470, -65.324666);
-	
-	          	setUpMapIfNeeded();
+        	  logger.debug("get lat : "+obj.getLat_universidad() + " longitud : "+obj.getLong_universidad());
+		      markerLatLng = new LatLng(Double.parseDouble(obj.getLat_universidad()),Double.parseDouble(obj.getLong_universidad()));
+	         setUpMapIfNeeded();
  
          
         }
 		
-       
+		}
 	
 	}
 	
@@ -171,7 +158,7 @@ public class ActivityMapUnju extends FragmentActivity implements LocationListene
           markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.map_marker_rojo));
 
           // Setting title for the infowindow
-          markerOptions.title("Universidad Nacional de Jujuy");
+          markerOptions.title(obj.getNombre_universidad());
 
           // Adding the marker to the map
           mMap.addMarker(markerOptions);

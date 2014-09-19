@@ -6,12 +6,14 @@
  >
 
  <ImageView
-      android:id="@+id/image_principal"
-      android:layout_width="75dp"
-      android:layout_height="75dp"
-      android:layout_marginLeft="100dp"
-      android:src="@drawable/ic_launcher"
-      android:contentDescription="@string/descripcion" />
+     android:id="@+id/image_principal"
+     android:layout_width="200dp"
+     android:layout_height="80dp"
+     android:layout_marginLeft="50dp"
+     android:layout_marginTop="30dp"
+     android:contentDescription="@string/descripcion"
+     android:src="@drawable/baneraplicacionunju" />
+ 
  
   <ScrollView
      android:id="@+id/scro1"
@@ -42,7 +44,14 @@
     
 </ScrollView>
 
- 
+  <TextView
+      android:id="@+id/textView1"
+      android:layout_width="fill_parent"
+      android:layout_height="1dp"
+      android:layout_alignParentLeft="true"
+      android:layout_below="@+id/image_principal"
+      android:layout_marginTop="10dp"
+      android:background="#555" />
     
 </RelativeLayout>
 

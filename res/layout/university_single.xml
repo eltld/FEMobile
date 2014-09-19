@@ -6,15 +6,22 @@
 
     <TextView
         android:id="@+id/text_universityNombre"
-        android:layout_width="match_parent"
+         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        
-        android:text="tituloUniversidad" />
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="8dp"
+        android:textSize="15dp"
+         android:paddingTop="10dip"
+          android:paddingBottom="10dip"
+        android:text="tituloUniversidad" 
+         android:textStyle="bold"/>
 
     <TextView
         android:id="@+id/text_universityId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Universidad" />
+          android:background="#DDD1E7"
+        android:text="IdUniversidad" />
 
 </LinearLayout>

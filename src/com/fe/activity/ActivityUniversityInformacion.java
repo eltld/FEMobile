@@ -38,7 +38,7 @@ public class ActivityUniversityInformacion extends Activity{
 	    
 		
 		textHeader=(TextView)findViewById(R.id.text_header);
-		textHeader.setText("INFORMACION ADMINISTRATIVA");
+		textHeader.setText("INFORMACION ");
 		Intent intent=getIntent();
 		String id_university=intent.getStringExtra(Constants.UNIVERSITY_ID);
 		logger.debug("id_university : "+id_university);

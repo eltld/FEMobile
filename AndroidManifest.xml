@@ -40,7 +40,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/ic_launcher"
+        android:icon="@drawable/logoaplicacion"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         
@@ -50,7 +50,8 @@
         <!--  Activity -->
         <activity
             android:name="com.fe.MainActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -59,156 +60,104 @@
         <activity 
             android:name="com.fe.activity.ActivitySecretaria"
             android:label="@string/activity_secretaria">
-         <intent-filter>
-             <action android:name="android.intent.action.MAIN"/>
-             <category android:name="android.intent.category.LAUNCHER"/>
-         </intent-filter>
+         
          </activity> 
           <activity 
             android:name="com.fe.activity.ActivitySecretariaContent"
             android:label="@string/activity_secretaria">
-         <intent-filter>
-             <action android:name="android.intent.action.MAIN"/>
-             <category android:name="android.intent.category.LAUNCHER"/>
-         </intent-filter>
+         
          </activity>
           <activity 
             android:name="com.fe.activity.ActivityMapUnju"
             android:label="@string/activity_map_unju">
-         <intent-filter>
-             <action android:name="android.intent.action.MAIN"/>
-             <category android:name="android.intent.category.LAUNCHER"/>
-         </intent-filter>
+         
          </activity>
             <activity 
             android:name="com.fe.activity.ActivityComedor"
             android:label="@string/activity_secretaria">
-         <intent-filter>
-             <action android:name="android.intent.action.MAIN"/>
-             <category android:name="android.intent.category.LAUNCHER"/>
-         </intent-filter>
+        
          </activity>
           <activity 
             android:name="com.fe.activity.ActivityNoticia"
             android:label="@string/activity_noticias">
-         <intent-filter>
-             <action android:name="android.intent.action.MAIN"/>
-             <category android:name="android.intent.category.LAUNCHER"/>
-         </intent-filter>
+        
          </activity>
              <activity 
             android:name="com.fe.activity.ActivityNoticiaContent"
             android:label="@string/activity_noticias">
-         <intent-filter>
-             <action android:name="android.intent.action.MAIN"/>
-             <category android:name="android.intent.category.LAUNCHER"/>
-         </intent-filter>
+       
          </activity>
            <activity 
             android:name="com.fe.activity.ActivityGaleria"
             android:label="@string/activity_galeria">
-         <intent-filter>
-             <action android:name="android.intent.action.MAIN"/>
-             <category android:name="android.intent.category.LAUNCHER"/>
-         </intent-filter>
+         
          </activity>
           <activity 
             android:name="com.fe.activity.ActivityGaleriaImage"
             android:label="@string/activity_galeriaImage">
-         <intent-filter>
-             <action android:name="android.intent.action.MAIN"/>
-             <category android:name="android.intent.category.LAUNCHER"/>
-         </intent-filter>
+        
          </activity>
           <activity 
             android:name="com.fe.activity.ActivityUniversity"
             android:label="@string/activity_university">
-         <intent-filter>
-             <action android:name="android.intent.action.MAIN"/>
-             <category android:name="android.intent.category.LAUNCHER"/>
-         </intent-filter>
+         
          </activity>
             <activity 
             android:name="com.fe.activity.ActivityUniversityContent"
             android:label="@string/activity_university">
-         <intent-filter>
-             <action android:name="android.intent.action.MAIN"/>
-             <category android:name="android.intent.category.LAUNCHER"/>
-         </intent-filter>
+         
          </activity>
           <activity 
             android:name="com.fe.activity.ActivityUniversityInformacion"
             android:label="@string/activity_university">
-         <intent-filter>
-             <action android:name="android.intent.action.MAIN"/>
-             <category android:name="android.intent.category.LAUNCHER"/>
-         </intent-filter>
+        
          </activity>
            <activity 
             android:name="com.fe.activity.ActivityUniversityIngreso"
             android:label="@string/activity_university">
-         <intent-filter>
-             <action android:name="android.intent.action.MAIN"/>
-             <category android:name="android.intent.category.LAUNCHER"/>
-         </intent-filter>
+       
          </activity>
           
             <activity 
             android:name="com.fe.activity.ActivityCarrera"
             android:label="@string/activity_carrera">
-         <intent-filter>
-             <action android:name="android.intent.action.MAIN"/>
-             <category android:name="android.intent.category.LAUNCHER"/>
-         </intent-filter>
+        
          </activity>
           <activity 
             android:name="com.fe.activity.ActivityCarreraContent"
             android:label="@string/activity_carrera">
-         <intent-filter>
-             <action android:name="android.intent.action.MAIN"/>
-             <category android:name="android.intent.category.LAUNCHER"/>
-         </intent-filter>
+        
+         </activity>
+          <activity 
+            android:name="com.fe.activity.ActivityUniversityMap"
+            android:label="@string/activity_map_unju">
+        
          </activity>
          <activity 
             android:name="com.fe.activity.ActivityAutoridad"
             android:label="@string/activity_autoridad">
-         <intent-filter>
-             <action android:name="android.intent.action.MAIN"/>
-             <category android:name="android.intent.category.LAUNCHER"/>
-         </intent-filter>
+        
          </activity>
           <activity 
             android:name="com.fe.activity.ActivityAutoridadContent"
             android:label="@string/activity_autoridad">
-         <intent-filter>
-             <action android:name="android.intent.action.MAIN"/>
-             <category android:name="android.intent.category.LAUNCHER"/>
-         </intent-filter>
+       
          </activity>
             <activity 
             android:name="com.fe.activity.ActivityEvento"
             android:label="@string/activity_evento">
-         <intent-filter>
-             <action android:name="android.intent.action.MAIN"/>
-             <category android:name="android.intent.category.LAUNCHER"/>
-         </intent-filter>
+        
          </activity>
             <activity 
             android:name="com.fe.activity.ActivityEventoContent"
             android:label="@string/activity_evento">
-         <intent-filter>
-             <action android:name="android.intent.action.MAIN"/>
-             <category android:name="android.intent.category.LAUNCHER"/>
-         </intent-filter>
+       
          </activity> 
             
            <activity 
             android:name="com.fe.activity.ActivityCalendario"
             android:label="@string/activity_calendario">
-         <intent-filter>
-             <action android:name="android.intent.action.MAIN"/>
-             <category android:name="android.intent.category.LAUNCHER"/>
-         </intent-filter>
+        
          </activity>
          <!-- apy key -->
          <meta-data 
@@ -216,11 +165,11 @@
              android:value="AIzaSyCW6Y4V8v-XH_1guJweEZFwiuYJgxzUfLw"
              /> 
           
-         <!--  
+      
              <meta-data
                 android:name="com.google.android.gms.version"
                 android:value="@integer/google_play_services_version" />
-         -->
+        
          
     </application>
      

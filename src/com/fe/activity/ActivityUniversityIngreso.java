@@ -6,6 +6,7 @@ import org.slf4j.LoggerFactory;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.webkit.WebView;
 import android.widget.TextView;
 
 import com.fe.R;
@@ -24,6 +25,8 @@ public class ActivityUniversityIngreso extends Activity{
 	    private TextView text_preinscripcion;
 	    private TextView text_direccion;
 	    private TextView text_requisitos;
+	    private TextView text_justified;
+	    
 	    
 	    
 	    
@@ -48,14 +51,21 @@ public class ActivityUniversityIngreso extends Activity{
 				text_inscripcion=(TextView)findViewById(R.id.text_universityInscripcion);
 				text_preinscripcion=(TextView)findViewById(R.id.text_universityPreinscripcion);
 				text_direccion=(TextView)findViewById(R.id.text_universityInformes);
-				text_requisitos=(TextView)findViewById(R.id.text_universityRequisito);
+				text_justified=(TextView)findViewById(R.id.text_justified_text);
+				//text_requisitos=(TextView)findViewById(R.id.text_universityRequisito);
 				
 			    
 				text_inscripcion.setText(obj.getInscripcion());
 				text_preinscripcion.setText(obj.getPreinscripcion());
 				text_direccion.setText(obj.getDireccion());
-				text_requisitos.setText(obj.getRequisitos());
+				text_justified.setText(obj.getRequisitos());
+				//text_requisitos.setText(obj.getRequisitos());
 			  
+				String htmlText = " %s ";
+			   
+			   /* WebView webView = (WebView) findViewById(R.id.webView1);
+			    webView.loadData(String.format(htmlText, obj.getRequisitos()), "text/html", "utf-8");
+			   */
 			}
 			
 		   logger.debug("informacion :"+ obj.toString());

@@ -30,6 +30,8 @@ public class ActivitySecretariaContent extends Activity {
 	TextView text_telefono;
 	TextView text_email;
 	TextView text_header;
+	TextView text_secretaria;
+	
 	private SecretariaBean secretariaBean;
 	private int numSecretaria=0;
 	private int currentSecretaria=0;
@@ -59,13 +61,14 @@ public class ActivitySecretariaContent extends Activity {
 		text_direccion=(TextView)findViewById(R.id.text_secretariaDireccion);
 		text_telefono=(TextView)findViewById(R.id.text_secretariaTelefono);
 		text_email=(TextView)findViewById(R.id.text_secretariaEmail);
-		
+	    text_secretaria=(TextView)findViewById(R.id.text_secretariaSecretaria);	
 		
 		text_secretario.setText(secretaria.getSecretario());
 		text_direccion.setText(secretaria.getDireccion());
 		text_telefono.setText(secretaria.getTelefono());
 	    text_email.setText(secretaria.getEmail());
-	    text_header.setText(titulo_secretaria);
+	    text_secretaria.setText(titulo_secretaria);
+	    text_header.setText("Secretaria");
 		
 	}
 	

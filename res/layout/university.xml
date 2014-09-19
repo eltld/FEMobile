@@ -1,6 +1,6 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical" >
    
     <include
@@ -10,7 +10,7 @@
     <RelativeLayout
         android:id="@+id/content"
         android:layout_width="fill_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:background="@color/header_text" 
         android:layout_below="@+id/header">
 
@@ -18,9 +18,13 @@
 
         <ListView
             android:id="@+id/list_university"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
+            android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:background="#DDD1E7"
+      
+        android:divider="@color/gray"
+        android:dividerHeight="0.1dp"
             android:layout_below="@+id/textView1" >
         </ListView>
 

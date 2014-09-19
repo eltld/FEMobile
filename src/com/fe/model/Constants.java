@@ -11,6 +11,10 @@ public final class Constants {
 	private static final String  METHOD_PUT="PUT";
 	
 	
+	//LAT LONGITUD UNIVERSITY
+	private static final String UNI_FAC_ING_LAT="";
+	private static final String UNI_FAC_ING_LONG="";
+	
 	//DATABASE
 	private static final String DATABASE_NAME="fe";
 	private static final String APP_NAME="APPFE";

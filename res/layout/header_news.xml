@@ -5,14 +5,15 @@
     android:background="@color/header_background"
     android:id="@+id/header">
     
-    <ImageView android:id="@+id/image_newsHeader" 
-        android:contentDescription="@string/descripcion"
-         android:layout_width="50dp"
+    <ImageView
+        android:id="@+id/image_newsHeader"
+        android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginRight="10dp"
+        android:background="@color/header_background_image"
+        android:contentDescription="@string/descripcion"
         android:scaleType="centerCrop"
-        android:src="@drawable/ic_launcher"
-        android:background="@color/header_background_image"/>
+        android:src="@drawable/logoaplicacion" />
 
     <TextView
         android:id="@+id/text_newsHeader"
@@ -22,12 +23,13 @@
         android:layout_marginTop="15dp"
         android:layout_toRightOf="@+id/image_newsHeader"
         android:text="TextView"
+        android:textSize="18dp"
         android:textColor="@color/header_text" />
 
     <ImageView
         android:id="@+id/image_newsHeaderUpdate"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
         android:src="@drawable/reload" />
