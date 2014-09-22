@@ -77,4 +77,51 @@ public class LoadCarreraBean {
 	   return null;	
 		
 	}
+	
+	
+	public List<Carrera>loadCarreraCienciasSociales()
+	{
+		//Carreras de Grado 
+		Carrera carrera=new Carrera();
+		carrera.setId_carrera(1);
+		carrera.setTitulo_carrera("Prof. y Lic. en Ciencias de la Educación ");
+		carrera.setNivel_carrera("Título de Grado");
+		carrera.setAcreditacion_carrera(null);
+		carrera.setPerfil_carrera(
+    "Planificar, conducir y evaluar procesos de enseñanza-aprendizaje para la educación formal, no formal e informal; presencial y a distancia."+
+    "Elaborar y evaluar modelos y propuestas curriculares, a nivel macro y micro educativo, para la educación formal, no formal e informal; presencial y a distancia."+
+    "Diseñar, dirigir, ejecutar y evaluar planes, programas y proyectos y culturales."+
+    "Elaborar, ejecutar y evaluar modelos y diseños de administración educacional."+
+    "Diseñar, dirigir, ejecutar y evaluar proyectos de investigación educativa."+
+    "Diseñar, producir y evaluar materiales educativos de distinta tecnológica."+
+    "Planificar, conducir y evaluar programas de formación, perfeccionamiento y actualización, para el desempeño de los distintos roles educativos."+
+    "Diseñar, dirigir, ejecutar y evaluar programas y proyectos destinados a la capacitación de recursos humanos."+
+    "Planificar, conducir y evaluar procesos de enseñanza-aprendizaje destinados a personas con necesidades especiales."+
+    "Elaborar, ejecutar y evaluar planes, programas y proyectos y acciones de prevención y asistencia psicopedagógica, destinados a personas con dificultades de aprendizaje."+
+    "Elaborar, ejecutar y evaluar planes, programas y proyectos de información y orientación educacional, vocacional y ocupacional."+
+    "Administrar y organizar unidades y servicios educativos y pedagógicos."+
+    "Asesorar en la formulación de políticas educativas y culturales."+
+    "Asesorar en la elaboración de normas jurídicas en materia educativa y las inherentes a la actividad profesional."+
+    "Brindar asesoramiento pedagógico a instituciones educativas y comunitarias."+
+    "Participar, desde la perspectiva educativa, en la elaboración, ejecución y evaluación de planes, programas y proyectos de acción sociocultural en comunidades."+
+    "Asesorar en la formulación de criterios y normas destinadas a promover la dimensión educativa de los medios de comunicación social."+
+    "Asesorar para el diseño y planeamiento de los espacios y de la infraestructura  destinados a actividades educativas, recreativas y culturales.");
+	 carrera.setAlcance_carrera(null);
+	 carrera.setDuracion_carrera("5 años");
+	 carrera.setId_grado(Constants.CARRERA_GRADO);
+	 carrera.setId_university(Constants.FACU_HUMANIDADES_ID);
+	 listCarrera.add(carrera);
+	 
+	 carrera=new Carrera();
+	 carrera.setId_carrera(2);
+	 carrera.setTitulo_carrera(" Licenciatura en Comunicación Social ");
+	 carrera.setNivel_carrera(
+     "Título de Grado: Licenciado en Comunicación Social (R.M. 1121/94)     4 años"+
+     "Título Intermedio: Técnico en Comunicación Social (R.M. 1121/94       3 años");
+		
+		
+		return null;
+		
+		
+	}
 }
