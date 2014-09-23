@@ -27,13 +27,16 @@ import com.fe.service.ServiceHandler;
 import com.google.gson.Gson;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -56,14 +59,17 @@ public class ActivityCarrera extends Activity {
 	CarreraBean carreraBean=null;
 	ArrayList<Carrera> listData;
 	CustomCarreraAdapter adapter;
+	ImageView imageViewFiltroCarrera;
+	private int id_uni=0;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.carrera);
 	 
+	   imageViewFiltroCarrera=(ImageView)findViewById(R.id.image_carreraFiltro);
+		 
 	
-		
-		textHeader=(TextView)findViewById(R.id.text_header);
+		textHeader=(TextView)findViewById(R.id.text_carreraHeader);
 		textHeader.setText(Constants.TAG_UNIVERSITY_HEADER_CARRERA);
 		pB=(ProgressBar)findViewById(R.id.marker_progress);
 	   
@@ -92,32 +98,38 @@ public class ActivityCarrera extends Activity {
 	    	
 	    	@Override
 	    	protected String doInBackground(String... arg0) {
-	    		logger.debug("doInBackground NoticiasClient");
+	    		logger.debug("doInBackground CarreraClient ");
+	    	 	LoadCarreraBean loadCarrera= new LoadCarreraBean();
+	    		 
 	    		
 	    		try
 	    		{
 	    		
-	    			 int id_uni=Integer.parseInt(id_university);
-	    			    
-	    			if(id_uni==Constants.FACU_INGENIERIA_ID)
-	    		    {
+	    			  id_uni=Integer.parseInt(id_university);
+	    			 logger.debug("Id University selected : "+id_uni);
+	    			 switch(id_uni)
+	    			 {
+	    			 case Constants.FACU_INGENIERIA_ID:{
 	    				listData=new ArrayList<Carrera>();
-	    		    	logger.debug("Seleccionado ingeneria");
-	    		    	listData=new ArrayList<Carrera>();
-	    		    	LoadCarreraBean loadCarrera= new LoadCarreraBean();
-	    		    	
 	    		    	listData= (ArrayList<Carrera>) loadCarrera.loadCarreraIngenieria();
-	    		    }
-	    		    else if(id_uni==Constants.FACU_AGRAGRIA_ID)
-	    		    {
-	    		    	listData=(ArrayList<Carrera>)UtilList.loadCarreraEconomica();
-	    		    }
+	    		    	};break;
+	    			
+	    			 case Constants.FACU_HUMANIDADES_ID:
+	    			 {
+	    				 listData=new ArrayList<Carrera>();
+		    		     listData= (ArrayList<Carrera>) loadCarrera.loadCarreraCienciasSociales();
+		    		     
+	    			 };break;
+	    			 case Constants.FACU_AGRAGRIA_ID:{
+	    				 listData=new ArrayList<Carrera>();
+		    		     listData= (ArrayList<Carrera>) loadCarrera.loadCarreraAgraria();
+	    			 };break;
+	    			 case Constants.FACU_ECONOMICA_ID:
+	    			 {
+	    				 
+	    			 };break;
+	    			}
 	    		  
-	    		    
-	    		    
-	    		  
-	          
-	    		
 	    		}catch(Exception ex)
 	    		{
 	    			logger.debug("Error :"+ex.toString());
@@ -147,44 +159,138 @@ public class ActivityCarrera extends Activity {
 			
 			public void displayContent(String result)
 			{
+
+			logger.debug("result content");
+
+			if (listData.size() != 0) 
+			{
+				System.out.println("carreraBean ActivityCarrera listSize : "
+						+ listData.size());
+				carreraBean.addList(listData);
+
+				logger.debug("actionImageView");
+				actionImageView();
 				
-				  if(listData.size()!=0)
-	    		    { 
-	    		    	System.out.println("carreraBean ActivityCarrera listSize : "+listData.size());
-	    		    	carreraBean.addList(listData) ;
-	    		    }		
-				//load list view
-				logger.info("onCreate Activity Carrera Universidades");
-				listView=(ListView)findViewById(R.id.list_carrera);
-			    adapter=new CustomCarreraAdapter(ActivityCarrera.this,listData);
-			    listView.setAdapter(adapter);
-			    
-			    listView.setOnItemClickListener(new OnItemClickListener() {
+				logger.debug("action listdata");
+				loadListView(listData);
+				
+				
+				logger.debug("actionListView");
+				actionListView();
+
+				
+			
+
+			
+			}
+			
+           }
+	
+	/**
+	 * Action Image View
+	 */
+	private void actionImageView()
+	{
+		
+
+		imageViewFiltroCarrera
+				.setOnClickListener(new View.OnClickListener() {
 
 					@Override
-					public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
-							long arg3) {
+					public void onClick(View arg0) {
+						logger.debug("Filtro Carrera");
+                         
 
-						TextView text_carreraTitulo=(TextView)arg1.findViewById(id.text_carreraTitulo);
-						TextView text_carreraId=(TextView)arg1.findViewById(R.id.text_carreraId);
-						
-						logger.debug("Carrera seleccionada : "+text_carreraId.getText().toString());
-						Intent intent=new Intent(ActivityCarrera.this,ActivityCarreraContent.class);
-					    intent.putExtra(Constants.CARRERA_ID,text_carreraId.getText().toString());
-					    
-						startActivity(intent);
-						
-						
+						final CharSequence items[] = new CharSequence[] {"PreGrado", 
+								                                 "Grado"};
+
+						AlertDialog.Builder builder = new AlertDialog.Builder(ActivityCarrera.this);
+						builder.setTitle("Seleccione Opción");
+						builder.setItems(items, new DialogInterface.OnClickListener() {
+						    @Override
+						    public void onClick(DialogInterface dialog, int which) {
+						     
+						    	logger.debug("seleccionado : "+items[which] + " item :"+which);
+						        switch(which)
+						        {
+						        case 0 : 
+						        {
+						           loadCarreraGrado(Constants.CARRERA_PREGADO);
+						        };break;
+						        case 1:
+						        {
+						        	loadCarreraGrado(Constants.CARRERA_GRADO);
+						        	
+						        };break;
+						       }
 					}
 				});
-				
-				
-			}
+						builder.show();
 
-			
-			
-			
-			
-   }
+		
+	         }
+	      });
+				
+  }
+	
+	/**
+	 * Load Carrera de Grado
+	 * @param grado
+	 */
+	private void loadCarreraGrado(int carreraGrado)
+	{
+		ArrayList<Carrera> list=new ArrayList<Carrera>();
+		
+		
+		for(Carrera carrera:listData)
+		{
+			if(carrera.getId_grado()==carreraGrado)
+				list.add(carrera);
+		}
+		
+		loadListView(listData);
+	}
+	
+	private void actionListView()
+	{
+		logger.debug("actionListView");
+		listView.setOnItemClickListener(new OnItemClickListener() {
+
+			@Override
+			public void onItemClick(AdapterView<?> arg0, View arg1,
+					int arg2, long arg3) {
+
+				TextView text_carreraTitulo = (TextView) arg1
+						.findViewById(id.text_carreraTitulo);
+				TextView text_carreraId = (TextView) arg1
+						.findViewById(R.id.text_carreraId);
+
+				logger.debug("Carrera seleccionada : "
+						+ text_carreraId.getText().toString());
+				Intent intent = new Intent(ActivityCarrera.this,
+						ActivityCarreraContent.class);
+				intent.putExtra(Constants.CARRERA_ID, text_carreraId
+						.getText().toString());
+
+				startActivity(intent);
+
+			}
+		});
+
+	}
+	
+	private void loadListView(ArrayList<Carrera> listDataVar)
+	{
+		// load list view
+		
+		logger.info("onCreate Activity Carrera Universidades");
+		listView = (ListView) findViewById(R.id.list_carrera);
+		adapter = new CustomCarreraAdapter(ActivityCarrera.this,
+				listDataVar);
+		listView.setAdapter(adapter);
+	}
+	
+	
+	}
 	
 }

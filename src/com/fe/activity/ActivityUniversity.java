@@ -54,8 +54,9 @@ public class ActivityUniversity extends Activity {
 	    universidadBean=new UniversityBean(getApplicationContext());	
 		loadData();
 		//load list view
-		logger.info("onCreate Activity Universidades");
+		logger.info("onCreate Activity Universidades : listData : "+listData.size());
 		listView=(ListView)findViewById(R.id.list_university);
+		
 	    adapter=new CustomUniversityAdapter(ActivityUniversity.this,listData);
 	    listView.setAdapter(null);
 	    listView.setAdapter(adapter);
@@ -73,7 +74,7 @@ public class ActivityUniversity extends Activity {
 						                                 "Carreras", "Ingreso", "Localizacion"};
 
 				AlertDialog.Builder builder = new AlertDialog.Builder(ActivityUniversity.this);
-				builder.setTitle("Seleccione Acci{on");
+				builder.setTitle("Seleccione Opción");
 				builder.setItems(items, new DialogInterface.OnClickListener() {
 				    @Override
 				    public void onClick(DialogInterface dialog, int which) {
@@ -130,6 +131,7 @@ public class ActivityUniversity extends Activity {
 	
 	private void loadData()
 	{
+		listData=null;
 		listData=new ArrayList<Universidad>();
 		
 		//Universidad de Agraria
@@ -145,7 +147,6 @@ public class ActivityUniversity extends Activity {
 		universidad.setInscripcion("Del 01 al 20 de Diciembre de cada año."+
           " Desde 01 al 15 de Febrero de cada año.");
         universidad.setPreinscripcion("De octubre a diciembre, vía internet: http//: www.alumnos.fca.unju.edu.ar");
-		listData.add(universidad);
 		universidad.setInforme("Departamento Alumnos.");
 		universidad
 				.setRequisitos("Fotocopia autenticada de Certificado de estudios de Nivel Medio o Polimodal o constancia original de Certificado de Estudios en trámite. Los estudiantes con materias previas tienen plazo hasta la primera quincena de abril de cada año para acreditar la finalización de Estudios de Nivel Medio, Polimodal o Terciario (si correspondiere), Resolución C. S. Nº 171/03.- "
@@ -186,9 +187,8 @@ public class ActivityUniversity extends Activity {
 		
 		universidad.setLat_universidad("-24.188887");
 		universidad.setLong_universidad("-65.293632");
-		
-		
 		listData.add(universidad);
+		
 		//Universidad de Ciencias Economicas
 		universidad=new Universidad();
 		universidad.setId_universidad(Constants.FACU_ECONOMICA_ID);
@@ -211,8 +211,16 @@ public class ActivityUniversity extends Activity {
                                   "Formulario impreso de pre-inscripción.");
 		universidad.setLat_universidad("-24.184097");
 		universidad.setLong_universidad(" -65.304802");
+		
 		listData.add(universidad);
+		logger.debug("Universityt : "+universidad.toString());
+		for (Universidad uni : listData) {
+			logger.debug("id_university : "+uni.getId_universidad());
+		}
+		
+		
 		//humanidads y cs sociales
+		universidad=new Universidad();
 		universidad.setId_universidad(Constants.FACU_HUMANIDADES_ID);
 		universidad.setNombre_universidad("FACULTAD DE HUMANIDADES Y CIENCIAS SOCIALES");
 		universidad.setDireccion("OTERO Nº 262");
@@ -236,10 +244,38 @@ public class ActivityUniversity extends Activity {
 						+ "Requisitos Obligatorios de Ingreso"
 						+ "Todas las fotocopias de la Documentación deben ser autenticadas por Escribano Público.");
 		
-                                  listData.add(universidad);
-		
-        universidad.setLat_universidad("-24.185753");
+		universidad.setLat_universidad("-24.185753");
         universidad.setLong_universidad("-65.301565");
+		
+        listData.add(universidad);
+		
+        
+		//escuela de minas 
+
+        universidad=new Universidad();
+		universidad.setId_universidad(Constants.ESC_MINAS);
+		universidad
+				.setNombre_universidad("ESCUELA DE MINAS 'Dr. Horacio Carrillo' ");
+		universidad.setDireccion("Italia Nro. 47");
+		universidad.setCodigoPostal("4600");
+		universidad.setTelefono("0388-4221598/9");
+		universidad.setFax("");
+		universidad.setEmail("");
+		universidad.setWeb("http://www.escuelademinas.unju.edu.ar/");
+		universidad.setPreinscripcion(" ");
+		universidad.setInscripcion("Del 03 al 18 de Febrero de cada año.");
+		universidad
+				.setInforme("");
+		universidad
+				.setRequisitos("");
+
+		universidad.setLat_universidad("-24.185753");
+		universidad.setLong_universidad("-65.301565");
+		
+		listData.add(universidad);
+
+	
+		System.out.println("listData : "+listData.size());
 		universidadBean.addList(listData);
 		
 	}

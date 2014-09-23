@@ -59,6 +59,7 @@ public class ActivityMapUnju extends FragmentActivity implements LocationListene
 	 private Marker customMarker;
 	 private LatLng markerLatLng;
 	 private TextView text_header;
+	
 	 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

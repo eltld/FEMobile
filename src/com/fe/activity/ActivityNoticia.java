@@ -57,6 +57,7 @@ public class ActivityNoticia extends Activity{
 	private ArrayList<Noticia> listData;
     private CustomNewsAdapter adapter;
     private TextView textViewHeader;
+    private TextView textNewsConnection;
     ProgressDialog pDialog;
     ProgressBar pB;
     DisplayImageOptions options;
@@ -80,7 +81,8 @@ public class ActivityNoticia extends Activity{
          
          
          pB=(ProgressBar)findViewById(R.id.marker_progress);
-      	
+      	 textNewsConnection=(TextView)findViewById(R.id.text_newsConnection);
+      	 
          noticiaBean=new NoticiaBean(getApplicationContext());
 
          
@@ -105,13 +107,9 @@ public class ActivityNoticia extends Activity{
          // Initialize ImageLoader with configuration.
          ImageLoader.getInstance().init(config);
      	imageLoader=ImageLoader.getInstance();
-         
-     	
-     	 
-       loadData();
-       
-     
-         
+ 	 
+        loadData();
+           
     }
       
     private void loadData()
@@ -122,138 +120,131 @@ public class ActivityNoticia extends Activity{
     	
     }
     
-    
-    private class NoticiasClient extends AsyncTask<String,Void, String>{
+	private class NoticiasClient extends AsyncTask<String, Void, String> {
 
-    	
-    	
-    	private ProgressBar progressBar;
-    	
-    	protected void onPreExecute() {
-            logger.debug("onPreExecute");
-           
-             pB.setVisibility(View.VISIBLE);
-           
-       }
-    	
-    	@Override
-    	protected String doInBackground(String... arg0) {
-    		logger.debug("doInBackground NoticiasClient");
-    		
-    		try
-    		{
-    		
-    		// TODO Auto-generated method stub
-    		ServiceHandler serviceHandler=new ServiceHandler();
-    		String jsonString=serviceHandler.makeServiceCall(ConstantRest.URL_NOTICIAS,serviceHandler.GET);
-    		logger.info("json : "+jsonString);
-    		
-    		
-    		if(jsonString!=null)
-    		{
-    			try
-    			{
-    			
-    				logger.debug("Recorro el listado de json");
-    				listData=new ArrayList<Noticia>();
-    				Gson gson=new Gson();
-    				JSONArray jsonArray=new JSONArray(jsonString);
-    				for(int i=0; i<jsonArray.length();i++)
-    				{
-    				   Noticia noticia=new Noticia();
-    				   JSONObject jsonObject=jsonArray.getJSONObject(i);
-    				   noticia.setIdNoticia(jsonObject.getString(NoticiaTag.ID));
-    				   noticia.setTituloNoticia(jsonObject.getString(NoticiaTag.TITULO));
-    				   noticia.setBajadaNoticia(jsonObject.getString(NoticiaTag.BAJADA));
-    				   noticia.setDateNoticia(jsonObject.getString(NoticiaTag.FECHA));
-    				   noticia.setUrlImageNoticia(jsonObject.getString(NoticiaTag.URL));
-    				   noticia.setCuerpoNoticia(jsonObject.getString(NoticiaTag.CUERPO));
-    				   listData.add(noticia);
-    					
-    				}
-    			
-    				
-    			}catch(JSONException e)
-    			{
-    				logger.error("Error JSONExcetion : "+e.toString());
-    			}
-    			
-    		}
-    		
-    		}catch(Exception ex)
-    		{
-    			logger.debug("Error :"+ex.toString());
-    			
-    			
-    		}
-    		
-    		return null;
-    	
-    	
-    	}
-    	
-    	
-    	protected void onProgressUpdate(Integer... progress){
-    		pB.setProgress(progress[0]);
-    		}
-    	
-		protected void onPostExecute(String result)
-    	{
-    		if(listData.size()!=0)
-    		{
-    			for(Noticia noticia : listData)
-    			{ noticiaBean.add(noticia);}
-    			
-    			System.out.println("informacion de datos");
-    			 // HIDE THE SPINNER AFTER LOADING FEEDS
-    			  pB.setVisibility(View.GONE);
-    			displayContent(result);
-    			
-    		}
-    		else
-    		{
-    			System.out.println("no contiene datos");
-    		}
-      			
-    	}
-		
-		public void displayContent(String result)
-		{
-			System.out.println("Result : "+result);
-			adapter=new CustomNewsAdapter(ActivityNoticia.this, listData,imageLoader,
-					options);
-			listViewNoticias.setAdapter(adapter);
-			ImageView imageViewNews=(ImageView)findViewById(R.id.image_newsHeaderUpdate);
+		private ProgressBar progressBar;
 
-				
-			 imageViewNews.setOnClickListener(new View.OnClickListener() {
-					
-					@Override
-					public void onClick(View arg0) {
-						logger.debug("event News Update");
-						loadData();
+		protected void onPreExecute() {
+			logger.debug("onPreExecute");
+			textNewsConnection.setVisibility(View.GONE);
+			pB.setVisibility(View.VISIBLE);
 
+		}
+
+		@Override
+		protected String doInBackground(String... arg0) {
+			logger.debug("doInBackground NoticiasClient");
+
+			try {
+
+				// TODO Auto-generated method stub
+				ServiceHandler serviceHandler = new ServiceHandler();
+				String jsonString = serviceHandler.makeServiceCall(
+						ConstantRest.URL_NOTICIAS, serviceHandler.GET);
+				logger.info("json : " + jsonString);
+
+				if (jsonString != null) {
+					try {
+
+						logger.debug("Recorro el listado de json");
+						listData = new ArrayList<Noticia>();
+						Gson gson = new Gson();
+						JSONArray jsonArray = new JSONArray(jsonString);
+						for (int i = 0; i < jsonArray.length(); i++) {
+							Noticia noticia = new Noticia();
+							JSONObject jsonObject = jsonArray.getJSONObject(i);
+							noticia.setIdNoticia(jsonObject
+									.getString(NoticiaTag.ID));
+							noticia.setTituloNoticia(jsonObject
+									.getString(NoticiaTag.TITULO));
+							noticia.setBajadaNoticia(jsonObject
+									.getString(NoticiaTag.BAJADA));
+							noticia.setDateNoticia(jsonObject
+									.getString(NoticiaTag.FECHA));
+							noticia.setUrlImageNoticia(jsonObject
+									.getString(NoticiaTag.URL));
+							noticia.setCuerpoNoticia(jsonObject
+									.getString(NoticiaTag.CUERPO));
+							listData.add(noticia);
+
+						}
+
+					} catch (JSONException e) {
+						logger.error("Error JSONExcetion : " + e.toString());
 					}
-				});
+
+				}
+
+			} catch (Exception ex) {
+				logger.debug("Error :" + ex.toString());
+
+			}
+
+			return null;
+
+		}
+
+		protected void onProgressUpdate(Integer... progress) {
+			pB.setProgress(progress[0]);
+		}
+
+		protected void onPostExecute(String result) {
+			if (listData.size() != 0) {
+				for (Noticia noticia : listData) {
+					noticiaBean.add(noticia);
+				}
+
+				System.out.println("informacion de datos");
+				// HIDE THE SPINNER AFTER LOADING FEEDS
+				pB.setVisibility(View.GONE);
+				displayContent(result);
+
+			} else {
+				pB.setVisibility(View.GONE);
+				textNewsConnection.setText(ConstantRest.CONNECTION_ERROR);
+				textNewsConnection.setVisibility(View.VISIBLE);
+				logger.debug("No contiene datos");
+				
+			}
+
+		}
+
+		public void displayContent(String result) {
+			System.out.println("Result : " + result);
+			adapter = new CustomNewsAdapter(ActivityNoticia.this, listData,
+					imageLoader, options);
+			listViewNoticias.setAdapter(adapter);
+			ImageView imageViewNews = (ImageView) findViewById(R.id.image_newsHeaderUpdate);
+
+			imageViewNews.setOnClickListener(new View.OnClickListener() {
+
+				@Override
+				public void onClick(View arg0) {
+					logger.debug("event News Update");
+					loadData();
+
+				}
+			});
 			listViewNoticias.setOnItemClickListener(new OnItemClickListener() {
 
 				@Override
 				public void onItemClick(AdapterView<?> arg0, View arg1,
 						int arg2, long arg3) {
 					logger.debug("click noticia");
-					
-					
-					TextView text_noticiaId=(TextView)arg1.findViewById(R.id.text_noticiaId);
-					Intent intent = new Intent(ActivityNoticia.this, ActivityNoticiaContent.class);
-					intent.putExtra(Constants.NOTICIA_ID, text_noticiaId.getText().toString());
-		
+
+					TextView text_noticiaId = (TextView) arg1
+							.findViewById(R.id.text_noticiaId);
+					Intent intent = new Intent(ActivityNoticia.this,
+							ActivityNoticiaContent.class);
+					intent.putExtra(Constants.NOTICIA_ID, text_noticiaId
+							.getText().toString());
+
 					startActivity(intent);
 				}
 			});
 		}
 
-    }
-
+	}
     
     
 }

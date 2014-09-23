@@ -64,6 +64,7 @@ public class ActivityEvento  extends Activity{
 	protected ImageLoader imageLoader;
 	EventoBean eventoBean=null;
     private ImageView imageViewCalendar;
+    private TextView textConnection;
 	private int yr,mon,day;
 	
 	static final int DATE_DIALOG_ID=0;
@@ -81,7 +82,7 @@ public class ActivityEvento  extends Activity{
 		 textViewHeader.setText("Eventos");
 		
          pB=(ProgressBar)findViewById(R.id.marker_progress);
-      	
+      	 textConnection=(TextView)findViewById(R.id.text_eventoConnection);
          eventoBean=new EventoBean(getApplicationContext());
 	 
          loadClient();
@@ -111,10 +112,8 @@ public class ActivityEvento  extends Activity{
     	
     	protected void onPreExecute() {
             logger.debug("onPreExecute");
-           
-            
              pB.setVisibility(View.VISIBLE);
-           
+             textConnection.setVisibility(View.GONE); 
        }
     	
     	@Override
@@ -193,6 +192,9 @@ public class ActivityEvento  extends Activity{
     		}
     		else
     		{
+    			pB.setVisibility(View.GONE);
+    			textConnection.setText(ConstantRest.CONNECTION_ERROR);
+    			textConnection.setVisibility(View.VISIBLE);
     			System.out.println("no contiene datos");
     		}
       			

@@ -42,6 +42,7 @@ import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 
 
 /**
@@ -57,7 +58,9 @@ public class ActivityGaleria extends ActivityBase{
 	DisplayImageOptions options;
 	protected ImageLoader imageLoader;
 	ArrayList<Galeria> listData;
-	
+	ProgressBar pB;
+	private TextView textViewHeader;   
+	private TextView textNewsConnection;
 	private AbsListView gridView;
 	
 	@Override
@@ -65,8 +68,13 @@ public class ActivityGaleria extends ActivityBase{
 	super.onCreate(savedInstanceState);
 	setContentView(R.layout.gallery_image);
 	
-
+	textViewHeader=(TextView)findViewById(R.id.text_newsHeader);
+    textViewHeader.setText("Mapas");
 	
+    
+    pB=(ProgressBar)findViewById(R.id.marker_progress);
+ 	 textNewsConnection=(TextView)findViewById(R.id.text_galleryConnection);
+
 	options = new DisplayImageOptions.Builder()
 	.showImageOnLoading(R.drawable.ic_stub)
 	.showImageForEmptyUri(R.drawable.ic_empty)
@@ -99,10 +107,14 @@ public class ActivityGaleria extends ActivityBase{
 	
  protected class GaleriaAsyncTask extends AsyncTask<String,Void, String>{
 
-	 
+     private ProgressBar progressBar;
+
 	 protected void onPreExecute() {
         logger.debug("onPreExecute");
-      
+        logger.debug("onPreExecute");
+		textNewsConnection.setVisibility(View.GONE);
+		pB.setVisibility(View.VISIBLE);
+
         
     }   
 	@Override
@@ -160,6 +172,7 @@ public class ActivityGaleria extends ActivityBase{
 	{
 		if(listData!=null)
 		{
+			pB.setVisibility(View.GONE);
 			logger.debug("listData informacion");
 			//((GridView) listView).setAdapter(new ImageAdapter());
 			final String[] imageUrls=new String[listData.size()];
@@ -184,6 +197,9 @@ public class ActivityGaleria extends ActivityBase{
 		}else
 		{
 			logger.debug("no contiene datos");
+			pB.setVisibility(View.GONE);
+			textNewsConnection.setText(ConstantRest.CONNECTION_ERROR);
+			textNewsConnection.setVisibility(View.VISIBLE);
 			
 		}
   			

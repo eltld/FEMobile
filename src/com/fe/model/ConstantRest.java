@@ -23,6 +23,7 @@ public abstract  class ConstantRest {
 	//IMAGES
 	 public final static String URL_IMAGE_UNJU="http://manuonda.netau.net/unju.jpg";
 
+	 //Connection 
+	 public final static String CONNECTION_ERROR="Verifique conexion de Internet";
 		
-	
 }

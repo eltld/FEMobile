@@ -2,261 +2,247 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
-   
 
-   <include
+    <include
         android:id="@+id/include1"
         layout="@layout/header" />
-       <ScrollView
-           android:id="@+id/scrollView1"
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:layout_alignParentLeft="true"
-           android:layout_below="@+id/include1" >
-    
-    
-    <RelativeLayout
-        android:id="@+id/content"
-        android:layout_width="wrap_content"
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/header"
-        android:background="@color/header_text" >
-    
-     <LinearLayout
-         android:orientation="vertical"
-         android:layout_height="fill_parent"
-         android:layout_width="fill_parent" >   
-        <TextView
-            android:id="@+id/label_universityInformacion"
-            
-              android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="20dp"
-              
-                android:textSize="19dp"
-                android:textStyle="bold"
-                android:typeface="serif"
-            android:text="Institucion" />
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/include1" >
 
-        <TextView
-            android:id="@+id/text_universityInfoTitulo"
-          
-            android:layout_below="@+id/textView2"
-            android:text="Institucion"
-             android:layout_marginLeft="20dp"
-                 android:layout_marginTop="6dp"
-                 android:textColor="@color/gray"
-                 android:textSize="15dp"
-                 android:typeface="sans"
-                 android:layout_width="wrap_content"
-                 android:layout_height="wrap_content" />
+        <RelativeLayout
+            android:id="@+id/content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/header_carrera"
+            android:background="@color/header_text" >
 
-        <TextView
-            android:id="@+id/text_divider"
-           android:layout_width="fill_parent"
-            android:layout_height="1dp"
-            android:layout_alignParentLeft="true"
-            android:background="@color/gray_claro"
-             />
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical" >
 
-        <TextView
-            android:id="@+id/label_universityInfoDireccion"
-             android:text="Direccion"
-             android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="20dp"
-                android:textSize="19dp"
-                android:textStyle="bold"
-                android:typeface="serif"
-             />
-        <TextView android:id="@+id/text_universityInscripcion"
-            android:text="text_direccion"
-              android:layout_marginLeft="20dp"
-                 android:layout_marginTop="6dp"
-                 android:textColor="@color/gray"
-                 android:textSize="15dp"
-                 android:typeface="sans"
-                 android:layout_width="wrap_content"
-                 android:layout_height="wrap_content"  
-            />
+                <TextView
+                    android:id="@+id/label_universityInformacion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Institucion"
+                    android:textSize="19dp"
+                    android:textStyle="bold"
+                    android:typeface="serif" />
 
-        <TextView
-            android:id="@+id/text_divider1"
-            android:layout_width="fill_parent"
-            android:layout_height="1dp"
-            android:layout_alignParentLeft="true"
-            android:background="@color/gray_claro"
-             />
-        
-        <TextView
-            android:id="@+id/label_universityInfoCodigo"
-            android:text="Codigo Postal"
-               android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="20dp"
-           
-                android:textSize="19dp"
-                android:textStyle="bold"
-                android:typeface="serif" 
-             />
-        <TextView android:id="@+id/text_universityInformes"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="text_direccion"
-              android:layout_marginLeft="20dp"
-                 android:layout_marginTop="6dp"
-                 android:textColor="@color/gray"
-                 android:textSize="15dp"
-                 android:typeface="sans"
-            />
-        
-           <TextView
-            android:id="@+id/text_divider2"
-             android:layout_width="fill_parent"
-            android:layout_height="1dp"
-            android:layout_alignParentLeft="true"
-            android:background="@color/gray_claro"
-             />
+                <TextView
+                    android:id="@+id/text_universityInfoTitulo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView2"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="6dp"
+                    android:text="Institucion"
+                    android:textColor="@color/gray"
+                    android:textSize="15dp"
+                    android:typeface="sans" />
 
-            <TextView
-            android:id="@+id/label_universityInfoTelefono"
-            android:text="Telefono"
-              android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="20dp"
-                android:textSize="19dp"
-                android:textStyle="bold"
-                android:typeface="serif"
-             />
-        <TextView android:id="@+id/text_universityRequisito"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="text_direccion"
-          
-             android:layout_marginLeft="20dp"
-                 android:layout_marginTop="6dp"
-                 android:textColor="@color/gray"
-                 android:textSize="15dp"
-                 android:typeface="sans"
-            />
-        
-           <TextView
-            android:id="@+id/text_divider3"
-             android:layout_width="fill_parent"
-            android:layout_height="1dp"
-            android:layout_alignParentLeft="true"
-            android:background="@color/gray_claro"
-             />
-                  <TextView
-            android:id="@+id/label_universityInfoFax"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Fax"
-                 android:layout_centerVertical="true"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="20dp"
-                android:textSize="19dp"
-                android:textStyle="bold"
-                android:typeface="serif"
-             />
-        <TextView android:id="@+id/text_universityInfoFax"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="text_direccion"
-            
-             android:layout_marginLeft="20dp"
-                 android:layout_marginTop="6dp"
-                 android:textColor="@color/gray"
-                 android:textSize="15dp"
-                 android:typeface="sans"
-            />
-          <TextView
-            android:id="@+id/text_divider4"
-              android:layout_width="fill_parent"
-            android:layout_height="1dp"
-            android:layout_alignParentLeft="true"
-            android:background="@color/gray_claro"
-             />
-          <TextView
-            android:id="@+id/label_universityInfoEmail"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Email"
-             android:layout_centerVertical="true"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="20dp"
-                android:textSize="19dp"
-                android:textStyle="bold"
-                android:typeface="serif"
-             />
-             <TextView android:id="@+id/text_universityInfoEmail"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="text_direccion"
-             android:layout_marginLeft="20dp"
-                 android:layout_marginTop="6dp"
-                 android:textColor="@color/gray"
-                 android:textSize="15dp"
-                 android:typeface="sans"
-            />
-               <TextView
-            android:id="@+id/text_divider5"
-             android:layout_width="fill_parent"
-            android:layout_height="1dp"
-            android:layout_alignParentLeft="true"
-            android:background="@color/gray_claro"
-             />
-          <TextView
-            android:id="@+id/label_universityInfoWeb"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Web"
-            android:layout_centerVertical="true"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="20dp"
-                android:textSize="19dp"
-                android:textStyle="bold"
-                android:typeface="serif" 
-             />
-             <TextView android:id="@+id/text_universityInfoWeb"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="text_direccion"
-             android:layout_marginLeft="20dp"
-                 android:layout_marginTop="6dp"
-                 android:textColor="@color/gray"
-                 android:textSize="15dp"
-                 android:typeface="sans"
-            />
-         <RelativeLayout android:id="@+id/linear_telefono"
-                       android:layout_width="wrap_content"
-                       android:layout_height="wrap_content"
-              >
+                <TextView
+                    android:id="@+id/text_divider"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentLeft="true"
+                    android:background="@color/gray_claro" />
 
-             
-             
-             
-           </RelativeLayout>
-         
-          <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="1dp"
-            android:layout_alignParentLeft="true"
-            android:background="#555"
-       
-             />
-            
-        
-       </LinearLayout>
+                <TextView
+                    android:id="@+id/label_universityInfoDireccion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Direccion"
+                    android:textSize="19dp"
+                    android:textStyle="bold"
+                    android:typeface="serif" />
 
-    </RelativeLayout>
+                <TextView
+                    android:id="@+id/text_universityInscripcion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="6dp"
+                    android:text="text_direccion"
+                    android:textColor="@color/gray"
+                    android:textSize="15dp"
+                    android:typeface="sans" />
+
+                <TextView
+                    android:id="@+id/text_divider1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentLeft="true"
+                    android:background="@color/gray_claro" />
+
+                <TextView
+                    android:id="@+id/label_universityInfoCodigo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Codigo Postal"
+                    android:textSize="19dp"
+                    android:textStyle="bold"
+                    android:typeface="serif" />
+
+                <TextView
+                    android:id="@+id/text_universityInformes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="6dp"
+                    android:text="text_direccion"
+                    android:textColor="@color/gray"
+                    android:textSize="15dp"
+                    android:typeface="sans" />
+
+                <TextView
+                    android:id="@+id/text_divider2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentLeft="true"
+                    android:background="@color/gray_claro" />
+
+                <TextView
+                    android:id="@+id/label_universityInfoTelefono"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Telefono"
+                    android:textSize="19dp"
+                    android:textStyle="bold"
+                    android:typeface="serif" />
+
+                <TextView
+                    android:id="@+id/text_universityRequisito"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="6dp"
+                    android:text="text_direccion"
+                    android:textColor="@color/gray"
+                    android:textSize="15dp"
+                    android:typeface="sans" />
+
+                <TextView
+                    android:id="@+id/text_divider3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentLeft="true"
+                    android:background="@color/gray_claro" />
+
+                <TextView
+                    android:id="@+id/label_universityInfoFax"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Fax"
+                    android:textSize="19dp"
+                    android:textStyle="bold"
+                    android:typeface="serif" />
+
+                <TextView
+                    android:id="@+id/text_universityInfoFax"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="6dp"
+                    android:text="text_direccion"
+                    android:textColor="@color/gray"
+                    android:textSize="15dp"
+                    android:typeface="sans" />
+
+                <TextView
+                    android:id="@+id/text_divider4"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentLeft="true"
+                    android:background="@color/gray_claro" />
+
+                <TextView
+                    android:id="@+id/label_universityInfoEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Email"
+                    android:textSize="19dp"
+                    android:textStyle="bold"
+                    android:typeface="serif" />
+
+                <TextView
+                    android:id="@+id/text_universityInfoEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="6dp"
+                    android:text="text_direccion"
+                    android:textColor="@color/gray"
+                    android:textSize="15dp"
+                    android:typeface="sans" />
+
+                <TextView
+                    android:id="@+id/text_divider5"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentLeft="true"
+                    android:background="@color/gray_claro" />
+
+                <TextView
+                    android:id="@+id/label_universityInfoWeb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Web"
+                    android:textSize="19dp"
+                    android:textStyle="bold"
+                    android:typeface="serif" />
+
+                <TextView
+                    android:id="@+id/text_universityInfoWeb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="6dp"
+                    android:text="text_direccion"
+                    android:textColor="@color/gray"
+                    android:textSize="15dp"
+                    android:typeface="sans" />
+
+                <RelativeLayout
+                    android:id="@+id/linear_telefono"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentLeft="true"
+                    android:background="#555" />
+            </LinearLayout>
+        </RelativeLayout>
     </ScrollView>
+
 </RelativeLayout>

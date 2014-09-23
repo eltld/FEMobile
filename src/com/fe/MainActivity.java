@@ -1,6 +1,8 @@
 package com.fe;
 
+import java.util.AbstractList;
 import java.util.ArrayList;
+import java.util.List;
 
 
 
@@ -26,9 +28,10 @@ import com.fe.bean.util.UtilList;
 import com.fe.model.Constants;
 import com.fe.model.ItemGrid;
 
-	import android.os.Bundle;
+import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.view.Menu;
 import android.view.View;
 import android.widget.AdapterView;
@@ -37,6 +40,8 @@ import android.widget.GridView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.util.Log;
+
+import android.content.res.Resources;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -71,12 +76,15 @@ public class MainActivity extends Activity  implements OnItemClickListener {
 		//comento esto no se la verdad gridView=(GridView)findViewById(R.id.grid_principal);
 		 gridView = (ScrollableGridView) findViewById(R.id.grid_principal);
 		 gridView.setExpanded(true);
-		//load listItemGridImages
+		 gridView.setAdapter(null);
+		 //load listItemGridImages
 		 logger.debug("listItemGridImage");
-		listItemGridImage=(ArrayList<ItemGrid>) UtilList.loadItemGridPrincipal(this.getResources());
+		listItemGridImage=null;
+		listItemGridImage=(ArrayList<ItemGrid>) loadItemGridPrincipal(this.getResources());
 	    
 		gridAdapterPrincipal=new CustomGridAdapter(this, R.layout.grid_single, listItemGridImage);
-	    gridView.setAdapter(gridAdapterPrincipal);
+	    
+		gridView.setAdapter(gridAdapterPrincipal);
 	    
 	    gridView.setOnItemClickListener(new OnItemClickListener() {
 
@@ -152,6 +160,9 @@ public class MainActivity extends Activity  implements OnItemClickListener {
 	}
 
 
+
+	
+	
 	@Override
 	public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
 		// TODO Auto-generated method stub
@@ -162,6 +173,22 @@ public class MainActivity extends Activity  implements OnItemClickListener {
 		
 	}
 
+	
+	private List<ItemGrid> loadItemGridPrincipal(Resources res)
+	{
+		ArrayList<ItemGrid> listItemGrid=new ArrayList<ItemGrid>();
+		listItemGrid.add(new ItemGrid("Mapa",res.getDrawable((R.drawable.location))));
+		listItemGrid.add(new ItemGrid("Noticias",res.getDrawable(R.drawable.news)));
+		listItemGrid.add(new ItemGrid("Comedor",res.getDrawable((R.drawable.tenedores))));
+		listItemGrid.add(new ItemGrid("Secretarias",res.getDrawable(R.drawable.telephone_office)));
+	    listItemGrid.add(new ItemGrid("Fotos",res.getDrawable(R.drawable.photo)));
+	    listItemGrid.add(new ItemGrid("Eventos",res.getDrawable(R.drawable.calendar)));
+	   // listItemGrid.add(new ItemGrid("Calendario",res.getDrawable(R.drawable.ic_launcher)));
+	    listItemGrid.add(new ItemGrid("Autoridades",res.getDrawable(R.drawable.account))); 	
+	    listItemGrid.add(new ItemGrid("Oferta Academica",res.getDrawable(R.drawable.university)));
+	    
+		return listItemGrid;
+	}
 	
 
 }

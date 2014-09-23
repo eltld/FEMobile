@@ -1,43 +1,47 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    >
-   
-    <include layout="@layout/header_news"/>
-    
-      
-    
-   
-  
-    
-    
-    <RelativeLayout 
+    android:orientation="vertical" >
+
+    <include layout="@layout/header_news" />
+
+    <RelativeLayout
         android:id="@+id/content"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:layout_below="@id/header"
-        android:gravity="center"
-        android:background="@color/header_text">
-     
-    <ProgressBar
-        android:id="@+id/marker_progress"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:layout_centerInParent="true"
-        android:progressDrawable="@drawable/animate_rotate">
-        
-    </ProgressBar>
-         
-    <ListView
-        android:id="@+id/custom_list_noticia"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:dividerHeight="1dp"
-        android:layout_above="@layout/header"
-         />
-    
+        android:layout_below="@id/header_carrera"
+        android:background="@color/header_text"
+        android:gravity="center" >
+
+        <ProgressBar
+            android:id="@+id/marker_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:progressDrawable="@drawable/animate_rotate" >
+        </ProgressBar>
+
+        <TextView
+            android:id="@+id/text_newsConnection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/text_noticiaContentTitulo"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="6dp"
+            android:text="Bajada"
+            android:textColor="@color/gray"
+            android:textSize="15dp"
+            android:typeface="sans" />
+
+        <ListView
+            android:id="@+id/custom_list_noticia"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@layout/header"
+            android:dividerHeight="1dp" />
     </RelativeLayout>
-    </RelativeLayout>
+
+</RelativeLayout>

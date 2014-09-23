@@ -21,7 +21,7 @@
      android:layout_height="wrap_content"
      android:layout_alignParentLeft="true"
      android:layout_below="@+id/image_principal"
-     android:layout_marginTop="42dp" 
+     android:layout_marginTop="10dp" 
      android:fillViewport="true">
 
    <RelativeLayout   
@@ -44,11 +44,11 @@
    <RelativeLayout
       android:layout_width="match_parent"
       android:layout_marginTop="30dp"
-      android:layout_height="40dp"
+      android:layout_height="200dp"
       android:layout_below="@+id/grid_principal"
       android:layout_alignParentBottom="true"
       android:layout_alignParentLeft="true"
-      android:background="#FC0"
+       android:background="@color/header_background_image"
       android:gravity="center" >
   </RelativeLayout>
 </RelativeLayout>  

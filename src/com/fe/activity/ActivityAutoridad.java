@@ -48,11 +48,13 @@ public class ActivityAutoridad extends Activity{
 	private ArrayList<Autoridad> listData;
     private CustomAutoridadAdapter adapter;
     private TextView textViewHeader;
+    private TextView textConnection;
     ProgressDialog pDialog;
     ProgressBar pB;
     DisplayImageOptions options;
 	protected ImageLoader imageLoader;
 	AutoridadBean autoridadBean=null;
+	
 	private boolean bandError;
 	 
     private String string_header;
@@ -71,7 +73,7 @@ public class ActivityAutoridad extends Activity{
          
          
          pB=(ProgressBar)findViewById(R.id.marker_progress);
-      	
+      	 textConnection=(TextView)findViewById(R.id.text_autoridadConnection);
          autoridadBean=new AutoridadBean(getApplicationContext());
 
          
@@ -114,7 +116,7 @@ public class ActivityAutoridad extends Activity{
     	
     	protected void onPreExecute() {
             logger.debug("onPreExecute");
-           
+             textConnection.setVisibility(View.GONE);
              pB.setVisibility(View.VISIBLE);
            
        }
@@ -197,7 +199,10 @@ public class ActivityAutoridad extends Activity{
     		}
     		else
     		{
-    			System.out.println("no contiene datos");
+    			pB.setVisibility(View.GONE);
+    			textConnection.setText(ConstantRest.CONNECTION_ERROR);
+    			textConnection.setVisibility(View.VISIBLE);
+    		     logger.debug("No se pudo realizar la conexion con la base");
     		}
       			
     	}

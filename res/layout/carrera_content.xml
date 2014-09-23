@@ -6,19 +6,18 @@
     <include
         android:id="@+id/include1"
         layout="@layout/header" />
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/include1" >
 
-       <ScrollView
-           android:id="@+id/scrollView1"
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:layout_alignParentLeft="true"
-           android:layout_below="@+id/include1" >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
 
-           <LinearLayout
-               android:orientation="vertical"
-               android:layout_width="match_parent"
-               android:layout_height="match_parent" >
-          
             <TextView
                 android:id="@+id/label_carreraContentTitulo"
                 android:layout_width="wrap_content"
@@ -34,154 +33,158 @@
             <TextView
                 android:id="@+id/text_carreraContentTitulo"
                 android:layout_width="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="3dp"
-                 android:textSize="15dp"
-                 android:typeface="normal"
-                 android:textColor="@color/gray"
                 android:layout_height="wrap_content"
-                android:text="Titulo" />
-               
-           <TextView
-            android:id="@+id/text_carreraLineaUno"
-            android:layout_width="fill_parent"
-            android:layout_height="1dp"
-            android:layout_alignParentLeft="true"
-            android:background="@color/gray_claro"
-            android:layout_below="@+id/text_carreraContentTitulo"
-            android:layout_marginTop="3dp"
-       
-             />
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="3dp"
+                android:text="Titulo"
+                android:textColor="@color/gray"
+                android:textSize="15dp"
+                android:typeface="normal" />
 
-           <TextView
-               android:id="@+id/label_carreraContentNivel"
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:layout_marginLeft="20dp"
-               android:layout_marginTop="20dp"
+            <TextView
+                android:id="@+id/text_carreraLineaUno"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/text_carreraContentTitulo"
+                android:layout_marginTop="3dp"
+                android:background="@color/gray_claro" />
+
+            <TextView
+                android:id="@+id/label_carreraContentNivel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:text="Nivel"
                 android:textSize="19dp"
                 android:textStyle="bold"
-                android:typeface="serif"
-                android:text="Nivel" />
+                android:typeface="serif" />
 
-           <TextView
-               android:id="@+id/text_carreraContentNivel"
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:layout_marginLeft="20dp"
-               android:layout_marginTop="3dp"
-                android:textSize="15dp"
-                 android:typeface="normal"
-                 android:textColor="@color/gray"
-               android:text="Nivel" />
-
-                <TextView
-            android:id="@+id/text_carreraLineaDos"
-            android:layout_width="fill_parent"
-            android:layout_height="1dp"
-            android:layout_alignParentLeft="true"
-            android:background="@color/gray_claro"
-            android:layout_below="@+id/text_carreraContentCuerpo"
-            android:layout_marginTop="3dp"
-       
-             />
-           
-          <TextView
-           android:id="@+id/label_carreraContentAcreditacion"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:layout_alignParentLeft="true"
-           android:layout_below="@+id/text_carreraLineaUno"
-           android:layout_marginLeft="20dp"
-           android:layout_marginTop="20dp"
-           android:textSize="19dp"
-                android:textStyle="bold"
-                android:typeface="serif"
-           android:text="Acreditacion" />
-
-          <TextView
-              android:id="@+id/text_carreraContentAcreditacion"
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
+            <TextView
+                android:id="@+id/text_carreraContentNivel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
                 android:layout_marginTop="3dp"
-                 android:textSize="15dp"
-                 android:typeface="normal"
-                 android:textColor="@color/gray"
-              android:text="TextView" />
+                android:text="Nivel"
+                android:textColor="@color/gray"
+                android:textSize="15dp"
+                android:typeface="normal" />
 
             <TextView
-            android:id="@+id/text_carreraLineaTres"
-            android:layout_width="fill_parent"
-            android:layout_height="1dp"
-            android:layout_alignParentLeft="true"
-            android:background="@color/gray_claro"
-            android:layout_below="@+id/text_carreraContentAcreditacion"
-            android:layout_marginTop="3dp"/>
-             <TextView
-           android:id="@+id/label_carreraContentPerfil"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:layout_alignParentLeft="true"
-           android:layout_below="@+id/label_carreraLineaTres"
-           android:layout_marginLeft="20dp"
-           android:layout_marginTop="20dp"
-          android:textSize="19dp"
-                android:textStyle="bold"
-                android:typeface="serif"
-           android:text="Perfil" />
-
-             <TextView
-                 android:id="@+id/text_carreraContentPerfil"
-                 android:layout_width="wrap_content"
-                 android:layout_height="wrap_content"
-                   android:layout_marginLeft="20dp"
+                android:id="@+id/text_carreraLineaDos"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/text_carreraContentCuerpo"
                 android:layout_marginTop="3dp"
-                 android:textSize="15dp"
-                 android:typeface="normal"
-                 android:textColor="@color/gray"
-                 android:text="TextView" />
+                android:background="@color/gray_claro" />
 
             <TextView
-            android:id="@+id/text_carreraLineaCuatro"
-            android:layout_width="fill_parent"
-            android:layout_height="1dp"
-            android:layout_alignParentLeft="true"
-            android:background="@color/gray_claro"
-            android:layout_below="@+id/text_carreraContentCuerpo"
-            android:layout_marginTop="3dp"/>
-                  <TextView
-           android:id="@+id/label_carreraContentAlcance"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:layout_alignParentLeft="true"
-           android:layout_below="@+id/text_carreraLineaUno"
-           android:layout_marginLeft="20dp"
-           android:layout_marginTop="20dp"
-          android:textSize="19dp"
+                android:id="@+id/label_carreraContentAcreditacion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/text_carreraLineaUno"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:text="Acreditacion"
+                android:textSize="19dp"
                 android:textStyle="bold"
-                android:typeface="serif"
-           android:text="Alcance" />
-                    <TextView
-           android:id="@+id/text_carreraContentAlcance"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-           android:layout_marginTop="3dp"
-            android:textSize="15dp"
-                 android:typeface="normal"
-                 android:textColor="@color/gray"
-           android:layout_alignParentLeft="true"
-           android:layout_below="@+id/label_carreraContentAlcance"
-        
-           android:text="TextView" />
-        
-           </LinearLayout>
+                android:typeface="serif" />
+
+      
+              <com.fe.bean.util.JustifyTextView
+                android:id="@+id/text_carreraContentAcreditacion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/label_carreraContentAlcance"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="3dp"
+                android:text="TextView"
+                android:textColor="@color/gray"
+                android:textSize="15dp"
+                android:typeface="normal" />
+
+            <TextView
+                android:id="@+id/text_carreraLineaTres"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/text_carreraContentAcreditacion"
+                android:layout_marginTop="3dp"
+                android:background="@color/gray_claro" />
+
+            <TextView
+                android:id="@+id/label_carreraContentPerfil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/label_carreraLineaTres"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:text="Perfil"
+                android:textSize="19dp"
+                android:textStyle="bold"
+                android:typeface="serif" />
+
            
-        
-           
-           
-           </ScrollView>
+             <com.fe.bean.util.JustifyTextView
+                android:id="@+id/text_carreraContentPerfil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/label_carreraContentAlcance"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="3dp"
+                android:text="TextView"
+                android:textColor="@color/gray"
+                android:textSize="15dp"
+                android:typeface="normal" />
+
+            <TextView
+                android:id="@+id/text_carreraLineaCuatro"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/text_carreraContentCuerpo"
+                android:layout_marginTop="3dp"
+                android:background="@color/gray_claro" />
+
+            <TextView
+                android:id="@+id/label_carreraContentAlcance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/text_carreraLineaUno"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:text="Alcance"
+                android:textSize="19dp"
+                android:textStyle="bold"
+                android:typeface="serif" />
+
+            <com.fe.bean.util.JustifyTextView
+                android:id="@+id/text_carreraContentAlcance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/label_carreraContentAlcance"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="3dp"
+                android:text="TextView"
+                android:textColor="@color/gray"
+                android:textSize="15dp"
+                android:typeface="normal" />
+        </LinearLayout>
+</ScrollView>
 
      
 
