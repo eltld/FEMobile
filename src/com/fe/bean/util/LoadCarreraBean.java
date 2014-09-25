@@ -5,6 +5,7 @@ import java.util.List;
 
 import com.fe.model.Carrera;
 import com.fe.model.Constants;
+import com.fe.model.Materias;
 
 public class LoadCarreraBean {
 
@@ -91,6 +92,9 @@ public class LoadCarreraBean {
 		carrera.setDuracion_carrera("5 años");
 		carrera.setId_grado(Constants.CARRERA_GRADO);
 		carrera.setId_university(Constants.FACU_AGRAGRIA_ID);
+		
+	
+		
 		listCarrera.add(carrera);
 		////////////////////
 		carrera =new Carrera();
@@ -114,6 +118,7 @@ public class LoadCarreraBean {
 		carrera.setId_grado(Constants.CARRERA_GRADO);
 		carrera.setId_university(Constants.FACU_AGRAGRIA_ID);
 		listCarrera.add(carrera);
+		
 		///////////////////////////
 		carrera =new Carrera();
 		carrera.setId_carrera(3);
@@ -130,6 +135,7 @@ public class LoadCarreraBean {
 		carrera.setId_grado(Constants.CARRERA_GRADO);
 		carrera.setId_university(Constants.FACU_AGRAGRIA_ID);
 		listCarrera.add(carrera);
+		
 		//////////////////////////////////
 		carrera =new Carrera();
 		carrera.setId_carrera(4);
@@ -190,6 +196,8 @@ public class LoadCarreraBean {
 		carrera.setId_university(Constants.FACU_HUMANIDADES_ID);
 		listCarrera.add(carrera);
     
+		
+	
     carrera=new Carrera();
     carrera.setId_carrera(3);
     carrera.setTitulo_carrera("PROF . Y LIC. EN CIENCIAS DE LA EDUCACION");
@@ -291,6 +299,8 @@ public class LoadCarreraBean {
  carrera.setId_grado(Constants.CARRERA_GRADO);
  carrera.setId_university(Constants.FACU_HUMANIDADES_ID);
  listCarrera.add(carrera);
+ 
+ 
   //////////////////////////////
    carrera=new Carrera();
    carrera.setId_carrera(7);
@@ -363,7 +373,7 @@ public class LoadCarreraBean {
  
  ////////////////////////
  carrera=new Carrera();
- carrera.setId_carrera(9);
+ carrera.setId_carrera(10);
  carrera.setTitulo_carrera("CICLO SUPERIOR DE LICENCIATURA EN FILOSOFIA");
  carrera.setNivel_carrera("Título de Grado");
  carrera.setDuracion_carrera(" 5 cuatrimestres");

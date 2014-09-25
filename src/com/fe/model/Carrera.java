@@ -1,5 +1,7 @@
 package com.fe.model;
 
+import java.util.List;
+
 public class Carrera {
 
     private int id_carrera;
@@ -12,6 +14,7 @@ public class Carrera {
     private int id_university;
     private int id_grado;
     
+    private List<Materias> listMateria;
     
 
   
@@ -89,11 +92,13 @@ public class Carrera {
 		this.id_grado = id_grado;
 	}
 
+	public List<Materias> getListMateria() {
+		return listMateria;
+	}
 
-
-
-
-
+	public void setListMateria(List<Materias> listMateria) {
+		this.listMateria = listMateria;
+	}
 
 	@Override
 	public String toString()

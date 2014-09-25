@@ -51,6 +51,40 @@
                 android:layout_marginTop="3dp"
                 android:background="@color/gray_claro" />
 
+            
+               <TextView
+                android:id="@+id/label_carreraContentDuracion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:text="Titulo"
+                android:textSize="19dp"
+                android:textStyle="bold"
+                android:typeface="serif" />
+            
+            <TextView
+                android:id="@+id/text_carreraContentDuracion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="3dp"
+                android:text="Titulo"
+                android:textColor="@color/gray"
+                android:textSize="15dp"
+                android:typeface="normal" />
+
+            <TextView
+                android:id="@+id/text_carreraLineaDos"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/text_carreraContentTitulo"
+                android:layout_marginTop="3dp"
+                android:background="@color/gray_claro" />
+            
             <TextView
                 android:id="@+id/label_carreraContentNivel"
                 android:layout_width="wrap_content"
@@ -75,7 +109,7 @@
                 android:typeface="normal" />
 
             <TextView
-                android:id="@+id/text_carreraLineaDos"
+                android:id="@+id/text_carreraLineaTres"
                 android:layout_width="fill_parent"
                 android:layout_height="1dp"
                 android:layout_alignParentLeft="true"
@@ -112,7 +146,7 @@
                 android:typeface="normal" />
 
             <TextView
-                android:id="@+id/text_carreraLineaTres"
+                android:id="@+id/text_carreraLineaCuatro"
                 android:layout_width="fill_parent"
                 android:layout_height="1dp"
                 android:layout_alignParentLeft="true"
@@ -149,7 +183,7 @@
                 android:typeface="normal" />
 
             <TextView
-                android:id="@+id/text_carreraLineaCuatro"
+                android:id="@+id/text_carreraLineaCinco"
                 android:layout_width="fill_parent"
                 android:layout_height="1dp"
                 android:layout_alignParentLeft="true"
@@ -183,6 +217,24 @@
                 android:textColor="@color/gray"
                 android:textSize="15dp"
                 android:typeface="normal" />
+              <TextView
+                android:id="@+id/text_carreraLineaSeis"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/text_carreraContentCuerpo"
+                android:layout_marginTop="3dp"
+                android:background="@color/gray_claro" />
+              
+              <ListView
+                  android:id="@+id/list_carreraMaeriaContent"
+                  android:orientation="vertical"
+                  android:layout_height="wrap_content"
+                  android:layout_width="match_parent"
+                  ></ListView>
+            
+            
+            
         </LinearLayout>
 </ScrollView>
 

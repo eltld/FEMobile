@@ -271,6 +271,7 @@ public class ActivityCarrera extends Activity {
 						ActivityCarreraContent.class);
 				intent.putExtra(Constants.CARRERA_ID, text_carreraId
 						.getText().toString());
+				intent.putExtra(Constants.UNIVERSITY_ID, id_university);
 
 				startActivity(intent);
 
