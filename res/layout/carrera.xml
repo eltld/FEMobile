@@ -8,42 +8,36 @@
         android:layout_height="wrap_content"
         layout="@layout/header_carrera" />
         
-  
-  
-
       <RelativeLayout
-        android:id="@+id/content"
-        android:layout_width="fill_parent"
-        android:layout_height="match_parent"
-        android:background="@color/header_text" 
-        android:layout_below="@+id/header_carrera">
+          android:id="@+id/content"
+          android:layout_width="fill_parent"
+          android:layout_height="match_parent"
+          android:layout_below="@+id/header_carrera"
+          android:background="@color/header_text" >
 
-         <TextView
-             android:id="@+id/text_carreraFiltro"
-           
-             android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="6dp"
-        android:layout_marginTop="8dp"
-        android:textSize="15dp"
-         android:paddingTop="10dip"
-          android:paddingBottom="10dip"
-        android:text="tituloUniversidad" 
-       
-         android:textStyle="bold" />
-          
-        <ListView
-             android:id="@+id/list_carrera"
-             android:layout_below="@+id/text_carreraFiltro"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:background="#DDD1E7"
-            android:divider="@color/gray"
-            android:dividerHeight="0.1dp" >
+          <TextView
+              android:id="@+id/text_carreraFiltro"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_alignParentLeft="true"
+              android:paddingLeft="10dp"
+             
+              android:paddingBottom="10dip"
+              android:paddingTop="10dip"
+              android:text="Carreras"
+              android:textSize="15dp"
+              android:textStyle="bold" />
 
-        </ListView>
+          <ListView
+              android:id="@+id/list_carrera"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:layout_alignParentLeft="true"
+              android:layout_below="@+id/text_carreraFiltro"
+              android:background="#DDD1E7"
+              android:divider="@color/gray"
+              android:dividerHeight="0.1dp" >
+          </ListView>
 
     </RelativeLayout>
 

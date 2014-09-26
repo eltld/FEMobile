@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/header_background"
+    android:id="@+id/header_carrera">
+    
+    <ImageView
+        android:id="@+id/image_newsHeader"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/header_background_image"
+        android:contentDescription="@string/descripcion"
+        android:scaleType="centerCrop"
+        android:src="@drawable/logoaplicacion" />
+
+    <TextView
+        android:id="@+id/text_carreraHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="15dp"
+        android:layout_toRightOf="@+id/image_newsHeader"
+        android:text="Evento"
+        android:textSize="18dp"
+        android:textColor="@color/header_text" />
+
+    <ImageView
+        android:id="@+id/image_carreraFiltro"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:clickable="true"
+        android:src="@drawable/calendar_color" />
+
+</RelativeLayout>

@@ -13,10 +13,6 @@ public class Carrera {
     private String duracion_carrera;
     private int id_university;
     private int id_grado;
-    
-    private List<Materias> listMateria;
-    
-
   
     
     
@@ -92,13 +88,6 @@ public class Carrera {
 		this.id_grado = id_grado;
 	}
 
-	public List<Materias> getListMateria() {
-		return listMateria;
-	}
-
-	public void setListMateria(List<Materias> listMateria) {
-		this.listMateria = listMateria;
-	}
 
 	@Override
 	public String toString()

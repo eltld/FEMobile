@@ -5,7 +5,6 @@ import java.util.List;
 
 import com.fe.model.Carrera;
 import com.fe.model.Constants;
-import com.fe.model.Materias;
 
 public class LoadCarreraBean {
 

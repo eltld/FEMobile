@@ -79,6 +79,7 @@ public class ActivityCarrera extends Activity {
 		Intent intent=getIntent();
 	    id_university=intent.getStringExtra(Constants.UNIVERSITY_ID);
 	   
+	    logger.debug("Activity Carrera : "+id_university);
 	     new ActivityCarreraClient().execute();  
       
     }
@@ -269,8 +270,7 @@ public class ActivityCarrera extends Activity {
 						+ text_carreraId.getText().toString());
 				Intent intent = new Intent(ActivityCarrera.this,
 						ActivityCarreraContent.class);
-				intent.putExtra(Constants.CARRERA_ID, text_carreraId
-						.getText().toString());
+				intent.putExtra(Constants.CARRERA_ID, text_carreraId.getText().toString());
 				intent.putExtra(Constants.UNIVERSITY_ID, id_university);
 
 				startActivity(intent);

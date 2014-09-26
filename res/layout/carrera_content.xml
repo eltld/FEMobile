@@ -12,12 +12,15 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/include1" >
+                   
+             
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical" >
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+           android:orientation="vertical" >
 
+        
             <TextView
                 android:id="@+id/label_carreraContentTitulo"
                 android:layout_width="wrap_content"
@@ -59,7 +62,7 @@
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
-                android:text="Titulo"
+                android:text="Duracion"
                 android:textSize="19dp"
                 android:textStyle="bold"
                 android:typeface="serif" />
@@ -217,27 +220,50 @@
                 android:textColor="@color/gray"
                 android:textSize="15dp"
                 android:typeface="normal" />
-              <TextView
-                android:id="@+id/text_carreraLineaSeis"
+             
+          
+                 <TextView
+                android:id="@+id/text_carreraLineaSiete"
                 android:layout_width="fill_parent"
                 android:layout_height="1dp"
                 android:layout_alignParentLeft="true"
                 android:layout_below="@+id/text_carreraContentCuerpo"
                 android:layout_marginTop="3dp"
                 android:background="@color/gray_claro" />
-              
-              <ListView
-                  android:id="@+id/list_carreraMaeriaContent"
-                  android:orientation="vertical"
-                  android:layout_height="wrap_content"
-                  android:layout_width="match_parent"
-                  ></ListView>
-            
+
+            <TextView
+                android:id="@+id/label_carreraContentMateria"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/text_carreraLineaUno"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:text="Materia"
+                android:textSize="19dp"
+                android:textStyle="bold"
+                android:typeface="serif" />
+         
+              <TextView
+                android:id="@+id/text_carreraContentMateria"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="3dp"
+                android:text="Nivel"
+                android:textColor="@color/gray"
+                android:textSize="15dp"
+                android:typeface="normal"
+                android:layout_marginBottom="20dp" />
+       
             
             
         </LinearLayout>
 </ScrollView>
 
+    
+            
      
 
 </RelativeLayout>
