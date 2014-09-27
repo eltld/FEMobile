@@ -38,6 +38,13 @@ public class CarreraBean {
 		  return carreraDao.get(id);
 		}
 		
+		
+		public Carrera get(Long id_carrera,Long id_university)
+		{
+			
+			  System.out.println("CarreraBean get : "+id_carrera + "id_university: "+id_university);		
+			  return carreraDao.get(id_carrera,id_university);
+		}
 		public void addList(ArrayList<Carrera> list)
 		{
 			for(int i=0; i<list.size();i++)

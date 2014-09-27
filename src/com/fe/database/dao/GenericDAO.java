@@ -93,6 +93,15 @@ public class GenericDAO extends SQLiteOpenHelper {
 	        return cursor;
 	    }
 	    
+	    public Cursor get(String table, String[] columns,String columnSearch ,String columnSearch2,long id,long id2){
+		       Cursor cursor =db.query(true, table, columns, columnSearch + "=" + id  +" and "+ columnSearch2+"="+id2, null, null, null, null, null);
+		       if (cursor != null) {
+		    		
+		            cursor.moveToFirst();
+		        }
+		        return cursor;
+		    }
+	    
 	    public int delete(String table) {
 	        return db.delete(table, "1", null);
 	    }

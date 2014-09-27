@@ -127,6 +127,8 @@ public class ActivityCarrera extends Activity {
 	    			 };break;
 	    			 case Constants.FACU_ECONOMICA_ID:
 	    			 {
+	    				 listData=new ArrayList<Carrera>();
+	    				 listData=(ArrayList<Carrera>)loadCarrera.loadCarreraEconomica();
 	    				 
 	    			 };break;
 	    			}

@@ -20,53 +20,220 @@ public class LoadCarreraBean {
 	{
 		//carrera de grado
 		Carrera carrera=new Carrera();
-		carrera.setId_carrera(2);
+		//INGENIERO QUIMICO
+		carrera.setId_carrera(1);
 		carrera.setTitulo_carrera("INGENIERÍA QUÍMICA");
 		carrera.setNivel_carrera("Título de Grado");
-		carrera.setAcreditacion_carrera(" Ingeniero Químico");
-		carrera.setPerfil_carrera("1. Desempeñarse eficaz y eficientemente en un ámbito tecnológico de"
+		carrera.setAcreditacion_carrera(" <br>Resolución Ministerial Nº 1856/83"+
+          "<br>Resolución CONEAU Nº 552/08"+
+          "<br>Resolución CONEAU Nº 628/04");
+		carrera.setPerfil_carrera("<br>1. Desempeñarse eficaz y eficientemente en un ámbito tecnológico de"
 				+ "complejidad creciente de permanente cambio."
-				+ "2. Asumir responsablemente la preservación del medio ambiente."
-				+ "3. Desenvolverse en equipos multidisciplinarios."
-				+ "4. Buscar, seleccionar, aprender y aplicar conocimientos nuevos y aún"
+				+ "<br>2. Asumir responsablemente la preservación del medio ambiente."
+				+ "<br>3. Desenvolverse en equipos multidisciplinarios."
+				+ "<br>4. Buscar, seleccionar, aprender y aplicar conocimientos nuevos y aún"
 				+ "abordar algunos no referidos específicamente con su profesión. "
-				+ "5. Prever, detectar y comprender los cambios de las condiciones externas,"
+				+ "<br>5. Prever, detectar y comprender los cambios de las condiciones externas,"
 				+ "tanto tecnológicas como económicas, sociales y culturales, y producir"
 				+ "respuestas apropiadas a ellos rápidamente."
-				+ "6. Encarar la búsqueda de las soluciones a los problemas tecnológicos "
+				+ "<br>6. Encarar la búsqueda de las soluciones a los problemas tecnológicos "
 				+ "sustentándose en las ciencias matemáticas, físicas y químicas, y"
 				+ "acompañándolas con criterio económico, ambientalista y social. "
-				+ "7. Ejercer su profesión con sentido ético y responsabilidad social en la"
+				+ "<br>7. Ejercer su profesión con sentido ético y responsabilidad social en la"
 				+ "búsqueda del bienestar común.");
-		carrera.setAlcance_carrera("1. Estudio, factibilidad, proyecto, dirección, construcción, instalación,"+
+		carrera.setAlcance_carrera("<br>1. Estudio, factibilidad, proyecto, dirección, construcción, instalación,"+
  "inspección, operación y mantenimiento (excepto de obras civiles e"
 				+ "industriales) de:"
-				+ "2. Industrias que involucren procesos químicos, fisicoquímicos, de"
+				+ "<br>2. Industrias que involucren procesos químicos, fisicoquímicos, de"
 				+ "bioingeniería y sus instalaciones complementarias."
-				+ "3. Instalaciones donde intervengan operaciones unitarias y/o procesos"
+				+ "<br>3. Instalaciones donde intervengan operaciones unitarias y/o procesos"
 				+ "unitarios."
-				+ "4. Instalaciones destinadas a evitar la contaminación ambiental por"
+				+ "<br>4. Instalaciones destinadas a evitar la contaminación ambiental por"
 				+ "efluentes de todo tipo originados por la industria y/o sus servicios."
-				+ "5. Equipos, maquinarias, aparatos e instrumentos para las industrias"
+				+ "<br>5. Equipos, maquinarias, aparatos e instrumentos para las industrias"
 				+ "indicadas en los incisos anteriores."
-				+ "6. Estudios, tareas y asesoramientos relacionados con:"
-				+ "7. Aspecto funcional de las construcciones industriales y de servicios"
+				+ "<br>6. Estudios, tareas y asesoramientos relacionados con:"
+				+ "<br>7. Aspecto funcional de las construcciones industriales y de servicios"
 				+ "indicados en el párrafo i) y sus obras e instalaciones complementarias."
-				+ "8. Factibilidad del aprovechamiento e industrialización de los recursos"
+				+ "<br>8. Factibilidad del aprovechamiento e industrialización de los recursos"
 				+ "naturales y materias primas que sufran transformación y elaboración"
 				+ "de nuevos productos."
-				+ "9. Planificación, programación, dirección, organización, racionalización,"
+				+ "<br>9. Planificación, programación, dirección, organización, racionalización,"
 				+ "control y optimización de los procesos industriales de las industrias"
 				+ "citadas en el párrafo"
-				+ "10. Asuntos de Ingeniería Legal, Económica y Financiera relacionados con"
+				+ "<br>10. Asuntos de Ingeniería Legal, Económica y Financiera relacionados con"
 				+ "los incisos anteriores.");
 		
 		carrera.setDuracion_carrera("5 años");
 		carrera.setId_grado(Constants.CARRERA_GRADO);
 		carrera.setId_university(Constants.FACU_INGENIERIA_ID);
+	    listCarrera.add(carrera);
+	   
+	    //INGENIERO DE MINAS
+	    carrera.setId_carrera(2);
+		carrera.setTitulo_carrera("INGENIERO EN MINAS");
+		carrera.setNivel_carrera("Título de Grado");
+		carrera.setAcreditacion_carrera("Resolución Ministerial Nº 1856/8"+
+         "<br>Resolución CONEAU Nº 555/08"+
+         "<br>Resolución CONEAU Nº 627/04"  +
+		 "<br>Carrera Acreditada");
+		
+		carrera.setPerfil_carrera("El Perfil del Egresado es polivalente, tal que le permita actuar de modo interdisciplinario con"+
+"otras áreas involucradas en su actividad. Como Ingeniero de Minas será capaz de:"+
+"<br>1. Establecer políticas, objetivos y estrategias. "+
+"<br>2. Gestionar sus actividades específicas."+
+"<br>3. Dirigir, proyectar, controlar y mantener las explotaciones mineras de yacimientos metalíferos, no"+
+"<br>metalíferos, geotérmicos, rocas de aplicación y de combustibles sólidos, líquidos y gaseosos que"+
+"<br>para su obtención requieran el uso de tecnología minera."+
+"<br>4. Dirigir y controlar la totalidad de las actividades requeridas hasta su efectiva concreción teniendo"+
+"<br>en cuenta los criterios de seguridad, impacto ambiental, relaciones humanas, calidad,"+
+"productividad y costos."+
+"<br>5. Dirigir, diseñar y ejecutar obras relacionadas con el uso de explosivos, la voladura de rocas y"+
+"movimiento de suelos. El manejo y buen uso de los explosivos hacen de este profesional un"+
+"asistente indiscutido de la ingeniería vial y de construcciones."+
+"<br>6. En el área del procesamiento de los materiales, dirigir, diseñar y optimizar plantas de trituración,"+
+"molienda, clasificación y concentración de productos minerales, alimenticios y cualquier otro"+
+"producto industrial. Estar capacitado para el estudio, di-seño y ubicación de residuos industriales"+
+"(relaves) y comunitarios, entre otros."+
+"<br>7. En el campo de la metalurgia extractiva, dirigir, diseñar y controlar plantas industriales donde se"+
+"realizan procesos pirometalúrgicos, hidrometalúrgicos y combinados. "+
+"<br>8. Comercializar, seleccionar y abastecer insumos, maquinarias, productos e instrumentales"+
+"específicos. Gestionar la logística para la producción. Actuar en el desarrollo de proveedores de"+
+"materias primas e insumos. Programar, coordinar y controlar servicios y suministros."+
+"<br>9. Desarrollar sus actividades en plena armonía con el medio ambiente."+
+"<br>10. Realizar trabajos topográficos y geodésicos necesarios para la ubicación de puntos fijos en"+
+"superficie y mensura de pertenencias mineras y de cateos."+
+"<br>11. Generar y liderar emprendimientos empresariales y actividades legales que le permiten asumir"+
+"funciones de planificación y dirección empresaria. Actuar en consultorías. Formular y evaluar la"+
+"factibilidad técnico-económica y financiera de proyectos de emprendimientos."+
+"<br>12. Valorar la responsabilidad social de su desempeño profesional."+ 
+"<br>13. Buscar, seleccionar, aprender y aplicar nuevos conocimientos."+
+"<br>14. Desempeñarse en el ámbito científico, tecnológico y educativo."+
+"<br>15. Desarrollar aplicaciones tecnológicas relacionadas con su formación profesional en temas"+
+"referentes a su especialidad y afines.");
+		carrera.setAlcance_carrera("El título profesional obtenido por el Egresado de la carrera de Ingeniero de Minas, lo habilita"+
+"para realizar:"+
+"<br>1) Estudios, proyecto, dirección y ejecución de obras concernientes a la exploración y explotación de"+
+"yacimientos minerales de todo tipo, ubicados en el suelo o subsuelo, comprendiendo:"+
+"<br>a) Estudios minero-geológicos y químico mineralúrgicos de yacimientos, minas, minerales y rocas."+
+"b) Muestreos, determinación de reservas, estudios económico-financieros, evaluación de los"+
+"yacimientos minerales."+
+"c) Construcciones e Instalaciones mineras civiles, industriales y electromecánicas des-tinadas a"+
+"viviendas, depósitos, talleres, salas de motores y máquinas; extracción, transporte, quebrantado,"+
+"trituración y molienda, clasificación y almacenado, y concentración de sustancias minerales de"+
+"todo tipo, por medios mecánicos, neumáticos magnéticos, electrostáticos, hidro y"+
+"pirometalúrgicos."+
+"d) Obras de provisión de agua, energía, desagües, producción y distribución de aire comprimido,"+
+"ventilación e iluminación."+
+"e) Mecánica de suelos, voladuras de rocas, trabajos con explosivos, excavaciones de pozos, galerías,"+
+"túneles, obras de contención y sostén de empujes de terrenos. "+
+"f) Evacuación y cerramiento de las aguas, galerías de derrame, sistemas de bombeo, terraplenes y"+
+"represas."+
+"g) Servicios auxiliares para el mantenimiento de motores y máquinas de uso minero, herramientas y"+
+"lamparería."+
+"<br>2) Operaciones topográficas y geodésicas relativas a las tareas señaladas en el capítulo 1) que"+
+"corresponden a:"+
+"a) Mensuras privadas y judiciales de yacimientos minerales, concesiones de exploración y cateo y de"+
+"explotación."+
+"b) Determinaciones para el cálculo de coordenadas geográficas, rumbos y azimutes."+
+"c) Relevamiento de superficie y de labores subterráneas de todo tipo."+
+"d) Operaciones de triangulación necesarias para la ubicación de los distritos mineros y sus"+
+"yacimientos."+
+"<br>3) Estudios, asesoramiento de ingeniería legal, relativos a la Legislación minera y del trabajo en las"+
+"minas y canteras, comprendiendo:"+
+"a) La aplicación de las disposiciones legales emanadas del Código de Minería, Leyes, Decretos y"+
+"reglamentaciones conexas."+
+"b) Contratos de exploración y explotaciones de los yacimientos de minerales y organización del"+
+"trabajo."+
+"c) Higiene y seguridad en las minas y canteras, elaboración y aplicación de las disposiciones"+
+"correspondientes a la policía minera."+
+"<br>4) Arbitrajes, pericias y tasaciones, referidas a los yacimientos de minerales, su concesión y" +
+"aprovechamiento."+
+"<br>5) Enseñanza e investigación de los conocimientos básicos, técnicos y científicos de los temas" +
+"contenidos en la carrera, en todos los niveles de acuerdo con las reglamentaciones existentes al"+
+"efecto.");
+		carrera.setDuracion_carrera("5 años");
+		carrera.setId_grado(Constants.CARRERA_GRADO);
+		carrera.setId_university(Constants.FACU_INGENIERIA_ID);
+	    listCarrera.add(carrera);
 	    
-		listCarrera.add(carrera);
-	   return listCarrera;
+	    
+	    /////////////////////////////////////
+	    ////INGENIERIA INDUSTRIAL
+	    carrera.setId_carrera(3);
+		carrera.setTitulo_carrera("INGENIEIA INDUSTRIAL");
+		carrera.setNivel_carrera("Título de Grado");
+		carrera.setAcreditacion_carrera("Resolución Ministerial Nº 335/02."+
+				"<br>Resolución CONEAU Nº 514/07"+
+                "<br>CARRERA ACREDITADA");
+		carrera.setPerfil_carrera("La Ingeniería Industrial tiene por objeto la planificación, organización, análisis, medición y"+
+"control de los hechos de cualquier naturaleza que ocurren en una empresa buscando optimizar la"+
+"producción minimizando los costos. Por lo tanto con la presente carrera se espera conseguir el"+
+"siguiente objetivo: formar profesionales con una sólida base científica y tecnológica,"+
+"competentes en la gestión de empresas y organización de sistemas productivos, la interpretación"+
+"de nuevas tecnologías y de los desarrollos económicos para la toma de decisiones en el diseño y"+
+"dirección de las organizaciones, la coordinación e integración de sistemas que requieran de"+
+"conocimientos científicos, tecnológicos y de comercialización, así como el manejo de relaciones"+
+"interpersonales con capacidad de trabajar en equipo."+
+"Se espera lograr que el graduado en Ingeniería Industrial esté formado en:"+
+"<br>1. Ciencias básicas de la Ingeniería: Matemáticas, Física, Química, Informática."+
+"<br>2. Ciencias de las Ingenierías Mecánica, Química, Civil y Electrónica."+
+"<br>3. Ciencias propias de la especialidad: Investigación Operativa, Economía, Finanzas de"+
+"Empresas, Comercialización, Organización de la Producción, Sistemas de Información,"+
+"Gestión Empresaria."+
+"<br>4. Complementos a los conocimientos anteriores con los de Proyectos, Prácticas Profesionales"+
+"Supervisadas y otros trabajos de campo."+
+"<br>5. El Ingeniero Industrial debe poseer aptitudes para las ciencias lógico-matemáticas,"+
+"capacidad de análisis, talento para establecer relaciones interpersonales y vocación para"+
+"aceptar el desafío de afrontar problemas y situaciones nuevas en los sistemas productivos,"+
+"estableciendo las alternativas de solución.");
+carrera.setAlcance_carrera("El Ingeniero Industrial resulta competente para:"+
+"<br>1. Realizar estudios de factibilidad, proyectar, dirigir, implementar, operar y evaluar el"+
+"proceso de producción de bienes industrializados y la administración de los recursos"+
+"destinados a la producción de dichos bienes."+
+"<br>2. Planificar y organizar plantas industriales y plantas de transformación de recursos naturales"+
+"en bienes industrializados y servicios. "+
+"<br>3. Proyectar las instalaciones necesarias para el desarrollo de procesos productivos"+
+"destinados a la producción de bienes industrializados y dirigir su ejecución y"+
+"mantenimiento. "+
+"<br>4. Proyectar, implementar y evaluar el proceso destinado a la producción de bienes"+
+"industrializados. "+
+"<br>5. Determinar las especificaciones técnicas y evaluar la factibilidad tecnológica de los"+
+"dispositivos, aparatos y equipos necesarios para el proceso destinado a la producción de"+
+"bienes industrializados."+
+"<br>6. Programar y organizar el movimiento y almacenamiento de materiales para el desarrollo"+
+"del proceso productivo y de bienes industrializados resultantes."+
+"<br>7. Participar en el diseño de productos en lo relativo a determinación de la factibilidad de su"+
+"elaboración industrial. "+
+"<br>8. Determinar las condiciones de instalación y de funcionamiento que aseguren que el"+
+"conjunto de operaciones necesarias para la producción y distribución de bienes"+
+"industrializados se realice en condiciones de higiene y seguridad; establecer las"+
+"especificaciones de equipos, dispositivos y elementos de protección y controlar su"+
+"utilización. "+
+"<br>9. Realizar la planificación, organización, conducción y control de gestión del conjunto de"+
+"operaciones necesarias para la producción y distribución de bienes industriales. "+
+"<br>10. Determinar la calidad y cantidad de los recursos humanos para la implementación y"+
+"funcionamiento del conjunto de operaciones necesarias para la producción de bienes"+
+"industrializados; evaluar su desempeño y establecer los requerimientos de capacitación."+
+"<br>11. Efectuar la programación de los requerimientos financieros para la producción de bienes"+
+"industrializados."+
+"<br>12. Asesorar en lo relativo al proceso de producción de bienes industrializados y la"+
+"administración de los recursos destinados a la producción de dichos bienes."+
+"<br>13. Efectuar tasaciones y valuaciones de plantas industriales en lo relativo a: sus instalaciones"+
+"y equipos, sus productos semielaborados y elaborados y las tecnologías de transformación"+
+"utilizadas en la producción y distribución de bienes industrializados. "+
+"<br>14. Realizar arbitrajes y peritajes referidos a: planificación y organización de plantas"+
+"industriales, sus instalaciones y equipos, el proceso de producción, los procedimientos de"+
+"operación y las condiciones de higiene y seguridad en el trabajo, para la producción y"+
+"distribución de bienes industrializados.")	;
+carrera.setDuracion_carrera("5 años");
+carrera.setId_grado(Constants.CARRERA_GRADO);
+carrera.setId_university(Constants.FACU_INGENIERIA_ID);
+listCarrera.add(carrera);
+
+
+
+	    return listCarrera;
 	}
 	
 	
@@ -138,7 +305,7 @@ public class LoadCarreraBean {
 		//////////////////////////////////
 		carrera =new Carrera();
 		carrera.setId_carrera(4);
-		carrera.setTitulo_carrera("Bromatólogo");
+		carrera.setTitulo_carrera("BROMATOLOGO");
 		carrera.setNivel_carrera("Título de PreGrado");
 		carrera.setAcreditacion_carrera("Bromatólogo");
 		carrera.setPerfil_carrera("A través de su conocimiento el Licenciado en Bromatología podrá desempeñarse en:"+
@@ -388,4 +555,83 @@ return listCarrera;
 		
 		
 	}
+
+     
+	public List<Carrera>loadCarreraEconomica()
+	{
+		
+		Carrera carrera=new Carrera();
+		carrera.setId_carrera(1);
+		carrera.setTitulo_carrera(" CONTADOR PUBLICO");
+		carrera.setNivel_carrera("Título de Grado");
+		carrera.setAcreditacion_carrera("");
+		carrera.setPerfil_carrera("Planeamiento, organización, dirección, ejecución y control de actividades contables y de administración de recursos financieros"+
+                                  "Análisis, interpretación, registro, clasificación y resumen de datos contables."+ 
+                                  "Organización y ejecución de planes y políticas relacionadas con sistemas de información contable, y aplicación de tales sistemas con métodos de todo tipos incluyendo los electrónicos."+
+                                  "Preparación y examen de información administrativa y contable y emisión de informes resultante de su evaluación ante organismos de toda índole o para publico conocimiento"+
+"Examen y evaluación de pruebas y evidencias admisibles en juicio, para la tarea pericial y la actuación en concursos civiles y comerciales.-"+
+"Interpretación de leyes decretos y resoluciones gubernamentales en materia administrativo-contable."+
+"Organización y ejecución de procedimientos contables en la constitución, fusión, escisión y disolución de entidades de todo tipo."+
+"Actuación en tareas administrativo-contables de la administración pública, interpretando las disposiciones que concierne a la información contable y emitiendo dictámenes sobre ellas."+
+"Liquidación de impuestos y toda forma de gravámenes tributarios, interpretando las disposiciones que conciernen a tales temas y emitiendo dictámenes sobre ellas."+
+"Liquidación de haberes y beneficios laborales, sus cargas y sus compensaciones sociales, interpretando las disposiciones que conciernen a ellas y emitiendo dictámenes al respecto."+
+"Actuación en puestos de dirección y conducción de unidades de administración contable y financieras, en funciones subordinadas de línea o de asesoramiento en esa materia.");
+	 carrera.setAlcance_carrera(null);
+	 carrera.setDuracion_carrera("5 años");
+	 carrera.setId_grado(Constants.CARRERA_GRADO);
+	 carrera.setId_university(Constants.FACU_ECONOMICA_ID);
+	 listCarrera.add(carrera);
+	
+	 //LICENCIATURA EN ADMINISTRACIÓN
+	 carrera=new Carrera();
+	 carrera.setId_carrera(2);
+	 carrera.setTitulo_carrera("LICENCIATURA EN ADMINISTRACIÓN");
+	 carrera.setNivel_carrera("Título de Grado");
+	 carrera.setAcreditacion_carrera("");
+	 carrera.setPerfil_carrera("Además de la formación cultural impartida a los analistas, el egresado con título de Licenciado en Administración estará capacitado para desarrollar "+
+	 "con toda destreza profesional las siguientes tareas:"+ 
+     "1.-Planeamiento, organización, dirección, ejecución y control de la actividad empresaria en su conjunto"+
+     "2.-Organización y ejecución de planes y políticas empresarias"+
+     "3.-Organización de sistemas de información empresaria y el manejo y aplicación de métodos cibernéticos a la administración y gestión empresaria."+
+     "4.-Análisis y evaluación de leyes, decretos, y resoluciones gubernamentales relativas a la gestión y administración empresaria."+
+     "5.-Conducción de gestión empresaria en todas sus etapas: constitución, fusión, escisión, y disolución de entidades de todo tipo."+
+     "6.-Actuación en la administración gubernamental, en los diferentes niveles de conducción, interpretando las disposiciones que conciernen a la gestión de las entidades gubernamentales."+
+     "7.-Actuación en puestos de dirección y conducción de unidades operativas o administrativas o de dirección general en funciones de línea o de asesoramiento en materia de gestión empresaria."+
+     "8.-Analizar la información estadística y económica para efectuar diagnósticos y el diseño de políticas y estrategias empresariales y gubernamentales."+
+     "9.-Realizar estudios e investigaciones para la formulación y evaluación de proyectos de inversión, pequeños, medianos y grandes, tanto de naturaleza pública como privada."+
+     "10.-Realizar el seguimiento y control de la ejecución de los proyectos de inversión"+
+     "11.-Analizar la influencia de los procesos administrativos en la rentabilidad de las empresas y procesos de inversión de capital"+
+     "12.-Actuar en todos los aspectos como agente de promoción del Desarrollo Económico."+
+     "13.-Realizar investigaciones científicas y tecnológicas en el campo de las ciencias de la administración.");
+	 carrera.setAlcance_carrera(null);
+	 carrera.setDuracion_carrera("5 años");
+	 carrera.setId_grado(Constants.CARRERA_GRADO);
+	 carrera.setId_university(Constants.FACU_ECONOMICA_ID);
+	 listCarrera.add(carrera);
+	
+	 
+	 //LICENCIADO EN ECONOMÍA
+	 carrera=new Carrera();
+	 carrera.setId_carrera(3);
+	 carrera.setTitulo_carrera("LICENCIADO EN ECONOMIA - CONVENIO CON LA FACULTA DE NACIONAL DE TUCUMAN");
+	 carrera.setNivel_carrera("Título de Grado");
+	 carrera.setAcreditacion_carrera("");
+	 carrera.setPerfil_carrera("" +
+	 		"El egresado de esta carrera deberá estar capacitado para desarrollar con y toda destreza profesional las siguientes actividades:"+
+            "Trabajar en entidades públicas (Ministerios, Gobernaciones, Intendencias, etc.)"+
+            "Desempeñar actividades de asesoramiento en empresas privadas."+
+            "Realizar diagnósticos, desarrollar, dirigir y coordinar."+
+            "Funciones de planeamiento, organización, control de gestión de las actividades administrativas en su relación a lo económico, en entidades públicas como privadas."+
+            "En cuanto a la especialización, formación que se desarrollará luego de los estudios de grado, se han ido delimitando áreas dada la diversidad de los campos con que se vincula la actividad de un economista: Finanzas, Economía de las Empresas, Comercio Exterior, Sector Público, etc.");
+	 carrera.setAlcance_carrera(null);
+	 carrera.setDuracion_carrera("2 años");
+	 carrera.setId_grado(Constants.CARRERA_GRADO);
+	 carrera.setId_university(Constants.FACU_ECONOMICA_ID);
+	 listCarrera.add(carrera);
+	  
+		
+		return listCarrera;
+	}
+
+
 }

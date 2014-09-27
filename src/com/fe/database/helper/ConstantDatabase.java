@@ -44,6 +44,7 @@ public final class ConstantDatabase {
    public static final String CARR_ALCANCE="carr_alcance";
    public static final String CARR_DURACION="carr_duracion";
    public static final String CARR_GRADO="carr_grado";
+  
    
    
 	public static final String QUERY_CREATE_CARRERA=

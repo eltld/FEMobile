@@ -56,21 +56,32 @@ public class ActivityCarreraContent extends Activity {
 		textHeader.setText("Carreras");;
 		
 		carreraBean=new CarreraBean(getApplicationContext());
-		Carrera objCarrera=carreraBean.get(Long.parseLong(idCarrera));
+		Carrera objCarrera=carreraBean.get(Long.parseLong(idCarrera),Long.parseLong(idUniversity));
 		
 		switch(Integer.parseInt(idUniversity))
 		{
 		case Constants.FACU_AGRAGRIA_ID: 
 		{
+			logger.debug("load materia agrarias");
 		  materia=loadMateriaAgraria(Integer.parseInt(idCarrera));
-		
-  	
-		}
+        };break;
 		case Constants.FACU_HUMANIDADES_ID:
-		{
+		
+		{   logger.debug("load materia humanidades");
 			materia=loadMateriaHumanidades(Integer.parseInt(idCarrera));
 		};break;
+		case Constants.FACU_ECONOMICA_ID:{
+			logger.debug("load materia economica");
+			materia=loadMateriaContador(Integer.parseInt(idCarrera));
+		};break;
+		case Constants.FACU_INGENIERIA_ID : {
+			logger.debug("load materia ingenieria");
+			materia=loadMateriaIngenieria(Integer.parseInt(idCarrera));
+		};break;
+		
+		
 		}
+		
 		
 		
 		if(objCarrera!=null)
@@ -104,6 +115,8 @@ public class ActivityCarreraContent extends Activity {
 	
 	public String loadMateriaAgraria(int id_carrera)
 	{
+		
+		logger.debug("loadMateriaAgraria id_carrera : "+id_carrera);
 		List<String> listMateria=new ArrayList<String>();
 		 
 		String materia="";
@@ -113,7 +126,7 @@ public class ActivityCarreraContent extends Activity {
 		case 1:{		
 		//Ingeniero Agronomo
 		
-		  materia+="Primer Año";
+		  materia+="<br><b>PRIMER AÑO</b>";
 		  materia+="<br>Álgebra y Geometría Analítica";
 	      materia+=" <br>Análisis Matemático";
           materia+=" <br>Botánica General"; 		
@@ -123,6 +136,7 @@ public class ActivityCarreraContent extends Activity {
 		  materia+=" <br>Física";
 		  materia+=" <br>Módulo I";
 		//2 año
+		  materia+="<br><b>SEGUNDO AÑO</b>";
 		  materia+="<br>Bioestadística y Diseño Experimental";
 		  materia+="<br>Química Biológica";	
         materia+=" <br>Química Agrícola";	
@@ -131,6 +145,7 @@ public class ActivityCarreraContent extends Activity {
         materia+=" <br>Topografía";	
         materia+=" <br>Agroclimatología";
         //3 año
+        materia+="<br><b>TERCER AÑO</b>";
         materia+=" <br>Fisiología Vegetal";	
         materia+=" <br>Zoología Agrícola";	
         materia+=" <br>Fitopatología";	
@@ -141,6 +156,7 @@ public class ActivityCarreraContent extends Activity {
         materia+=" <br>Economía Agraria";	
         materia+=" <br>Módulo II";	
         //4 año
+        materia+="<br><b>CUARTO AÑO</b>";
         materia+="<br>25 Manejo del Suelo y Riego";	
         materia+="<br>26 Protección Vegetal";	
         materia+="<br>27 Granos y Forrajes";	
@@ -149,6 +165,7 @@ public class ActivityCarreraContent extends Activity {
         materia+="<br>30 Mejoramiento Genético";
         
         //5to año
+        materia+="<br><b>QUINTO AÑO</b>";
         materia+="<br>31 Administración Agraria";	
         materia+="<br>32 Horticultura y Floricultura";	
         materia+="<br>33 Cultivos Industriales";	
@@ -159,7 +176,7 @@ public class ActivityCarreraContent extends Activity {
         materia+="<br>38 Módulo III";	
         materia+="<br>39 Pasantía con Trabajo Final";
         
-		}
+		};break;
 		case 2 :// LIC. EN CIENCIAS BIOLOGICAS
 		   {
 			   materia+="<br><b>PRIMER AÑO</b>";
@@ -215,12 +232,64 @@ public class ActivityCarreraContent extends Activity {
 			materia+="<br>Química Orgánica";	
 			materia+="<br>Química Analítica General";	
 			materia+="<br>Estadística";	
-			Zoología Alimentaria	
-			Química Biológica	
-			Bromatología I
+			materia+="<br>Zoología Alimentaria";	
+			materia+="<br>Química Biológica	";
+			materia+="<br>Bromatología I";
+			
+			materia+="<br><b>TERCER AÑO</b>";
+			materia+="<br>Química Analítica Instrumental";
+			materia+="<br>Microbiología General";
+			materia+="<br>Bromatología II";
+			materia+="<br>Microbiología de Alimentos";
+			materia+="<br>Bromatología III";
+			materia+="<br>Higiene y Saneamiento";
+			materia+="<br>Toxicología de Alimentos";
+			
+			
+			materia+="<br><b>Fisiología de la Nutrición</b>";
+			materia+="<br>Tecnología de los Alimentos";
+			materia+="<br>Organización y Gestión de Calidad";
+			materia+="<br>Optativa *";
+			materia+="<br>Legislación y Educación Alimentaria";
+			materia+="<br>Taller de Calidad y Seguridad";
+			materia+="<br>Diseño Expermiental";
+			materia+="<br>Optativa";
+			
+			materia+="<br><b>LICENCIADO EN BROMATOLOGIA</b>";
+			
+		};break;
+		case 4:{
+			
+			//BROMATOLOGO
+			materia+="<br><b>BROMATOLOGO</b>";
+			materia+="<br><b>PRIMER AÑOz</b>";
+			materia+="<br>Matemática I";	
+			materia+="<br>Química General";	
+			materia+="<br>Botánica Alimentaria";	
+			materia+="<br>Matemática II";	
+			materia+="<br>Química Inorgánica";	
+			materia+="<br>Física";
+			
+			materia+="<br><b>SEGUNDO AÑOz</b>";
+			materia+="<br>Química Orgánica";	
+			materia+="<br>Química Analítica General";	
+			materia+="<br>Estadística";	
+			materia+="<br>Zoología Alimentaria";	
+			materia+="<br>Química Biológica	";
+			materia+="<br>Bromatología I";
+			
+			materia+="<br><b>TERCER AÑO</b>";
+			materia+="<br>Química Analítica Instrumental";
+			materia+="<br>Microbiología General";
+			materia+="<br>Bromatología II";
+			materia+="<br>Microbiología de Alimentos";
+			materia+="<br>Bromatología III";
+			materia+="<br>Higiene y Saneamiento";
+			materia+="<br>Toxicología de Alimentos";
 			
 			
 		};break;
+		
 		}
 		return materia;
 	}
@@ -229,8 +298,7 @@ public class ActivityCarreraContent extends Activity {
 	//Load Humanidades
 	public String loadMateriaHumanidades(int id_carrera) {
 		
-		List<String> listMateria =null;
-		listMateria=new ArrayList<String>();
+
 		logger.debug("loadMateriaHumanidades id_Carrera: "+id_carrera);
 		
 		String materia="";
@@ -686,6 +754,274 @@ public class ActivityCarreraContent extends Activity {
 		return materia;
 	}
 	
+    //Load Contador 
+	public String loadMateriaContador(int id_carrera)
+	{
+         logger.debug("loadMateriaContador id_Carrera: "+id_carrera);
+		
+		String materia="";
+		switch (id_carrera) {
+		case 1 :{
+			      //CONTADOR PUBLICO
+			      materia+="<br><b>CONTADOR PUBLICO</b>";
+			      materia+="<br>PRIMER AÑO";
+			      materia+="<br>Introducción a la Contabilidad ";
+			      materia+="<br>Algebra y Geometría Analítica ";
+			      materia+="<br>Teoría General de la Administración";
+			      materia+="<br>Contabilidad Básica ";
+			      materia+="<br>Introducción a la Economía";
+			      materia+="<br>Análisis Matemático ";
+			      materia+="<br>Introducción a las Ciencias Sociales ";
+			      materia+="<br><b>SEGUNDO AÑO</b>";
+			      materia+="<br>Contabilidad Superior I ";
+			      materia+="<br>Estadística ";
+			      materia+="<br>Estructuras y Procesos";
+			      materia+="<br>Derecho Privado ";
+			      materia+="<br>Contabilidad Superior II ";
+			      materia+="<br>Informática";
+			      materia+="<br>Microeconomía ";
+			      materia+="<br><b>TERCER AÑO</b>";
+			      materia+="<br>Derecho Constitucional y Administrativo ";
+			      materia+="<br>Contabilidad Superior III ";
+			      materia+="<br>Sistemas de Información ";
+			      materia+="<br>Macroeconomía";
+			      materia+="<br>Costos I ";
+			      materia+="<br>Derecho Laboral ";
+			      materia+="<br>Historia Económica y Social ";
+			      materia+="<br>Cálculo Financiero ";
+			      materia+="<br><b>CUARTO AÑO</b>";
+			      materia+="<br>Administración Financiera ";
+			      materia+="<br>Costos II ";
+			      materia+="<br>Finanzas Públicas ";
+			      materia+="<br>Metodología de Investigación ";
+			      materia+="<br>Análisis e Interpretación de Estados Contables ";
+			      materia+="<br>Impuestos I ";
+			      materia+="<br>Derecho Societario ";
+			      materia+="<br>Contabilidad Pública ";
+			      materia+="<br><b>QUINTO AÑO</b>";
+			      materia+="<br>Auditoría I ";
+			      materia+="<br>Impuestos II ";
+			      materia+="<br>Derecho Concursal ";
+			      materia+="<br>Electiva I";
+			      materia+="<br>Auditoría II ";
+			      materia+="<br>Electiva II";
+			      materia+="<br>Práctica Profesional ";
+			      materia+="<br>Seminario Final ";
+			      
+		        };break; 
+		case 2:{
+	          //LICENCIATURA EN ADMINISTRACION
+			 materia+="<br><b>LICENCIATURA EN ADMINISTRACION</b>";
+		      materia+="<br>PRIMER AÑO";
+		      materia+="<br>Introducción a la Contabilidad ";
+		      materia+="<br>Algebra y Geometría Analítica ";
+		      materia+="<br>Teoría General de la Administración";
+		      materia+="<br>Contabilidad Básica ";
+		      materia+="<br>Introducción a la Economía";
+		      materia+="<br>Análisis Matemático ";
+		      materia+="<br>Introducción a las Ciencias Sociales ";
+			  materia+="<br><b>SEGUNDO AÑO</b>";
+			  materia+="<br>Análisis Sico Social de las Organizaciones";
+			  materia+="<br>Estadística ";
+			  materia+="<br>Estructuras y Procesos" ;
+			  materia+="<br>Derecho Privado ";
+			  materia+="<br>Elementos y Sistemas de Costos"; 
+			  materia+="<br>Informática"; 
+			  materia+="<br>Microeconomía ";
+			  materia+="<br><b>TERCER AÑO</b>";
+			  materia+="<br>Derecho Constitucional y Administrativo ";
+			  materia+="<br>Análisis de Estados Contables ";
+			  materia+="<br>Sistemas de Información ";
+			  materia+="<br>Macroeconomía";
+			  materia+="<br>Administración de Recursos Humanos"; 
+			  materia+="<br>Derecho Laboral ";
+			  materia+="<br>Historia Económica y Social"; 
+			  materia+="<br>Cálculo Financiero ";
+			  materia+="<br><b>CUARTO AÑO</b>";
+			  materia+="<br>Administración Financiera ";
+			  materia+="<br>Sist. de Adm. Financ. y Control del Sector Público ";
+			  materia+="<br>Marketing ";
+			  materia+="<br>Metodología de Investigación ";
+			  materia+="<br>Régimen Tributario ";
+			  materia+="<br>Derecho Societario ";
+			  materia+="<br>Formulación y Evaluación de Proyectos";
+			  materia+="<br><b>QUINTO AÑO</b>";
+			  materia+="<br>Electiva I";	
+			  materia+="<br>Electiva II";	
+			  materia+="<br>Práctica Profesional"; 
+			  materia+="Seminario Final";
+			  
+		};break;
+		case 3:{
+			
+			//LICENCIADO EN ECONOMIA
+			materia+="<br><b>PRIMERA AÑO</b>";
+			materia+="<br>Introducción a la Contabilidad ";
+			materia+="<br>Algebra y Geometría Analítica ";
+			materia+="<br>Teoría General de la Administración"; 
+			materia+="<br>Contabilidad Básica ";
+			materia+="<br>Análisis Matemático ";
+			materia+="<br>Introducción a las Ciencias Sociales";
+			materia+="<br>Microeconomía ";
+			materia+="<br><b>SEGUNDO AÑO</b>";
+			materia+="<br>Estadística ";
+			materia+="<br>Derecho Privado"; 
+			materia+="<br>Macroeconomía ";
+			materia+="<br>Historia Económica y Social"; 
+			materia+="<br>Cálculo Financiero ";
+			
+			
+		};break;
+		}
+		return materia;
+		
+		}
 	
 	
+	//Load Ingenieria
+	public String loadMateriaIngenieria(int id_carrera)
+	{ 
+		logger.debug("loadMateriaIngenieria id_Carrera: "+id_carrera);
+	
+	
+	String materia="";
+	switch (id_carrera) {
+	case 1 :{
+		    //INGENIERO QUIMICO
+		     materia+="INGENIERIA QUIMICA";
+		     materia+="<br><b>PRIMERA AÑO</b>";
+		     materia+="<br>Álgebra y Geometría Analítica";
+		     materia+="<br>Análisis Matemático I ";
+		     materia+="<br>Física I ";
+		     materia+="<br>Introducción a la Informática ";
+		     materia+="<br>Química I  ";
+		     materia+="<br>Sistemas de Representación ";
+		     materia+="<br><b>SEGUNDO AÑO</b>";
+		     materia+="<br>Física II ";
+		     materia+="<br>Química Orgánica";  
+		     materia+="<br>Análisis Matemático II"; 
+		     materia+="<br>Química II ";
+		     materia+="<br>Matemática para Ingenieros";
+		     materia+="<br>Termodinámica ";
+		     materia+="<br><b>TERCER AÑO</b>";
+		     materia+="<br>Química Analítica ";
+		     materia+="<br>Electricidad y Electrónica";
+		     materia+="<br>Fenómenos de Transporte ";
+		     materia+="<br>Fisicoquímica ";
+		     materia+="<br>Economía, Organización y Dirección de Empresas"; 
+		     materia+="<br>Estática y Resistencia de Materiales ";
+		     materia+="<br>Operaciones Unitarias I ";
+		     materia+="<br>Programación Aplicada";
+		     materia+="<br><b>CUARTO AÑO</b>";
+		     materia+="<br>Ingeniería de las Reacciones Químicas";
+		     materia+="<br>Instrumentación y Control de Procesos ";
+		     materia+="<br>Operaciones Unitarias II"; 
+		     materia+="<br>Ingeniería de los Servicios"; 
+		     materia+="<br>Materiales para Ingeniería";
+		     materia+="<br>Tecnología Mecánica ";
+		     materia+="<br>Bioingeniería ";
+		     materia+="<br>Procesos Electroquímicos";
+		     materia+="<br><b>QUINTO AÑO</b>";
+		     materia+="<br>Formulación y Evaluación de Proyectos";
+		     materia+="<br>Ingeniería de Procesos";
+		     materia+="<br>Simulación y Optimización";
+		    		 
+	        };break;	
+	case 2:{
+		     //INGENIERO EN MINAS
+		      materia+="INGENIERO EN MINAS";
+		      materia+="<br><b>PRIMER AÑO</b>";
+		      materia+="<br>Álgebra y Geometría Analítica";
+		      materia+="<br>Análisis Matemático I ";
+		      materia+="<br>Física I ";
+		      materia+="<br>Introducción a la Informática"; 
+		      materia+="<br>Química I ";
+		      materia+="<br>Sistemas de Representación";
+		      materia+="<br>T1 Taller: Introducción a la Ingeniería de Minas";
+		      materia+="<br><b>SEGUNDO AÑO</b>";
+		      materia+="<br>Física II ";
+		      materia+="<br>Análisis Matemático II"; 
+		      materia+="<br>Geología ";
+		      materia+="<br>Química II ";
+		      materia+="<br>Cálculo Numérico ";
+		      materia+="<br>Matemática para Ingenieros "; 
+		      materia+="<br>Mecánica Aplicada a la Minería "; 
+		      materia+="<br>Termodinámica ";
+		      materia+="<br><b>TERCER AÑO</b>";
+		      materia+="<br>Química Analítica y Análisis de Menas";
+		      materia+="<br>Topografía ";
+		      materia+="<br>Electricidad y Electrónica ";
+		      materia+="<br>Fisicoquímica ";
+		      materia+="<br>Seminario: Ingeniería de la Calidad y del Medio Ambiente";
+		      materia+="<br>Estática y Resistencia de Materiales ";
+		      materia+="<br>Mecánica de Rocas y Suelos ";
+		      materia+="<br>Mineralogía ";
+		      materia+="<br>Seminario: Higiene y Seguridad Ambiental y del Trabajo";
+		      materia+="<br><b>CUARTO AÑO</b>";
+		      materia+="<br>Economía Minera y Dirección y Organización de Empresas";
+		      materia+="<br>Máquinas Mineras y Servicios ";
+		      materia+="<br>Metalurgia Extractiva I ";
+		      materia+="<br>Procesamiento de Minerales I"; 
+		      materia+="<br>Yacimientos de Minerales ";
+		      materia+="<br>Construcciones Mineras ";
+		      materia+="<br>Explotación de Minas I ";
+		      materia+="<br>Metalurgia Extractiva II ";
+		      materia+="<br>Petrografía y Petrología ";
+		      materia+="<br>Procesamiento de Minerales II"; 
+		      materia+="<br>Prospección y Exploración";
+		      materia+="<br><b> QUINTO AÑO</b>";
+		      materia+="<br>Explotación de Minas II ";
+		      materia+="<br>Formulación y Evaluación de Proyectos"; 
+		      materia+="<br>Procesamiento de Minerales III ";
+		      materia+="<br>Seminario: Ingeniería de la Producción y de la Empresa";
+		      materia+="<br>Seminario: Legislación Minera y Ética Profesional";
+		      materia+="<br>Proyecto Final";
+	};break;
+	case 3:{
+		 //INGENIERO EN INDUSTRIAL
+		materia+="<br><b>PRIMER AÑO</b>";
+		materia+="Álgebra y Geometría Analítica"; 
+		materia+="<br>Análisis Matemático I ";
+		materia+="<br>Física I ";
+		materia+="<br>Introducción a la Informática"; 
+		materia+="<br>Química I ";
+		materia+="<br>Sistemas de Representación";
+		materia+="<br><b>SEGUNDO AÑO</b>";
+		materia+="<br>Estática y Resistencia de Materiales ";
+		materia+="<br>Física II ";
+		materia+="<br>Probabilidad y Estadística"; 
+		materia+="<br>Análisis Matemático II ";
+		materia+="<br>Química II ";
+		materia+="<br>Programación Aplicada"; 
+		materia+="<br>Termodinámica y Máquinas Térmicas";
+		materia+="<br>TERCER AÑO</b>";
+		materia+="<br>Investigación Operativa ";
+		materia+="<br>Costos Industriales ";
+		materia+="<br>Economía y Dirección de Empresas";
+		materia+="<br>Electrotecnia";
+		materia+="<br>Organización de la Producción";
+		materia+="<br>Ingeniería de Materiales ";
+		materia+="<br>Organización de Empresas ";
+		materia+="<br>Planeamiento y Control de la Producción";
+		materia+="<br><b>CUARTO AÑO</b>";
+		materia+="<br>Sistemas de Información ";
+		materia+="<br>Formulación y Evaluación de Proyectos";
+		materia+="<br>Instalaciones y Control ";
+		materia+="<br>Mecánica de los Fluidos C";
+		materia+="<br>Higiene y Seguridad Ambiental y del Trabajo";
+		materia+="<br>Ingeniería Legal ";
+		materia+="<br>Mecánica y Mecanismos";
+		materia+="<br><b>QUINTO AÑO</b>";
+		materia+="<br>Edificios Industriales"; 
+		materia+="<br>Optativa I ";
+		materia+="<br>Optativa II ";
+		materia+="<br>Gestión Empresaria de la Calidad"; 
+		materia+="<br>Operaciones Industriales ";
+		materia+="<br>Optativa III ";
+				
+		
+	};break;
+	 }
+  	   return materia;
+	}
 }

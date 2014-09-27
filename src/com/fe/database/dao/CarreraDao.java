@@ -75,6 +75,40 @@ private static final Logger logger = (Logger) LoggerFactory.getLogger(CarreraDao
 		}
 	}
 	
+	
+	
+	public Carrera get(Long id_carrera, Long id_university)
+	{
+		cursor=dao.get(ConstantDatabase.T_CARRERA,this.columns,ConstantDatabase.CARR_ID,ConstantDatabase.UNI_ID,id_carrera,id_university);
+		
+		
+		if(cursor!=null)
+		{
+	     int carr_id =cursor.getColumnIndex(ConstantDatabase.CARR_ID);
+	     int carr_titulo=cursor.getColumnIndex(ConstantDatabase.CARR_TITULO);
+	     int carr_nivel=cursor.getColumnIndex(ConstantDatabase.CARR_NIVEL);
+	     int carr_acreditacion=cursor.getColumnIndex(ConstantDatabase.CARR_ACREDITACION);
+	     int carr_perfil=cursor.getColumnIndex(ConstantDatabase.CARR_PERFIL);
+	     int carr_alcance=cursor.getColumnIndex(ConstantDatabase.CARR_ALCANCE);
+	     int carr_duracion=cursor.getColumnIndex(ConstantDatabase.CARR_DURACION);
+	     int uni_id=cursor.getColumnIndex(ConstantDatabase.UNI_ID);
+	     
+	    
+	     carrera.setId_carrera(Integer.parseInt(cursor.getString(carr_id)));
+	     carrera.setTitulo_carrera(cursor.getString(carr_titulo));
+	     carrera.setNivel_carrera(cursor.getString(carr_nivel));
+	     carrera.setAcreditacion_carrera(cursor.getString(carr_acreditacion));
+	     carrera.setPerfil_carrera(cursor.getString(carr_perfil));
+	     carrera.setAlcance_carrera(cursor.getString(carr_alcance));
+	     carrera.setDuracion_carrera(cursor.getString(carr_duracion));
+	     carrera.setId_university(Integer.parseInt(cursor.getString(uni_id)));
+	     cursor.close();
+	     return carrera;
+		}
+		return null;
+		
+	}
+	
 	public Carrera get(Long id)
 	{
 		cursor=dao.get(ConstantDatabase.T_CARRERA,this.columns,ConstantDatabase.CARR_ID,id);
