@@ -102,9 +102,9 @@ public class ActivityCarreraContent extends Activity {
 	      text_duracion.setText(objCarrera.getDuracion_carrera());
 	      text_nivel.setText(objCarrera.getNivel_carrera());
 	      text_acreditacion.setText(objCarrera.getAcreditacion_carrera());
-	      text_perfil.setText(objCarrera.getPerfil_carrera());
+	      text_perfil.setText(Html.fromHtml(objCarrera.getPerfil_carrera()));
 	      text_materia.setText(Html.fromHtml(materia));
-	      text_alcance.setText(objCarrera.getAlcance_carrera());
+	      text_alcance.setText(Html.fromHtml( objCarrera.getAlcance_carrera()));
         
         	
 	      
@@ -1021,7 +1021,226 @@ public class ActivityCarreraContent extends Activity {
 				
 		
 	};break;
-	 }
+	 
+	case 4:{
+		//INGENIERIA EN INFORMATICA.
+		materia+="<br><b>PRIMER AÑO</b>";
+		materia+="<br>Álgebra y Geometría Analítica"; 
+		materia+="<br>Análisis Matemático I ";
+		materia+="<br>Física I ";
+		materia+="<br>Introducción a la Informática"; 
+		materia+="<br>Química I ";
+		materia+="<br>Sistemas de Representación";
+		materia+="<br><b>SEGUNDO AÑO</b";
+		materia+="<br>Física II ";
+		materia+="<br>Probabilidades y Estadística"; 
+		materia+="<br>Análisis Matemático II ";
+		materia+="<br>Matemática Discreta ";
+		materia+="<br>Técnicas Digitales ";
+		materia+="<br>Estructura de Datos ";
+		materia+="<br>Estructura y Tecnología de Computadoras"; 
+		materia+="<br>Metodología de la Programación";
+		materia+="<br><b>TERCER AÑO</b>";
+		materia+="<br>Investigación Operativa"; 
+		materia+="<br>Modelos de Desarrollo de Programas y  Programación Concurrente";
+		materia+="<br>Desarrollo Sistemático de Programas ";
+		materia+="<br>Lógica Computacional ";
+		materia+="<br>Sistemas Operativos";
+		materia+="<br>Bases de Datos";
+		materia+="<br>Cálculo Numérico"; 
+		materia+="<br>Lenguajes Formales"; 
+		materia+="<br>Redes de Computadoras";
+		materia+="<br><b>CUARTO AÑO</b>";
+		materia+="<br>Economía, Organización y Administración de Empresas";
+		materia+="<br>Arquitectura de Redes ";
+		materia+="<br>Compiladores";
+		materia+="<br>Inteligencia Artificial"; 
+		materia+="<br>Laboratorio de Computadoras";
+		materia+="<br>Arquitectura de Computadoras ";
+		materia+="<br>Ingeniería de Software I";
+		materia+="<br><b>QUINTO AÑO</b>";
+		materia+="<br>Diseño de Sistemas Operativos";
+		materia+="<br>Ingeniería de Software II ";
+		materia+="<br>Gestión Ambiental ";
+		materia+="<br>Ingeniería del Conocimiento"; 
+		materia+="<br>Legislación";
+		materia+="<br>Proyecto Final";
+	};break;
+	case 5:{
+		
+		//LICENCIATURA EN SISTEMAS 
+		materia+="<br><b>PRIMER AÑO</b>";
+		materia+="<br>Álgebra y Geometría Analítica"; 
+		materia+="<br>Análisis Matemático ";
+		materia+="<br>Introducción a la Informática"; 
+		materia+="<br>Técnicas Digitales";
+		materia+="<br>Estructura de Datos ";
+		materia+="<br>Estructura y Tecnología de Computadoras"; 
+		materia+="<br>Metodología de la Programación ";
+		materia+="<br><b>SEGUNDO AÑO</b>";
+		materia+="<br>Probabilidades y Estadística ";
+		materia+="<br>Análisis Matemático II ";
+		materia+="<br>Lógica Computacional ";
+		materia+="<br>Matemática Discreta"; 
+		materia+="<br>Sistemas Operativos";
+		materia+="<br>Bases de Datos";
+		materia+="<br>Lenguajes Formales";
+		materia+="<br>Redes de Computadoras";
+		materia+="<br><b>TERCER AÑO</b>";
+		materia+="<br>Economía, Organización y Administración de Empresas";
+		materia+="<br>Investigación Operativa";
+		materia+="<br>Modelos de Desarrollo de Programas y Programación Concurrente";
+		materia+="<br>Sistemas de Información I";
+		materia+="<br>Desarrollo Sistemático de Programas"; 
+		materia+="<br>Taller de Epistemología de las Ciencias";
+		materia+="<br>Taller de Formación Profesional ";
+		materia+="<br>Cálculo Numérico ";
+		materia+="<br>Seguridad en Sistemas"; 
+		materia+="<br>Taller de Metodología de la Investigación Científica";
+		materia+="<br><b>CUARTO AÑO</b>";
+		materia+="<br>Sistemas de Información II ";
+		materia+="<br>Compiladores ";
+		materia+="<br>Diseño de Sistemas Operativos"; 
+		materia+="<br>Inteligencia Artificial ";
+		materia+="<br>Laboratorio de Computadoras"; 
+		materia+="<br>Arquitectura de Computadoras";
+		materia+="<br>Gestión Ambiental ";
+		materia+="<br>Ingeniería del Conocimiento";
+		materia+="<br>Legislación ";
+		materia+="<br>Trabajo Final de Sistemas"; 
+	};break;
+	case 6:{
+		///LICENCIATURA EN TECNLOOGIA DE LOS ALIMENTOS
+		materia+="<br><b>PRIMER AÑO</b>";
+		materia+="<br>Álgebra y Geometría Analítica";
+		materia+="<br>Análisis Matemático ";
+		materia+="<br>Física I ";
+		materia+="<br>Química I";
+		materia+="<br><b>SEGUNDO AÑO</b>";
+		materia+="<br>Estadística ";
+		materia+="<br>Química Orgánica"; 
+		materia+="<br>Biología General y Celular"; 
+		materia+="<br>Química II ";
+		materia+="<br>Física II ";
+		materia+="<br>Matemática y Computación";
+		materia+="<br><b>TERCER AÑO</b>";
+		materia+="<br>Bioquímica de los Alimentos ";
+		materia+="<br>Fisicoquímica ";
+		materia+="<br>Microbiología General y de los Alimentos";
+		materia+="<br>Química Analítica y Análisis de los Alimentos";
+		materia+="<br>Fenómenos de Transporte";
+		materia+="<br><b>CUARTO AÑO</b>";
+		materia+="<br>Operaciones Básicas de los Alimentos";
+		materia+="<br>Materiales y Equipos ";
+		materia+="<br>Tecnología de los Alimentos I"; 
+		materia+="<br>Calidad de los Alimentos ";
+		materia+="<br>Higiene y Seguridad Ambiental";
+		materia+="<br>Tecnología de los Alimentos II";
+		
+		
+	};break;
+	case 7:{
+		//LICENCIADO EN CIENCIAS GEOLOGICAS
+		materia+="";
+	};break;
+	case 8:{
+		//TECNICO UNIVERSITARIO EN EXPLOTACION DE MINAS 2007 PERFIL Y ALCANCES
+		materia+="";
+	};break;
+	case 9:{
+		// TÉCNICO UNIVERSITARIO EN PROCESAMIENTO DE MINERALES
+	    materia+="<br><b>PRIMER AÑO</b>";
+	    materia+="<br>Álgebra y Geometría Analítica ";
+	    materia+="<br>Análisis Matemático I";
+	    materia+="<br>Física I ";
+	    materia+="<br>Introducción a la Informática"; 
+	    materia+="<br>Química I ";
+	    materia+="<br>Sistemas de Representación"; 
+	    materia+="<br>Taller: Introducción a la Minería";
+	    materia+="<br><b>SEGUNDO AÑO</b>";
+	    materia+="<br>Física II ";
+	    materia+="<br>Química Analítica y Análisis de Menas";
+	    materia+="<br>Seminario: Ingeniería de la Calidad y del Medio Ambiente";
+	    materia+="<br>Procesamiento de Minerales I ";
+	    materia+="<br>Química II ";
+	    materia+="<br>Mineralogía ";
+	    materia+="<br>Procesamiento de Minerales II"; 
+	    materia+="<br>Termodinámica";
+	    materia+="<br><b>TERCER AÑO</b>";
+	    materia+="<br>Electricidad y Electrónica ";
+	    materia+="<br>Fisicoquímica ";
+	    materia+="<br>Metalurgia Extractiva I"; 
+	    materia+="<br>Procesamiento de Minerales III";
+	    materia+="<br>Seminario: Higiene y Seguridad Ambiental y del Trabajo";
+	    materia+="<br>Metalurgia Extractiva II ";
+	    materia+="<br>Taller: Beneficio de los Minerales"; 
+	    materia+="<br>Taller: Procesos de Metalurgia Extractiva";
+	};break;
+	case 10:{
+		//ANALISTA PROGRAMADDOR UNIVERSITARIO
+		materia+="<br><b>PRIMIER AÑO</b>";
+		materia+="<br>Inglés I ";
+		materia+="<br>Herramientas Informáticas I"; 
+		materia+="<br>Programación Estructurada ";
+		materia+="<br>Inglés II ";
+		materia+="<br>Herramientas Informáticas II";
+		materia+="<br>Estructura de Datos ";
+		materia+="<br>Laboratorio de Sistemas Operativos I"; 
+		materia+="<br>Base de Datos I";
+		materia+="<br><b>SEGUNDO AÑO</b>";
+		materia+="<br>Inglés III ";
+		materia+="<br>Álgebra I ";
+		materia+="<br>Programación Visual"; 
+		materia+="<br>Laboratorio de Sistemas Operativos II"; 
+		materia+="<br>Base de Datos II";
+		materia+="<br>Inglés IV ";
+		materia+="<br>Álgebra II ";
+		materia+="<br>Programación Concurrente y Paralela"; 
+		materia+="<br>Programación Orientada a Objetos ";
+		materia+="<br>Análisis y Diseño de Sistemas I ";
+		materia+="<br><b>TERCER AÑO</b>";
+		materia+="<br>Inglés V";
+		materia+="<br>Redes I ";
+		materia+="<br>Programación y Servicios Web"; 
+		materia+="<br>Laboratorio de Programación Orientado a Objetos I"; 
+		materia+="<br>Análisis y Diseño de Sistemas II";
+		materia+="<br>Inglés VI ";
+		materia+="<br>Redes II ";
+		materia+="<br>Laboratorio de Programación Orientado a Objetos II"; 
+		materia+="<br>Herramientas informáticas avanzadas";
+		materia+="<br>Legislación y Ejercicio Profesional ";
+		
+	};break;
+	case 11:{
+		materia+="<br><b>PRIMER AÑO</b>";
+		materia+="<br>Álgebra y Geometría Analítica ";
+		materia+="<br>Análisis Matemático ";
+		materia+="<br>Física I ";
+		materia+="<br>Introducción a la Geología"; 
+		materia+="<br>Química I ";
+		materia+="<br><b>SEGUNDO AÑO</b>";
+		materia+="<br>Química Analítica ";
+		materia+="<br>Geología Estructural"; 
+		materia+="<br>Paleontología ";
+		materia+="<br>Química II ";
+		materia+="<br>Física II ";
+		materia+="<br>Levantamiento Geológico"; 
+		materia+="<br>Mineralogía";
+		materia+="<br><b>TERCER AÑO</b>";
+		materia+="<br>Estadística Descriptiva y Probabilidades ";
+		materia+="<br>Geofísica General y Aplicada ";
+		materia+="<br>Geomorfología ";
+		materia+="<br>Sedimentología";
+		materia+="<br>Estratigrafía ";
+		materia+="<br>Fotogeología e Imágenes Satelitales"; 
+		materia+="<br>Hidrogeología";
+		materia+="<br>Petrografía y Petrología"; 
+		materia+="<br>Práctica Profesional Asistida";
+		
+	};break;
+	case 12:{materia="";};break;
+	case 13:{materia="";};break;
+	}
   	   return materia;
 	}
 }
