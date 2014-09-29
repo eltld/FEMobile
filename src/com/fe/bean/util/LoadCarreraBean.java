@@ -70,6 +70,7 @@ public class LoadCarreraBean {
 	    listCarrera.add(carrera);
 	   
 	    //INGENIERO DE MINAS
+	    carrera=new Carrera();
 	    carrera.setId_carrera(2);
 		carrera.setTitulo_carrera("INGENIERO EN MINAS");
 		carrera.setNivel_carrera("Título de Grado");
@@ -160,6 +161,7 @@ public class LoadCarreraBean {
 	    
 	    /////////////////////////////////////
 	    ////INGENIERIA INDUSTRIAL
+	    carrera=new Carrera();
 	    carrera.setId_carrera(3);
 		carrera.setTitulo_carrera("INGENIEIA INDUSTRIAL");
 		carrera.setNivel_carrera("Título de Grado");
@@ -231,9 +233,388 @@ carrera.setId_grado(Constants.CARRERA_GRADO);
 carrera.setId_university(Constants.FACU_INGENIERIA_ID);
 listCarrera.add(carrera);
 
+ 
+////////////////////////////////
+//INGENIERIA EN INFORMATICA
+
+carrera=new Carrera();
+carrera.setId_carrera(4);
+carrera.setTitulo_carrera("INGENIEIA INFORMATICA");
+carrera.setNivel_carrera("Título de Grado");
+carrera.setAcreditacion_carrera("Resolución Ministerial Nº 335/02. "+
+"<br>Resolución CONEAU Nº 1220/12");
+carrera.setPerfil_carrera("El Ingeniero Informático de la Facultad de Ingeniería de la Universidad Nacional de Jujuy posee "+
+"una sólida formación conceptual en contenidos de Ciencias Básicas, comunes a todas las Carreras de "+
+"Ingeniería, para sustento y desarrollo de las disciplinas específicas y un adecuado dominio de las"+ 
+"Tecnologías Básicas traducido en la aplicación creativa del conocimiento de los principios "+
+"fundamentales de las diferentes disciplinas, a la solución de problemas de Ingeniería Informática. "+
+"<br>Desarrolla competencias para la identificación y solución de problemas abiertos de ingeniería, "+
+"cuyo tratamiento requiera aplicación de conocimientos de Ciencias Básicas y de las Tecnologías. Está "+
+"capacitado para la toma de decisiones, la aplicación de técnicas modernas de gestión industrial, la"+ 
+"interpretación de tecnologías de procesos y el sentido económico de las decisiones."+
+"<br>Está formado para la Integración en grupos de trabajo uni o multidisciplinarios y concientizado "+
+"del rol de la Educación Continua en la especialización y permanente actualización del graduado. Podrá "+
+"conducir y administrar los recursos y el personal en el marco legal y ambiental apropiado; analizar e "+
+"interpretar la realidad informática internacional, nacional, regional y local con una visión prospectiva"+ 
+"contribuir a la solución de problemas de las organizaciones, nacionales e internacionales mediante la "+
+"aplicación de tecnologías informáticas; contribuir al desarrollo científico y tecnológico de la Región y"+ 
+"del País; liderar y asesorar en el desarrollo de proyectos informáticos integrando los recursos "+
+"tecnológicos de última generación y participar en la definición de políticas y estrategias en el área "+
+"informática");
+carrera.setAlcance_carrera("El título profesional obtenido por el Egresado de esta carrera, según Resolución Ministerial Nº "+
+"722/97, lo habilita para realizar:"+
+"<br>1) Estudio, factibilidad, proyecto, planificación, dirección, realización, instalación, puesta en marcha, "+
+"operación, ensayo, mediciones, mantenimiento, modificación, transformación e inspección de:"+
+"<br>a)Sistemas de información administrativos de una organización incluyendo los procesos, "+
+"organización de datos, comunicaciones y normas de seguridad para protección de la información "+
+"con exclusión de los dispositivos físicos y el equipamiento computacional involucrado."+
+"<br>b)Sistemas de información de medición, control y diseño aplicados a la ingeniería y a otras "+
+"disciplinas incluyendo sus sistemas de programación asociados, con exclusión de los dispositivos "+
+"físicos y el equipamiento computacional involucrado."+
+"<br>c)Sistemas de información para la automatización, operación y control de redes y otros sistemas"+ 
+"de telecomunicaciones, incluyendo los sistemas de programación asociados, con exclusión de los "+
+"dispositivos físicos y el equipamiento computacional involucrado."+
+"<br>d)Sistemas de simulación computacional para el estudio de modelos matemáticos y sus"+ 
+"aplicaciones en la toma de decisiones y entrenamiento de personal, incluidos los sistemas de"+ 
+"programación asociados, con exclusión de los dispositivos físicos y el equipamiento computacional"+ 
+"involucrado."+
+"<br>e)Sistemas clasificados como de inteligencia artificial en general y en particular sistemas expertos"+ 
+"con exclusión de los dispositivos físicos y el equipamiento computacional involucrado."+
+"<br>f)Laboratorios de todo tipo relacionados con los incisos anteriores excepto obras civiles."+
+"<br>2) Evaluar, seleccionar, desarrollar y adaptar software de base."+
+"<br>3) Evaluar y seleccionar los equipos relacionados con los incisos del ítem i), incluyendo la"+ 
+"determinación de las pautas y especificaciones técnicas de los mismos."+
+"<br>4) Realizar auditorías, estudios, tareas y asesoramientos relacionados con:"+
+"<br>a)Asuntos de Ingeniería legal, económica y financiera relacionados con los incisos del ítem i)."+
+"<br>b)Arbitrajes, pericias y tasaciones relacionados con los incisos del ítem i)."+
+"<br>c)Higiene, seguridad industrial y contaminación ambiental relacionados con los incisos del ítem 1)."+
+"<br>5) Organizar y dirigir el funcionamiento de las áreas informáticas."+
+"<br>6) Realizar estudios de auditoría de las áreas informáticas y de los sistemas automatizados, desde el"+ 
+"punto de vista de los sistemas informáticos"+
+"<br>7) Evaluar y seleccionar proveedores de productos y servicios informáticos en conjunto con otros"+ 
+"profesionales relacionados en la tarea."+
+"<br>8) Asesorar acerca del uso de nuevas tecnologías de la información para posibilitar la definición de"+ 
+"políticas y la toma de decisiones estratégicas de la organización.");
+	    
+carrera.setDuracion_carrera("5 años");
+carrera.setId_grado(Constants.CARRERA_GRADO);
+carrera.setId_university(Constants.FACU_INGENIERIA_ID);
+listCarrera.add(carrera);
+
+//LICENCIATURA EN SISTEMAS
+carrera=new Carrera();
+carrera.setId_carrera(5);
+carrera.setTitulo_carrera("LICENCIATURA EN SISTEMAS");
+carrera.setNivel_carrera("Título de Grado");
+carrera.setAcreditacion_carrera("Resolución Ministerial Nº 578/02."+
+"<br>Resolución CONEAU Nº 1230/12");
+carrera.setAlcance_carrera("El título profesional obtenido por el Egresado de la carrera de Licenciatura en "+
+"Sistemas, lo habilita para:"+
+		"<br>Planificar, dirigir, realizar y/o evaluar proyectos de relevamiento de problemas del"+ 
+		"mundo real. Especificación formal, diseño, implementación, prueba, verificación, "+
+		"validación, mantenimiento y control de calidad de sistemas de software que se ejecuten"+
+		"sobre sistemas de procesamiento de datos."+
+		"<br>Organizar, dirigir y controlar las áreas informáticas de las organizaciones, seleccionando"+ 
+        "y capacitando al personal técnico de los mismos."+
+		"<br>Dirigir el relevamiento y análisis de los procesos funcionales de una Organización, con la"+ 
+"finalidad de dirigir proyectos de diseño de Sistemas de Información asociados, así como "+
+"los Sistemas de Software que hagan a su funcionamiento. Determinar, regular y "+
+"administrar las pautas operativas y reglas de control que hacen al funcionamiento de las"+ 
+"áreas informáticas de las empresas y organizaciones."+
+"<br>Entender, planificar y/o participar de los estudios técnicos-económicos de factibilidad y/o"+ 
+"referentes a la configuración y dimensionamiento de sistemas de procesamiento de "+
+"información. Supervisar la implantación de los sistemas de información y organizar y"+ 
+"capacitar al personal afectado por dichos sistemas."+
+"<br>Entender, planificar y/o participar de los estudios técnicos-económicos de factibilidad y/o"+ 
+"referentes a la configuración y dimensionamiento de sistemas de procesamiento de "+
+"información. Supervisar la implantación de los sistemas de información y organizar y" +
+"capacitar al personal afectado por dichos sistemas."+
+"<br>Entender, planificar y/o participar de los estudios técnicos-económicos de factibilidad y/o"+ 
+"referentes a la configuración y dimensionamiento de sistemas de procesamiento de "+
+"información. Supervisar la implantación de los sistemas de información y organizar y "+
+"capacitar al personal afectado por dichos sistemas.");
+carrera.setPerfil_carrera("• Profesional con significativos fundamentos teóricos en informática y conocimientos actualizados en"+ 
+"tecnologías de información y comunicación, con una sólida formación académica que le permitirá la "+
+"capacitación continua al ritmo de la evolución tecnológica."+
+"<br>• Especialmente apto para la supervisión del desarrollo de productos software, así como la planificación,"+ 
+"realización y control, de proyectos de sistemas de información. "+
+"<br>• Capaz de brindar asesoramiento a distintas organizaciones sobre políticas y estrategias de desarrollo de"+ 
+"sistemas, y organización del área de sistemas, determinando para ella el per-fil de los recursos humanos, su "+
+"selección y formación, como también la definición de las arquitecturas de hardware y de software."+
+"<br>• Orientado al mercado profesional, vinculado con la evaluación y selección de los Sistemas Informáticos,"+ 
+"Computacionales Complejos, Distribuidos, de Comunicación, etc., "+
+"<br>• Competente en la ejecución de arbitrajes y pericias relacionadas con Sistemas de Información."+
+"• Dotado de un enfoque sistémico, que deberá aplicar al desarrollo operación y mantenimiento de los "+
+"productos, como a actividades de Investigación y Transferencia de las que podrá formar parte.");
+carrera.setDuracion_carrera("5 años");
+carrera.setId_grado(Constants.CARRERA_GRADO);
+carrera.setId_university(Constants.FACU_INGENIERIA_ID);
+listCarrera.add(carrera);
+
+//LICENCIATURA EN TECNOLOGIA DE LOS ALIMENTOS
+carrera=new Carrera();
+carrera.setId_carrera(6);
+carrera.setTitulo_carrera("LICENCIATURA EN TECNOLOGÍA DE LOS ALIMENTOS");
+carrera.setNivel_carrera("Título de Grado");
+carrera.setAcreditacion_carrera("Resolución Ministerial Nº 916/00");
+carrera.setAlcance_carrera("El Licenciado en Tecnología de los Alimentos de esta Facultad de Ingeniería "+
+"estará capacitado para desarrollar sus actividades en el sector industrial "+
+"alimentario, de contralor bromatológico y en el sector Académico y de "+
+"Investigación en Ciencia y Tecnología de Alimentos; siendo los alcances del Título:"+
+"<br>1. Investigar sobre el desarrollo de nuevos productos alimenticios, las técnicas "+
+"aplicables a su elaboración y conservación y los procesos biotecnológicos "+
+"destinados a su obtención."+
+"<br>2. Participar de grupos multidisciplinarios, en la planeación y ejecución de"+ 
+"proyectos orientados a prever y solucionar problemas de producción "+
+"alimentaria diferenciada, según requerimientos poblacionales."+
+"<br>3. Realizar el control de calidad y optimizar las operaciones intervinientes en los"+ 
+"procesos industriales de fabricación, transformación y/o fraccionamiento y "+
+"envasado de productos alimenticios contemplados en la legislación y/o "+
+"normativa vigente."+
+"<br>4. Participar en la evaluación y actualización de normas y programas de control"+ 
+"de calidad de alimentos, tendientes a asegurar la calidad nutricional e "+
+"higiénico sanitaria de los mismos, en el marco de los nuevos escenarios "+
+"regionales o internacionales."+
+"<br>5. Realizar estudios de recursos alimentarios y asesorar sobre su"+ 
+"aprovechamiento."+
+"<br>6. Realizar análisis físico-químicos y microbiológicos de alimentos."+
+"<br>7. Investigar y asesorar sobre los valores nutricionales de los alimentos y las"+ 
+"técnicas más adecuadas para se mejoramiento nutricional.LICENCIATURA EN TECNOLOGÍA DE LOS ALIMENTOS"+
+"<br>8. Participar en la prevención, control y solución de problemas sobre el impacto "+
+"ambiental de la producción alimentaria, que permitan asegurar un equilibrio "+
+"entre el desarrollo socioeconómico y los ecosistemas."+
+"<br>9. Realizar consultorías, asesorías y peritajes técnicos referidos a: Composición"+ 
+"de materias primas alimentarias, los aditivos alimentarios y los alimentos"+
+"elaborados.");
+carrera.setPerfil_carrera("Perfil del Graduado: "+
+"El título de Licenciado en Tecnología de los Alimentos acredita una formación"+ 
+"científica y técnica suficientemente amplia como para realizar su trabajo "+
+"profesional de manera individual o integrándose a equipos multidisciplinarios, que"+ 
+"permitan desarrollar las capacidades, competencias, actitudes y habilidades en lo "+
+"concerniente a:"+
+"<br>1. El conocimiento de las propiedades de las materias primas, su evolución en el"+ 
+"curso de los tratamientos que soporta y la calidad de los productos "+
+"alimenticios elaborados."+
+"<br>2. La participación en el desarrollo de trabajos interdisciplinarios de prevención,"+ 
+"control y solución de problemas originados en el procesamiento, "+
+"comercialización, almacenaje y distribución de alimentos."+
+"<br>3. El desarrollo de nuevos productos y la optimización de los procesos, tendientes"+ 
+"al mejoramiento del nivel de nutrición de la población y la eficiencia de la "+
+"producción."+
+"<br>4. El control de calidad y legal de los alimentos y de sus procesos de fabricación,"+ 
+"comercialización, almacenaje y distribución.");
+carrera.setDuracion_carrera("4 años");
+carrera.setId_grado(Constants.CARRERA_GRADO);
+carrera.setId_university(Constants.FACU_INGENIERIA_ID);
+listCarrera.add(carrera);
 
 
-	    return listCarrera;
+//// LICENCIADO EN CIENCIAS GEOLOGICAS
+carrera=new Carrera();
+carrera.setId_carrera(7);
+carrera.setTitulo_carrera("LICENCIATURA EN CIENCIAS GEOLOGICAS");
+carrera.setNivel_carrera("Título de Grado");
+carrera.setAcreditacion_carrera("");
+carrera.setPerfil_carrera("Es un graduado universitario con adecuada formación en Ciencias Básicas (Matemática, Física, Química) y profundo"+ 
+"conocimiento de las Ciencias Geológicas. Posee además conocimientos suficientes en sus distintas aplicaciones y en las "+
+"relacionadas con las orientaciones del plan de estudios."+
+"<br>Tiene una sólida formación práctica, experimental, predictiva, dominio del lenguaje informático que le permite afrontar"+ 
+"la actividad profesional individualmente o integrando equipos de trabajo. Evidencia equilibrio entre competencias en "+
+"conocimientos disciplinares (teorías, métodos), experiencias en tareas laborales profesionales y versatilidad en lo relativo a la"+ 
+"aplicación profesional del conocimiento."+
+"<br>Posee una formación en investigación aplicable al área de las Ciencias Geológicas con actitud crítica y racional frente"+ 
+"a los fenómenos de las Ciencias. Está preparado para enriquecer la práctica profesional y poder desarrollar nuevos "+
+"procedimientos."+
+"<br>Está capacitado para el trabajo en equipo disciplinario e interdisciplinario, potenciando la creatividad y la innovación."+
+"<br>Está capacitado para actuar sobre la realidad aplicando los conocimientos científicos pa-ra transformarla, sin afectar "+
+"su integridad. Tiene la formación práctica, experimental y teórica que garantiza su desarrollo profesional.");
+carrera.setAlcance_carrera("El título profesional de Licenciado en Ciencias Geológicas habilita para:"+
+"<br>1) Planificar, dirigir, evaluar y efectuar estudios destinados a determinar la estructura, composición y génesis de minerales, "+
+"rocas y suelos."+
+"<br>2) Planificar, dirigir, coordinar, supervisar, evaluar y efectuar estudios sobre la determinación de génesis, evolución,"+ 
+"estructura, composición físico química y dinámica interna y externa de la Tierra y demás cuerpos celestes."+
+"<br>3) Dirigir, evaluar y efectuar estudios tecnológicos de minerales, rocas, áridos y gemas."+
+"<br>4) Planificar, dirigir, coordinar, supervisar, evaluar y efectuar estudios estratigráficos, paleontológicos, geocronológicos,"+ 
+"geomorfológicos, geotectónicos, vulcanológicos, glaciológicos."+
+"<br>5) Efectuar estudios geológicos de cuencas hídricas y participar en la planificación y evaluación de su ordenamiento y"+ 
+"sistematización."+
+"<br>6) Planificar, dirigir, supervisar, evaluar y efectuar estudios para determinar áreas de riesgos geológicos, elaborar"+ 
+"propuestas de solución y efectuar su control."+
+"<br>7) Planificar, dirigir, coordinar, supervisar, evaluar y efectuar estudios geotécnicos de macizos rocosos y suelos, realizando"+ 
+"su caracterización y acondicionamiento para la fundación de obras de ingeniería y de arquitectura, realizar el control "+
+"geológico de las mismas durante su desarrollo y posterior operación."+
+"<br>8) Planificar, dirigir, supervisar, evaluar y efectuar estudios sobre los movimientos de suelos y rocas y realizar el control"+ 
+"geológico durante la ejecución de los trabajos."+
+"<br>9) Planificar, dirigir, coordinar, evaluar y efectuar prospección, exploración, evaluación y cuantificación de minerales, rocas y"+ 
+"de yacimientos líquidos, sólidos y gaseosos."+
+"<br>10) Planificar, dirigir, supervisar, evaluar y efectuar control geológico en la explotación de yacimientos y participar en la"+ 
+"planificación y en el tratamiento y beneficio de minerales y rocas."+
+"<br>11) Dirigir, supervisar y efectuar reconocimientos geológicos, ubicación, delimitación, mensura y representación gráfica de las"+ 
+"concesiones, pertenencias y/o propiedades mine-ras."+
+"<br>12) Planificar, dirigir, coordinar, supervisar, evaluar y ejecutar la exploración, explotación y conservación de los recursos"+ 
+"hídricos y geotérmicos, y efectuar el control geológico de su evolución."+
+"<br>13) Participar en el planeamiento, supervisión y evaluación de la explotación de recursos hídricos y geotérmicos."+
+"<br>14) Planificar, ubicar, dirigir, supervisar, evaluar, efectuar y representar gráficamente perforaciones de investigación, de"+ 
+"prospección, exploración y explotación de recursos hidrogeológicos, mineros, geotérmicos y geotécnicos."+
+"<br>15) Ubicar, evaluar, realizar el control geológico y representar gráficamente las perforaciones vinculadas a hidrocarburos y"+ 
+"participar en la planificación, supervisión y ejecución de la exploración y explotación de yacimientos."+
+"<br>16) Elaborar y aplicar sistemas de clasificación, análisis y tipificación científica y tecnológica de minerales, rocas, suelos y"+ 
+"aguas, y asesorar en la utilización de los mismos."+
+"<br>17) Planificar, dirigir, supervisar y efectuar el reconocimiento, inventario, evaluación y re-presentación gráfica de suelos,"+ 
+"desde el punto de vista geológico."+
+"<br>18) Planificar, dirigir, supervisar y efectuar levantamientos y carteos topográficos geológicos de superficie y subterráneos,"+ 
+"estudios fotogeológicos e interpretación visual y digital de imágenes obtenidas por teledetección."+
+"<br>19) Participar en la elaboración y ejecución de planes y programas de conservación, mejoramiento y recuperación de suelos"+ 
+"y habilitación de tierras."+
+"<br>20) Participar en el planeamiento y ejecución de estudios y proyectos destinados a asentamientos humanos, al saneamiento"+ 
+"ambiental y al impacto ambiental."+
+"<br>21) Asesorar acerca del aprovechamiento de los recursos geológicos para la formulación de políticas, normas, planes y"+ 
+"programas de desarrollo nacional, provincial y municipal."+
+"<br>22) Efectuar y controlar valuaciones y tasaciones de recursos geológicos y de las alteraciones causadas por los mismos.LICENCIATURA EN CIENCIAS GEOLOGICAS"+
+"<br>23) Realizar arbitrajes y peritajes relacionados con la detección y aprovechamiento de recursos geológicos y efectuar "+
+"estudios para la determinación de riesgos geológicos y de su control.");
+carrera.setDuracion_carrera("5 años");
+carrera.setId_grado(Constants.CARRERA_GRADO);
+carrera.setId_university(Constants.FACU_INGENIERIA_ID);
+listCarrera.add(carrera);
+
+//CARRERAS DE PREGRADO
+//TECNICO UNIVERSITARIO EN EXPLOTACION DE MINAS 2007 PERFIL Y ALCANCES
+carrera=new Carrera();
+carrera.setId_carrera(8);
+carrera.setTitulo_carrera("TECNICO UNIVERSITARIO EN EXPLOTACION DE MINAS");
+carrera.setNivel_carrera("Título de PreGrado");
+carrera.setAcreditacion_carrera("");
+carrera.setPerfil_carrera("");
+carrera.setAlcance_carrera("");
+carrera.setDuracion_carrera("3 años");
+carrera.setId_grado(Constants.CARRERA_PREGADO);
+carrera.setId_university(Constants.FACU_INGENIERIA_ID);
+listCarrera.add(carrera);
+
+//TECNICO UNIVERSITARIO EN PROCESAMIENTO DE MINERALES 2007 PERFIL Y ALCANCES
+carrera=new Carrera();
+carrera.setId_carrera(9);
+carrera.setTitulo_carrera("TECNICO UNIVERSITARIO EN PROCESAMIENTO DE MINERALES ");
+carrera.setNivel_carrera("Título de PreGrado");
+carrera.setAcreditacion_carrera("");
+carrera.setPerfil_carrera("El Profesional egresado de la carrera de Técnico Universitario en Procesamiento de Minerales "+
+"debe ser polivalente tal que le permita actuar de modo interdisciplinario con otras áreas involucradas en"+ 
+"su actividad. Tiene la formación, conocimientos y habilidades para:"+
+"<br>1. Operar, Controlar y mantener los procesos relacionados con el Procesamiento de Minerales,"+ 
+"incluido la Metalurgia Extractiva."+
+"<br>2. Dirigir y controlar la totalidad de las actividades requeridas hasta su efectiva concreción teniendo en"+ 
+"cuenta los criterios de seguridad, impacto ambiental, relaciones humanas, calidad, productividad y "+
+"costos."+
+"<br>3. Desarrollar sus actividades en plena armonía con el medio ambiente."+ 
+"<br>4. Buscar, seleccionar, aprender y aplicar nuevos conocimientos. "+
+"<br>5. Desempeñarse en el ámbito científico, tecnológico y educativo."+
+"<br>6. Desempeñarse en aplicaciones tecnológicas relacionadas con su formación profesional en temas"+ 
+"referentes a su especialidad y afines. "+
+"<br>7. Interpretar e implementar el diseño de una aplicación.");
+carrera.setAlcance_carrera("El Técnico Universitario en Procesamiento de Minerales ejecuta las directivas de sus superiores"+ 
+"en tareas y obras relacionadas con el Procesamiento de Minerales incluido la Metalurgia Extractiva."+
+"<br>1. En el área del procesamiento de los materiales, está capacitado para operar plantas de trituración,"+ 
+"molienda, clasificación y concentración de productos minerales, alimenticios y cualquier otro "+
+"producto industrial. Capacitado para el estudio, diseño y ubicación de residuos industriales "+
+"(relaves) y comunitarios, entre otros."+
+"<br>2. En el campo de la metalurgia extractiva opera y controla plantas industriales donde se realizan"+ 
+"procesos pirometalúrgicos, hidrometalúrgicos y combinados. Por su formación, entiende muy bien "+
+"esta temática, debido a las asignaturas de la Ciencia de la Tierra que componen su curricula."+
+"<br>3. Control de Higiene y seguridad en plantas industriales de procesamiento de minerales.");
+carrera.setDuracion_carrera("3 años");
+carrera.setId_grado(Constants.CARRERA_PREGADO);
+carrera.setId_university(Constants.FACU_INGENIERIA_ID);
+listCarrera.add(carrera);
+
+//ANALISTA PROGRAMADOR UNIVERSITARIO
+carrera=new Carrera();
+carrera.setId_carrera(10);
+carrera.setTitulo_carrera("ANALISTA PROGRAMADOR UNIVERSITARIO");
+carrera.setNivel_carrera("Título de PreGrado");
+carrera.setAcreditacion_carrera("");
+carrera.setPerfil_carrera("El Profesional egresado de la carrera Analista Programador Universitario, tiene la "+
+"formación, conocimientos y habilidades para:"+
+"<br>1. Manejar los distintos paradigmas de la programación."+
+"<br>2. Seleccionar y aplicar lenguajes de programación de diferentes características."+
+"<br>3. Desarrollar un pensamiento lógico y estructurado que le permita un correcto y eficiente"+ 
+"desempeño en las actividades relacionadas con la programación y administración de "+
+"datos."+
+"<br>4. Es capaz de interpretar e implementar el diseño de una aplicación");
+carrera.setAlcance_carrera("El título profesional obtenido por el Egresado de la carrera de Analista Programador" +
+"Universitario, lo habilita para:"+
+"<br>1. Programar, documentar, instalar, poner en marcha, operar, modificar, probar, medir,"+ 
+"mantener y transformar software en general o incluido en sistemas informáticos."+
+"<br>2. Asistir al Profesional de grado informático en tareas de relevamiento y análisis y diseño de"+ 
+"sistemas informáticos de cualquier envergadura."+
+"<br>3. Participar en equipos de trabajo para desarrollo o transferencia tecnológica relacionados"+ 
+"con la producción y/o manipulación de software");
+carrera.setDuracion_carrera("3 años");
+carrera.setId_grado(Constants.CARRERA_PREGADO);
+carrera.setId_university(Constants.FACU_INGENIERIA_ID);
+listCarrera.add(carrera);
+
+/////////
+///TÉCNICO UNIVERSITARIO EN CIENCIAS GEOLOGICAS
+carrera=new Carrera();
+carrera.setId_carrera(11);
+carrera.setTitulo_carrera("TÉCNICO UNIVERSITARIO EN CIENCIAS GEOLOGICAS");
+carrera.setNivel_carrera("Título de PreGrado");
+carrera.setAcreditacion_carrera("");
+carrera.setPerfil_carrera("El Técnico Universitario en Ciencias Geológicas posee conocimientos en Ciencias Básicas y una"+ 
+"formación básica en áreas fundamentales de la Geología que le permiten encarar tareas auxiliares en "+
+"investigación, peritajes, servicios técnicos y administrativos, colaborar en grupos que trabajan en la"+ 
+"línea de la Geología Aplicada en el marco de las culturas regionales."+
+"<br>Está capacitado para el trabajo en equipo disciplinario e interdisciplinario."+
+"<br>Es competente en la aplicación del lenguaje informático pertinente.");
+carrera.setAlcance_carrera("El título profesional de Técnico Universitario en Ciencias Geológicas habilita para:"+
+"<br>1) Realizar tareas técnicas de investigación, integrando los equipos especializados."+
+"<br>2) Realizar tareas auxiliares en equipos técnicos y/o de investigación, vinculadas con actividades"+ 
+"geológicas de empresas privadas o del Estado."+
+"<br>3) Realizar tareas auxiliares en el área geológica en museos, archivos, banco de datos"+ 
+"informatizados, etc."+
+"<br>4) Dar asistencia técnica a grupos que realicen viajes de turismo científico a lugares con sitios"+ 
+"geológicos de interés."+
+"<br>5) Participar como auxiliares en grupos que tengan a su cargo proyectos interdisciplinarios de"+ 
+"protección, preservación y desarrollo de asentamientos humanos."+
+"<br>6) Colaborar en tareas de arbitraje y peritaje relacionadas con la detección y aprovechamiento de"+ 
+"recursos geológicos.");
+carrera.setDuracion_carrera("3 años");
+carrera.setId_grado(Constants.CARRERA_PREGADO);
+carrera.setId_university(Constants.FACU_INGENIERIA_ID);
+listCarrera.add(carrera);
+
+//////carrera=new Carrera();
+carrera.setId_carrera(12);
+carrera.setTitulo_carrera("TECNICATURA UNIVERSITARIA EN PERFORACIONES");
+carrera.setNivel_carrera("Título de PreGrado");
+carrera.setAcreditacion_carrera("");
+carrera.setPerfil_carrera("");
+carrera.setPerfil_carrera("");
+carrera.setDuracion_carrera("3 años");
+carrera.setId_grado(Constants.CARRERA_PREGADO);
+carrera.setId_university(Constants.FACU_INGENIERIA_ID);
+listCarrera.add(carrera);
+
+carrera.setId_carrera(13);
+carrera.setTitulo_carrera("TECNICATURA UNIVERSITARIA EN CIENCIAS DE LA TIERRA ORIENTADA A PETROLEO");
+carrera.setNivel_carrera("Título de PreGrado");
+carrera.setAcreditacion_carrera("");
+carrera.setPerfil_carrera("");
+carrera.setPerfil_carrera("");
+carrera.setDuracion_carrera("3 años");
+carrera.setId_grado(Constants.CARRERA_PREGADO);
+carrera.setId_university(Constants.FACU_INGENIERIA_ID);
+listCarrera.add(carrera);
+
+
+
+
+
+
+
+
+return listCarrera;
 	}
 	
 	

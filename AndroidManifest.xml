@@ -165,11 +165,12 @@
              android:value="AIzaSyCW6Y4V8v-XH_1guJweEZFwiuYJgxzUfLw"
              /> 
           
+         <!--  
       
              <meta-data
                 android:name="com.google.android.gms.version"
                 android:value="@integer/google_play_services_version" />
-    
+      -->
          
     </application>
      
