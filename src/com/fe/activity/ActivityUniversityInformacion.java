@@ -12,6 +12,7 @@ import com.fe.model.Universidad;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Html;
 import android.util.Log;
 import android.widget.TextView;
 
@@ -38,7 +39,7 @@ public class ActivityUniversityInformacion extends Activity{
 	    
 		
 		textHeader=(TextView)findViewById(R.id.text_header);
-		textHeader.setText("INFORMACION ");
+		textHeader.setText(Html.fromHtml("<u>INFORMACION </u>"));
 		Intent intent=getIntent();
 		String id_university=intent.getStringExtra(Constants.UNIVERSITY_ID);
 		logger.debug("id_university : "+id_university);

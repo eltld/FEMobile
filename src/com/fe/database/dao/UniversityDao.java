@@ -33,7 +33,9 @@ private static final Logger logger = (Logger) LoggerFactory.getLogger(University
     		            ConstantDatabase.UNI_INS,
     		            ConstantDatabase.UNI_PRE,
     		            ConstantDatabase.UNI_INF,
-    		            ConstantDatabase.UNI_REQ
+    		            ConstantDatabase.UNI_REQ,
+    		            ConstantDatabase.UNI_LAT,
+    		            ConstantDatabase.UNI_LONG
     		             };
     
     GenericDAO dao ;
@@ -69,6 +71,8 @@ private static final Logger logger = (Logger) LoggerFactory.getLogger(University
 			values.put(ConstantDatabase.UNI_PRE, obj.getPreinscripcion());
 			values.put(ConstantDatabase.UNI_INF, obj.getInforme());
 			values.put(ConstantDatabase.UNI_REQ, obj.getRequisitos());
+			values.put(ConstantDatabase.UNI_LAT,obj.getLat_universidad());
+			values.put(ConstantDatabase.UNI_LONG, obj.getLong_universidad());
 			dao.insert(ConstantDatabase.T_UNIVERSIDAD, values);
 			
 			
@@ -94,7 +98,10 @@ private static final Logger logger = (Logger) LoggerFactory.getLogger(University
 	     int uni_pre=cursor.getColumnIndex(ConstantDatabase.UNI_PRE);
 	     int uni_inf=cursor.getColumnIndex(ConstantDatabase.UNI_INF);
 	     int uni_req=cursor.getColumnIndex(ConstantDatabase.UNI_REQ);
+	     int uni_lat=cursor.getColumnIndex(ConstantDatabase.UNI_LAT);
+	     int uni_long=cursor.getColumnIndex(ConstantDatabase.UNI_LONG);
 	     
+	     logger.debug("UniversitiyDao : uni_req=> "+uni_req+"  lat => "+uni_lat+ " long => "+uni_long);
 	    
 	     universidad.setId_universidad(Integer.parseInt(cursor.getString(uni_id)));
 	     universidad.setNombre_universidad(cursor.getString(uni_nombre));
@@ -108,6 +115,8 @@ private static final Logger logger = (Logger) LoggerFactory.getLogger(University
 	     universidad.setPreinscripcion(cursor.getString(uni_pre));
 	     universidad.setInforme(cursor.getString(uni_inf));
 	     universidad.setRequisitos(cursor.getString(uni_req));
+	     universidad.setLat_universidad(cursor.getString(uni_lat));
+	     universidad.setLong_universidad(cursor.getString(uni_long));
 	     
 	     cursor.close();
 	     return universidad;

@@ -36,6 +36,7 @@ public class ActivitySecretariaContent extends Activity {
 	private int numSecretaria=0;
 	private int currentSecretaria=0;
 	private int idSecretaria=0;
+	private ImageView image_call_secretaria;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -51,7 +52,7 @@ public class ActivitySecretariaContent extends Activity {
 		
 		//cargo objectos 
 		secretariaBean=new SecretariaBean();
-		Secretaria secretaria=secretariaBean.GetBean(id_secretaria);
+		final Secretaria secretaria=secretariaBean.GetBean(id_secretaria);
 		logger.debug("secretaria : "+secretaria.toString());
 	    
 		
@@ -68,8 +69,21 @@ public class ActivitySecretariaContent extends Activity {
 		text_telefono.setText(secretaria.getTelefono());
 	    text_email.setText(secretaria.getEmail());
 	    text_secretaria.setText(titulo_secretaria);
-	    text_header.setText("Secretaria");
+	    text_header.setText("<u><b>SECRETARIA</b></u>");
 		
+	    
+	    image_telefonoCall.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View arg0) {
+				// TODO Auto-generated method stub
+				 Intent callIntent = new Intent(Intent.ACTION_CALL);
+					callIntent.setData(Uri.parse("tel:"+secretaria.getTelefono()));
+					startActivity(callIntent);
+				
+				
+			}
+		});
 	}
 	
 	/*View.OnClickListener callSecretaria =new OnClickListener() {

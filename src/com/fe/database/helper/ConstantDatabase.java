@@ -92,6 +92,8 @@ public final class ConstantDatabase {
     public static final String UNI_PRE="uni_pre"; //PREINSCRIPCION
     public static final String UNI_INF="uni_inf"; //INFORME
     public static final String UNI_REQ="uni_req"; //REQUISITOS
+    public static final String UNI_LAT="uni_lat";//LATITUD 
+    public static final String UNI_LONG="uni_long"; //Longitud
 	
 	
 
@@ -108,7 +110,9 @@ public final class ConstantDatabase {
 	         UNI_INS+" text , "+
 			 UNI_PRE+ " text,"+
 	         UNI_INF+ " text,"+
-			 UNI_REQ+" text)";
+			 UNI_REQ+" text,"+
+	         UNI_LAT+ " text,"+
+			 UNI_LONG+ " text)";
 	public static final String QUERY_DROP_UNIVERSITY=
 			"DROP TABLE IF EXISTS "+T_UNIVERSIDAD;
    

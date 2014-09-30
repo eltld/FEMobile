@@ -15,6 +15,7 @@ import com.fe.model.Constants;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.text.Html;
 import android.widget.ArrayAdapter;
@@ -53,7 +54,7 @@ public class ActivityCarreraContent extends Activity {
 		logger.debug("Activity Carrera Content Seleccionada : "+idCarrera);
 		
 		textHeader=(TextView)findViewById(R.id.text_header);
-		textHeader.setText("Carreras");;
+		textHeader.setText(Html.fromHtml("<u>CARRERA</u>"));
 		
 		carreraBean=new CarreraBean(getApplicationContext());
 		Carrera objCarrera=carreraBean.get(Long.parseLong(idCarrera),Long.parseLong(idUniversity));
@@ -97,7 +98,7 @@ public class ActivityCarreraContent extends Activity {
 	      
 	      
 	      
-	      logger.debug("Materia : "+materia);
+	      logger.debug("Materia : "+materia.toString());
 	      text_titulo.setText(objCarrera.getTitulo_carrera());
 	      text_duracion.setText(objCarrera.getDuracion_carrera());
 	      text_nivel.setText(objCarrera.getNivel_carrera());

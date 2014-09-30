@@ -11,6 +11,7 @@ import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
+import android.text.Html;
 import android.widget.TextView;
 
 import com.fe.R;
@@ -46,7 +47,7 @@ public class ActivityUniversityMap extends FragmentActivity implements LocationL
 	  logger.info("activity map unju");
 		
 	  text_header=(TextView)findViewById(R.id.text_header);
-	  text_header.setText("UBICACION");
+	  text_header.setText(Html.fromHtml("<u>UBICACION</u>"));
 	  
 		Intent intent=getIntent();
 		String id_university=intent.getStringExtra(Constants.UNIVERSITY_ID);

@@ -133,7 +133,7 @@ public class ActivityUniversity extends Activity {
 	{
 		listData=null;
 		listData=new ArrayList<Universidad>();
-		
+		String requisito="";
 		//Universidad de Agraria
 		Universidad universidad=new Universidad();
 		universidad.setId_universidad(Constants.FACU_AGRAGRIA_ID);
@@ -145,19 +145,22 @@ public class ActivityUniversity extends Activity {
 		universidad.setEmail("academica@fca.unju.edu.ar");
 		universidad.setWeb("www.fca.unju.edu.ar");
 		universidad.setInscripcion("Del 01 al 20 de Diciembre de cada año."+
-          " Desde 01 al 15 de Febrero de cada año.");
-        universidad.setPreinscripcion("De octubre a diciembre, vía internet: http//: www.alumnos.fca.unju.edu.ar");
+          " <br>Desde 01 al 15 de Febrero de cada año.");
+        universidad.setPreinscripcion("De octubre a diciembre, <br>vía internet: http//: www.alumnos.fca.unju.edu.ar");
 		universidad.setInforme("Departamento Alumnos.");
-		universidad
-				.setRequisitos("Fotocopia autenticada de Certificado de estudios de Nivel Medio o Polimodal o constancia original de Certificado de Estudios en trámite. Los estudiantes con materias previas tienen plazo hasta la primera quincena de abril de cada año para acreditar la finalización de Estudios de Nivel Medio, Polimodal o Terciario (si correspondiere), Resolución C. S. Nº 171/03.- "
-						+ "Fotocopia autenticada de Carnet sanitario expedido por el Ministerio de Bienestar Social de la Provincia de Jujuy, por la Municipalidad de la Capital (Departamento Dr. M. Belgrano) o por hospitales zonales o municipios del interior de la provincia. (*)"
-						+ "Dos (2) fotografías tipo carnet (4x4)."
-						+ "Fotocopia autenticada de Documento Nacional de Identidad de las dos primeras hojas, y si correspondiere, de la hoja donde conste cambio de domicilio. (*)"
-						+ "Ingreso de Extranjeros: se aplicarán las normas vigentes en la Universidad ."
-						+ "Formulario de Preinscripción impreso (debe corresponder a la última actualización realizada en el módulo de Preinscripción)."
-						+ "Carpetín colgante."
-						+ "(*) Se deberán presentar además los originales a los efectos de constatar la veracidad de los datos ");
 		
+		requisito+="<b>*</b>Fotocopia autenticada de Certificado de estudios de Nivel Medio o Polimodal o constancia original de Certificado de Estudios en trámite. " ;
+		requisito+="<br><b>*</b>Los estudiantes con materias previas tienen plazo hasta la primera quincena de abril de cada año para acreditar la finalización de Estudios de Nivel Medio, Polimodal o Terciario (si correspondiere), Resolución C. S. Nº 171/03.- ";
+		requisito+= "<br><b>*</b>Fotocopia autenticada de Carnet sanitario expedido por el Ministerio de Bienestar Social de la Provincia de Jujuy, por la Municipalidad de la Capital (Departamento Dr. M. Belgrano) o por hospitales zonales o municipios del interior de la provincia. (*)";
+	    requisito+= "<br><b>*</b>Dos (2) fotografías tipo carnet (4x4).";
+		requisito+= "<br><b>*</b>Fotocopia autenticada de Documento Nacional de Identidad de las dos primeras hojas, y si correspondiere, de la hoja donde conste cambio de domicilio. (*)";
+		requisito+= "<br><b>*</b>Ingreso de Extranjeros: se aplicarán las normas vigentes en la Universidad .";
+		requisito+= "<br><b>*</b>Formulario de Preinscripción impreso (debe corresponder a la última actualización realizada en el módulo de Preinscripción).";
+		requisito+= "<br><b>*</b>Carpetín colgante.";
+		requisito+= "<br><b>*</b> Se deberán presentar además los originales a los efectos de constatar la veracidad de los datos</b> ";
+
+		universidad
+				.setRequisitos(requisito);
 		universidad.setLat_universidad("-24.188101");
 		universidad.setLong_universidad("-65.293551");
 		listData.add(universidad);
@@ -171,19 +174,22 @@ public class ActivityUniversity extends Activity {
 		universidad.setFax("0388-4221528");
 		universidad.setEmail("sacad@fi.unju.edu.ar");
 		universidad.setWeb("www.fi.unju.edu.ar");
-		universidad.setPreinscripcion("De Noviembre a Diciembre de cada año vía internet:  www.fi.unju.edu.ar");
+		universidad.setPreinscripcion("De Noviembre a Diciembre de cada año vía internet:  <br>www.fi.unju.edu.ar");
 		universidad.setInscripcion("Del 01 al 20 de Diciembre de cada año."+
-                                   "Del 01 al 07 de Febrero de cada año.");
+                                   "<br>Del 01 al 07 de Febrero de cada año.");
 		universidad.setInforme("Departamento Alumnos de lunes a viernes de 09:00 a 12:00 y de 16:00 a 19:00 hs.");
-		universidad.setRequisitos("Formulario impreso de preinscripción por Internet"+
-                                  "Fotocopia autenticada de las dos primeras hojas del Documento Nacional de Identidad y de las hojas en donde consten cambios de domicilio si los hubiera."+
-                                  "Fotocopia autenticada del Título de Nivel Medio (Secundario o Polimodal) o Constancia Original de Título de Nivel Medio en Trámite. Excepcionalmente, los aspirantes que adeuden materias para concluir el Nivel Medio serán preinscriptos provisoriamente presentando un certificado de estudios de Nivel Medio Incompletos, siendo la fecha límite para completar los estudios de Nivel Medio y presentar la documentación hasta el 15 de abril de cada año."+
-                                  "Cuatro fotos carnet"+
-                                  "Carnet Sanitario expedido por el Ministerio de Bienestar Social de Jujuy u Organismo Sanitario Oficial, o constancia de iniciación del trámite correspondiente para obtenerlo."+   
-                                  "Fotocopia autenticada de la Partida de Nacimiento"+
-                                  "Asistir al Curso de Nivelación que se inicia en febrero de cada año."  +
-                                  "La documentación deberá ser presentada personalmente en una carpeta colgante tamaño oficio.");
+		requisito="";
+		requisito+=" *Formulario impreso de preinscripción por Internet";
+        requisito+="<br><b>*</b>Fotocopia autenticada de las dos primeras hojas del Documento Nacional de Identidad y de las hojas en donde consten cambios de domicilio si los hubiera.";
+        requisito+="<br><b>*</b>Fotocopia autenticada del Título de Nivel Medio (Secundario o Polimodal) o Constancia Original de Título de Nivel Medio en Trámite. Excepcionalmente, los aspirantes que adeuden materias para concluir el Nivel Medio serán preinscriptos provisoriamente presentando un certificado de estudios de Nivel Medio Incompletos, siendo la fecha límite para completar los estudios de Nivel Medio y presentar la documentación hasta el 15 de abril de cada año.";
+        requisito+="<br><b>*</b>Cuatro fotos carnet";
+        requisito+="<br><b>*</b>Carnet Sanitario expedido por el Ministerio de Bienestar Social de Jujuy u Organismo Sanitario Oficial, o constancia de iniciación del trámite correspondiente para obtenerlo.";   
+        requisito+="<br><b>*</b>Fotocopia autenticada de la Partida de Nacimiento";
+        requisito+="<br><b>*</b>Asistir al Curso de Nivelación que se inicia en febrero de cada año."  ;
+        requisito+="<br><b>*</b>La documentación deberá ser presentada personalmente en una carpeta colgante tamaño oficio.";
+
 		
+		universidad.setRequisitos(requisito);
 		
 		universidad.setLat_universidad("-24.188887");
 		universidad.setLong_universidad("-65.293632");
@@ -201,14 +207,16 @@ public class ActivityUniversity extends Activity {
 		universidad.setWeb("www.fce.unju.edu.ar");
 		universidad.setPreinscripcion("De Octubre a Diciembre, vía internet: http//: www.fce.unju.edu.ar");
 		universidad.setInscripcion("Del 01 al 20 de Diciembre de cada año."+
-                                   "Desde 01 al 15 de Febrero de cada año.");
+                                   "<br>Desde 01 al 15 de Febrero de cada año.");
 		universidad.setInforme("Departamento Alumnos.");
-		universidad.setRequisitos("Fotocopia de D.N.I. (1º y 2º hoja)."+
-                                  "Fotocopia autenticada del Certificado de Estudios Secundario o constancia provisoria original del certificado de estudios en trámite. Las personas que adeuden materias tienen plazo hasta el 15 de abril de cada año para aprobarlas. No se acepta constancia de alumno regular."+
-                                  "Fotocopia de Carnet Sanitario expedido por el Centro Sanitario del Ministerio de Salud."+
-                                  "Dos (2) fotos tipo carnet."+
-                                  "Un carpetín colgante tamaño oficio con visor y broches nepaco."+
-                                  "Formulario impreso de pre-inscripción.");
+		requisito="";
+		requisito+="<br><b>*</b>Fotocopia de D.N.I. (1º y 2º hoja).";
+        requisito+="<br><b>*</b>Fotocopia autenticada del Certificado de Estudios Secundario o constancia provisoria original del certificado de estudios en trámite. Las personas que adeuden materias tienen plazo hasta el 15 de abril de cada año para aprobarlas. No se acepta constancia de alumno regular.";
+        requisito+="<br><b>*</b>Fotocopia de Carnet Sanitario expedido por el Centro Sanitario del Ministerio de Salud.";
+        requisito+="<br><b>*</b>Dos (2) fotos tipo carnet.";
+        requisito+="<br><b>*</b>Un carpetín colgante tamaño oficio con visor y broches nepaco.";
+        requisito+="<br><b>*</b>Formulario impreso de pre-inscripción.";
+		universidad.setRequisitos(requisito);
 		universidad.setLat_universidad("-24.184097");
 		universidad.setLong_universidad(" -65.304802");
 		
@@ -230,20 +238,23 @@ public class ActivityUniversity extends Activity {
 		universidad.setEmail("secretariaacademica@fhycs.unju.edu.ar");
 		universidad.setWeb("www.fhycs.unju.edu.ar");
 		universidad.setPreinscripcion("Por internet:  www.fhycs.unju.edu.ar"+
-                                      "De 15/11 al 30/12 de cada año. ");
+                                      "<br>De 15/11 al 30/12 de cada año. ");
 		universidad.setInscripcion("Del 03 al 18 de Febrero de cada año.");
 		universidad.setInforme("Dirección alumnos de 08:30 a 12:30 y de 16:30 a 20:30 hs.");
-		universidad
-				.setRequisitos("Fotocopia autenticada del D.N.I."
-						+ "Fotocopia autenticada del título Secundario o constancia del título en trámite (original)."
-						+ "Dos (2) fotos tipo carnet 4x4."
-						+ "Una carpeta colgante pedaflex o Rehin con broche nepaco y visor para número."
-						+ "Ficha individual del alumno."
-						+ "Requisitos para alumnos vocacionales"
-						+ "Nota solicitando autorización: debe ser presentada en Mesa de Entrada antes de la Inscripción."
-						+ "Requisitos Obligatorios de Ingreso"
-						+ "Todas las fotocopias de la Documentación deben ser autenticadas por Escribano Público.");
 		
+		requisito="";
+		requisito+="<b>*</b>Fotocopia autenticada del D.N.I.";
+		requisito+= "<br><b>*</b>Fotocopia autenticada del título Secundario o constancia del título en trámite (original)";
+		requisito+= "<br><b>*</b>Dos (2) fotos tipo carnet 4x4.";
+		requisito+="<br><b>*</b>Una carpeta colgante pedaflex o Rehin con broche nepaco y visor para número.";
+		requisito+="<br><b>*</b>Ficha individual del alumno.";
+		requisito+="<br><b>*</b>Requisitos para alumnos vocacionales";
+		requisito+="<br><b>*</b>Nota solicitando autorización: debe ser presentada en Mesa de Entrada antes de la Inscripción.";
+		requisito+= "<br><b>*</b>Requisitos Obligatorios de Ingreso";
+		requisito+= "<br><b>*</b>Todas las fotocopias de la Documentación deben ser autenticadas por Escribano Público.";
+
+		universidad
+				.setRequisitos(requisito);
 		universidad.setLat_universidad("-24.185753");
         universidad.setLong_universidad("-65.301565");
 		

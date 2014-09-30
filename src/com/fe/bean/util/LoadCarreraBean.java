@@ -635,7 +635,7 @@ return listCarrera;
 				+ "Generación, adaptación y/o modificación de tecnologías compatibles con la disponibilidad de los recursos productivos."
 				+ "Docencia e Investigación Científica en Instituciones Públicas o Privadas."
 				+ "Asesoramiento al sector agroalimentario en cuanto a administración, crédito y desarrollo tecnológico.");
-		carrera.setAlcance_carrera(null);
+		carrera.setAlcance_carrera("");
 		carrera.setDuracion_carrera("5 años");
 		carrera.setId_grado(Constants.CARRERA_GRADO);
 		carrera.setId_university(Constants.FACU_AGRAGRIA_ID);
@@ -660,7 +660,7 @@ return listCarrera;
                 "Investigación sobre la incidencia de efluentes industriales en la contaminación ambiental."+
                 "Elaboración, desarrollo, control y seguimiento de emprendimientos destinados al tratamiento de residuos o provenientes de cualquier tipo de actividad humana."+
                 "Realiza actividades de peritaje en el área de las Ciencias Biológicas.");
-		carrera.setAlcance_carrera(null);
+		carrera.setAlcance_carrera("");
 		carrera.setDuracion_carrera("5 años");
 		carrera.setId_grado(Constants.CARRERA_GRADO);
 		carrera.setId_university(Constants.FACU_AGRAGRIA_ID);
@@ -677,7 +677,7 @@ return listCarrera;
 "Interpretación de resultados de análisis y determinación de calidad y aptitud para el consumo y la comercialización de alimentos, en cuanto a origen, elaboración y conservación."+
 "Docencia e investigación científica en Instituciones privadas u oficiales."+
 "Trabajos en laboratorios para el análisis físico, químico y biológico a los efectos de determinar el grado de contaminación de las materias primas y los productos alimenticios.");
-		carrera.setAlcance_carrera(null);
+		carrera.setAlcance_carrera("");
 		carrera.setDuracion_carrera("4 1/2 Años (Incluye Trabajo Final y Práctica Profesional)     ");
 		carrera.setId_grado(Constants.CARRERA_GRADO);
 		carrera.setId_university(Constants.FACU_AGRAGRIA_ID);
@@ -694,7 +694,7 @@ return listCarrera;
 "Interpretación de resultados de análisis y determinación de calidad y aptitud para el consumo y la comercialización de alimentos, en cuanto a origen, elaboración y conservación."+
 "Docencia e investigación científica en Instituciones privadas u oficiales."+
 "Trabajos en laboratorios para el análisis físico, químico y biológico a los efectos de determinar el grado de contaminación de las materias primas y los productos alimenticios.");
-		carrera.setAlcance_carrera(null);
+		carrera.setAlcance_carrera("");
 		carrera.setDuracion_carrera(" 3 1/2 Años   ");
 		carrera.setId_grado(Constants.CARRERA_PREGADO);
 		carrera.setId_university(Constants.FACU_AGRAGRIA_ID);
@@ -719,7 +719,7 @@ return listCarrera;
 "Realizar tareas de Docencia e Investigación en Centros de investigación y Formación de Profesionales de los distintos niveles del Sistema Educativo."+
 "Realizar, coordinar y dirigir actividades periodísticas en medios gráficos, audiovisuales y agencias noticiosas, tanto en la producción periodística como en la evaluación, selección e interpretación de la información."+
 "Comprender acciones tendientes al diagnóstico, planificación y diseño de políticas y estrategias de Comunicación Social a nivel nacional, regional y zonal en organizaciones gubernamentales, privadas y no gubernamentales.");
-	 carrera.setAlcance_carrera(null);
+	 carrera.setAlcance_carrera("");
 	 carrera.setDuracion_carrera("5 años");
 	 carrera.setId_grado(Constants.CARRERA_GRADO);
 	 carrera.setId_university(Constants.FACU_HUMANIDADES_ID);
@@ -957,7 +957,7 @@ return listCarrera;
 "Liquidación de impuestos y toda forma de gravámenes tributarios, interpretando las disposiciones que conciernen a tales temas y emitiendo dictámenes sobre ellas."+
 "Liquidación de haberes y beneficios laborales, sus cargas y sus compensaciones sociales, interpretando las disposiciones que conciernen a ellas y emitiendo dictámenes al respecto."+
 "Actuación en puestos de dirección y conducción de unidades de administración contable y financieras, en funciones subordinadas de línea o de asesoramiento en esa materia.");
-	 carrera.setAlcance_carrera(null);
+	 carrera.setAlcance_carrera("");
 	 carrera.setDuracion_carrera("5 años");
 	 carrera.setId_grado(Constants.CARRERA_GRADO);
 	 carrera.setId_university(Constants.FACU_ECONOMICA_ID);
@@ -984,7 +984,7 @@ return listCarrera;
      "11.-Analizar la influencia de los procesos administrativos en la rentabilidad de las empresas y procesos de inversión de capital"+
      "12.-Actuar en todos los aspectos como agente de promoción del Desarrollo Económico."+
      "13.-Realizar investigaciones científicas y tecnológicas en el campo de las ciencias de la administración.");
-	 carrera.setAlcance_carrera(null);
+	 carrera.setAlcance_carrera("");
 	 carrera.setDuracion_carrera("5 años");
 	 carrera.setId_grado(Constants.CARRERA_GRADO);
 	 carrera.setId_university(Constants.FACU_ECONOMICA_ID);
@@ -1004,7 +1004,7 @@ return listCarrera;
             "Realizar diagnósticos, desarrollar, dirigir y coordinar."+
             "Funciones de planeamiento, organización, control de gestión de las actividades administrativas en su relación a lo económico, en entidades públicas como privadas."+
             "En cuanto a la especialización, formación que se desarrollará luego de los estudios de grado, se han ido delimitando áreas dada la diversidad de los campos con que se vincula la actividad de un economista: Finanzas, Economía de las Empresas, Comercio Exterior, Sector Público, etc.");
-	 carrera.setAlcance_carrera(null);
+	 carrera.setAlcance_carrera("");
 	 carrera.setDuracion_carrera("2 años");
 	 carrera.setId_grado(Constants.CARRERA_GRADO);
 	 carrera.setId_university(Constants.FACU_ECONOMICA_ID);

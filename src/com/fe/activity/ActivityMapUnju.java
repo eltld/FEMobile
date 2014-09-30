@@ -16,6 +16,7 @@ import com.google.android.gms.maps.GoogleMap.InfoWindowAdapter;
 import com.google.android.gms.maps.GoogleMap.OnInfoWindowClickListener;
 import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptor;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.LatLngBounds;
@@ -35,6 +36,7 @@ import android.location.LocationManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
+import android.text.Html;
 import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -69,7 +71,7 @@ public class ActivityMapUnju extends FragmentActivity implements LocationListene
 	  logger.info("activity map unju");
 		
 	  text_header=(TextView)findViewById(R.id.text_header);
-	  text_header.setText("UBICACION");
+	  text_header.setText(Html.fromHtml("<u>UBICACION</u>"));
 		
 		 // Getting Google Play availability status
         int status = GooglePlayServicesUtil.isGooglePlayServicesAvailable(getBaseContext());
@@ -169,7 +171,8 @@ public class ActivityMapUnju extends FragmentActivity implements LocationListene
           markerOptions.position(markerLatLng);
 
           // Setting custom icon for the marker
-          markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.map_marker_rojo));
+          markerOptions.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE));
+          //markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.map_marker_rojo));
 
           // Setting title for the infowindow
           markerOptions.title("Universidad Nacional de Jujuy");

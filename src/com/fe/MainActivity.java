@@ -20,6 +20,7 @@ import com.fe.activity.ActivityGaleria;
 import com.fe.activity.ActivityMapUnju;
 import com.fe.activity.ActivityNoticia;
 import com.fe.activity.ActivitySecretaria;
+import com.fe.activity.ActivitySobre;
 import com.fe.activity.ActivityUniversity;
 import com.fe.bean.ActivityDbBean;
 import com.fe.bean.adapter.CustomGridAdapter;
@@ -28,15 +29,18 @@ import com.fe.bean.util.UtilList;
 import com.fe.model.Constants;
 import com.fe.model.ItemGrid;
 
+import android.net.Uri;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.view.Menu;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.GridView;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.util.Log;
@@ -63,6 +67,8 @@ public class MainActivity extends Activity  implements OnItemClickListener {
 	  //adapter principal
 	  CustomGridAdapter gridAdapterPrincipal;
 	  private ActivityDbBean activityBean;
+	  private ImageView image_sobre;
+	  private ImageView image_navigator;
 	  
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -72,6 +78,9 @@ public class MainActivity extends Activity  implements OnItemClickListener {
 		logger.info("onCreate MainActivity");
 		activityBean= new ActivityDbBean(getApplicationContext());
 		
+		//
+		image_sobre=(ImageView)findViewById(R.id.image_about);
+		image_navigator=(ImageView)findViewById(R.id.image_navigator);
 		//load content 
 		//comento esto no se la verdad gridView=(GridView)findViewById(R.id.grid_principal);
 		 gridView = (ScrollableGridView) findViewById(R.id.grid_principal);
@@ -157,6 +166,33 @@ public class MainActivity extends Activity  implements OnItemClickListener {
 				
 			}
 		});
+	
+	    
+	    //Image Sobre click
+	    image_sobre.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View arg0) {
+				// TODO Auto-generated method stub
+				Intent intent=new Intent(MainActivity.this, ActivitySobre.class);
+				startActivity(intent);
+			}
+		});
+	    
+	    //Abrir navegador
+	    image_navigator.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View arg0) {
+				// TODO Auto-generated method stub
+			
+					   Intent browserIntent = new Intent("android.intent.action.VIEW",
+					   Uri.parse("http://10.2.2.113")); // reeemplazar el sitio por el contenido de alguna variable de la clase que contenga en URL o agregando un parámetro más.
+					   startActivity(browserIntent);
+				
+			}
+		});
+	
 	}
 
 
