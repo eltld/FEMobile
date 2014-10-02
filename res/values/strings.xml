@@ -20,6 +20,7 @@
     <string name="activity_evento">Eventos</string>
     <string name="activity_sobre">About</string>
     <string name="version_unju">UNJU 1.0.0.1</string>
-    
+    <string name="comedor">COMEDORES</string>
+    <string name="activity_comedor">comedor</string>
 
 </resources>

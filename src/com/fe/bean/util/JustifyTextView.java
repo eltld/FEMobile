@@ -22,6 +22,7 @@ public class JustifyTextView extends TextView {
 
     public JustifyTextView(Context context, AttributeSet attrs) {
         super(context, attrs);
+        
     }
 
     @Override

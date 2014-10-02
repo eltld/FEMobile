@@ -30,7 +30,9 @@ public class ComedorDao {
     String[] columns = new String[] { 
     		            ConstantDatabase.COM_ID,
     		            ConstantDatabase.COM_NOMBRE,
-    		            ConstantDatabase.COM_DIRECCION};
+    		            ConstantDatabase.COM_RESPONSABLE,
+    		            ConstantDatabase.COM_CALLE,
+    		            ConstantDatabase.COM_BARRIO};
     
  
 	
@@ -54,7 +56,10 @@ public class ComedorDao {
 			ContentValues values=new ContentValues();
 			values.put(ConstantDatabase.COM_ID, obj.getId_comedor());
 			values.put(ConstantDatabase.COM_NOMBRE, obj.getNombre_comedor());
-			values.put(ConstantDatabase.COM_DIRECCION, obj.getDescripcion_comedor());
+			values.put(ConstantDatabase.COM_RESPONSABLE, obj.getResponsable_comedor());
+			values.put(ConstantDatabase.COM_CALLE, obj.getCalle_comedor());
+			values.put(ConstantDatabase.COM_BARRIO, obj.getBarrio_comedor());
+			
 			dao.insert(ConstantDatabase.T_COMEDOR, values);
 			
 		}
@@ -67,17 +72,49 @@ public class ComedorDao {
 		
 	}
 	
-	public ArrayList<Noticia> getAll()
+	public ArrayList<Comedor> getAll()
 	{
 		
 		return null;
 	}
 
 
-	public Carrera get(Long id) {
-		// TODO Auto-generated method stub
+	public Comedor get(Long id) {
+		
+	 cursor=dao.get(ConstantDatabase.T_COMEDOR,this.columns);
+			
+	 
+			
+		if (cursor != null) {
+			System.out.println("Cursor != null Comedor");
+			int com_id = cursor.getColumnIndex(ConstantDatabase.COM_ID);
+			int com_nombre = cursor.getColumnIndex(ConstantDatabase.COM_NOMBRE);
+			int com_responsable = cursor
+					.getColumnIndex(ConstantDatabase.COM_RESPONSABLE);
+			int com_calle = cursor.getColumnIndex(ConstantDatabase.COM_CALLE);
+			int com_barrio = cursor.getColumnIndex(ConstantDatabase.COM_BARRIO);
+
+			comedor = new Comedor();
+
+			
+			System.out.println("Comedor new comedor");
+			//comedor.setId_comedor(Integer.parseInt(cursor.getString(com_id)));
+			comedor.setNombre_comedor(cursor.getColumnName(com_nombre));
+		   
+			System.out.println("comedor 1");
+		 	//comedor.setResponsable_comedor(cursor.getString(com_responsable));
+		 	System.out.println("comedor2");
+			comedor.setCalle_comedor(cursor.getString(com_calle));
+			comedor.setBarrio_comedor(cursor.getString(com_barrio));
+			System.out.println("comedor 2");
+			cursor.close();
+		
+			return comedor;
+		}
 		return null;
-	}
+
+	}	
+	
 	
 	
 	

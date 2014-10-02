@@ -1,0 +1,23 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+   
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/header" />
+        
+      <RelativeLayout
+          android:id="@+id/content"
+          android:layout_width="fill_parent"
+          android:layout_height="match_parent"
+          android:layout_below="@+id/header_carrera"
+          android:background="@color/header_text" >
+
+    
+    </RelativeLayout>
+
+ 
+    
+</RelativeLayout>

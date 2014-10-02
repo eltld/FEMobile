@@ -67,7 +67,7 @@
            android:layout_alignParentRight="true"
            android:layout_alignTop="@+id/image_navigator"
            android:layout_marginRight="72dp"
-           android:src="@drawable/account" />
+           android:src="@drawable/informacion" />
 
   </RelativeLayout>
 </RelativeLayout>  

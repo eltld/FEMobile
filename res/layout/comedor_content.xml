@@ -7,70 +7,149 @@
        
         layout="@layout/header" />
 
-    <RelativeLayout
+   <RelativeLayout
         android:id="@+id/content"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/header_carrera"
         android:background="@color/header_text" >
-    
-     <LinearLayout
-         android:orientation="vertical"
-         android:layout_height="fill_parent"
-         android:layout_width="fill_parent" >   
-        <TextView
-            android:id="@+id/label_comedor"
-            android:layout_width="wrap_content"
+
+        <ScrollView
+            android:id="@+id/scrollView1"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:textStyle="bold"
-            android:typeface="sans"
-            android:textSize="20dp"
-            android:text="Comedor" />
+            android:layout_below="@+id/include1" >
 
-        <TextView
-            android:id="@+id/text_comedorNombre"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_below="@+id/textView2"
-            android:text="TextView" />
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical" >
 
-        <TextView
-            android:id="@+id/text_divider"
-            android:layout_width="fill_parent"
-            android:layout_height="1dp"
-            android:layout_alignParentLeft="true"
-            android:background="#555"
-             />
+                <TextView
+                    android:id="@+id/label_nombreComedor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Comedor"
+                    android:textSize="19dp"
+                    android:textStyle="bold"
+                    android:typeface="serif" />
 
-        <TextView
-            android:id="@+id/label_direccion"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Direccion"
-            android:textStyle="bold"
-            android:typeface="sans"
-            android:textSize="20dp"
-             />
-        <TextView android:id="@+id/text_comedorDireccion"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="text_direccion"
-            />
-         <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="1dp"
-            android:layout_alignParentLeft="true"
-            android:background="#555"
-          />
+                <TextView
+                    android:id="@+id/text_comedorContentNombre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView2"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="6dp"
+                    android:text="TextView"
+                    android:textColor="@color/gray"
+                    android:textSize="15dp"
+                    android:typeface="sans" />
 
-        
-            
-        
-       </LinearLayout>
+                <TextView
+                    android:id="@+id/text_divider"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentLeft="true"
+                    android:background="@color/gray_claro" />
 
+                <TextView
+                    android:id="@+id/label_responsable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Responsable"
+                    android:textSize="19dp"
+                    android:textStyle="bold"
+                    android:typeface="serif" />
+
+                <TextView
+                    android:id="@+id/text_comedorContentResponsable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView2"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="6dp"
+                    android:text="TextView"
+                    android:textColor="@color/gray"
+                    android:textSize="15dp"
+                    android:typeface="sans" />
+
+                <TextView
+                    android:id="@+id/text_divider3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentLeft="true"
+                    android:background="@color/gray_claro" />
+
+                <TextView
+                    android:id="@+id/label_calle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Calle"
+                    android:textSize="19dp"
+                    android:textStyle="bold"
+                    android:typeface="serif" />
+
+                <TextView
+                    android:id="@+id/text_comedorContentCalle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="6dp"
+                    android:text="text_direccion"
+                    android:textColor="@color/gray"
+                    android:textSize="15dp"
+                    android:typeface="sans" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentLeft="true"
+                    android:background="@color/gray_claro" />
+
+                <TextView
+                    android:id="@+id/label_barrio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Barrio"
+                    android:textSize="19dp"
+                    android:textStyle="bold"
+                    android:typeface="serif" />
+
+                 <TextView
+                     android:id="@+id/text_comedorContentBarrio"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_centerVertical="true"
+                     android:layout_marginLeft="20dp"
+                     android:layout_marginTop="6dp"
+                     android:text="barrio"
+                     android:textColor="@color/gray"
+                     android:textSize="15dp"
+                     android:typeface="sans" />
+                 
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentLeft="true"
+                    android:background="@color/gray_claro" />
+
+              
+            </LinearLayout>
+        </ScrollView>
     </RelativeLayout>
 
 </RelativeLayout>

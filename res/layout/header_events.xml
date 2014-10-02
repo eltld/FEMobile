@@ -13,7 +13,7 @@
         android:background="@color/header_background_image"
         android:contentDescription="@string/descripcion"
         android:scaleType="centerCrop"
-        android:src="@drawable/logoaplicacion" />
+        android:src="@drawable/logo" />
 
     <TextView
         android:id="@+id/text_eventHeader"

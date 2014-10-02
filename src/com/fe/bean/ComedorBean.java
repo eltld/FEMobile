@@ -35,7 +35,7 @@ public class ComedorBean {
 		comedorDao.add(obj);
 	}
 	
-	public Carrera get(Long id)
+	public Comedor get(Long id)
 	{
 	  return comedorDao.get(id);
 	}

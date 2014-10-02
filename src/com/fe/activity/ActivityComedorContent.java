@@ -33,6 +33,9 @@ public class ActivityComedorContent extends Activity {
 	TextView text_telefono;
 	TextView text_email;
 	TextView text_header;
+	TextView text_responsable;
+	TextView text_calle;
+	TextView text_barrio;
 	private ComedorBean comedorBean;
 	
 	@Override
@@ -49,22 +52,26 @@ public class ActivityComedorContent extends Activity {
 	comedorBean=new ComedorBean(getApplicationContext());
 	
 	Comedor comedor=new Comedor();
-	comedor.setId_comedor(1);
-	comedor.setNombre_comedor("Comedor 1");
-	comedor.setDescripcion_comedor("comedor informacion");
-	comedorBean.add(comedor);
+	comedor=comedorBean.get(Long.parseLong(idComedor));
 	
+	System.out.println("Comedor  : "+comedor.toString());
 	
+	if(comedor!=null)
+	{
 	text_header=(TextView)findViewById(R.id.text_header);
 	text_comedor=(TextView)findViewById(R.id.text_comedorNombre);
-	text_direccion=(TextView)findViewById(R.id.text_comedorDireccion);
+	text_responsable=(TextView)findViewById(R.id.text_comedorContentResponsable);
+	text_calle=(TextView)findViewById(R.id.text_comedorContentCalle);
+	text_barrio=(TextView)findViewById(R.id.text_comedorContentBarrio);
 	
 	text_comedor.setText(comedor.getNombre_comedor());
-	text_direccion.setText(comedor.getDescripcion_comedor());
+	text_responsable.setText(comedor.getResponsable_comedor());
+	text_calle.setText(comedor.getCalle_comedor());
+	text_barrio.setText(comedor.getBarrio_comedor());
 	
 	}
 	
-	
+	}
 	
 	
 	

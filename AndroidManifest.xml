@@ -72,15 +72,19 @@
             android:label="@string/activity_map_unju">
          
          </activity>
-            <activity 
+         <activity 
             android:name="com.fe.activity.ActivityComedor"
-            android:label="@string/activity_secretaria">
+            android:label="@string/activity_comedor">
+         </activity>
+                 <activity 
+            android:name="com.fe.activity.ActivityComedorContent"
+            android:label="@string/activity_comedor">
         
          </activity>
-          <activity 
+            
+         <activity 
             android:name="com.fe.activity.ActivityNoticia"
             android:label="@string/activity_noticias">
-        
          </activity>
              <activity 
             android:name="com.fe.activity.ActivityNoticiaContent"
@@ -165,6 +169,8 @@
         
          </activity>
            
+        
+             
          <!-- apy key -->
          <meta-data 
              android:name="com.google.android.maps.v2.API_KEY"

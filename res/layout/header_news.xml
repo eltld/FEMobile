@@ -13,7 +13,7 @@
         android:background="@color/header_background_image"
         android:contentDescription="@string/descripcion"
         android:scaleType="centerCrop"
-        android:src="@drawable/logoaplicacion" />
+        android:src="@drawable/logo" />
 
     <TextView
         android:id="@+id/text_newsHeader"
@@ -32,6 +32,6 @@
         android:layout_height="50dp"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
-        android:src="@drawable/reload" />
+        android:src="@drawable/actualizar_4" />
 
 </RelativeLayout>

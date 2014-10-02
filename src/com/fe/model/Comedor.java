@@ -13,6 +13,9 @@ public class Comedor {
 	private int id_comedor;
 	private String nombre_comedor;
 	private String descripcion_comedor;
+	private String calle_comedor;
+	private String barrio_comedor;
+	private String responsable_comedor;
 	private String lat_comedor;
 	private String long_comedor;
 	
@@ -58,6 +61,30 @@ public class Comedor {
 	}
 	public void setLong_comedor(String long_comedor) {
 		this.long_comedor = long_comedor;
+	}
+
+	public String getCalle_comedor() {
+		return calle_comedor;
+	}
+
+	public void setCalle_comedor(String calle_comedor) {
+		this.calle_comedor = calle_comedor;
+	}
+
+	public String getBarrio_comedor() {
+		return barrio_comedor;
+	}
+
+	public void setBarrio_comedor(String barrio_comedor) {
+		this.barrio_comedor = barrio_comedor;
+	}
+
+	public String getResponsable_comedor() {
+		return responsable_comedor;
+	}
+
+	public void setResponsable_comedor(String responsable_comedor) {
+		this.responsable_comedor = responsable_comedor;
 	}
 	
 	

@@ -5,6 +5,7 @@ import org.slf4j.LoggerFactory;
 
 import com.fe.R;
 import com.fe.bean.NoticiaBean;
+import com.fe.bean.util.JustifyTextView;
 import com.fe.model.Constants;
 import com.fe.model.Noticia;
 
@@ -14,6 +15,8 @@ import com.koushikdutta.ion.Ion;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Html;
+import android.webkit.WebView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -33,6 +36,8 @@ public class ActivityNoticiaContent extends Activity {
 	private TextView text_noticiaCuerpo;
 	private ImageView image_noticia;
 	private TextView textHeader;
+	private WebView webView;
+	private JustifyTextView text_justified;
 	private NoticiaBean noticiaBean;
 	
 	
@@ -54,7 +59,9 @@ public class ActivityNoticiaContent extends Activity {
 	 
 	 text_noticiaTitulo=(TextView)findViewById(R.id.text_noticiaContentTitulo);
 	 text_noticiaBajada=(TextView)findViewById(R.id.text_noticiaContentBajada);
-	 text_noticiaCuerpo=(TextView)findViewById(R.id.text_noticiaContentCuerpo);
+	 //webView=(WebView)findViewById(R.id.text_noticiaContentCuerpo);
+	 //text_noticiaCuerpo=(TextView)findViewById(R.id.text_noticiaContentCuerpo);
+	 text_justified=(JustifyTextView)findViewById(R.id.text_noticiaContentCuerpo);
 	 text_noticiaFecha=(TextView)findViewById(R.id.text_noticiaContentFecha);
 	 image_noticia=(ImageView)findViewById(R.id.image_noticiaContentImage);
 	 textHeader=(TextView)findViewById(R.id.text_header);
@@ -66,8 +73,19 @@ public class ActivityNoticiaContent extends Activity {
 		 text_noticiaTitulo.setText(noticia.getTituloNoticia());
 		 text_noticiaBajada.setText(noticia.getBajadaNoticia());
 		 text_noticiaFecha.setText(noticia.getDateNoticia());
-		 text_noticiaCuerpo.setText(noticia.getCuerpoNoticia());
-		
+		 String noticia_cuerpo = "<p align=\"justify\">";
+		 String youtContentStr = String.valueOf(Html
+	                .fromHtml("<![CDATA[<body style=\"text-align:justify; \">"
+	                            + noticia.getCuerpoNoticia()
+	                            + "</body>]]>"));
+		 
+		 noticia_cuerpo+=noticia.getCuerpoNoticia();
+		 noticia_cuerpo+= "</p>";
+		 
+		 //text_noticiaCuerpo.setText(Html.fromHtml(noticia_cuerpo));
+		text_justified.setText(youtContentStr);	
+		 //webView.loadDataWithBaseURL("",noticia_cuerpo, "text/html", "utf-8",null);
+		 
 		
 		 Ion.with(getApplicationContext())
 		 .load(noticia.getUrlImageNoticia())
