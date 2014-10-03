@@ -53,20 +53,20 @@
 
        <ImageView
            android:id="@+id/image_navigator"
-           android:layout_width="50dp"
-           android:layout_height="50dp"
+           android:layout_width="60dp"
+           android:layout_height="60dp"
            android:layout_alignParentLeft="true"
            android:layout_centerVertical="true"
            android:layout_marginLeft="56dp"
-           android:src="@drawable/calendar" />
+           android:src="@drawable/mundo" />
 
        <ImageView
            android:id="@+id/image_about"
-           android:layout_width="50dp"
-           android:layout_height="50dp"
+           android:layout_width="60dp"
+           android:layout_height="60dp"
            android:layout_alignParentRight="true"
            android:layout_alignTop="@+id/image_navigator"
-           android:layout_marginRight="72dp"
+           android:layout_marginRight="56dp"
            android:src="@drawable/informacion" />
 
   </RelativeLayout>

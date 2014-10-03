@@ -35,7 +35,7 @@ public final class UtilList {
 	 * @param res
 	 * @return
 	 */
-	public static List<ItemGrid> loadItemGridPrincipal(Resources res)
+	/*public static List<ItemGrid> loadItemGridPrincipal(Resources res)
 	{
 		listItemGrid.add(new ItemGrid("Mapa",res.getDrawable((R.drawable.location))));
 		listItemGrid.add(new ItemGrid("Noticias",res.getDrawable(R.drawable.news)));
@@ -48,7 +48,7 @@ public final class UtilList {
 	    listItemGrid.add(new ItemGrid("Oferta Academica",res.getDrawable(R.drawable.university)));
 	    
 		return listItemGrid;
-	}
+	}*/
 	
 	
 	public static List<String> loadSecretaria()

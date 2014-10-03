@@ -66,7 +66,7 @@ public class CustomGridAdapter extends ArrayAdapter<ItemGrid>{
 	      ItemGrid item=data.get(position);
 	      holder.txtItem.setText(item.getText());
 	      holder.imgItem.setImageDrawable(item.getImage());
-	      holder.txtItem.setVisibility(View.GONE);
+	     
 	      
 	      return itemView;
 		  
