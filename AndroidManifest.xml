@@ -166,7 +166,14 @@
              <activity 
             android:name="com.fe.activity.ActivitySobre"
             android:label="@string/activity_sobre">
-        
+         </activity>
+            <activity 
+            android:name="com.fe.activity.ActivitySobreInformacion"
+            android:label="@string/activity_sobre">     
+         </activity>
+           <activity 
+            android:name="com.fe.activity.ActivitySobreContacto"
+            android:label="@string/activity_sobre">     
          </activity>
            
         

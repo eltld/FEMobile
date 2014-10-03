@@ -15,9 +15,191 @@
           android:layout_below="@+id/header_carrera"
           android:background="@color/header_text" >
 
-    
-    </RelativeLayout>
+  
+        <ScrollView
+            android:id="@+id/scrollView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/include1" >
 
- 
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/label_nombre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Nombre"
+                    android:textSize="19dp"
+                    android:textStyle="bold"
+                    android:typeface="serif" />
+
+                <EditText
+                    android:id="@+id/text_aboutContentNombre"
+                    android:layout_width="272dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView2"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="6dp"
+                    android:text="TextView"
+                    android:textColor="@color/gray"
+                    android:textSize="15dp"
+                    android:typeface="sans" />
+
+                <TextView
+                    android:id="@+id/text_divider"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentLeft="true"
+                    android:background="@color/gray_claro" />
+
+                <TextView
+                    android:id="@+id/label_aboutContentApellido"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Apellido"
+                    android:textSize="19dp"
+                    android:textStyle="bold"
+                    android:typeface="serif" />
+
+                <EditText
+                    android:id="@+id/text_aboutContentApellido"
+                    android:layout_width="273dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView2"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="6dp"
+                    android:text="TextView"
+                    android:textColor="@color/gray"
+                    android:textSize="15dp"
+                    android:typeface="sans" />
+
+                <TextView
+                    android:id="@+id/text_divider3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentLeft="true"
+                    android:background="@color/gray_claro" />
+
+              
+
+                <TextView
+                    android:id="@+id/label_aboutContentFacultad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Facultad"
+                    android:textSize="19dp"
+                    android:textStyle="bold"
+                    android:typeface="serif" />
+
+                <EditText
+                    android:id="@+id/text_aboutContentFacultad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="6dp"
+                    android:text="text_direccion"
+                    android:textColor="@color/gray"
+                    android:textSize="15dp"
+                    android:typeface="sans" />
+
+                
+                <TextView
+                    android:id="@+id/text_divider6"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentLeft="true"
+                    android:background="@color/gray_claro" />
+                
+                <TextView
+                    android:id="@+id/label_aboutContentEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Email"
+                    android:textSize="19dp"
+                    android:textStyle="bold"
+                    android:typeface="serif" />
+
+                <EditText
+                    android:id="@+id/text_aboutContentEmail"
+                    android:layout_width="278dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="6dp"
+                    android:text="text_direccion"
+                    android:textColor="@color/gray"
+                    android:textSize="15dp"
+                    android:typeface="sans" />
+
+
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentLeft="true"
+                    android:background="@color/gray_claro" />
+
+                <TextView
+                    android:id="@+id/label_aboutContentMessage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Mensaje"
+                    android:textSize="19dp"
+                    android:textStyle="bold"
+                    android:typeface="serif" />
+                <EditText
+            android:id="@+id/text_aboutContentMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/scrollView1"
+            android:layout_marginLeft="24dp"
+            android:ems="10"
+            android:inputType="textMultiLine" >
+
+            <requestFocus />
+            
+            
+            
+        </EditText>
+            
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentLeft="true"
+                    android:background="@color/gray_claro" />
+            
+                
+               <Button
+                   android:id="@+id/btn_aboutContentEnviar"
+                   android:layout_width="20dp"
+                   android:layout_height="30dp"
+                   android:text="Enviar">
+                   
+               </Button> 
+            
+            </LinearLayout>
+    
+  </ScrollView>
+
+        
+
+</RelativeLayout>
     
 </RelativeLayout>

@@ -7,27 +7,133 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         layout="@layout/header" />
-        
-      <RelativeLayout
-          android:id="@+id/content"
-          android:layout_width="fill_parent"
-          android:layout_height="match_parent"
-          android:layout_below="@+id/header_carrera"
-          android:background="@color/header_text" >
+    
+    
+    
+       <RelativeLayout
+        android:id="@+id/content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header_carrera"
+        android:background="@color/header_text"
+        >
 
-          <com.fe.bean.util.JustifyTextView
-            android:id="@+id/text_aboutInformacion"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:layout_alignParentLeft="true"
-           android:layout_marginLeft="20dp"
-           android:layout_marginTop="6dp"
-           android:layout_marginRight="10dp"
-           android:text="Cuerpo"
-            />
-          
+        <ScrollView
+            android:id="@+id/scrollView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/include1" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/label_mision"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Mision"
+                    android:textSize="19dp"
+                    android:textStyle="bold"
+                    android:typeface="serif"
+                     />
+
+               
+                  <com.fe.bean.util.JustifyTextView
+          android:id="@+id/text_sobreInformacionVision"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView2"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="6dp"
+                    android:text="@string/unju_vision"
+                    android:textColor="@color/gray"
+                    android:textSize="15dp"
+                    android:typeface="sans"
+                     android:layout_marginRight="10dp"
+                 />
+
+                <TextView
+                    android:id="@+id/text_divider"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentLeft="true"
+                    android:background="@color/gray_claro" />
+
+                <TextView
+                    android:id="@+id/label_vision"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Vision"
+                    android:textSize="19dp"
+                    android:textStyle="bold"
+                    android:typeface="serif" />
+                
+                  <com.fe.bean.util.JustifyTextView
+                    android:id="@+id/text_sobreInformacionMision"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView2"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="6dp"
+                    android:text="@string/unju_vision"
+                    android:textColor="@color/gray"
+                    android:textSize="15dp"
+                    android:typeface="sans"
+                     android:layout_marginRight="10dp"/>
+         
+                <TextView
+                    android:id="@+id/text_divider3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentLeft="true"
+                    android:background="@color/gray_claro" 
+                    android:layout_marginRight="10dp"/>
+
+                <TextView
+                    android:id="@+id/label_sobreObjetivos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Objetivo"
+                    android:textSize="19dp"
+                    android:textStyle="bold"
+                    android:typeface="serif" />
+
+                
+                 <com.fe.bean.util.JustifyTextView
+                    android:id="@+id/text_sobreInformacionObjetivo"
+                    
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView2"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="6dp"
+                    android:text="@string/unju_objetivo"
+                    android:textColor="@color/gray"
+                    android:textSize="15dp"
+                    android:typeface="sans"
+                     android:layout_marginRight="10dp"/>
+               
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentLeft="true"
+                    android:background="@color/gray_claro" />
+            </LinearLayout>
+        </ScrollView>
     </RelativeLayout>
-
+    
  
     
 </RelativeLayout>

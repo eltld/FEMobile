@@ -23,7 +23,7 @@ public class ActivitySobreInformacion extends Activity{
     @Override
     public void onCreate(Bundle savedInstanceState) {
          super.onCreate(savedInstanceState);
-         setContentView(R.layout.autoridad);  
+         setContentView(R.layout.about_informacion);  
          Intent intent=new Intent();
          string_header=intent.getStringExtra("title_header");
          textViewHeader=(TextView)findViewById(R.id.text_header);

@@ -98,11 +98,11 @@ public class ComedorDao {
 
 			
 			System.out.println("Comedor new comedor");
-			//comedor.setId_comedor(Integer.parseInt(cursor.getString(com_id)));
+			comedor.setId_comedor(Integer.parseInt(cursor.getString(com_id)));
 			comedor.setNombre_comedor(cursor.getColumnName(com_nombre));
 		   
 			System.out.println("comedor 1");
-		 	//comedor.setResponsable_comedor(cursor.getString(com_responsable));
+		 	comedor.setResponsable_comedor(cursor.getString(com_responsable));
 		 	System.out.println("comedor2");
 			comedor.setCalle_comedor(cursor.getString(com_calle));
 			comedor.setBarrio_comedor(cursor.getString(com_barrio));

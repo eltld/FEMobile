@@ -22,5 +22,11 @@
     <string name="version_unju">UNJU 1.0.0.1</string>
     <string name="comedor">COMEDORES</string>
     <string name="activity_comedor">comedor</string>
-
+    
+    <string name="unju_mision">Formar personas comprometidas con el desarrollo de su comunidad para mejorarla en lo social, en lo económico y en lo político; y que sean competitivas internacionalmente en su área de conocimiento, contribuyendo al desarrollo sostenible de la provincia, la region y el país.</string>
+    <string name="unju_vision">La UNJu está consolidada como un sistema de educación superior de vanguardia a nivel internacional y contribuye de manera destacada en el desarrollo sustentable de la regiones y el posicionamiento de Jujuy en el ámbito nacional y internacional.</string>
+    <string name="unju_objetivo">Identificar, establecer y aplicar estrategias para promover el desarrollo sostenido y equitativo para: Mejorar la calidad de la Educación que se imparten en la Universidad.
+Fortalecer la identidad institucional generando la partisipación activa de todos los integrantes, promoviendo la creatividad y las iniciativas, canalizando los recursos humanos existentes.
+Institucionalizar mecanismos de desarrollo social mediante la propuesta de políticas púplicas con los distintos sectores de la sociedad civil de Jujuy.
+</string>
 </resources>

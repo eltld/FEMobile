@@ -68,8 +68,8 @@ public class ActivityGaleria extends ActivityBase{
 	super.onCreate(savedInstanceState);
 	setContentView(R.layout.gallery_image);
 	
-	textViewHeader=(TextView)findViewById(R.id.text_newsHeader);
-    textViewHeader.setText("Mapas");
+	textViewHeader=(TextView)findViewById(R.id.text_header);
+    textViewHeader.setText("FOTOS");
 	
     
     pB=(ProgressBar)findViewById(R.id.marker_progress);
