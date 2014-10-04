@@ -40,7 +40,7 @@ public class ActivitySobre  extends Activity{
          string_header=intent.getStringExtra("title_header");
          textViewHeader=(TextView)findViewById(R.id.text_header);
 		
-         textViewHeader.setText(Html.fromHtml("<u><b>About</b></u>"));
+         textViewHeader.setText(Html.fromHtml("Información"));
 		 listView=(ListView)findViewById(R.id.list_sobre); 	
         
          String[] array = new String[] {

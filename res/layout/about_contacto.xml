@@ -26,7 +26,8 @@
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:orientation="vertical" >
+                android:orientation="vertical" 
+               >
 
                 <TextView
                     android:id="@+id/label_nombre"
@@ -42,15 +43,16 @@
 
                 <EditText
                     android:id="@+id/text_aboutContentNombre"
-                    android:layout_width="272dp"
+                    android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/textView2"
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="6dp"
-                    android:text="TextView"
                     android:textColor="@color/gray"
                     android:textSize="15dp"
-                    android:typeface="sans" />
+                    android:typeface="sans"
+                   
+                     android:layout_marginRight="20dp" />
 
                 <TextView
                     android:id="@+id/text_divider"
@@ -69,19 +71,20 @@
                     android:text="Apellido"
                     android:textSize="19dp"
                     android:textStyle="bold"
-                    android:typeface="serif" />
+                    android:typeface="serif" 
+                     android:layout_marginRight="20dp"/>
 
                 <EditText
                     android:id="@+id/text_aboutContentApellido"
-                    android:layout_width="273dp"
+                    android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/textView2"
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="6dp"
-                    android:text="TextView"
                     android:textColor="@color/gray"
                     android:textSize="15dp"
-                    android:typeface="sans" />
+                    android:typeface="sans"
+                     android:layout_marginRight="20dp" />
 
                 <TextView
                     android:id="@+id/text_divider3"
@@ -105,14 +108,15 @@
 
                 <EditText
                     android:id="@+id/text_aboutContentFacultad"
-                    android:layout_width="wrap_content"
+                    android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="6dp"
-                    android:text="text_direccion"
+                
                     android:textColor="@color/gray"
                     android:textSize="15dp"
-                    android:typeface="sans" />
+                    android:typeface="sans"
+                     android:layout_marginRight="20dp" />
 
                 
                 <TextView
@@ -131,18 +135,20 @@
                     android:text="Email"
                     android:textSize="19dp"
                     android:textStyle="bold"
-                    android:typeface="serif" />
+                    android:typeface="serif"
+                     />
 
                 <EditText
                     android:id="@+id/text_aboutContentEmail"
-                    android:layout_width="278dp"
+                    android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="6dp"
-                    android:text="text_direccion"
+                
                     android:textColor="@color/gray"
                     android:textSize="15dp"
-                    android:typeface="sans" />
+                    android:typeface="sans" 
+                     android:layout_marginRight="20dp"/>
 
 
 
@@ -162,23 +168,24 @@
                     android:textSize="19dp"
                     android:textStyle="bold"
                     android:typeface="serif" />
-                <EditText
-            android:id="@+id/text_aboutContentMessage"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true"
-            android:layout_below="@+id/scrollView1"
-            android:layout_marginLeft="24dp"
-            android:ems="10"
-            android:inputType="textMultiLine" >
+                  
+                  <EditText
+                    android:id="@+id/text_aboutContentMessage"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/scrollView1"
+                    android:gravity="top|left"
+                    android:inputType="textMultiLine"
+                    android:lines="8"
+                    android:maxLines="10"
+                    android:minLines="6"
+                    android:scrollbars="vertical" 
+                     android:layout_marginRight="20dp"
+                      android:layout_marginLeft="20dp"/>
 
-            <requestFocus />
-            
-            
-            
-        </EditText>
-            
+
                 <TextView
                     android:layout_width="fill_parent"
                     android:layout_height="1dp"
@@ -188,8 +195,9 @@
                 
                <Button
                    android:id="@+id/btn_aboutContentEnviar"
-                   android:layout_width="20dp"
-                   android:layout_height="30dp"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
                    android:text="Enviar">
                    
                </Button> 

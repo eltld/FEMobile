@@ -129,8 +129,8 @@ public class ActivityEvento  extends Activity{
     		logger.info("json : "+jsonString);
     		
     		
-    		if(jsonString!=null)
-    		{
+    		if(jsonString!=null && jsonString.length()!=0)
+		    {
     			try
     			{
     			
@@ -179,7 +179,7 @@ public class ActivityEvento  extends Activity{
     	
 		protected void onPostExecute(String result)
     	{
-    		if(listData.size()!=0)
+    		if(listData!=null)
     		{
     			for(Evento evento : listData)
     			{ eventoBean.add(evento);}

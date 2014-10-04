@@ -9,6 +9,8 @@ $email=$_POST["email"];
 $message=$_POST["message"];
 
 
+echo "message".$message;
+
 
 
 $enlace =  mysql_connect('localhost', 'root', 'd3zinf04m');
@@ -24,26 +26,25 @@ else
       }else
       {
          
-         $consulta =  "insert into t_contacto(nombre_cont,apellido_cont,email_cont,facultad_cont,mensaje_cont)values('".$nombre."','".$apellido."','".$email."','".$facultad."','".$mensaje."')";
+         $consulta =  "insert into t_contacto(nombre_cont,apellido_cont,email_cont,facultad_cont,mensaje_cont)values('".$nombre."','".$apellido."','".$email."','".$facultad."','".$message."')";
           
-           echo "consulta".$consulta;
+              echo "Consulta : ".$consulta;
 
           // Ejecutar la consulta
-           $resultado = mysql_query($consulta);
+         $resultado = mysql_query($consulta,$enlace);
 
-         // Comprobar el resultado
-          // Lo siguiente muestra la consulta real enviada a MySQL, y el error ocurrido. Útil para depuración.
-         if (!$resultado) {
-            $mensaje  = 'Consulta no válida: ' . mysql_error() . "\n";
-            $mensaje .= 'Consulta completa: ' . $consulta;
+           if (!$resultado) {
+           	echo " consulta : "+$consulta;
+            $mensaje  = "Consulta no válida: " . mysql_error() . "\n";
+            $mensaje .= "Consulta completa: " . $consulta;
            die($mensaje);
           }else
           {
-          	echo "Se ejecuto la consulta"
+          	echo "Se ejecuto la consulta";
 
           }
             
-         */
+        
 
       }
   }

@@ -17,6 +17,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Html;
@@ -25,6 +27,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.fe.R;
 import com.fe.model.ConstantRest;
@@ -51,15 +54,17 @@ public class ActivitySobreContacto extends Activity{
          string_header=intent.getStringExtra("title_header");
          textViewHeader=(TextView)findViewById(R.id.text_header);
 		
-         textViewHeader.setText(Html.fromHtml("<u>CONTACTO</u>"));
+         textViewHeader.setText(Html.fromHtml("Contacto"));
 			 
          text_nombre=(EditText)findViewById(R.id.text_aboutContentNombre);
          text_apellido=(EditText)findViewById(R.id.text_aboutContentApellido);
-         text_message=(EditText)findViewById(R.id.text_aboutContentMessage);
          text_email=(EditText)findViewById(R.id.text_aboutContentEmail);
          text_facultad=(EditText)findViewById(R.id.text_aboutContentFacultad);
+         text_message=(EditText)findViewById(R.id.text_aboutContentMessage);
          btn_enviar=(Button)findViewById(R.id.btn_aboutContentEnviar); 
 
+         System.out.println("mensagge : "+text_message.getText().toString());
+         logger.debug("text_message : "+text_message.getText().toString());
      
          btn_enviar.setOnClickListener(new OnClickListener() {
 			
@@ -81,6 +86,9 @@ public class ActivitySobreContacto extends Activity{
 
         try {
             // Add your data
+        	
+        	   System.out.println("mensagge : "+text_message.getText().toString());
+               logger.debug("text_message : "+text_message.getText().toString());
             List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>(2);
             nameValuePairs.add(new BasicNameValuePair("nombre", text_nombre.getText().toString()));
             nameValuePairs.add(new BasicNameValuePair("apellido",text_apellido.getText().toString()));
@@ -93,12 +101,78 @@ public class ActivitySobreContacto extends Activity{
             HttpResponse response = httpclient.execute(httppost);
 
             String responseStr = EntityUtils.toString(response.getEntity());
-            logger.debug("Response Code : "+response.getStatusLine().toString() + " response  :"+responseStr);
+            
+            int code_recive=response.getStatusLine().getStatusCode();
+            logger.debug("Code : "+code_recive+"Response Code : "+response.getStatusLine().toString() + " response  :"+responseStr);
+            
+            String code_message="";
+            switch(code_recive)
+            {
+            case 200:
+            {
+            	code_message="Informacion Enviada";
+              
+            };break;
+            case 500 :{
+            	
+              code_message="Informacion no Enviada ";
+            
+            };break;
+            }
+            
+            AlertDialog.Builder alertDialog = new AlertDialog.Builder(
+        	        ActivitySobreContacto.this);
+             
+        	alertDialog.setMessage(code_message);
+        	
+        	alertDialog.setNegativeButton("Aceptar", new DialogInterface.OnClickListener() 
+            {   
+                @Override
+                public void onClick(DialogInterface dialog, int which) 
+                {
+                    dialog.dismiss();
+                }
+            });
+            alertDialog.show();
             
         } catch (ClientProtocolException e) {
+        	
+        	
+        	logger.debug("ClienteProtocol exception : "+e.toString());
+        	AlertDialog.Builder alertDialog = new AlertDialog.Builder(
+        	        ActivitySobreContacto.this);
+             
+        	alertDialog.setMessage("Verifique Conexion Internet ");
+        	
+        	alertDialog.setNegativeButton("Aceptar", new DialogInterface.OnClickListener() 
+            {   
+                @Override
+                public void onClick(DialogInterface dialog, int which) 
+                {
+                    dialog.dismiss();
+                }
+            });
+            alertDialog.show();
             // TODO Auto-generated catch block
         } catch (IOException e) {
             // TODO Auto-generated catch block
+        	logger.debug("ClienteProtocol exception : "+e.toString());
+        	AlertDialog.Builder alertDialog = new AlertDialog.Builder(
+        	        ActivitySobreContacto.this);
+             
+        	alertDialog.setMessage("Verifique Conexion Internet ");
+        	
+        	alertDialog.setNegativeButton("Aceptar", new DialogInterface.OnClickListener() 
+            {   
+                @Override
+                public void onClick(DialogInterface dialog, int which) 
+                {
+                    dialog.dismiss();
+                }
+            });
+            alertDialog.show();
+          	logger.debug("IO exception : "+e.toString());
+            
         }
     } 
     

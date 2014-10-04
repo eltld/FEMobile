@@ -9,7 +9,7 @@
      android:id="@+id/image_principal"
      android:layout_width="200dp"
      android:layout_height="80dp"
-     android:layout_marginLeft="50dp"
+     android:layout_marginLeft="40dp"
      android:layout_marginTop="30dp"
      android:contentDescription="@string/descripcion"
      android:src="@drawable/baneraplicacionunju" />
@@ -53,21 +53,48 @@
 
        <ImageView
            android:id="@+id/image_navigator"
-           android:layout_width="60dp"
-           android:layout_height="60dp"
+           android:layout_width="40dp"
+           android:layout_height="40dp"
            android:layout_alignParentLeft="true"
            android:layout_centerVertical="true"
-           android:layout_marginLeft="56dp"
+           android:layout_marginLeft="69dp"
            android:src="@drawable/mundo" />
 
        <ImageView
            android:id="@+id/image_about"
-           android:layout_width="60dp"
-           android:layout_height="60dp"
+           android:layout_width="40dp"
+           android:layout_height="40dp"
            android:layout_alignParentRight="true"
            android:layout_alignTop="@+id/image_navigator"
-           android:layout_marginRight="56dp"
+           android:layout_marginRight="58dp"
            android:src="@drawable/informacion" />
+
+       <TextView
+           android:id="@+id/textView3"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_alignBaseline="@+id/textView2"
+           android:layout_alignBottom="@+id/textView2"
+           android:layout_alignParentRight="true"
+           android:layout_marginRight="35dp"
+           android:text="Información"
+           android:textColor="@color/blanco"
+           android:textStyle="bold"
+           android:typeface="normal"
+           android:layout_marginTop="1dp" />
+
+       <TextView
+           android:id="@+id/textView2"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_alignLeft="@+id/image_navigator"
+           android:layout_below="@+id/image_navigator"
+           android:text="Sitio Web"
+           android:gravity="center_horizontal"
+           android:textColor="@color/blanco"
+           android:textColorLink="@color/gray_claro"
+           android:textStyle="bold"
+           android:layout_marginTop="1dp" />
 
   </RelativeLayout>
 </RelativeLayout>  
