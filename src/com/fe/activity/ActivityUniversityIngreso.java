@@ -37,7 +37,7 @@ public class ActivityUniversityIngreso extends Activity{
 			setContentView(R.layout.university_ingreso);
 		
 			textHeader=(TextView)findViewById(R.id.text_header);
-			textHeader.setText(Html.fromHtml("<u>INFORMACION INGRESO</u>"));
+			textHeader.setText(Html.fromHtml("Información Ingreso"));
 		 
 			Intent intent=getIntent();
 			String id_university=intent.getStringExtra(Constants.UNIVERSITY_ID);

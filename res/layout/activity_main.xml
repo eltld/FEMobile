@@ -87,6 +87,7 @@
            android:id="@+id/textView2"
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
+
            android:layout_alignLeft="@+id/image_navigator"
            android:layout_below="@+id/image_navigator"
            android:text="Sitio Web"
@@ -95,6 +96,16 @@
            android:textColorLink="@color/gray_claro"
            android:textStyle="bold"
            android:layout_marginTop="1dp" />
+         
+           <!--  
+           android:layout_alignRight="@+id/image_navigator"
+           android:layout_below="@+id/image_navigator"
+           android:gravity="center_horizontal"
+           android:text="Sitio Web"
+           android:textColor="@color/blanco"
+           android:textColorLink="@color/gray_claro"
+           android:textStyle="bold" />
+           -->
 
   </RelativeLayout>
 </RelativeLayout>  

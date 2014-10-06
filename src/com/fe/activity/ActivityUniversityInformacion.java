@@ -39,7 +39,7 @@ public class ActivityUniversityInformacion extends Activity{
 	    
 		
 		textHeader=(TextView)findViewById(R.id.text_header);
-		textHeader.setText(Html.fromHtml("<u>INFORMACION </u>"));
+		textHeader.setText(Html.fromHtml("Información"));
 		Intent intent=getIntent();
 		String id_university=intent.getStringExtra(Constants.UNIVERSITY_ID);
 		logger.debug("id_university : "+id_university);

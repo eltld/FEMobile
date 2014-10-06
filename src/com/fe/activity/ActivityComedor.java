@@ -60,7 +60,7 @@ public class ActivityComedor extends Activity{
 		String title_header=intent.getStringExtra("title_header");
 		logger.debug("title_header : "+title_header);
 		textViewHeader=(TextView)findViewById(R.id.text_header);
-		textViewHeader.setText(Html.fromHtml("<u>COMEDORES</u>"));
+		textViewHeader.setText(Html.fromHtml("Comedores"));
 		
 		listComedor=new ArrayList<Comedor>();
 		loadData();

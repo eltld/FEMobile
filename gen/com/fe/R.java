@@ -44,6 +44,12 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static final int adUnitId=0x7f010002;
+        /** <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+         */
+        public static final int backgroundColor=0x7f010022;
         /**  Appearance of the buy button. Must be one of "classic", "grayscale" and "monochrome" 
          <p>Must be one of the following constant values.</p>
 <table>
@@ -249,6 +255,28 @@ containing a value of this type.
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int maskedWalletDetailsTextAppearance=0x7f010019;
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int text=0x7f010020;
+        /** <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+         */
+        public static final int textColor=0x7f010021;
+        /** <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int textSize=0x7f010023;
         /**  Theme to be used for the Wallet selector 
          <p>Must be one of the following constant values.</p>
 <table>
@@ -380,78 +408,82 @@ containing a value of this type.
         public static final int activity_vertical_margin=0x7f090001;
     }
     public static final class drawable {
-        public static final int actualizar=0x7f020000;
-        public static final int animate_rotate=0x7f020001;
-        public static final int autoridad=0x7f020002;
-        public static final int baneraplicacionunju=0x7f020003;
-        public static final int calendar=0x7f020004;
-        public static final int calendar_color=0x7f020005;
-        public static final int calendar_icon=0x7f020006;
-        public static final int call=0x7f020007;
-        public static final int comedor=0x7f020008;
-        public static final int common_signin_btn_icon_dark=0x7f020009;
-        public static final int common_signin_btn_icon_disabled_dark=0x7f02000a;
-        public static final int common_signin_btn_icon_disabled_focus_dark=0x7f02000b;
-        public static final int common_signin_btn_icon_disabled_focus_light=0x7f02000c;
-        public static final int common_signin_btn_icon_disabled_light=0x7f02000d;
-        public static final int common_signin_btn_icon_focus_dark=0x7f02000e;
-        public static final int common_signin_btn_icon_focus_light=0x7f02000f;
-        public static final int common_signin_btn_icon_light=0x7f020010;
-        public static final int common_signin_btn_icon_normal_dark=0x7f020011;
-        public static final int common_signin_btn_icon_normal_light=0x7f020012;
-        public static final int common_signin_btn_icon_pressed_dark=0x7f020013;
-        public static final int common_signin_btn_icon_pressed_light=0x7f020014;
-        public static final int common_signin_btn_text_dark=0x7f020015;
-        public static final int common_signin_btn_text_disabled_dark=0x7f020016;
-        public static final int common_signin_btn_text_disabled_focus_dark=0x7f020017;
-        public static final int common_signin_btn_text_disabled_focus_light=0x7f020018;
-        public static final int common_signin_btn_text_disabled_light=0x7f020019;
-        public static final int common_signin_btn_text_focus_dark=0x7f02001a;
-        public static final int common_signin_btn_text_focus_light=0x7f02001b;
-        public static final int common_signin_btn_text_light=0x7f02001c;
-        public static final int common_signin_btn_text_normal_dark=0x7f02001d;
-        public static final int common_signin_btn_text_normal_light=0x7f02001e;
-        public static final int common_signin_btn_text_pressed_dark=0x7f02001f;
-        public static final int common_signin_btn_text_pressed_light=0x7f020020;
-        public static final int custom_marker=0x7f020021;
-        public static final int evento=0x7f020022;
-        public static final int ic_empty=0x7f020023;
-        public static final int ic_error=0x7f020024;
-        public static final int ic_launcher=0x7f020025;
-        public static final int ic_plusone_medium_off_client=0x7f020026;
-        public static final int ic_plusone_small_off_client=0x7f020027;
-        public static final int ic_plusone_standard_off_client=0x7f020028;
-        public static final int ic_plusone_tall_off_client=0x7f020029;
-        public static final int ic_stub=0x7f02002a;
-        public static final int informacion=0x7f02002b;
-        public static final int logo=0x7f02002c;
-        public static final int map_marker_azure=0x7f02002d;
-        public static final int map_marker_pink=0x7f02002e;
-        public static final int map_marker_rojo=0x7f02002f;
-        public static final int mapa=0x7f020030;
-        public static final int mundo=0x7f020031;
-        public static final int news=0x7f020032;
-        public static final int oferta=0x7f020033;
-        public static final int photo=0x7f020034;
-        public static final int powered_by_google_dark=0x7f020035;
-        public static final int powered_by_google_light=0x7f020036;
-        public static final int preloader_1=0x7f020037;
-        public static final int preloader_2=0x7f020038;
-        public static final int preloader_3=0x7f020039;
-        public static final int preloader_4=0x7f02003a;
-        public static final int progress_1=0x7f02003b;
-        public static final int progress_2=0x7f02003c;
-        public static final int progress_3=0x7f02003d;
-        public static final int progress_4=0x7f02003e;
-        public static final int progress_5=0x7f02003f;
-        public static final int progress_circle=0x7f020040;
-        public static final int progress_circular_background=0x7f020041;
-        public static final int progress_circular_indeterminate=0x7f020042;
-        public static final int progress_particle=0x7f020043;
-        public static final int reload=0x7f020044;
-        public static final int secretaria=0x7f020045;
-        public static final int telephone=0x7f020046;
-        public static final int transporte=0x7f020047;
+        public static final int academia=0x7f020000;
+        public static final int actualizar=0x7f020001;
+        public static final int animate_rotate=0x7f020002;
+        public static final int autoridad=0x7f020003;
+        public static final int baneraplicacionunju=0x7f020004;
+        public static final int calendar=0x7f020005;
+        public static final int calendar_color=0x7f020006;
+        public static final int calendar_icon=0x7f020007;
+        public static final int call=0x7f020008;
+        public static final int comedor=0x7f020009;
+        public static final int common_signin_btn_icon_dark=0x7f02000a;
+        public static final int common_signin_btn_icon_disabled_dark=0x7f02000b;
+        public static final int common_signin_btn_icon_disabled_focus_dark=0x7f02000c;
+        public static final int common_signin_btn_icon_disabled_focus_light=0x7f02000d;
+        public static final int common_signin_btn_icon_disabled_light=0x7f02000e;
+        public static final int common_signin_btn_icon_focus_dark=0x7f02000f;
+        public static final int common_signin_btn_icon_focus_light=0x7f020010;
+        public static final int common_signin_btn_icon_light=0x7f020011;
+        public static final int common_signin_btn_icon_normal_dark=0x7f020012;
+        public static final int common_signin_btn_icon_normal_light=0x7f020013;
+        public static final int common_signin_btn_icon_pressed_dark=0x7f020014;
+        public static final int common_signin_btn_icon_pressed_light=0x7f020015;
+        public static final int common_signin_btn_text_dark=0x7f020016;
+        public static final int common_signin_btn_text_disabled_dark=0x7f020017;
+        public static final int common_signin_btn_text_disabled_focus_dark=0x7f020018;
+        public static final int common_signin_btn_text_disabled_focus_light=0x7f020019;
+        public static final int common_signin_btn_text_disabled_light=0x7f02001a;
+        public static final int common_signin_btn_text_focus_dark=0x7f02001b;
+        public static final int common_signin_btn_text_focus_light=0x7f02001c;
+        public static final int common_signin_btn_text_light=0x7f02001d;
+        public static final int common_signin_btn_text_normal_dark=0x7f02001e;
+        public static final int common_signin_btn_text_normal_light=0x7f02001f;
+        public static final int common_signin_btn_text_pressed_dark=0x7f020020;
+        public static final int common_signin_btn_text_pressed_light=0x7f020021;
+        public static final int custom_marker=0x7f020022;
+        public static final int evento=0x7f020023;
+        public static final int ic_empty=0x7f020024;
+        public static final int ic_error=0x7f020025;
+        public static final int ic_launcher=0x7f020026;
+        public static final int ic_plusone_medium_off_client=0x7f020027;
+        public static final int ic_plusone_small_off_client=0x7f020028;
+        public static final int ic_plusone_standard_off_client=0x7f020029;
+        public static final int ic_plusone_tall_off_client=0x7f02002a;
+        public static final int ic_stub=0x7f02002b;
+        public static final int informacion=0x7f02002c;
+        public static final int logo=0x7f02002d;
+        public static final int logo_header=0x7f02002e;
+        public static final int map_marker_azure=0x7f02002f;
+        public static final int map_marker_pink=0x7f020030;
+        public static final int map_marker_rojo=0x7f020031;
+        public static final int mapa=0x7f020032;
+        public static final int mundo=0x7f020033;
+        public static final int news=0x7f020034;
+        public static final int oferta=0x7f020035;
+        public static final int photo=0x7f020036;
+        public static final int powered_by_google_dark=0x7f020037;
+        public static final int powered_by_google_light=0x7f020038;
+        public static final int preloader_1=0x7f020039;
+        public static final int preloader_2=0x7f02003a;
+        public static final int preloader_3=0x7f02003b;
+        public static final int preloader_4=0x7f02003c;
+        public static final int progress_1=0x7f02003d;
+        public static final int progress_2=0x7f02003e;
+        public static final int progress_3=0x7f02003f;
+        public static final int progress_4=0x7f020040;
+        public static final int progress_5=0x7f020041;
+        public static final int progress_circle=0x7f020042;
+        public static final int progress_circular_background=0x7f020043;
+        public static final int progress_circular_indeterminate=0x7f020044;
+        public static final int progress_particle=0x7f020045;
+        public static final int reload=0x7f020046;
+        public static final int secretaria=0x7f020047;
+        public static final int telephone=0x7f020048;
+        public static final int transporte=0x7f020049;
+        public static final int university2=0x7f02004a;
+        public static final int university3=0x7f02004b;
     }
     public static final class id {
         public static final int book_now=0x7f070010;
@@ -486,9 +518,9 @@ containing a value of this type.
         public static final int image_newsHeader=0x7f07007e;
         public static final int image_newsHeaderUpdate=0x7f070084;
         public static final int image_noticiaContentImage=0x7f070070;
-        public static final int image_noticiaImage=0x7f07008d;
+        public static final int image_noticiaImage=0x7f07008c;
         public static final int image_principal=0x7f07002f;
-        public static final int image_secretariaTelefono=0x7f07009a;
+        public static final int image_secretariaTelefono=0x7f070099;
         public static final int include1=0x7f070019;
         public static final int label_aboutContentApellido=0x7f07001e;
         public static final int label_aboutContentEmail=0x7f070024;
@@ -504,33 +536,33 @@ containing a value of this type.
         public static final int label_carreraContentPerfil=0x7f070054;
         public static final int label_carreraContentTitulo=0x7f070046;
         public static final int label_carreraLineaTres=0x7f070055;
-        public static final int label_email=0x7f07009b;
+        public static final int label_email=0x7f07009a;
         public static final int label_mision=0x7f070029;
         public static final int label_nombre=0x7f07001a;
         public static final int label_nombreComedor=0x7f07005f;
-        public static final int label_objetivo=0x7f070095;
+        public static final int label_objetivo=0x7f070094;
         public static final int label_responsable=0x7f070061;
-        public static final int label_secretario=0x7f070093;
+        public static final int label_secretario=0x7f070092;
         public static final int label_sobreObjetivos=0x7f07002d;
-        public static final int label_telefono=0x7f070097;
-        public static final int label_universityInfoCodigo=0x7f0700a6;
-        public static final int label_universityInfoDireccion=0x7f0700a3;
-        public static final int label_universityInfoEmail=0x7f0700ae;
-        public static final int label_universityInfoFax=0x7f0700ab;
-        public static final int label_universityInfoTelefono=0x7f0700a9;
-        public static final int label_universityInfoWeb=0x7f0700b1;
-        public static final int label_universityInformacion=0x7f0700a1;
-        public static final int label_universityInformes=0x7f0700b6;
-        public static final int label_universityInscripcion=0x7f0700b5;
-        public static final int label_universityPreinscripcion=0x7f0700b3;
-        public static final int label_universityRequisito=0x7f0700b7;
+        public static final int label_telefono=0x7f070096;
+        public static final int label_universityInfoCodigo=0x7f0700a5;
+        public static final int label_universityInfoDireccion=0x7f0700a2;
+        public static final int label_universityInfoEmail=0x7f0700ad;
+        public static final int label_universityInfoFax=0x7f0700aa;
+        public static final int label_universityInfoTelefono=0x7f0700a8;
+        public static final int label_universityInfoWeb=0x7f0700b0;
+        public static final int label_universityInformacion=0x7f0700a0;
+        public static final int label_universityInformes=0x7f0700b5;
+        public static final int label_universityInscripcion=0x7f0700b4;
+        public static final int label_universityPreinscripcion=0x7f0700b2;
+        public static final int label_universityRequisito=0x7f0700b6;
         public static final int label_vision=0x7f07002b;
-        public static final int linear_telefono=0x7f070098;
+        public static final int linear_telefono=0x7f070097;
         public static final int list_carrera=0x7f070045;
         public static final int list_comedor=0x7f07005e;
-        public static final int list_secretaria=0x7f070091;
+        public static final int list_secretaria=0x7f070090;
         public static final int list_sobre=0x7f070017;
-        public static final int list_university=0x7f0700a0;
+        public static final int list_university=0x7f07009f;
         public static final int map=0x7f070087;
         public static final int marker_progress=0x7f070037;
         public static final int match_parent=0x7f07000c;
@@ -589,11 +621,11 @@ containing a value of this type.
         public static final int text_comedorId=0x7f070068;
         public static final int text_comedorNombre=0x7f070067;
         public static final int text_divider=0x7f07001d;
-        public static final int text_divider1=0x7f0700a5;
-        public static final int text_divider2=0x7f0700a8;
+        public static final int text_divider1=0x7f0700a4;
+        public static final int text_divider2=0x7f0700a7;
         public static final int text_divider3=0x7f070020;
-        public static final int text_divider4=0x7f0700ad;
-        public static final int text_divider5=0x7f0700b0;
+        public static final int text_divider4=0x7f0700ac;
+        public static final int text_divider5=0x7f0700af;
         public static final int text_divider6=0x7f070023;
         public static final int text_eventHeader=0x7f070081;
         public static final int text_eventoConnection=0x7f070069;
@@ -606,39 +638,38 @@ containing a value of this type.
         public static final int text_eventoTitulo=0x7f070071;
         public static final int text_galleryConnection=0x7f070075;
         public static final int text_header=0x7f07007d;
-        public static final int text_idSecretaria=0x7f07009e;
+        public static final int text_idSecretaria=0x7f07009d;
         public static final int text_newsConnection=0x7f070088;
         public static final int text_newsHeader=0x7f070083;
-        public static final int text_noticiaBajada=0x7f07008f;
+        public static final int text_noticiaBajada=0x7f07008e;
         public static final int text_noticiaContentBajada=0x7f07006e;
         public static final int text_noticiaContentCuerpo=0x7f07008b;
         public static final int text_noticiaContentFecha=0x7f07008a;
         public static final int text_noticiaContentTitulo=0x7f070039;
-        public static final int text_noticiaId=0x7f07008e;
-        public static final int text_noticiaLineaDos=0x7f07008c;
+        public static final int text_noticiaId=0x7f07008d;
         public static final int text_noticiaLineaUno=0x7f07003f;
-        public static final int text_noticiaTitulo=0x7f070090;
-        public static final int text_secretaria=0x7f07009f;
-        public static final int text_secretariaDireccion=0x7f070096;
-        public static final int text_secretariaEmail=0x7f07009c;
-        public static final int text_secretariaSecretaria=0x7f070092;
-        public static final int text_secretariaSecretario=0x7f070094;
-        public static final int text_secretariaTelefono=0x7f070099;
-        public static final int text_secretariaTitulo=0x7f07009d;
+        public static final int text_noticiaTitulo=0x7f07008f;
+        public static final int text_secretaria=0x7f07009e;
+        public static final int text_secretariaDireccion=0x7f070095;
+        public static final int text_secretariaEmail=0x7f07009b;
+        public static final int text_secretariaSecretaria=0x7f070091;
+        public static final int text_secretariaSecretario=0x7f070093;
+        public static final int text_secretariaTelefono=0x7f070098;
+        public static final int text_secretariaTitulo=0x7f07009c;
         public static final int text_sobreInformacionMision=0x7f07002c;
         public static final int text_sobreInformacionObjetivo=0x7f07002e;
         public static final int text_sobreInformacionVision=0x7f07002a;
-        public static final int text_universityId=0x7f0700ba;
-        public static final int text_universityInfoEmail=0x7f0700af;
-        public static final int text_universityInfoFax=0x7f0700ac;
-        public static final int text_universityInfoTitulo=0x7f0700a2;
-        public static final int text_universityInfoWeb=0x7f0700b2;
-        public static final int text_universityInformes=0x7f0700a7;
-        public static final int text_universityIngreso=0x7f0700b8;
-        public static final int text_universityInscripcion=0x7f0700a4;
-        public static final int text_universityNombre=0x7f0700b9;
-        public static final int text_universityPreinscripcion=0x7f0700b4;
-        public static final int text_universityRequisito=0x7f0700aa;
+        public static final int text_universityId=0x7f0700b9;
+        public static final int text_universityInfoEmail=0x7f0700ae;
+        public static final int text_universityInfoFax=0x7f0700ab;
+        public static final int text_universityInfoTitulo=0x7f0700a1;
+        public static final int text_universityInfoWeb=0x7f0700b1;
+        public static final int text_universityInformes=0x7f0700a6;
+        public static final int text_universityIngreso=0x7f0700b7;
+        public static final int text_universityInscripcion=0x7f0700a3;
+        public static final int text_universityNombre=0x7f0700b8;
+        public static final int text_universityPreinscripcion=0x7f0700b3;
+        public static final int text_universityRequisito=0x7f0700a9;
         public static final int title=0x7f070085;
         public static final int wrap_content=0x7f07000d;
     }
@@ -913,6 +944,77 @@ containing a value of this type.
           @attr name com.fe:adUnitId
         */
         public static final int AdsAttrs_adUnitId = 2;
+        /** Attributes that can be used with a JustifiedTextView.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #JustifiedTextView_backgroundColor com.fe:backgroundColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #JustifiedTextView_text com.fe:text}</code></td><td></td></tr>
+           <tr><td><code>{@link #JustifiedTextView_textColor com.fe:textColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #JustifiedTextView_textSize com.fe:textSize}</code></td><td></td></tr>
+           </table>
+           @see #JustifiedTextView_backgroundColor
+           @see #JustifiedTextView_text
+           @see #JustifiedTextView_textColor
+           @see #JustifiedTextView_textSize
+         */
+        public static final int[] JustifiedTextView = {
+            0x7f010020, 0x7f010021, 0x7f010022, 0x7f010023
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.fe.R.attr#backgroundColor}
+          attribute's value can be found in the {@link #JustifiedTextView} array.
+
+
+          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+          @attr name com.fe:backgroundColor
+        */
+        public static final int JustifiedTextView_backgroundColor = 2;
+        /**
+          <p>This symbol is the offset where the {@link com.fe.R.attr#text}
+          attribute's value can be found in the {@link #JustifiedTextView} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.fe:text
+        */
+        public static final int JustifiedTextView_text = 0;
+        /**
+          <p>This symbol is the offset where the {@link com.fe.R.attr#textColor}
+          attribute's value can be found in the {@link #JustifiedTextView} array.
+
+
+          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+          @attr name com.fe:textColor
+        */
+        public static final int JustifiedTextView_textColor = 1;
+        /**
+          <p>This symbol is the offset where the {@link com.fe.R.attr#textSize}
+          attribute's value can be found in the {@link #JustifiedTextView} array.
+
+
+          <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.fe:textSize
+        */
+        public static final int JustifiedTextView_textSize = 3;
         /** Attributes that can be used with a MapAttrs.
            <p>Includes the following attributes:</p>
            <table>

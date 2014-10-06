@@ -7,17 +7,25 @@
         android:id="@+id/include1"
         layout="@layout/header" />
 
-       <ScrollView
-           android:id="@+id/scrollView1"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:layout_alignParentLeft="true"
-           android:layout_below="@+id/include1" >
+     <RelativeLayout
+          android:id="@+id/content"
+        android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="@color/header_text"
+          android:layout_below="@+id/include1"  >
+
+        <ScrollView
+            android:id="@+id/scrollView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+           >
 
            <LinearLayout
-               android:orientation="vertical"
-               android:layout_width="match_parent"
-               android:layout_height="match_parent" >
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+              
+               android:orientation="vertical" >
           
             <TextView
                 android:id="@+id/text_noticiaContentTitulo"
@@ -76,71 +84,25 @@
            
            android:src="@drawable/call" />
            
+     
            
-           <com.fe.bean.util.JustifyTextView
-            android:id="@+id/text_noticiaContentCuerpo"
+          <com.fe.bean.util.TextViewEx
+           android:id="@+id/text_noticiaContentCuerpo"
            android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
+            android:layout_height="wrap_content"
            android:layout_alignParentLeft="true"
            android:layout_below="@+id/image_noticiaContentImage"
            android:layout_marginLeft="20dp"
            android:layout_marginTop="6dp"
-           android:layout_marginRight="10dp"
-           android:layout_marginBottom="3dp"
-           android:text="Cuerpo"
+           android:text="Cuerpo" 
             />
-         
-           <!--  <WebView
-           android:id="@+id/text_noticiaContentCuerpo"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:layout_alignParentLeft="true"
-           android:layout_below="@+id/image_noticiaContentImage"
-           android:layout_marginLeft="20dp"
-           android:layout_marginTop="6dp"
-           android:text="Cuerpo" 
-               />
-               -->
-            <!--  <TextView
-           android:id="@+id/text_noticiaContentCuerpo"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:layout_alignParentLeft="true"
-           android:layout_below="@+id/image_noticiaContentImage"
-           android:layout_marginLeft="20dp"
-           android:layout_marginTop="6dp"
-           android:text="Cuerpo" 
-        />-->
-           
-             
-            <TextView
-            android:id="@+id/text_noticiaLineaDos"
-            android:layout_width="fill_parent"
-            android:layout_height="1dp"
-            android:layout_alignParentLeft="true"
-            android:background="@color/gray_claro"
-            android:layout_below="@+id/text_noticiaContentCuerpo"
-            android:layout_marginTop="3dp"></TextView>
-            
-           <!--  <TextView
-           android:id="@+id/text_noticiaContentCuerpo"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:layout_alignParentLeft="true"
-           android:layout_below="@+id/image_noticiaContentImage"
-           android:layout_marginLeft="20dp"
-           android:layout_marginTop="6dp"
-           android:text="Cuerpo" />
-           -->
+          
            
            </LinearLayout>
            
            </ScrollView>
 
       
-
-    
-
-      
+</RelativeLayout>
 
 </RelativeLayout>

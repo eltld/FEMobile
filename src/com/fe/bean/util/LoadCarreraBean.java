@@ -3,6 +3,8 @@ package com.fe.bean.util;
 import java.util.ArrayList;
 import java.util.List;
 
+import android.text.Html;
+
 import com.fe.model.Carrera;
 import com.fe.model.Constants;
 
@@ -24,7 +26,8 @@ public class LoadCarreraBean {
 		carrera.setId_carrera(1);
 		carrera.setTitulo_carrera("INGENIERÍA QUÍMICA");
 		carrera.setNivel_carrera("Título de Grado");
-		carrera.setAcreditacion_carrera(" <br>Resolución Ministerial Nº 1856/83"+
+		carrera.setAcreditacion_carrera(
+	     " <br>Resolución Ministerial Nº 1856/83"+
           "<br>Resolución CONEAU Nº 552/08"+
           "<br>Resolución CONEAU Nº 628/04");
 		carrera.setPerfil_carrera("<br>1. Desempeñarse eficaz y eficientemente en un ámbito tecnológico de"
@@ -117,36 +120,36 @@ public class LoadCarreraBean {
 "<br>1) Estudios, proyecto, dirección y ejecución de obras concernientes a la exploración y explotación de"+
 "yacimientos minerales de todo tipo, ubicados en el suelo o subsuelo, comprendiendo:"+
 "<br>a) Estudios minero-geológicos y químico mineralúrgicos de yacimientos, minas, minerales y rocas."+
-"b) Muestreos, determinación de reservas, estudios económico-financieros, evaluación de los"+
+"<br>b) Muestreos, determinación de reservas, estudios económico-financieros, evaluación de los"+
 "yacimientos minerales."+
-"c) Construcciones e Instalaciones mineras civiles, industriales y electromecánicas des-tinadas a"+
+"<br>c) Construcciones e Instalaciones mineras civiles, industriales y electromecánicas des-tinadas a"+
 "viviendas, depósitos, talleres, salas de motores y máquinas; extracción, transporte, quebrantado,"+
 "trituración y molienda, clasificación y almacenado, y concentración de sustancias minerales de"+
 "todo tipo, por medios mecánicos, neumáticos magnéticos, electrostáticos, hidro y"+
 "pirometalúrgicos."+
-"d) Obras de provisión de agua, energía, desagües, producción y distribución de aire comprimido,"+
+"<br>d) Obras de provisión de agua, energía, desagües, producción y distribución de aire comprimido,"+
 "ventilación e iluminación."+
-"e) Mecánica de suelos, voladuras de rocas, trabajos con explosivos, excavaciones de pozos, galerías,"+
+"<br>e) Mecánica de suelos, voladuras de rocas, trabajos con explosivos, excavaciones de pozos, galerías,"+
 "túneles, obras de contención y sostén de empujes de terrenos. "+
-"f) Evacuación y cerramiento de las aguas, galerías de derrame, sistemas de bombeo, terraplenes y"+
+"<br>f) Evacuación y cerramiento de las aguas, galerías de derrame, sistemas de bombeo, terraplenes y"+
 "represas."+
-"g) Servicios auxiliares para el mantenimiento de motores y máquinas de uso minero, herramientas y"+
+"<br>g) Servicios auxiliares para el mantenimiento de motores y máquinas de uso minero, herramientas y"+
 "lamparería."+
 "<br>2) Operaciones topográficas y geodésicas relativas a las tareas señaladas en el capítulo 1) que"+
 "corresponden a:"+
-"a) Mensuras privadas y judiciales de yacimientos minerales, concesiones de exploración y cateo y de"+
+"<br>a) Mensuras privadas y judiciales de yacimientos minerales, concesiones de exploración y cateo y de"+
 "explotación."+
-"b) Determinaciones para el cálculo de coordenadas geográficas, rumbos y azimutes."+
-"c) Relevamiento de superficie y de labores subterráneas de todo tipo."+
-"d) Operaciones de triangulación necesarias para la ubicación de los distritos mineros y sus"+
+"<br>b) Determinaciones para el cálculo de coordenadas geográficas, rumbos y azimutes."+
+"<br>c) Relevamiento de superficie y de labores subterráneas de todo tipo."+
+"<br>d) Operaciones de triangulación necesarias para la ubicación de los distritos mineros y sus"+
 "yacimientos."+
 "<br>3) Estudios, asesoramiento de ingeniería legal, relativos a la Legislación minera y del trabajo en las"+
 "minas y canteras, comprendiendo:"+
-"a) La aplicación de las disposiciones legales emanadas del Código de Minería, Leyes, Decretos y"+
+"<br>a) La aplicación de las disposiciones legales emanadas del Código de Minería, Leyes, Decretos y"+
 "reglamentaciones conexas."+
-"b) Contratos de exploración y explotaciones de los yacimientos de minerales y organización del"+
+"<br>b) Contratos de exploración y explotaciones de los yacimientos de minerales y organización del"+
 "trabajo."+
-"c) Higiene y seguridad en las minas y canteras, elaboración y aplicación de las disposiciones"+
+"<br>c) Higiene y seguridad en las minas y canteras, elaboración y aplicación de las disposiciones"+
 "correspondientes a la policía minera."+
 "<br>4) Arbitrajes, pericias y tasaciones, referidas a los yacimientos de minerales, su concesión y" +
 "aprovechamiento."+
@@ -163,7 +166,7 @@ public class LoadCarreraBean {
 	    ////INGENIERIA INDUSTRIAL
 	    carrera=new Carrera();
 	    carrera.setId_carrera(3);
-		carrera.setTitulo_carrera("INGENIEIA INDUSTRIAL");
+		carrera.setTitulo_carrera("INGENIERIA INDUSTRIAL");
 		carrera.setNivel_carrera("Título de Grado");
 		carrera.setAcreditacion_carrera("Resolución Ministerial Nº 335/02."+
 				"<br>Resolución CONEAU Nº 514/07"+
@@ -239,7 +242,7 @@ listCarrera.add(carrera);
 
 carrera=new Carrera();
 carrera.setId_carrera(4);
-carrera.setTitulo_carrera("INGENIEIA INFORMATICA");
+carrera.setTitulo_carrera("INGENIERIA INFORMATICA");
 carrera.setNivel_carrera("Título de Grado");
 carrera.setAcreditacion_carrera("Resolución Ministerial Nº 335/02. "+
 "<br>Resolución CONEAU Nº 1220/12");
@@ -585,6 +588,7 @@ carrera.setId_university(Constants.FACU_INGENIERIA_ID);
 listCarrera.add(carrera);
 
 //////carrera=new Carrera();
+carrera=new Carrera();
 carrera.setId_carrera(12);
 carrera.setTitulo_carrera("TECNICATURA UNIVERSITARIA EN PERFORACIONES");
 carrera.setNivel_carrera("Título de PreGrado");
@@ -596,6 +600,7 @@ carrera.setId_grado(Constants.CARRERA_PREGADO);
 carrera.setId_university(Constants.FACU_INGENIERIA_ID);
 listCarrera.add(carrera);
 
+carrera=new Carrera();
 carrera.setId_carrera(13);
 carrera.setTitulo_carrera("TECNICATURA UNIVERSITARIA EN CIENCIAS DE LA TIERRA ORIENTADA A PETROLEO");
 carrera.setNivel_carrera("Título de PreGrado");
@@ -770,7 +775,7 @@ return listCarrera;
 				+ "Participar, desde la perspectiva educativa, en la elaboración, ejecución y evaluación de planes, programas y proyectos de acción sociocultural en comunidades."
 				+ "Asesorar en la formulación de criterios y normas destinadas a promover la dimensión educativa de los medios de comunicación social."
 				+ "Asesorar para el diseño y planeamiento de los espacios y de la infraestructura  destinados a actividades educativas, recreativas y culturales.");
-		carrera.setDuracion_carrera("");
+		carrera.setDuracion_carrera("5 años");
 		carrera.setId_grado(Constants.CARRERA_GRADO);
 		carrera.setId_university(Constants.FACU_HUMANIDADES_ID);
 		listCarrera.add(carrera);
@@ -790,6 +795,8 @@ return listCarrera;
 "Participar en equipos interdisciplinarios responsables de la elaboración y evaluación de planes, programas y proyectos relacionados con la problemática socio-cultural."+
 "Intervenir en arbitrajes, peritajes y todas aquellas actividades que requieran del ámbito de su especialidad."+
 "Elaborar proyectos de protección de yacimientos y riquezas arqueológicas");
+   
+    carrera.setDuracion_carrera("10 cuatrimestres");
     carrera.setId_grado(Constants.CARRERA_GRADO);
 	carrera.setId_university(Constants.FACU_HUMANIDADES_ID);
 	listCarrera.add(carrera);
@@ -809,7 +816,8 @@ return listCarrera;
 			"Participar en equipos interdisciplinarios responsables de la elaboración y evaluación de planes, programas y proyectos relacionados con la problemática socio-cultural."+
 			"Intervenir en arbitrajes, peritajes y todas aquellas actividades que requieran del ámbito de su especialidad."+
 			"Elaborar proyectos de protección de yacimientos y riquezas arqueológicas");
-			    carrera.setId_grado(Constants.CARRERA_PREGADO);
+	carrera.setDuracion_carrera("Requisitos aprobar las primeras 18 materias incluyendo el 1º nivel de inglés.");		    
+	carrera.setId_grado(Constants.CARRERA_PREGADO);
 				carrera.setId_university(Constants.FACU_HUMANIDADES_ID);
 				
    listCarrera.add(carrera);
@@ -820,8 +828,8 @@ return listCarrera;
    carrera.setTitulo_carrera("PROFESOR EN LETRAS "+
                              "LICENCIATURA EN LETRAS ");
    carrera.setNivel_carrera("Título de Grado");
-   carrera.setDuracion_carrera("Profesor en Letras C.S. 280/06. 4 años"+
-"Licenciado en Letras C.S. 280/06. 5 años y Tesina Final");
+   carrera.setDuracion_carrera("<br>Profesor en Letras C.S. 280/06. 4 años"+
+" <br>Licenciado en Letras C.S. 280/06. 5 años y Tesina Final");
    carrera.setAcreditacion_carrera("Profesor en Letras C.S. 280/06. 4 años"
                                    +"Licenciado en Letras C.S. 280/06. 5 años y Tesina Final");
    carrera.setPerfil_carrera("PERFIL DEL PROFESOR"+
@@ -865,7 +873,7 @@ return listCarrera;
 "Participar en investigación, diseño, ejecución y evaluación de Programas de Desarrollo como parte integrante de equipos interdisciplinarios."+
 "Cualquier, otra actividad que importe participación de un profesional del Trabajo Social y tienda al logro del Bienestar Social.");  
  carrera.setPerfil_carrera("Lo que caracteriza al Trabajo Social es la praxis social, es el contacto directo, cotidiano y continuado con la realidad social, su actuación con el hombre en su realidad histórica presente y la planificación de cara al futuro. Por ende, el Licenciado en Trabajo Social es un graduado universitario con adecuada formación en las líneas curriculares sociológica, psicológica, pedagógica, antropológica, filosófica y de investigaci6n que le permiten el conocimiento, comprensión y operacionalización de los principios y técnicas propios de la indagación de la realidad social. ");
- 
+ carrera.setDuracion_carrera("4 semestres");
  carrera.setId_grado(Constants.CARRERA_GRADO);
  carrera.setId_university(Constants.FACU_HUMANIDADES_ID);
  listCarrera.add(carrera);
@@ -890,6 +898,7 @@ return listCarrera;
 "Planificar y ejecutar programas de Educación para la Salud en medios de comunicación social utilizando óptimamente el grado de cobertura de los mismos."+
 "Cubrir tareas docente sobre problemáticas específicas ámbito de educación formal y no formal."+
 "Diseñar y estructurar recursos didácticos de diferente complejidad orientados a la Educación para la Salud.");
+ carrera.setDuracion_carrera(" 2.838.horas");
  carrera.setId_grado(Constants.CARRERA_GRADO);
  carrera.setId_university(Constants.FACU_HUMANIDADES_ID);
  listCarrera.add(carrera);

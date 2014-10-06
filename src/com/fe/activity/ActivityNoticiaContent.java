@@ -5,7 +5,10 @@ import org.slf4j.LoggerFactory;
 
 import com.fe.R;
 import com.fe.bean.NoticiaBean;
-import com.fe.bean.util.JustifyTextView;
+import com.fe.bean.util.JustifiedTextView;
+import com.fe.bean.util.TextJustification;
+import com.fe.bean.util.TextJustify;
+import com.fe.bean.util.TextViewEx;
 import com.fe.model.Constants;
 import com.fe.model.Noticia;
 
@@ -14,8 +17,13 @@ import com.koushikdutta.ion.Ion;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Point;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.text.Html;
+import android.util.DisplayMetrics;
+import android.view.Display;
+import android.view.ViewGroup;
 import android.webkit.WebView;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -37,10 +45,15 @@ public class ActivityNoticiaContent extends Activity {
 	private ImageView image_noticia;
 	private TextView textHeader;
 	private WebView webView;
-	private JustifyTextView text_justified;
+	private TextView text_cuerpo;
 	private NoticiaBean noticiaBean;
-	
-	
+	private JustifiedTextView text_view;
+	private TextViewEx text_viewEx;
+	static Point size;
+    static float density;
+    public static final int FinallwidthDp  = 320 ;
+    public static final int widthJustify  = 223 ;
+
 	
 	@Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +63,17 @@ public class ActivityNoticiaContent extends Activity {
 	  
 	 logger.debug("Noticia Content");
 	 
+	 
+	
+     DisplayMetrics metrics = new DisplayMetrics();
+     getWindowManager().getDefaultDisplay().getMetrics(metrics);
+     int widthPixels = metrics.widthPixels;
+
+     float scaleFactor = metrics.density;
+     float widthDp = widthPixels / scaleFactor;
+
+     
+   
 	 Intent intent=this.getIntent();
 	 String noticia_id=intent.getStringExtra(Constants.NOTICIA_ID);
 	 noticiaBean=new NoticiaBean(getApplicationContext());
@@ -60,9 +84,11 @@ public class ActivityNoticiaContent extends Activity {
 	 text_noticiaTitulo=(TextView)findViewById(R.id.text_noticiaContentTitulo);
 	 text_noticiaBajada=(TextView)findViewById(R.id.text_noticiaContentBajada);
 	 //webView=(WebView)findViewById(R.id.text_noticiaContentCuerpo);
-	 //text_noticiaCuerpo=(TextView)findViewById(R.id.text_noticiaContentCuerpo);
-	 text_justified=(JustifyTextView)findViewById(R.id.text_noticiaContentCuerpo);
+	 //text_view=(JustifiedTextView)findViewById(R.id.text_noticiaContentCuerpo);
+	 text_cuerpo=(TextView)findViewById(R.id.text_noticiaContentCuerpo);
+	 //text_justy=(JustifiedWeb)findViewById(R.id.text_noticiaContentCuerpo);
 	 text_noticiaFecha=(TextView)findViewById(R.id.text_noticiaContentFecha);
+	 text_viewEx=(TextViewEx)findViewById(R.id.text_noticiaContentCuerpo);
 	 image_noticia=(ImageView)findViewById(R.id.image_noticiaContentImage);
 	 textHeader=(TextView)findViewById(R.id.text_header);
 	 textHeader.setText("Noticias");
@@ -73,18 +99,14 @@ public class ActivityNoticiaContent extends Activity {
 		 text_noticiaTitulo.setText(noticia.getTituloNoticia());
 		 text_noticiaBajada.setText(noticia.getBajadaNoticia());
 		 text_noticiaFecha.setText(noticia.getDateNoticia());
-		 String noticia_cuerpo = "<p align=\"justify\">";
-		 String youtContentStr = String.valueOf(Html
-	                .fromHtml("<![CDATA[<body style=\"text-align:justify; \">"
-	                            + noticia.getCuerpoNoticia()
-	                            + "</body>]]>"));
 		 
-		 noticia_cuerpo+=noticia.getCuerpoNoticia();
-		 noticia_cuerpo+= "</p>";
-		 
-		 //text_noticiaCuerpo.setText(Html.fromHtml(noticia_cuerpo));
-		text_justified.setText(youtContentStr);	
-		 //webView.loadDataWithBaseURL("",noticia_cuerpo, "text/html", "utf-8",null);
+		   
+		  
+			
+			  String text = "<html><body style=\"text-align:justify\"><p style=\"text-align:justify\">"+Html.fromHtml(noticia.getCuerpoNoticia())+" </p></body></Html>";
+			  //text_cuerpo.setText(text);
+			  text_viewEx.setText(noticia.getCuerpoNoticia(),true);
+				
 		 
 		
 		 Ion.with(getApplicationContext())
