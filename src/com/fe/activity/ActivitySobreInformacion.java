@@ -28,7 +28,7 @@ public class ActivitySobreInformacion extends Activity{
          string_header=intent.getStringExtra("title_header");
          textViewHeader=(TextView)findViewById(R.id.text_header);
 		
-         textViewHeader.setText(Html.fromHtml("<u>INFORMACION</u>"));
+         textViewHeader.setText(Html.fromHtml("Información"));
 			 
          
           

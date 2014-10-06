@@ -7,10 +7,10 @@
     
     <ImageView
         android:id="@+id/image_newsHeader"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:layout_marginRight="10dp"
-        android:background="@color/header_background_image"
+        android:background="@color/blanco"
         android:contentDescription="@string/descripcion"
         android:scaleType="centerCrop"
         android:src="@drawable/logo" />
@@ -28,8 +28,8 @@
 
     <ImageView
         android:id="@+id/image_newsHeaderUpdate"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
         android:src="@drawable/actualizar" />

@@ -44,10 +44,8 @@ public class ActivityUniversityMap extends FragmentActivity implements LocationL
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.map_unju);
 	  
-	  logger.info("activity map unju");
-		
 	  text_header=(TextView)findViewById(R.id.text_header);
-	  text_header.setText(Html.fromHtml("<u>UBICACION</u>"));
+	  text_header.setText(Html.fromHtml("Ubicación"));
 	  
 		Intent intent=getIntent();
 		String id_university=intent.getStringExtra(Constants.UNIVERSITY_ID);

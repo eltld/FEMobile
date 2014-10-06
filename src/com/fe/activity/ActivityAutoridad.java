@@ -134,8 +134,8 @@ public class ActivityAutoridad extends Activity{
     		logger.info("json : "+jsonString);
     		
     		
-    		if(jsonString!=null)
-    		{
+    		if(jsonString!=null && jsonString.length()!=0)
+		    {
     			try
     			{
     			
@@ -186,7 +186,7 @@ public class ActivityAutoridad extends Activity{
     	
 		protected void onPostExecute(String result)
     	{
-    		if(listData.size()!=0)
+    		if(listData!=null)
     		{
     			for(Autoridad autoridad : listData)
     			{ autoridadBean.add(autoridad);}

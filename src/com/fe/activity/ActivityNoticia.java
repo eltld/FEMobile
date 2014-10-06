@@ -143,8 +143,8 @@ public class ActivityNoticia extends Activity{
 						ConstantRest.URL_NOTICIAS, serviceHandler.GET);
 				logger.info("json : " + jsonString);
 
-				if (jsonString != null) {
-					try {
+				if(jsonString!=null && jsonString.length()!=0)
+				{	try {
 
 						logger.debug("Recorro el listado de json");
 						listData = new ArrayList<Noticia>();
@@ -189,7 +189,7 @@ public class ActivityNoticia extends Activity{
 		}
 
 		protected void onPostExecute(String result) {
-			if (listData.size() != 0) {
+			if (listData != null) {
 				for (Noticia noticia : listData) {
 					noticiaBean.add(noticia);
 				}

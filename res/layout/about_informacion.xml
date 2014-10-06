@@ -123,13 +123,10 @@
                     android:textColor="@color/gray"
                     android:textSize="15dp"
                     android:typeface="sans"
-                     android:layout_marginRight="10dp"/>
+                   
+                     android:layout_marginRight="10dp"
+                     android:layout_marginBottom="30dp"/>
                
-                <TextView
-                    android:layout_width="fill_parent"
-                    android:layout_height="1dp"
-                    android:layout_alignParentLeft="true"
-                    android:background="@color/gray_claro" />
             </LinearLayout>
         </ScrollView>
     </RelativeLayout>

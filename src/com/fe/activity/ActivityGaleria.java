@@ -69,7 +69,7 @@ public class ActivityGaleria extends ActivityBase{
 	setContentView(R.layout.gallery_image);
 	
 	textViewHeader=(TextView)findViewById(R.id.text_header);
-    textViewHeader.setText("FOTOS");
+    textViewHeader.setText("Fotos");
 	
     
     pB=(ProgressBar)findViewById(R.id.marker_progress);

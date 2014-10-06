@@ -71,7 +71,7 @@ public class ActivityMapUnju extends FragmentActivity implements LocationListene
 	  logger.info("activity map unju");
 		
 	  text_header=(TextView)findViewById(R.id.text_header);
-	  text_header.setText(Html.fromHtml("<u>UBICACION</u>"));
+	  text_header.setText(Html.fromHtml("Ubicación"));
 		
 		 // Getting Google Play availability status
         int status = GooglePlayServicesUtil.isGooglePlayServicesAvailable(getBaseContext());

@@ -54,7 +54,7 @@ public class ActivityCarreraContent extends Activity {
 		logger.debug("Activity Carrera Content Seleccionada : "+idCarrera);
 		
 		textHeader=(TextView)findViewById(R.id.text_header);
-		textHeader.setText(Html.fromHtml("<u>CARRERA</u>"));
+		textHeader.setText(Html.fromHtml("Carrera"));
 		
 		carreraBean=new CarreraBean(getApplicationContext());
 		Carrera objCarrera=carreraBean.get(Long.parseLong(idCarrera),Long.parseLong(idUniversity));
@@ -101,8 +101,8 @@ public class ActivityCarreraContent extends Activity {
 	      logger.debug("Materia : "+materia.toString());
 	      text_titulo.setText(objCarrera.getTitulo_carrera());
 	      text_duracion.setText(objCarrera.getDuracion_carrera());
-	      text_nivel.setText(objCarrera.getNivel_carrera());
-	      text_acreditacion.setText(objCarrera.getAcreditacion_carrera());
+	      text_nivel.setText(Html.fromHtml(objCarrera.getNivel_carrera()));
+	      text_acreditacion.setText(Html.fromHtml(objCarrera.getAcreditacion_carrera()));
 	      text_perfil.setText(Html.fromHtml(objCarrera.getPerfil_carrera()));
 	      text_materia.setText(Html.fromHtml(materia));
 	      text_alcance.setText(Html.fromHtml( objCarrera.getAlcance_carrera()));
@@ -217,11 +217,22 @@ public class ActivityCarreraContent extends Activity {
                materia+="<br>Diseño Experimental";	
                materia+="<br>Análisis Instrumental";
                
+               //Optativas 
+               materia+="<br><b>Optativas</b>";
+               materia+="<br>Optativa I";
+               materia+="<br>Optativa II";
+               materia+="<br>Optativa III";
+               materia+="<br>Optativa IV";
+               materia+="<br>Optativa V";
+               materia+="<br>Optativa VI";
+               materia+="<br>Practicas de Campo y/o Laboratorio";
+               materia+="<br>TESINA";
+               
 			
 		   };break;
 		case 3: {
 			  //LICENCIADO EN BROMATOLOGIA
-			materia+="<br><b>PRIMER AÑOz</b>";
+			materia+="<br><b>PRIMER AÑO</b>";
 			materia+="<br>Matemática I";	
 			materia+="<br>Química General";	
 			materia+="<br>Botánica Alimentaria";	
@@ -229,7 +240,7 @@ public class ActivityCarreraContent extends Activity {
 			materia+="<br>Química Inorgánica";	
 			materia+="<br>Física";
 			
-			materia+="<br><b>SEGUNDO AÑOz</b>";
+			materia+="<br><b>SEGUNDO AÑO</b>";
 			materia+="<br>Química Orgánica";	
 			materia+="<br>Química Analítica General";	
 			materia+="<br>Estadística";	
@@ -246,15 +257,24 @@ public class ActivityCarreraContent extends Activity {
 			materia+="<br>Higiene y Saneamiento";
 			materia+="<br>Toxicología de Alimentos";
 			
-			
-			materia+="<br><b>Fisiología de la Nutrición</b>";
+			materia+="<br><b>CUARTO AÑO</b>";
+			materia+="<br>Fisiología de la Nutrición";
 			materia+="<br>Tecnología de los Alimentos";
 			materia+="<br>Organización y Gestión de Calidad";
 			materia+="<br>Optativa *";
 			materia+="<br>Legislación y Educación Alimentaria";
 			materia+="<br>Taller de Calidad y Seguridad";
 			materia+="<br>Diseño Expermiental";
-			materia+="<br>Optativa";
+			materia+="<br>Optativa**";
+			
+			materia+="<br><br><b>MATERIAS OPTATIVAS</b>";
+			materia+="<br>Epistemología";
+            materia+="<br>Economía de la Producción Alimentaria";
+            materia+="<br>Tratamiento de Residuos y Efluentes";
+            materia+="<br>Productos Agrícolas Alimentarios";
+            materia+="<br>Biotecnología Alimentaria";
+            materia+="<br>Micrografía de los Alimentos de Origen vegetal";
+            materia+="<br>Calidad de productos Fruti-Hortícola";
 			
 			materia+="<br><b>LICENCIADO EN BROMATOLOGIA</b>";
 			
@@ -263,7 +283,7 @@ public class ActivityCarreraContent extends Activity {
 			
 			//BROMATOLOGO
 			materia+="<br><b>BROMATOLOGO</b>";
-			materia+="<br><b>PRIMER AÑOz</b>";
+			materia+="<br><b>PRIMER AÑO</b>";
 			materia+="<br>Matemática I";	
 			materia+="<br>Química General";	
 			materia+="<br>Botánica Alimentaria";	
@@ -271,7 +291,7 @@ public class ActivityCarreraContent extends Activity {
 			materia+="<br>Química Inorgánica";	
 			materia+="<br>Física";
 			
-			materia+="<br><b>SEGUNDO AÑOz</b>";
+			materia+="<br><b>SEGUNDO AÑO</b>";
 			materia+="<br>Química Orgánica";	
 			materia+="<br>Química Analítica General";	
 			materia+="<br>Estadística";	
@@ -435,6 +455,7 @@ public class ActivityCarreraContent extends Activity {
 			materia+="<br>30. Educación No Formal";
 			materia+="<br>31. Universidad y Formación Docente";
 			materia+="<br>32. PRÁCTICA Y RESIDENCIA (PARA EL TÍTULO DE PROFESOR)";
+			materia+="<br>TRABAJO DE CAMPO E INVESTIGACIÓN (TRABAJO FINAL) (PARA EL TÍTULO DE LICENCIADO)";
 
 		}
 			;
@@ -1032,7 +1053,7 @@ public class ActivityCarreraContent extends Activity {
 		materia+="<br>Introducción a la Informática"; 
 		materia+="<br>Química I ";
 		materia+="<br>Sistemas de Representación";
-		materia+="<br><b>SEGUNDO AÑO</b";
+		materia+="<br><b>SEGUNDO AÑO</b>";
 		materia+="<br>Física II ";
 		materia+="<br>Probabilidades y Estadística"; 
 		materia+="<br>Análisis Matemático II ";
@@ -1065,6 +1086,7 @@ public class ActivityCarreraContent extends Activity {
 		materia+="<br>Gestión Ambiental ";
 		materia+="<br>Ingeniería del Conocimiento"; 
 		materia+="<br>Legislación";
+		materia+="<br>Práctica Profesional Supervisada";
 		materia+="<br>Proyecto Final";
 	};break;
 	case 5:{
@@ -1142,7 +1164,53 @@ public class ActivityCarreraContent extends Activity {
 	};break;
 	case 7:{
 		//LICENCIADO EN CIENCIAS GEOLOGICAS
-		materia+="";
+		materia+="<br><b>PRIMER AÑO</b>";
+        materia+="<br>Álgebra y Geometría Analítica";
+        materia+="<br>Análisis Matemático I";
+        materia+="<br>Física I";
+        materia+="<br>Introducción a la Informática";
+        materia+="<br>Química I";
+        materia+="<br>Sistemas de Representación";
+        materia+="<br>Taller: Introducción a la Ingeniería de Minas";
+        materia+="<br><b>SEGUNDO AÑO</b>";
+        materia+="<br>Física II";
+        materia+="<br>Análisis Matemático II";
+        materia+="<br>Geología";
+        materia+="<br>Química II";
+        materia+="<br>Cálculo Numérico";
+        materia+="<br>Matemática para Ingenieros";
+        materia+="<br>Mecánica Aplicada a la Minería";
+        materia+="<br>Termodinámica";
+        materia+="<br><b>TERCER AÑO</b>";
+        materia+="<br>Química Analítica y Análisis de Menas";
+        materia+="<br>Topografía";
+        materia+="<br>Electricidad y Electrónica";
+        materia+="<br>Fisicoquímica";
+        materia+="<br>Seminario: Ingeniería de la Calidad y del Medio Ambiente";
+        materia+="<br>Estática y Resistencia de Materiales";
+        materia+="<br>Mecánica de Rocas y Suelos";
+        materia+="<br>Mineralogía";
+        materia+="<br>Seminario: Higiene y Seguridad Ambiental y del Trabajo";
+        materia+="<br><b>CUARTO AÑO</b>";
+        materia+="<br>Economía Minera y Dirección y Organización de Empresas";
+        materia+="<br>Máquinas Mineras y Servicios";
+        materia+="<br>Metalurgia Extractiva I";
+        materia+="<br>Procesamiento de Minerales I";
+        materia+="<br>Yacimientos de Minerales";
+        materia+="<br>Construcciones Mineras";
+        materia+="<br>Explotación de Minas I";
+        materia+="<br>Metalurgia Extractiva II";
+        materia+="<br>Petrografía y Petrología";
+        materia+="<br>Procesamiento de Minerales II";
+        materia+="<br>Prospección y Exploración";
+        materia+="<br><b>QUINTO AÑO</b>";
+         materia+="<br>Explotación de Minas II";
+         materia+="<br>Formulación y Evaluación de Proyectos";
+         materia+="<br>Procesamiento de Minerales III";
+         materia+="<br>Seminario: Ingeniería de la Producción y de la Empresa";
+         materia+="<br>Seminario: Legislación Minera y Ética Profesional";
+         materia+="<br>Proyecto Final";
+		
 	};break;
 	case 8:{
 		//TECNICO UNIVERSITARIO EN EXPLOTACION DE MINAS 2007 PERFIL Y ALCANCES

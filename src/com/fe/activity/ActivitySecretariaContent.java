@@ -1,5 +1,8 @@
 package com.fe.activity;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -37,6 +40,7 @@ public class ActivitySecretariaContent extends Activity {
 	private int currentSecretaria=0;
 	private int idSecretaria=0;
 	private ImageView image_call_secretaria;
+	private List<Secretaria> listSecretaria;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -51,9 +55,10 @@ public class ActivitySecretariaContent extends Activity {
 		logger.debug("Secretaria Id: "+id_secretaria);
 		
 		//cargo objectos 
+		loadData();
+		final Secretaria secretaria=getSecretaria(id_secretaria);
 		secretariaBean=new SecretariaBean();
-		final Secretaria secretaria=secretariaBean.GetBean(id_secretaria);
-		logger.debug("secretaria : "+secretaria.toString());
+		;
 	    
 		
 		image_telefonoCall=(ImageView)findViewById(id.image_secretariaTelefono);
@@ -69,7 +74,7 @@ public class ActivitySecretariaContent extends Activity {
 		text_telefono.setText(secretaria.getTelefono());
 	    text_email.setText(secretaria.getEmail());
 	    text_secretaria.setText(titulo_secretaria);
-	    text_header.setText("<u><b>SECRETARIA</b></u>");
+	    text_header.setText("Secretaria");
 		
 	    
 	    image_telefonoCall.setOnClickListener(new OnClickListener() {
@@ -100,5 +105,75 @@ public class ActivitySecretariaContent extends Activity {
 	*/
 	
 	
+	
+	private void loadData()
+	{
+		
+		listSecretaria=new ArrayList<Secretaria>();
+		//listSecretaria=(ArrayList<Secretaria>) UtilList.loadListSecretaria();
+		listSecretaria.add(
+				new Secretaria("1",
+						      "SECRETARIA GENERAL LEGAL Y TECNICA",
+						      " Dr. César Guillermo Farfán", 
+						      "descripcion",
+						      "Av. Bolivia 1239 S. S. de Jujuy", 
+						      "+54-(388)-4221-517",
+						      "gfarfan@unju.edu.ar "));
+		listSecretaria.add( new Secretaria(
+				                 "2",
+				                 "SECRETARIA DE ADMINISTRACION",
+				                 "CPN Fernanda Colque",
+				                 "",
+				                 "Av. Bolivia 1239 S. S. de Jujuy",
+				                 "+54-(388)-4221-514",
+				                 "secadmin@unju.edu.ar "));
+		
+		listSecretaria.add(new Secretaria(
+				                           "3",
+				                           "SECRETARIA DE CIENCIA Y TECNICA",
+				                           "Dra. María Graciela del Valle Bovi Mitre",
+				                           "",
+				                           "Av. Bolivia 1239 S. S. de Jujuy",
+				                           "+54-(388)-4221-505",
+				                           "secretariasectergb@unju.edu.ar"));
+		listSecretaria.add(new Secretaria(
+				                            "4",
+				                           "SECRETARIA DE EXTENSION UNIVERSITARIA",
+				                            "Dra. Elena Ester Belli",
+				                            "",
+				                            "Av. Bolivia 1239 S. S. de Jujuy",
+				                            "+54-(388)-4244-100 ",
+				                            "seu@unju.edu.ar"));
+		listSecretaria.add(new Secretaria(
+				                           "5",
+				                           "SECRETARIO DE ASUNTOS ACADEMICOS",
+				                           "Dr. Julio César Arrueta",
+				                           "",
+				                           "Av. Bolivia 1239 S. S. de Jujuy",
+				                           "+54-(388)-4221-504",
+				                           "c.arrueta@unju.edu.ar"));
+		listSecretaria.add(new Secretaria(
+				                          "6",
+				                         "SECRETARIO DE BIENESTAR UNIVERSITARIO",
+				                         "Sr. Diego Esteban Gutierrez", 
+				                         ""
+				                         , "Av. Bolivia 1239 S. S. de Jujuy", 
+				                         " +54-(388)-4221-500", 
+				                         "sbu@unju.edu.ar"));
+		
+	}
+	
+	private Secretaria getSecretaria(String idSecretaria)
+	{
+		Secretaria secretaria=new Secretaria();
+		for(Secretaria sec: listSecretaria)
+		{
+			  if(idSecretaria.equals(sec.getId_secretaria()))
+				  return sec;
+			
+		}
+		return null;
+		
+	}
 	
 }

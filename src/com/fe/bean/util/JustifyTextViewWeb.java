@@ -1,14 +1,14 @@
 package com.fe.bean.util;
-
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Color;
+import android.text.SpannableString;
 import android.util.AttributeSet;
-import android.view.View;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 
-public class JustifiedTextViewWeb  extends WebView {
+
+public class JustifyTextViewWeb extends WebView {
 
   
     private String core      = "<html><body style='text-align:justify;color:rgba(%s);font-size:%dpx;margin: 0px 0px 0px 0px;'>%s</body></html>";
@@ -17,7 +17,7 @@ public class JustifiedTextViewWeb  extends WebView {
 	    private int textSize     = 12;
 	    private int backgroundColor=Color.TRANSPARENT;
 
-	    public JustifiedTextViewWeb(Context context, AttributeSet attrs) {
+	    public JustifyTextViewWeb(Context context, AttributeSet attrs) {
 	        super(context, attrs);
 	        this.setWebChromeClient(new WebChromeClient(){});
 	    }

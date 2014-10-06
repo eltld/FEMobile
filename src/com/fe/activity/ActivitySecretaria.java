@@ -97,51 +97,50 @@ public class ActivitySecretaria extends Activity {
         		listSecretaria.add(
         				new Secretaria("1",
         						      "SECRETARIA GENERAL LEGAL Y TECNICA",
-        						      " Dr. César Guillermo FARFÁN", 
+        						      " Dr. César Guillermo Farfán", 
         						      "descripcion",
-        						      "", 
+        						      "Av. Bolivia 1239 S. S. de Jujuy", 
         						      "+54-(388)-4221-517",
         						      "gfarfan@unju.edu.ar "));
         		listSecretaria.add( new Secretaria(
         				                 "2",
         				                 "SECRETARIA DE ADMINISTRACION",
-        				                 "descripcion",
-        				                 "CPN Fernanda COLQUE",
-        				                 "direccion",
+        				                 "CPN Fernanda Colque",
+        				                 "",
+        				                 "Av. Bolivia 1239 S. S. de Jujuy",
         				                 "+54-(388)-4221-514",
         				                 "secadmin@unju.edu.ar "));
         		
         		listSecretaria.add(new Secretaria(
         				                           "3",
         				                           "SECRETARIA DE CIENCIA Y TECNICA",
-        				                           "Dra. María Graciela del Valle BOVI MITRE",
-        				                           "descripcion",
-        				                           "direccion",
+        				                           "Dra. María Graciela del Valle Bovi Mitre",
+        				                           "",
+        				                           "Av. Bolivia 1239 S. S. de Jujuy",
         				                           "+54-(388)-4221-505",
         				                           "secretariasectergb@unju.edu.ar"));
         		listSecretaria.add(new Secretaria(
         				                            "4",
         				                           "SECRETARIA DE EXTENSION UNIVERSITARIA",
-        				                            "Dra. Elena Ester BELLI",
-        				                            "descripcion",
-        				                            "direccion",
+        				                            "Dra. Elena Ester Belli",
+        				                            "",
+        				                            "Av. Bolivia 1239 S. S. de Jujuy",
         				                            "+54-(388)-4244-100 ",
         				                            "seu@unju.edu.ar"));
         		listSecretaria.add(new Secretaria(
         				                           "5",
         				                           "SECRETARIO DE ASUNTOS ACADEMICOS",
-        				                          
-        				                           "Dr. Julio César ARRUETA",
-        				                           "direccion",
-        				                           "descripcion",
+        				                           "Dr. Julio César Arrueta",
+        				                           "",
+        				                           "Av. Bolivia 1239 S. S. de Jujuy",
         				                           "+54-(388)-4221-504",
         				                           "c.arrueta@unju.edu.ar"));
         		listSecretaria.add(new Secretaria(
         				                          "6",
         				                         "SECRETARIO DE BIENESTAR UNIVERSITARIO",
-        				                         "Sr. Diego Esteban GUTIERREZ", 
-        				                         "descripcion"
-        				                         , "direccion", 
+        				                         "Sr. Diego Esteban Gutierrez", 
+        				                         ""
+        				                         , "Av. Bolivia 1239 S. S. de Jujuy", 
         				                         " +54-(388)-4221-500", 
         				                         "sbu@unju.edu.ar"));
         		

@@ -221,7 +221,7 @@ public class MainActivity extends Activity  implements OnItemClickListener {
 	    listItemGrid.add(new ItemGrid("Evento",res.getDrawable(R.drawable.evento)));
 	   // listItemGrid.add(new ItemGrid("Calendario",res.getDrawable(R.drawable.ic_launcher)));
 	    listItemGrid.add(new ItemGrid("Autoridades",res.getDrawable(R.drawable.autoridad))); 	
-	    listItemGrid.add(new ItemGrid("Oferta Academica",res.getDrawable(R.drawable.oferta)));
+	    listItemGrid.add(new ItemGrid("Oferta Academica",res.getDrawable(R.drawable.university3)));
 	    
 		return listItemGrid;
 	}

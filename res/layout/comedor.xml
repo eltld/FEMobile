@@ -15,33 +15,28 @@
         android:layout_below="@+id/header_carrera">
 
      <TextView
-              android:id="@+id/text_carreraFiltro"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:layout_alignParentLeft="true"
-              android:paddingLeft="10dp"
-             
-              android:paddingBottom="10dip"
-              android:paddingTop="10dip"
-              android:text="@string/comedor"
-              android:textSize="20dp"
-              android:textStyle="bold"
-              android:typeface="serif" />
-         
+         android:id="@+id/text_carreraFiltro"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_alignParentLeft="true"
+         android:paddingBottom="10dip"
+         android:paddingLeft="10dp"
+         android:paddingTop="10dip"
+         android:text="@string/comedor"
+         android:textSize="20dp"
+         android:textStyle="bold"
+         android:typeface="serif" />
 
-          <ListView
-              android:id="@+id/list_comedor"
-              android:layout_width="fill_parent"
-              android:layout_height="wrap_content"
-              android:layout_alignParentLeft="true"
-              android:layout_below="@+id/text_carreraFiltro"
-              android:background="#DDD1E7"
-              android:divider="@color/gray"
-              android:dividerHeight="0.1dp" >
-          </ListView>
-        
-        
-
-    </RelativeLayout>
+     <ListView
+         android:id="@+id/list_comedor"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:layout_alignParentLeft="true"
+         android:layout_below="@+id/text_carreraFiltro"
+         android:background="#DDD1E7"
+         android:divider="@color/gray"
+         android:dividerHeight="0.1dp" >
+     </ListView>
+</RelativeLayout>
     
 </RelativeLayout>
