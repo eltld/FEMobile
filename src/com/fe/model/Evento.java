@@ -63,7 +63,7 @@ public void setBajadaEvento(String bajadaEvento) {
 @Override
  public String toString()
  {
-	 return "idEvento : "+idEvento + " titulo: "+tituloEvento + " bajadas :"+bajadaEvento+ " fecha: "+fechaEvento 
+	 return "idEvento : "+idEvento + " titulo: "+tituloEvento + " bajadas : " +bajadaEvento+ " fecha: "+fechaEvento 
 			 + " horario : "+horarioEvento + " cuerpo : "+cuerpoEvento + " urlWeb : "+urlWebEvento;
 	 
 	 
