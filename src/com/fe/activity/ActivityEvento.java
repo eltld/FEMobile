@@ -144,6 +144,7 @@ public class ActivityEvento  extends Activity{
     				   JSONObject jsonObject=jsonArray.getJSONObject(i);
     				   evento.setIdEvento(jsonObject.getString(EventoTag.EVENTO_ID));
     				   evento.setTituloEvento(jsonObject.getString(EventoTag.EVENTO_TITULO));
+    				   evento.setFechaEvento(jsonObject.getString(EventoTag.EVENTO_BAJADA));
     				   evento.setFechaEvento(jsonObject.getString(EventoTag.EVENTO_FECHA));
     				   evento.setHorarioEvento(jsonObject.getString(EventoTag.EVENTO_HORARIO));
     				   evento.setCuerpoEvento(jsonObject.getString(EventoTag.EVENTO_CUERPO));

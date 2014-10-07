@@ -4,6 +4,7 @@ public class Evento {
 
  private String idEvento;
  private String tituloEvento;
+ private String bajadaEvento;
  private String fechaEvento;
  private String horarioEvento;
  private String cuerpoEvento;
@@ -51,10 +52,18 @@ public void setUrlWebEvento(String urlWebEvento) {
 }
  
  
- @Override
+ public String getBajadaEvento() {
+	return bajadaEvento;
+}
+
+public void setBajadaEvento(String bajadaEvento) {
+	this.bajadaEvento = bajadaEvento;
+}
+
+@Override
  public String toString()
  {
-	 return "idEvento : "+idEvento + " titulo: "+tituloEvento + " fecha: "+fechaEvento 
+	 return "idEvento : "+idEvento + " titulo: "+tituloEvento + " bajadas :"+bajadaEvento+ " fecha: "+fechaEvento 
 			 + " horario : "+horarioEvento + " cuerpo : "+cuerpoEvento + " urlWeb : "+urlWebEvento;
 	 
 	 

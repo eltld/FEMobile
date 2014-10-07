@@ -147,6 +147,7 @@ public final class ConstantDatabase {
 		public static final String T_EVENTO="evento";
 		public static final String EVENTO_ID="eve_id";
 		public static final String EVENTO_TITULO="eve_titulo";
+		public static final String EVENTO_BAJADA="eve_bajada";
 		public static final String EVENTO_FECHA="eve_fecha";
 		public static final String EVENTO_HORA="eve_hora";
 		public static final String EVENTO_CUERPO="eve_cuerpo";
@@ -157,6 +158,7 @@ public final class ConstantDatabase {
 		public static final String QUERY_CREATE_EVENTO="CREATE TABLE "+T_EVENTO+"("+
 		         EVENTO_ID +" integer ,"+
 			     EVENTO_TITULO+" text,"+
+		         EVENTO_BAJADA+" text,"+
 		         EVENTO_FECHA +" text,"+
 				 EVENTO_HORA+" text,"+
 		         EVENTO_CUERPO+" text,"+

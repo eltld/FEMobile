@@ -6,8 +6,6 @@ import org.slf4j.LoggerFactory;
 import com.fe.R;
 import com.fe.bean.NoticiaBean;
 import com.fe.bean.util.JustifiedTextView;
-import com.fe.bean.util.TextJustification;
-import com.fe.bean.util.TextJustify;
 import com.fe.bean.util.TextViewEx;
 import com.fe.model.Constants;
 import com.fe.model.Noticia;

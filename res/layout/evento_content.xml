@@ -1,23 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent" >
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
 
     <include
         android:id="@+id/include1"
         layout="@layout/header" />
 
-       <ScrollView
-           android:id="@+id/scrollView1"
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:layout_alignParentLeft="true"
-           android:layout_below="@+id/include1" >
+     <RelativeLayout
+          android:id="@+id/content"
+        android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="@color/header_text"
+          android:layout_below="@+id/include1"  >
+
+        <ScrollView
+            android:id="@+id/scrollView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+           >
 
            <LinearLayout
-               android:orientation="vertical"
                android:layout_width="match_parent"
-               android:layout_height="match_parent" >
+               android:layout_height="match_parent"
+               android:orientation="vertical" >
           
             <TextView
                 android:id="@+id/text_eventoContentTitulo"
@@ -27,67 +34,63 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
                 android:text="Titulo"
-                android:textSize="20dp"
+                android:textSize="19dp"
                 android:textStyle="bold"
                 android:typeface="serif" />
+
+             <TextView
+                 android:id="@+id/text_eventoContentBajada"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignParentLeft="true"
+                 android:layout_below="@+id/text_noticiaContentTitulo"
+                 android:layout_marginLeft="20dp"
+                 android:layout_marginTop="6dp"
+                 android:text="Bajada"
+                 android:textColor="@color/gray"
+                 android:textSize="15dp"
+                 android:typeface="sans" />
 
              <TextView
                  android:id="@+id/text_eventoContentFecha"
                  android:layout_width="wrap_content"
                  android:layout_height="wrap_content"
-                 android:layout_alignParentLeft="true"
-                 android:layout_below="@+id/text_eventoContentTitulo"
-                 android:layout_marginLeft="20dp"
-                 android:layout_marginTop="2dp"
                  android:text="Fecha"
+                 android:layout_marginTop="10dp"
+                 android:textSize="15dp"
+                 android:typeface="normal"
                  android:textColor="@color/gray"
-                 android:textSize="12dp"
-                 android:typeface="sans" />
-
-             <TextView
-                 android:id="@+id/text_eventoContentHora"
-                 android:layout_width="wrap_content"
-                 android:layout_height="wrap_content"
-                 android:layout_marginLeft="20dp"
-                 android:layout_marginTop="2dp"
-                 android:text="Hora"
-                 android:textColor="@color/gray"
-                 android:textSize="12dp"
-                 android:typeface="normal" />
+                 android:layout_marginLeft="20dp" />
                
            <TextView
             android:id="@+id/text_noticiaLineaUno"
             android:layout_width="fill_parent"
-            android:layout_height="2dp"
+            android:layout_height="1dp"
             android:layout_alignParentLeft="true"
             android:background="@color/gray_claro"
             android:layout_below="@+id/text_noticiaContentBajada"
             android:layout_marginTop="3dp"
        
              />
+     
            
-           <TextView
+          <com.fe.bean.util.TextViewEx
            android:id="@+id/text_eventoContentCuerpo"
            android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
+            android:layout_height="wrap_content"
            android:layout_alignParentLeft="true"
            android:layout_below="@+id/image_noticiaContentImage"
            android:layout_marginLeft="20dp"
            android:layout_marginTop="6dp"
-           android:typeface="serif"
-           android:textStyle="bold"
            android:text="Cuerpo" 
-           android:textSize="12dp"/>
+            />
+          
            
-            
-            
-            
-            
            </LinearLayout>
-       
            
            </ScrollView>
 
-    
+      
+</RelativeLayout>
 
 </RelativeLayout>

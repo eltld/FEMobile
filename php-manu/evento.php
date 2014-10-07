@@ -1,28 +1,76 @@
 <?php 
 
-$arr=array(
 
- array(
-  "evento_id"=>"1",
-  "evento_titulo"=>"titulo_1",
-  "evento_fecha"=>"14-4-2014",
-  "evento_horario"=>"todo el dia",
-  "evento_cuerpo"=>"cuerpo del evento",
-  "evento_url_web"=>"http://javatechig.com/wp-content/uploads/2013/06/"
- ),
-  array(
-  "evento_id"=>"2",
-  "evento_titulo"=>"titulo_2",
-  "evento_fecha"=>"15-04-2014",
-  "evento_horario"=>"desde 18:30 a 20:30",
-  "evento_cuerpo"=>"cuerpo del evento",
-  "evento_url_web"=>"http://javatechig.com/wp-content/uploads/2013/06/"
- ),
+$enlace =  mysql_connect('localhost', 'root', 'd3zinf04m');
+if (!$enlace) {
+    die('No pudo conectarse: ' . mysql_error());
+}
+else
+  { 
+  // Hacer que foo sea la base de datos actual
+      $bd_seleccionada = mysql_select_db('base02', $enlace);
+      if (!$bd_seleccionada) {
+         die ('No se puede usar foo : ' . mysql_error());
+      }else
+      {
+         
+         //1 : noticias , 2 :  noticias destacadas 
+         $consulta =  "select * from  noticias where publicado = 0  order by Id desc  limit 5 ";
+          
+             
+
+          // Ejecutar la consulta
+         $resultado = mysql_query($consulta,$enlace);
+
+           if (!$resultado) {
+            echo " consulta : "+$consulta;
+            $mensaje  = "Consulta no válida: " . mysql_error() . "\n";
+            $mensaje .= "Consulta completa: " . $consulta;
+           die($mensaje);
+          }else
+          {
+             $arr=array();
+          
+
+             $total_records = mysql_num_rows($resultado);
+
+             if($total_records >= 1)
+             {
+
+              
+             while ($row = mysql_fetch_array($resultado, MYSQL_ASSOC))
+
+                {
 
 
-);
+                   $row_array["evento_id"] = $row["Id"];
+                   $row_array["evento_titulo"] = $row["titulo"];
+                   $row_array["evento_bajada"] = $row["bajada"];
+                   $row_array["evento_fecha"]  =  $row["fecha"];
+                   $row_array["evento_horario"] = "";
+                   $row_array["evento_cuerpo"] =  $row["priparrafo"] . "\n" . 
+                                                    $row["segparrafo"] . "\n"  . 
+                                                    $row["terparrafo"] ; 
+                   $row_array["evento_url_web"]=""; 
 
 
-echo json_encode($arr);
+                   array_push($arr,$row_array);
+  
+                }
+          
+
+
+               echo json_encode($arr);
+
+           } 
+        
+          }
+            
+        
+
+      }
+  }
+
+mysql_close($enlace);
 
 ?>

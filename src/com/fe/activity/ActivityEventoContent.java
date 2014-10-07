@@ -29,10 +29,10 @@ public class ActivityEventoContent extends Activity {
 private static final Logger logger = (Logger) LoggerFactory.getLogger(ActivityEventoContent.class);
 
 private TextView text_eventoTitulo;
+private TextView text_eventoBajada;
 private TextView text_eventoFecha;
-private TextView text_eventoHora;
+
 private TextView text_eventoCuerpo;
-private TextView text_eventoUrlWeb;
 private TextView textHeader;
 private EventoBean eventoBean;
 
@@ -54,8 +54,8 @@ protected void onCreate(Bundle savedInstanceState) {
  logger.debug("Evento getObject :"+evento.toString());
  
  text_eventoTitulo=(TextView)findViewById(R.id.text_eventoContentTitulo);
+ text_eventoBajada=(TextView)findViewById(R.id.text_eventoContentBajada);
  text_eventoFecha=(TextView)findViewById(R.id.text_eventoContentFecha);
- text_eventoHora=(TextView)findViewById(R.id.text_eventoContentHora);
  text_eventoCuerpo=(TextView)findViewById(R.id.text_eventoContentCuerpo);
  //text_eventoUrlWeb=(TextView)findViewById(R.id.text_eventoContentUrlWeb);
  textHeader=(TextView)findViewById(R.id.text_header);
@@ -67,8 +67,9 @@ protected void onCreate(Bundle savedInstanceState) {
  if(evento!=null)
   {
 	 text_eventoTitulo.setText(evento.getTituloEvento());
+	 text_eventoBajada.setText(evento.getBajadaEvento());
 	 text_eventoFecha.setText(evento.getFechaEvento());
-	 text_eventoHora.setText(evento.getHorarioEvento());
+	
 	 text_eventoCuerpo.setText(evento.getCuerpoEvento());
 	 //text_eventoUrlWeb.setText(evento.getUrlWebEvento()); 
   }

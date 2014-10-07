@@ -368,13 +368,14 @@ containing a value of this type.
         public static final int common_signin_btn_light_text_disabled=0x7f050006;
         public static final int common_signin_btn_light_text_focused=0x7f050007;
         public static final int common_signin_btn_light_text_pressed=0x7f050005;
-        public static final int common_signin_btn_text_dark=0x7f05001e;
-        public static final int common_signin_btn_text_light=0x7f05001f;
+        public static final int common_signin_btn_text_dark=0x7f05001f;
+        public static final int common_signin_btn_text_light=0x7f050020;
         public static final int gray=0x7f05001b;
         public static final int gray_claro=0x7f05001c;
         public static final int header_background=0x7f050017;
         public static final int header_background_image=0x7f050019;
         public static final int header_banner=0x7f05001a;
+        public static final int header_principal=0x7f05001e;
         public static final int header_text=0x7f050018;
         public static final int wallet_bright_foreground_disabled_holo_light=0x7f05000f;
         /** 
@@ -394,8 +395,8 @@ containing a value of this type.
         public static final int wallet_hint_foreground_holo_light=0x7f050011;
         public static final int wallet_holo_blue_light=0x7f050015;
         public static final int wallet_link_text_light=0x7f050016;
-        public static final int wallet_primary_text_holo_light=0x7f050020;
-        public static final int wallet_secondary_text_holo_dark=0x7f050021;
+        public static final int wallet_primary_text_holo_light=0x7f050021;
+        public static final int wallet_secondary_text_holo_dark=0x7f050022;
     }
     public static final class dimen {
         /**  Default screen margins, per the Android Design guidelines. 
@@ -629,9 +630,9 @@ containing a value of this type.
         public static final int text_divider6=0x7f070023;
         public static final int text_eventHeader=0x7f070081;
         public static final int text_eventoConnection=0x7f070069;
+        public static final int text_eventoContentBajada=0x7f07006c;
         public static final int text_eventoContentCuerpo=0x7f07006f;
-        public static final int text_eventoContentFecha=0x7f07006c;
-        public static final int text_eventoContentHora=0x7f07006d;
+        public static final int text_eventoContentFecha=0x7f07006d;
         public static final int text_eventoContentTitulo=0x7f07006b;
         public static final int text_eventoDetalle=0x7f070072;
         public static final int text_eventoId=0x7f070073;

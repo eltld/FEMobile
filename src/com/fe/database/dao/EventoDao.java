@@ -25,6 +25,7 @@ private static final Logger logger = (Logger) LoggerFactory.getLogger(AutoridadD
    String[] columns = new String[] { 
    		            ConstantDatabase.EVENTO_ID,
    		            ConstantDatabase.EVENTO_TITULO,
+   		            ConstantDatabase.EVENTO_BAJADA,
    		            ConstantDatabase.EVENTO_FECHA,
    		            ConstantDatabase.EVENTO_HORA,
    		            ConstantDatabase.EVENTO_CUERPO,
@@ -54,6 +55,7 @@ private static final Logger logger = (Logger) LoggerFactory.getLogger(AutoridadD
 			ContentValues values=new ContentValues();
 			values.put(ConstantDatabase.EVENTO_ID, obj.getIdEvento());
 			values.put(ConstantDatabase.EVENTO_TITULO, obj.getTituloEvento());
+			values.put(ConstantDatabase.EVENTO_BAJADA, obj.getBajadaEvento());
 			values.put(ConstantDatabase.EVENTO_FECHA,obj.getFechaEvento());
 			values.put(ConstantDatabase.EVENTO_HORA,obj.getHorarioEvento());
 			values.put(ConstantDatabase.EVENTO_CUERPO,obj.getCuerpoEvento());
@@ -73,6 +75,7 @@ private static final Logger logger = (Logger) LoggerFactory.getLogger(AutoridadD
 		{
 	     int evento_id =cursor.getColumnIndex(ConstantDatabase.EVENTO_ID);
 	     int evento_titulo=cursor.getColumnIndex(ConstantDatabase.EVENTO_TITULO);
+	     int evento_bajada=cursor.getColumnIndex(ConstantDatabase.EVENTO_BAJADA);
 	     int evento_fecha=cursor.getColumnIndex(ConstantDatabase.EVENTO_FECHA);
 	     int evento_hora=cursor.getColumnIndex(ConstantDatabase.EVENTO_HORA);
 	     int evento_cuerpo=cursor.getColumnIndex(ConstantDatabase.EVENTO_CUERPO);
@@ -81,6 +84,7 @@ private static final Logger logger = (Logger) LoggerFactory.getLogger(AutoridadD
 	    
 	     evento.setIdEvento(cursor.getString(evento_id));
 	     evento.setTituloEvento(cursor.getString(evento_titulo));
+	     evento.setBajadaEvento(cursor.getString(evento_bajada));
 	     evento.setFechaEvento(cursor.getString(evento_fecha));
 	     evento.setHorarioEvento(cursor.getString(evento_hora));
 	     evento.setCuerpoEvento(cursor.getString(evento_cuerpo));
