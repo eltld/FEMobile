@@ -1,7 +1,9 @@
 <?php 
 
 
-$enlace =  mysql_connect('localhost', 'root', 'd3zinf04m');
+require_once ("config.php");
+
+$enlace =  mysql_connect($servidor, $user,$password);
 if (!$enlace) {
     die('No pudo conectarse: ' . mysql_error());
 }

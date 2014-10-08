@@ -13,7 +13,7 @@
      android:layout_marginLeft="40dp"
      android:layout_marginTop="30dp"
      android:contentDescription="@string/descripcion"
-     android:src="@drawable/baneraplicacionunju" />
+     android:src="@drawable/logomovila2" />
  
  
   <ScrollView
@@ -83,20 +83,6 @@
            android:textStyle="bold"
            android:typeface="normal"
            android:layout_marginTop="1dp" />
-
-       <TextView
-           android:id="@+id/textView2"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-
-           android:layout_alignLeft="@+id/image_navigator"
-           android:layout_below="@+id/image_navigator"
-           android:text="Sitio Web"
-           android:gravity="center_horizontal"
-           android:textColor="@color/blanco"
-           android:textColorLink="@color/gray_claro"
-           android:textStyle="bold"
-           android:layout_marginTop="1dp" />
          
            <!--  
            android:layout_alignRight="@+id/image_navigator"
@@ -107,6 +93,19 @@
            android:textColorLink="@color/gray_claro"
            android:textStyle="bold" />
            -->
+
+       <TextView
+           android:id="@+id/textView2"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_alignParentLeft="true"
+           android:layout_below="@+id/image_navigator"
+           android:layout_marginLeft="40dp"
+           android:gravity="center_horizontal"
+           android:text="www.unju.edu.ar"
+           android:textColor="@color/blanco"
+           android:textColorLink="@color/gray_claro"
+           android:textStyle="bold" />
 
   </RelativeLayout>
 </RelativeLayout>  
@@ -122,7 +121,34 @@
       android:layout_marginTop="10dp"
       android:background="#555" />
 
-  
+  <RelativeLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignBottom="@+id/textView1"
+      android:layout_alignParentLeft="true"
+      android:layout_alignParentRight="true"
+      android:layout_alignParentTop="true"
+      android:background="@color/header_principal" >
+
+  </RelativeLayout>
+
+  <RelativeLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignBottom="@+id/textView1"
+      android:layout_alignParentLeft="true"
+      android:layout_alignParentRight="true"
+      android:layout_alignParentTop="true" >
+
+      <ImageView
+          android:id="@+id/imageView1"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_centerHorizontal="true"
+          android:layout_centerVertical="true"
+          android:src="@drawable/logomovila2" />
+
+  </RelativeLayout>
   
 </RelativeLayout>
 

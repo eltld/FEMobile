@@ -592,9 +592,29 @@ carrera=new Carrera();
 carrera.setId_carrera(12);
 carrera.setTitulo_carrera("TECNICATURA UNIVERSITARIA EN PERFORACIONES");
 carrera.setNivel_carrera("Título de PreGrado");
-carrera.setAcreditacion_carrera("");
-carrera.setPerfil_carrera("");
-carrera.setPerfil_carrera("");
+carrera.setAcreditacion_carrera("Aprobado por la resolución CAFI N° 409/12");
+carrera.setPerfil_carrera("La formación del estudiante, en virtud del programa de estudios de esta carrera y del consenso del cue rpo docente acerca de los objetivos de la educación impartida, está orientada a lograr graduados con las siguientes características:"+
+"<br>Solvencia en la ejecución de tareas profesionales específicas."+
+"<br>Capacidad para la resolución de problemas técnicos utilizan do herramientas científicas."+
+"<br>Capacidad de incorporar permanentemente los avances en los conocimientos técnicos específicos."+
+"<br>Compromiso con la problemática regional en la que desempeña sus tareas."+
+"<br>Capacidad crítica para la toma de decisiones."+
+"<br>Conocimiento de las disposiciones legales y normativas referentes a su desempeño profesional."+
+"<br>Conciencia de su responsabilidad en la seguridad en el trabajo y de la protección del medio ambiente."+
+"<br>Compromiso y responsabilidad para la seguridad en el trabajo y la protecció n del medio ambiente.");
+carrera.setAlcance_carrera("Alcances del Título (incumbencias): El Título de Técnico Universitario en Pe rforaciones habilita para:"+
+"<br>Asistir en la programación, dirección, ejecución y control de la perforación, terminación y reparación de pozos petrolíferos, de exploración y explotación."+
+"<br>Asistir en la programación, dirección, ejecución y control de la perfora ción y terminación de pozos de exploración minera."+
+"<br>Asistir en la programación, dirección y control de la perforación, diseño y desarrollo de pozos de agua."+
+"<br>Realizar, interpretar y controlar los lodos de perforación en boca de pozo."+
+"<br>Control y monitoreo de los lodos de perforación en boca de pozo."+
+"<br>Realizar e interpretar ensayos de materiales y herramientas especiales en boca de pozo."+
+"<br>Interpretar y realizar ensayos de materiales y manejar herramientas especiales en boca de pozo."+
+"<br>Organizar, dirigir y controlar la documentación de pozos."+
+"<br>Describir las muestras de pozos durante la perforación o ejecución de los mismos."+
+"<br>Utilizar el instrumental necesario para la perforación de pozos y controlar su funcionamiento."+
+"<br>Describir las muestras extraídas de las perforacion es de pozos de exploración minera , petrolíferos y de agua."+
+"<br>Operar instrumental topográfico y manejo de software específico.");
 carrera.setDuracion_carrera("3 años");
 carrera.setId_grado(Constants.CARRERA_PREGADO);
 carrera.setId_university(Constants.FACU_INGENIERIA_ID);
@@ -604,9 +624,22 @@ carrera=new Carrera();
 carrera.setId_carrera(13);
 carrera.setTitulo_carrera("TECNICATURA UNIVERSITARIA EN CIENCIAS DE LA TIERRA ORIENTADA A PETROLEO");
 carrera.setNivel_carrera("Título de PreGrado");
-carrera.setAcreditacion_carrera("");
-carrera.setPerfil_carrera("");
-carrera.setPerfil_carrera("");
+carrera.setAcreditacion_carrera(" Aprobado por la resolución CAFI N° 410/12");
+carrera.setPerfil_carrera("La formación del estudiante, en virtud del programa de estudios de esta carrera y del consenso del cuerpo docente acerca de l os objetivos de la educación impartida, está orientada a lograr graduados con las siguientes características:"+
+"<br>Solvencia en la ejecución de tareas específicas según alcances del título ."+
+"<br>Capacidad para la resolución de problemas técnicos utilizando herramie ntas científicas ."+
+"<br>Capacidad de incorporar permanentemente los avances en los conocimientos técnicos específicos."+
+"<br>Compromiso con la problemática regional en la que desempeña sus tareas."+
+"<br>Capacidad crítica en la toma de decisiones."+
+"<br>Conciencia de su responsabi lidad en la seguridad en el trabajo y de la protección del medio ambiente."+
+"<br>Capacidad para trabajar en equipos disciplinarios e interdisciplinarios."+
+"<br>Competencia en la aplicación del lenguaje informático pertinente.");
+carrera.setAlcance_carrera("Alcance del Título (incumbencias): El Título de Téc nico Universitario en Formaciones Petrolíferas :"+
+"<br>Realizar tareas técnicas integrando los equipos especializados en exploración de empresas petroleras."+
+"<br>Realizar tarea s auxiliares en el área de la geología en petróleo en archivos, banco de datos informatizados, institutos geológicos."+
+"<br>Colaborar en tareas de arbitraje y peritaje relacionados con la detección y aprovechamiento de recursos geológicos petroleros."+
+"<br>Asistir en estudios de factibilidad, proyectos, cálculos, dirección, construcción, instalación, inspección, operación y mantenim iento de obras de exploración de yacimientos de petróleo y gas."+
+"<br>Asistir en estudios de nivelación, relevamientos, ubicación y ponderación de yacimientos. Selección de máquinas, aparatos e instrument os relacionados con la exploración petrolera.");
 carrera.setDuracion_carrera("3 años");
 carrera.setId_grado(Constants.CARRERA_PREGADO);
 carrera.setId_university(Constants.FACU_INGENIERIA_ID);
@@ -714,7 +747,7 @@ return listCarrera;
 		//Carreras de Grado 
 		Carrera carrera=new Carrera();
 		carrera.setId_carrera(1);
-		carrera.setTitulo_carrera(" LICENCIADO EN COMUNICACION SOCIAL");
+		carrera.setTitulo_carrera("LICENCIADO EN COMUNICACION SOCIAL");
 		carrera.setNivel_carrera("Título de Grado");
 		carrera.setAcreditacion_carrera(" Licenciado en Comunicación Social (R.M. 1121/94)");
 		carrera.setPerfil_carrera("Un Licenciado en Comunicación Social estará capacitado para:"+
@@ -828,7 +861,7 @@ return listCarrera;
    carrera.setTitulo_carrera("PROFESOR EN LETRAS "+
                              "LICENCIATURA EN LETRAS ");
    carrera.setNivel_carrera("Título de Grado");
-   carrera.setDuracion_carrera("<br>Profesor en Letras C.S. 280/06. 4 años"+
+   carrera.setDuracion_carrera("<br>Profesor en Letras C.S. 280/06. 4 años , "+
 " <br>Licenciado en Letras C.S. 280/06. 5 años y Tesina Final");
    carrera.setAcreditacion_carrera("Profesor en Letras C.S. 280/06. 4 años"
                                    +"Licenciado en Letras C.S. 280/06. 5 años y Tesina Final");
@@ -1023,5 +1056,7 @@ return listCarrera;
 		return listCarrera;
 	}
 
+	
+	
 
 }

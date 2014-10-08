@@ -131,6 +131,7 @@ public class ActivityCarrera extends Activity {
 	    				 listData=(ArrayList<Carrera>)loadCarrera.loadCarreraEconomica();
 	    				 
 	    			 };break;
+	    		
 	    			}
 	    		  
 	    		}catch(Exception ex)

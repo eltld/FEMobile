@@ -18,10 +18,10 @@ public abstract  class ConstantRest {
 	public final static String URL_BASE="http://10.2.2.113/php-manu/";
 	
 	public final static String URL_NOTICIAS=URL_BASE+"noticias.php";
-    public final static String URL_AUTORIDADES="http://mauonda.netau.net/autoridad.php";
-	public final static String URL_IMAGES="http://10.2.2.113/manu/fotos.php";
+    public final static String URL_AUTORIDADES=URL_BASE+"autoridad.php";
+	public final static String URL_IMAGES=URL_BASE+"fotos.php";
 	public final static String URL_EVENTO=URL_BASE+"evento.php";
-	public final static String URL_CONTACTO="http://10.2.2.113/manu/contacto.php";
+	public final static String URL_CONTACTO=URL_BASE+"contacto.php";
 	//IMAGES
 	 public final static String URL_IMAGE_UNJU="http://manuonda.netau.net/unju.jpg";
 

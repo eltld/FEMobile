@@ -84,6 +84,7 @@ private static final Logger logger = (Logger) LoggerFactory.getLogger(AutoridadD
 	    
 	     evento.setIdEvento(cursor.getString(evento_id));
 	     evento.setTituloEvento(cursor.getString(evento_titulo));
+	     logger.debug("evento bajada en Get : "+cursor.getString(evento_bajada)+ " evento_bajada :"+evento_bajada);
 	     evento.setBajadaEvento(cursor.getString(evento_bajada));
 	     evento.setFechaEvento(cursor.getString(evento_fecha));
 	     evento.setHorarioEvento(cursor.getString(evento_hora));

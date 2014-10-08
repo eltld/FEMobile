@@ -1,5 +1,11 @@
 <?php 
 
+
+require_once ("config.php");
+
+$dir_fotos="http://10.2.2.113/php-manu/fotos/facebook.jpg";
+
+
 $arr=array(
 
  array(
@@ -8,7 +14,7 @@ $arr=array(
   "autoridad_nombre"=>"Lic. Rodolfo Alejandro TECCHI ",
   "autoridad_email"=>"rtecchi@unju.edu.ar",
   "autoridad_telefono"=>"Tel: +54-(388)-4221-502 ",
-  "autoridad_url_imagen"=>"http://mauonda.netau.net/unju.jpg"
+  "autoridad_url_imagen"=>$dir_fotos
   ),
 
  array(
@@ -17,7 +23,7 @@ $arr=array(
   "autoridad_nombre"=>"Lic. Jorge Eugenio GRIOT ",
   "autoridad_email"=>"viceerrector@unju.edu.ar ",
   "autoridad_telefono"=>"Tel: +54-(388)-4221-501 ",
-  "autoridad_url_imagen"=>"http://mauonda.netau.net/unju.jpg"
+  "autoridad_url_imagen"=>$dir_fotos
   ),
 
  array(
@@ -26,7 +32,7 @@ $arr=array(
   "autoridad_nombre"=>"E.S. Edgardo Aramayo ",
   "autoridad_email"=>"secgeneral@unju.edu.ar ",
   "autoridad_telefono"=>"Tel: +54-(388)-4221-517 ",
-  "autoridad_url_imagen"=>"http://mauonda.netau.net/unju.jpg"
+  "autoridad_url_imagen"=>$dir_fotos
   ),
 
  array(
@@ -35,7 +41,7 @@ $arr=array(
   "autoridad_nombre"=>"Dr. César Guillermo FARFÁN ",
   "autoridad_email"=>"gfarfan@unju.edu.ar ",
   "autoridad_telefono"=>"Tel: +54-(388)-4221-517 ",
-  "autoridad_url_imagen"=>"http://mauonda.netau.net/unju.jpg"
+  "autoridad_url_imagen"=>$dir_fotos
   ),
  array(
   "autoridad_id"=>"5",
@@ -43,7 +49,7 @@ $arr=array(
   "autoridad_nombre"=>"CPN Fernanda COLQUE ",
   "autoridad_email"=>"secadmin@unju.edu.ar ",
   "autoridad_telefono"=>"Tel: +54-(388)-4221-514 ",
-  "autoridad_url_imagen"=>"http://mauonda.netau.net/unju.jpg"
+  "autoridad_url_imagen"=>$dir_fotos
   ),
  array(
   "autoridad_id"=>"6",
@@ -51,7 +57,7 @@ $arr=array(
   "autoridad_nombre"=>"Dra. María G. BOVI MITRE ",
   "autoridad_email"=>"secretariasectergb@unju.edu.ar ",
   "autoridad_telefono"=>"Tel: +54-(388)-4221-505 ",
-  "autoridad_url_imagen"=>"http://mauonda.netau.net/unju.jpg"
+  "autoridad_url_imagen"=>$dir_fotos
   ),
   array(
   "autoridad_id"=>"7",
@@ -59,7 +65,7 @@ $arr=array(
   "autoridad_nombre"=>"Dra. Elena Ester BELLI ",
   "autoridad_email"=>"seu@unju.edu.ar ",
   "autoridad_telefono"=>"el: +54-(388)-4244-100 ",
-  "autoridad_url_imagen"=>"http://mauonda.netau.net/unju.jpg"
+  "autoridad_url_imagen"=>$dir_fotos
   ),
    array(
   "autoridad_id"=>"8",
@@ -67,7 +73,7 @@ $arr=array(
   "autoridad_nombre"=>"Dr. Julio César ARRUETA ",
   "autoridad_email"=>"c.arrueta@unju.edu.ar ",
   "autoridad_telefono"=>"Tel: +54-(388)-4221-504 ",
-  "autoridad_url_imagen"=>"http://mauonda.netau.net/unju.jpg"
+  "autoridad_url_imagen"=>$dir_fotos
   ),
   array(
   "autoridad_id"=>"9",
@@ -75,7 +81,7 @@ $arr=array(
   "autoridad_nombre"=>"Sr. Diego Esteban GUTIERREZ ",
   "autoridad_email"=>"sbu@unju.edu.ar ",
   "autoridad_telefono"=>"Tel: +54-(388)-4221-500 ",
-  "autoridad_url_imagen"=>"http://mauonda.netau.net/unju.jpg"
+  "autoridad_url_imagen"=>$dir_fotos
   ),
    array(
   "autoridad_id"=>"10",
@@ -83,7 +89,7 @@ $arr=array(
   "autoridad_nombre"=>"Ing. Gustavo Alberto Lores ",
   "autoridad_email"=>"decano@fi.unju.edu.ar  ",
   "autoridad_telefono"=>"Tel: +54-(388)-4221-542 ",
-  "autoridad_url_imagen"=>"http://mauonda.netau.net/unju.jpg"
+  "autoridad_url_imagen"=>$dir_fotos
   ),
      array(
   "autoridad_id"=>"11",
@@ -91,7 +97,7 @@ $arr=array(
   "autoridad_nombre"=>"Dr. Ricardo Enrique Gregorio Slavutsky",
   "autoridad_email"=>"decano@fhycs.unju.edu.ar ",
   "autoridad_telefono"=>"Tel: +54-(388)-4221-560 ",
-  "autoridad_url_imagen"=>"http://mauonda.netau.net/unju.jpg"
+  "autoridad_url_imagen"=>$dir_fotos
   ),
     array(
   "autoridad_id"=>"12",
@@ -99,7 +105,7 @@ $arr=array(
   "autoridad_nombre"=>"Mg. Ing. Agr. Mario Cesar BONILLO ",
   "autoridad_email"=>"decanofca@fca.unju.edu.ar ",
   "autoridad_telefono"=>"Tel: +54-(388)-4221-557 ",
-  "autoridad_url_imagen"=>"http://mauonda.netau.net/unju.jpg"
+  "autoridad_url_imagen"=>$dir_fotos
   ),
       array(
   "autoridad_id"=>"13",
@@ -107,7 +113,7 @@ $arr=array(
   "autoridad_nombre"=>"CPN María Rosa GRISOLÍA ",
   "autoridad_email"=>"cragrisolia@fce.unju.edu.ar ",
   "autoridad_telefono"=>"Tel: +54-(388)-4221536 ",
-  "autoridad_url_imagen"=>"http://mauonda.netau.net/unju.jpg"
+  "autoridad_url_imagen"=>$dir_fotos
   )
 
 

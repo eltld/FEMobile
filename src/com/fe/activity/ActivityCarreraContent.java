@@ -100,7 +100,7 @@ public class ActivityCarreraContent extends Activity {
 	      
 	      logger.debug("Materia : "+materia.toString());
 	      text_titulo.setText(objCarrera.getTitulo_carrera());
-	      text_duracion.setText(objCarrera.getDuracion_carrera());
+	      text_duracion.setText(Html.fromHtml(objCarrera.getDuracion_carrera()));
 	      text_nivel.setText(Html.fromHtml(objCarrera.getNivel_carrera()));
 	      text_acreditacion.setText(Html.fromHtml(objCarrera.getAcreditacion_carrera()));
 	      text_perfil.setText(Html.fromHtml(objCarrera.getPerfil_carrera()));
@@ -1307,9 +1307,66 @@ public class ActivityCarreraContent extends Activity {
 		materia+="<br>Práctica Profesional Asistida";
 		
 	};break;
-	case 12:{materia="";};break;
-	case 13:{materia="";};break;
-	}
+	case 12:{
+		//TECNICATURA UNIVERSITARIA EN PERFORACIONES
+		materia="<br><b>PRIMER AÑO</b>";
+		materia+="<br>Álgebra y Geometría Analítica";
+		materia+="<br>Física General";
+		materia+="<br>Análisis Matemático";
+		materia+="<br>Introducción a la Geología";
+		materia+="<br>Química I";
+		materia+="<br>Práctica Geológica I";
+		materia+="<br><b>SEGUNDO AÑO</b>";
+		materia+="<br>Mineralogía";
+		materia+="<br>Geología Estructural";
+		materia+="<br>Química II";
+		materia+="<br>Perforaciones I";
+		materia+="<br>Carteo Geológico";
+		materia+="<br>Petrografía Sedimentaria";
+		materia+="<br><b>TERCER AÑO</b>";
+		materia+="<br>Recursos Energéticos";
+		materia+="<br>Yacimientos Minerales";
+		materia+="<br>Perforaciones II";
+		materia+="<br>Máquinas de Exploración";
+		materia+="<br>Geofísica";
+		materia+="<br>Legislación Minera y Laboral";
+		materia+="<br>Recursos Hídricos";
+		materia+="<br>Práctica Profesional Asistida";
+		
+	};break;
+	case 13:
+	{ 
+		//TECNICATURA UNIVERSITARIA EN CIENCIAS 
+		//DE LA TIERRA ORIENTADA A PETROLEO
+		materia="<br><b>PRIMER AÑO</b>";
+		materia+="<br>Álgebra y Geometría Analítica";
+		materia+="<br>Física General";
+		materia+="<br>Análisis Matemático";
+		materia+="<br>Introducción a la Geología";
+		materia+="<br>Química I";
+		materia+="<br>Práctica Geológica I";
+		materia+="<br><b>SEGUNDO AÑO</b>";
+		materia+="<br>Geología Estructural";
+		materia+="<br>Química II";
+		materia+="<br>Práctica Geológica II";
+		materia+="<br>Mineralogía";
+		materia+="<br>Carteo Geológico";
+		materia+="<br>Sedimentología";
+		materia+="<br>Estratigrafía y Geología Histórica";
+		materia+="<br>Geofísica";
+		materia+="<br><b>TERCER AÑO</b>";
+		materia+="<br>Reservorios";
+		materia+="<br>Geología del Petróleo";
+		materia+="<br>Prospección y Perforación Petrolera";
+		materia+="<br>Teledetección y Sensores Remotos";
+		materia+="<br>Geomorfología";
+		materia+="<br>Petrografía Ígnea y Metamórfica";
+		materia+="<br>Práctica Profesional Asistida";
+		
+		
+	
+	};break;
+}
   	   return materia;
 	}
 }

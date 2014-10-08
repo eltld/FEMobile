@@ -13,7 +13,7 @@
         android:background="@color/blanco"
         android:contentDescription="@string/descripcion"
         android:scaleType="centerCrop"
-        android:src="@drawable/logo" />
+        android:src="@drawable/logob72" />
 
     <TextView
         android:id="@+id/text_newsHeader"

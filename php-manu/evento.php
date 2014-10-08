@@ -1,7 +1,9 @@
 <?php 
 
 
-$enlace =  mysql_connect('localhost', 'root', 'd3zinf04m');
+require_once ("config.php");
+
+$enlace =  mysql_connect($servidor, $user,$password);
 if (!$enlace) {
     die('No pudo conectarse: ' . mysql_error());
 }
@@ -15,7 +17,7 @@ else
       {
          
          //1 : noticias , 2 :  noticias destacadas 
-         $consulta =  "select * from  noticias where publicado = 0  order by Id desc  limit 5 ";
+         $consulta =  "select * from  noticias where publicado = 3  order by Id desc  limit 5 ";
           
              
 

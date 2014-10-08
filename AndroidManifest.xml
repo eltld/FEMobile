@@ -132,6 +132,12 @@
             android:label="@string/activity_carrera">
         
          </activity>
+         
+           <activity 
+            android:name="com.fe.activity.ActivityCarreraMinas"
+            android:label="@string/activity_carrera">
+ 
+         </activity>
           <activity 
             android:name="com.fe.activity.ActivityUniversityMap"
             android:label="@string/activity_map_unju">

@@ -89,24 +89,18 @@ public class ComedorDao {
 			System.out.println("Cursor != null Comedor");
 			int com_id = cursor.getColumnIndex(ConstantDatabase.COM_ID);
 			int com_nombre = cursor.getColumnIndex(ConstantDatabase.COM_NOMBRE);
-			int com_responsable = cursor
-					.getColumnIndex(ConstantDatabase.COM_RESPONSABLE);
+			int com_responsable = cursor.getColumnIndex(ConstantDatabase.COM_RESPONSABLE);
 			int com_calle = cursor.getColumnIndex(ConstantDatabase.COM_CALLE);
 			int com_barrio = cursor.getColumnIndex(ConstantDatabase.COM_BARRIO);
 
 			comedor = new Comedor();
 
 			
-			System.out.println("Comedor new comedor");
 			comedor.setId_comedor(Integer.parseInt(cursor.getString(com_id)));
 			comedor.setNombre_comedor(cursor.getColumnName(com_nombre));
-		   
-			System.out.println("comedor 1");
 		 	comedor.setResponsable_comedor(cursor.getString(com_responsable));
-		 	System.out.println("comedor2");
 			comedor.setCalle_comedor(cursor.getString(com_calle));
 			comedor.setBarrio_comedor(cursor.getString(com_barrio));
-			System.out.println("comedor 2");
 			cursor.close();
 		
 			return comedor;

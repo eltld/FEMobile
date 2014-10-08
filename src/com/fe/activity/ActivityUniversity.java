@@ -92,10 +92,28 @@ public class ActivityUniversity extends Activity {
 				        	
 				        };break;
 				        case 1 : {
-				        	logger.debug("Carreras");
-				        	Intent intent=new Intent(ActivityUniversity.this, ActivityCarrera.class);
-				        	intent.putExtra(Constants.UNIVERSITY_ID,text_id.getText().toString());
-				        	startActivity(intent);
+				        	logger.debug("Carrera "+text_id.getText().toString());
+							if (text_id
+									.getText()
+									.toString()
+									.equals(String.valueOf(Constants.ESC_MINAS))) {
+								logger.debug("Es igual a escuela de minas");
+								Intent intent = new Intent(
+										ActivityUniversity.this,
+										ActivityCarreraMinas.class);
+
+								startActivity(intent);
+
+							} else {
+								logger.debug("no es igual a esc de inas");
+								Intent intent = new Intent(
+										ActivityUniversity.this,
+										ActivityCarrera.class);
+								intent.putExtra(Constants.UNIVERSITY_ID,
+										text_id.getText().toString());
+								startActivity(intent);
+
+							}
 				        	
 				        };break;
 				        case 2 : {
@@ -273,7 +291,12 @@ public class ActivityUniversity extends Activity {
 		universidad.setFax("");
 		universidad.setEmail("");
 		universidad.setWeb("http://www.escuelademinas.unju.edu.ar/");
-		universidad.setPreinscripcion(" ");
+		universidad.setPreinscripcion("Realizar una preinscripción."+
+		"<br>Los requisitos son:"+
+		"<br>fotocopia de la 1ª y 2ª hoja del D.N.I. ."+
+		"<br>Constancia de alumno regular de 7mo. grado para la Escuela de Minas. "+
+		"<br>Asistir al Curso de Nivelación. "+
+		"<br>Rendir examen de ingreso en las asignaturas Lengua y Matemática. ");
 		universidad.setInscripcion("Del 03 al 18 de Febrero de cada año.");
 		universidad
 				.setInforme("");
