@@ -15,7 +15,7 @@ public abstract  class ConstantRest {
 	//public final static String URL_NOTICIAS="http://10.2.2.245/projects/www/noticias.php";
     //public final static String URL_IMAGES="http://10.2.2.245/WebRest//fotos.php";
     
-	public final static String URL_BASE="http://10.2.2.113/php-manu/";
+	public final static String URL_BASE="http://10.2.0.66/php-manu/";
 	
 	public final static String URL_NOTICIAS=URL_BASE+"noticias.php";
     public final static String URL_AUTORIDADES=URL_BASE+"autoridad.php";

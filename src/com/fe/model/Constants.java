@@ -36,6 +36,9 @@ public final class Constants {
    //TAG INTENT COMEDOR 
     public static final String COMEDOR_TITULO="TITULO";
     public static final String COMEDOR_ID="ID";
+    public static final String COMEDOR_LAT="LATITUD";
+    public static final String COMEDOR_LONG="LONGITUD";
+    public static final String COMEDOR_NOMBRE="NOMBRE";
     
     //TAG INTENT AUTORIDAD 
     public static final String AUTORIDAD_TITULO="TITULO";

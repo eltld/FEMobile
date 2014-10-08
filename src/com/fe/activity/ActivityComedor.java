@@ -162,7 +162,8 @@ public class ActivityComedor extends Activity{
 		comedor.setDescripcion_comedor("");
 		comedor.setCalle_comedor("Alberdi 11");
 		comedor.setBarrio_comedor("Los Naranjos");
-		
+		comedor.setLat_comedor("0");
+		comedor.setLong_comedor("0");
 		listComedor.add(comedor);
 		
 		comedor=new Comedor();
@@ -172,6 +173,8 @@ public class ActivityComedor extends Activity{
 		comedor.setDescripcion_comedor("");
 		comedor.setCalle_comedor("La ISO Bustament 74");
 		comedor.setBarrio_comedor("Barrio Los Naranjos");
+		comedor.setLat_comedor("0");
+		comedor.setLong_comedor("0");
 		listComedor.add(comedor);
 		
 		comedor=new Comedor();
@@ -181,11 +184,13 @@ public class ActivityComedor extends Activity{
 		comedor.setDescripcion_comedor("");
 		comedor.setCalle_comedor("Balcarce 357");
 		comedor.setBarrio_comedor("Barrio Centro");
-		
+		comedor.setLat_comedor("-24.184930");
+		comedor.setLong_comedor("-65.305652");
 		listComedor.add(comedor);
 		
 	    
 	}
+	
 	
 	
 	

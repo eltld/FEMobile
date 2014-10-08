@@ -154,7 +154,9 @@ public class ActivityUniversityMap extends FragmentActivity implements LocationL
           markerOptions.position(markerLatLng);
 
           // Setting custom icon for the marker
-          markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.map_marker_rojo));
+          markerOptions.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE));
+          
+          // markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.map_marker_rojo));
 
           // Setting title for the infowindow
           markerOptions.title(obj.getNombre_universidad());

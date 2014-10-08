@@ -74,10 +74,10 @@ public final class ConstantDatabase {
 	public static final String QUERY_CREATE_COMEDOR=
 			"CREATE TABLE  "+T_COMEDOR+"("+
 	        COM_ID +" integer ,"+
+		    COM_RESPONSABLE+ " text,"+
 		 	COM_NOMBRE+" text,"+
 		 	COM_CALLE+ " text,"+
-	        COM_BARRIO + " text,"+
-		 	COM_RESPONSABLE + " text)";
+	        COM_BARRIO + " text)";
 	public static final String QUERY_DROP_COMEDOR="DROP TABLE IF EXISTS "+T_COMEDOR;
 	
 	

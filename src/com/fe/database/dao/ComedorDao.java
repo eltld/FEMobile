@@ -90,15 +90,20 @@ public class ComedorDao {
 			int com_id = cursor.getColumnIndex(ConstantDatabase.COM_ID);
 			int com_nombre = cursor.getColumnIndex(ConstantDatabase.COM_NOMBRE);
 			int com_responsable = cursor.getColumnIndex(ConstantDatabase.COM_RESPONSABLE);
+			
 			int com_calle = cursor.getColumnIndex(ConstantDatabase.COM_CALLE);
 			int com_barrio = cursor.getColumnIndex(ConstantDatabase.COM_BARRIO);
+			
 
+			logger.debug("com_id : "+com_id + " com_nombre :"+com_nombre + " com_responsable : "+com_responsable + 
+					    " com_calle  : "+com_calle + " com_barrio : "+com_barrio);
+			
 			comedor = new Comedor();
 
 			
-			comedor.setId_comedor(Integer.parseInt(cursor.getString(com_id)));
+			//comedor.setId_comedor(Integer.parseInt(cursor.getString(com_id)));
 			comedor.setNombre_comedor(cursor.getColumnName(com_nombre));
-		 	comedor.setResponsable_comedor(cursor.getString(com_responsable));
+		 	//comedor.setResponsable_comedor(cursor.getString(com_responsable));
 			comedor.setCalle_comedor(cursor.getString(com_calle));
 			comedor.setBarrio_comedor(cursor.getString(com_barrio));
 			cursor.close();

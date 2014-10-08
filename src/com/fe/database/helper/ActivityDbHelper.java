@@ -23,7 +23,7 @@ public class ActivityDbHelper extends SQLiteOpenHelper {
 
 	@Override
 	public void onCreate(SQLiteDatabase db) {
-	    logger.debug("Execute create sql");	
+	    logger.debug("Execute create sql" + ConstantDatabase.QUERY_CREATE_COMEDOR);	
 		db.execSQL(ConstantDatabase.QUERY_CREATE_NOTICIA);
 		db.execSQL(ConstantDatabase.QUERY_CREATE_CARRERA);
 		db.execSQL(ConstantDatabase.QUERY_CREATE_COMEDOR);

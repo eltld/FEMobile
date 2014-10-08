@@ -179,8 +179,10 @@ public class ActivityUniversity extends Activity {
 
 		universidad
 				.setRequisitos(requisito);
-		universidad.setLat_universidad("-24.188101");
-		universidad.setLong_universidad("-65.293551");
+		universidad.setLat_universidad("-24.188102");
+		universidad.setLong_universidad("-65.294574");
+		
+		
 		listData.add(universidad);
 		//Universidad de Ingenieria
 		universidad=new Universidad();
@@ -209,8 +211,10 @@ public class ActivityUniversity extends Activity {
 		
 		universidad.setRequisitos(requisito);
 		
-		universidad.setLat_universidad("-24.188887");
-		universidad.setLong_universidad("-65.293632");
+		universidad.setLat_universidad("-24.189228");
+		universidad.setLong_universidad("-65.293874");
+		
+	
 		listData.add(universidad);
 		
 		//Universidad de Ciencias Economicas
@@ -303,8 +307,10 @@ public class ActivityUniversity extends Activity {
 		universidad
 				.setRequisitos("");
 
-		universidad.setLat_universidad("-24.185753");
-		universidad.setLong_universidad("-65.301565");
+		universidad.setLat_universidad("-24.188063");
+		universidad.setLong_universidad("-65.292423");
+		
+		 
 		
 		listData.add(universidad);
 

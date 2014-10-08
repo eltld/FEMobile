@@ -3,7 +3,7 @@
 
 require_once ("config.php");
 
-$dir_fotos="http://10.2.2.113/php-manu/fotos/facebook.jpg";
+$dir_fotos="http://10.2.0.66/php-manu/fotos/facebook.jpg";
 
 
 $arr=array(
@@ -114,7 +114,17 @@ $arr=array(
   "autoridad_email"=>"cragrisolia@fce.unju.edu.ar ",
   "autoridad_telefono"=>"Tel: +54-(388)-4221536 ",
   "autoridad_url_imagen"=>$dir_fotos
+  ),
+        array(
+  "autoridad_id"=>"14",
+  "autoridad_titulo"=>"DIRECTORA- ESC. DE MINAS ' Dr. Horacio Carrillo'",
+  "autoridad_nombre"=>"Lic. Graciela Leticia Medardi",
+  "autoridad_email"=>" ",
+  "autoridad_telefono"=>"Tel: +54-(388)-4221599/98 ",
+  "autoridad_url_imagen"=>$dir_fotos
   )
+
+
 
 
 );

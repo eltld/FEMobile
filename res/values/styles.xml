@@ -26,5 +26,6 @@
     <color name="gray_claro">#D3D3D3</color>
     <color name="blanco">#FFF</color>
     <color name="header_principal">#2281a1</color>
+    <color name="black">#000</color>
 
 </resources>

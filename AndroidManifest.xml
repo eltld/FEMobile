@@ -81,6 +81,11 @@
             android:label="@string/activity_comedor">
         
          </activity>
+           <activity 
+            android:name="com.fe.activity.ActivityComedorMap"
+            android:label="@string/activity_comedor">
+         </activity>
+         
             
          <activity 
             android:name="com.fe.activity.ActivityNoticia"

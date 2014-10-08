@@ -89,4 +89,12 @@ public class Comedor {
 	
 	
 	
+	@Override
+	public String toString()
+	{
+		
+		return "idComedor : "+id_comedor+ " nombre : "+nombre_comedor+ "responsable : "+responsable_comedor+
+				"calle :"+calle_comedor+ " barrrio : "+barrio_comedor;
+	}
+	
 }
