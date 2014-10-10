@@ -22,6 +22,7 @@ import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 
 import android.content.Context;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -123,8 +124,8 @@ public class CustomNewsAdapter extends BaseAdapter {
 			bajada=noticias.getBajadaNoticia().substring(0,60)+"...";
 		
 		
-		holder.noticiaHead.setText(titulo);
-		holder.noticiaBajada.setText(bajada);
+		holder.noticiaHead.setText(Html.fromHtml(titulo));
+		holder.noticiaBajada.setText(Html.fromHtml(bajada));
 		holder.noticiaId.setText(noticias.getIdNoticia());
         holder.noticiaId.setVisibility(View.GONE);
 		

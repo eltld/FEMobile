@@ -86,7 +86,7 @@
            
      
            
-          <com.fe.bean.util.TextViewEx
+         <!--  <TextView
            android:id="@+id/text_noticiaContentCuerpo"
            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -96,12 +96,33 @@
            android:layout_marginTop="6dp"
            android:text="Cuerpo" 
             />
+            -->
+            
+         <TextView
+           android:id="@+id/text_noticiaContentCuerpo"
+           android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+           android:layout_alignParentLeft="true"
+           android:layout_below="@+id/image_noticiaContentImage"
+           android:layout_marginLeft="20dp"
+           android:layout_marginTop="6dp"
+           android:text="Cuerpo" 
+           android:layout_marginBottom="20dp"
+           
+            />
+          
+         
+          
           
            
            </LinearLayout>
            
+           
+        
            </ScrollView>
 
+        
+        
       
 </RelativeLayout>
 

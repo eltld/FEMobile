@@ -57,6 +57,20 @@ private static final Logger logger = (Logger) LoggerFactory.getLogger(University
 	{
 		if(dao!=null)
 		{
+			
+			//verifico si la universidad existe 
+			logger.debug("Id Universidad : "+obj.getId_universidad());
+			cursor=dao.get(ConstantDatabase.T_UNIVERSIDAD,this.columns,ConstantDatabase.UNI_ID,obj.getId_universidad());
+			
+			if(cursor!=null)
+			{
+			   logger.debug("existe la UNIVERSIDAD");
+			   dao.delete(ConstantDatabase.T_UNIVERSIDAD,ConstantDatabase.UNI_ID, (obj.getId_universidad()));
+			   cursor.close();
+			}	
+				
+			
+			
 			logger.debug("Insert Universidad : "+obj.toString());
 			ContentValues values=new ContentValues();
 			values.put(ConstantDatabase.UNI_ID, obj.getId_universidad());

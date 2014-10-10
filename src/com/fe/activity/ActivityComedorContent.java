@@ -125,7 +125,8 @@ public class ActivityComedorContent extends Activity {
 		comedor.setBarrio_comedor("Los Naranjos");
 		comedor.setLat_comedor("");
 		comedor.setLong_comedor("");
-	
+		comedor.setLat_comedor("-24.188430");
+		comedor.setLong_comedor("-65.293757");
 		
 		
 		listComedor.add(comedor);
@@ -135,8 +136,10 @@ public class ActivityComedorContent extends Activity {
 		comedor.setNombre_comedor("Comedor 2");
 		comedor.setResponsable_comedor("Celestina Burgos");
 		comedor.setDescripcion_comedor("");
-		comedor.setCalle_comedor("La ISO Bustament 74");
+		comedor.setCalle_comedor("Bustamente 74");
 		comedor.setBarrio_comedor("Barrio Los Naranjos");
+		comedor.setLat_comedor("-24.188102");
+		comedor.setLong_comedor("-65.296246");
 		listComedor.add(comedor);
 		
 		comedor=new Comedor();
@@ -146,7 +149,8 @@ public class ActivityComedorContent extends Activity {
 		comedor.setDescripcion_comedor("");
 		comedor.setCalle_comedor("Balcarce 357");
 		comedor.setBarrio_comedor("Barrio Centro");
-		
+		comedor.setLat_comedor("-24.184621");
+		comedor.setLong_comedor("-65.305638");
 		listComedor.add(comedor);
 		
 	    

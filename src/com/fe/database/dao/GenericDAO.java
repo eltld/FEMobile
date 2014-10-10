@@ -106,8 +106,8 @@ public class GenericDAO extends SQLiteOpenHelper {
 	        return db.delete(table, "1", null);
 	    }
 	    
-	    public int delete(String table, long id) {
-	        return db.delete(table, KEY_ID + "=" + id, null);
+	    public int delete(String table,String columnSearch, long id) {
+	        return db.delete(table, columnSearch+ "=" + id, null);
 	    }
 	    
 	    public int update(String table, long id, ContentValues values) {

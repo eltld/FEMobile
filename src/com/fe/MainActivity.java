@@ -213,7 +213,7 @@ public class MainActivity extends Activity  implements OnItemClickListener {
 	private List<ItemGrid> loadItemGridPrincipal(Resources res)
 	{
 		ArrayList<ItemGrid> listItemGrid=new ArrayList<ItemGrid>();
-		listItemGrid.add(new ItemGrid("Mapa",res.getDrawable((R.drawable.mapa))));
+		listItemGrid.add(new ItemGrid("Mapa",res.getDrawable((R.drawable.mapa_comedor))));
 		listItemGrid.add(new ItemGrid("Noticias",res.getDrawable(R.drawable.news)));
 		listItemGrid.add(new ItemGrid("Comedor",res.getDrawable((R.drawable.comedor))));
 		listItemGrid.add(new ItemGrid("Secretaria",res.getDrawable(R.drawable.secretaria)));

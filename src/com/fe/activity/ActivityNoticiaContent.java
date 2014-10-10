@@ -46,7 +46,7 @@ public class ActivityNoticiaContent extends Activity {
 	private TextView text_cuerpo;
 	private NoticiaBean noticiaBean;
 	private JustifiedTextView text_view;
-	private TextViewEx text_viewEx;
+	private TextView text_viewEx;
 	static Point size;
     static float density;
     public static final int FinallwidthDp  = 320 ;
@@ -83,10 +83,10 @@ public class ActivityNoticiaContent extends Activity {
 	 text_noticiaBajada=(TextView)findViewById(R.id.text_noticiaContentBajada);
 	 //webView=(WebView)findViewById(R.id.text_noticiaContentCuerpo);
 	 //text_view=(JustifiedTextView)findViewById(R.id.text_noticiaContentCuerpo);
-	 text_cuerpo=(TextView)findViewById(R.id.text_noticiaContentCuerpo);
+	 //text_cuerpo=(TextView)findViewById(R.id.text_noticiaContentCuerpo);
 	 //text_justy=(JustifiedWeb)findViewById(R.id.text_noticiaContentCuerpo);
 	 text_noticiaFecha=(TextView)findViewById(R.id.text_noticiaContentFecha);
-	 text_viewEx=(TextViewEx)findViewById(R.id.text_noticiaContentCuerpo);
+	 text_viewEx=(TextView)findViewById(R.id.text_noticiaContentCuerpo);
 	 image_noticia=(ImageView)findViewById(R.id.image_noticiaContentImage);
 	 textHeader=(TextView)findViewById(R.id.text_header);
 	 textHeader.setText("Noticias");
@@ -94,18 +94,21 @@ public class ActivityNoticiaContent extends Activity {
 	 //asigno los valores 
 	 if(noticia!=null)
       {
-		 text_noticiaTitulo.setText(noticia.getTituloNoticia());
-		 text_noticiaBajada.setText(noticia.getBajadaNoticia());
-		 text_noticiaFecha.setText(noticia.getDateNoticia());
+		 text_noticiaTitulo.setText(Html.fromHtml(noticia.getTituloNoticia()));
+		 text_noticiaBajada.setText(Html.fromHtml(noticia.getBajadaNoticia()));
+		 text_noticiaFecha.setText(Html.fromHtml(noticia.getDateNoticia()));
 		 
-		   
-		  
+
+		 String text_content=
+                "<html><head></head><body style='text-align:justify;'>"+
+				 noticia.getCuerpoNoticia()+
+				 " </body></html>";
+		 
 			
-			  String text = "<html><body style=\"text-align:justify\"><p style=\"text-align:justify\">"+Html.fromHtml(noticia.getCuerpoNoticia())+" </p></body></Html>";
 			  //text_cuerpo.setText(text);
-			  text_viewEx.setText(noticia.getCuerpoNoticia(),true);
+	     text_viewEx.setText(Html.fromHtml(text_content));
 				
-		 
+		 logger.debug("noticia url : "+noticia.getUrlImageNoticia());
 		
 		 Ion.with(getApplicationContext())
 		 .load(noticia.getUrlImageNoticia())

@@ -48,7 +48,7 @@ public class ActivityCarreraMinas  extends Activity {
 		 	textHeader.setText(Html.fromHtml("Carrera"));
 		    
 		 	textTitulo.setText("Escuela de Minas “Dr. Horacio Carrillo");
-		    textContenido.setText(Html.fromHtml("Años de cursado: 6 (seis) divididos en dos Ciclos: Ciclo Básico: 1ro., 2do. y 3er. año Ciclo Superior: 4to., 5to. y 6to. año ."+
+		    textContenido.setText(Html.fromHtml("Años de cursado: 6 (seis) divididos en dos Ciclos:<br> Ciclo Básico: 1ro., 2do. y 3er año.<br> Ciclo Superior: 4to., 5to. y 6to. año.<br>"+
 		 	"<br>Al finalizar el 3er. Año del Ciclo Básico los alumnos deben optar por una de las tres tecnicaturas que ofrece la Escuela:"+
 "<br>Técnico Minero."+
 "<br>Técnico Químico."+

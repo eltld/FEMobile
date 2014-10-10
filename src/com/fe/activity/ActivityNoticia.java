@@ -150,6 +150,7 @@ public class ActivityNoticia extends Activity{
 						listData = new ArrayList<Noticia>();
 						Gson gson = new Gson();
 						JSONArray jsonArray = new JSONArray(jsonString);
+						String url_noticia=ConstantRest.URL_BASE_NOTICIAS;
 						for (int i = 0; i < jsonArray.length(); i++) {
 							Noticia noticia = new Noticia();
 							JSONObject jsonObject = jsonArray.getJSONObject(i);
@@ -161,8 +162,16 @@ public class ActivityNoticia extends Activity{
 									.getString(NoticiaTag.BAJADA));
 							noticia.setDateNoticia(jsonObject
 									.getString(NoticiaTag.FECHA));
-							noticia.setUrlImageNoticia(jsonObject
-									.getString(NoticiaTag.URL));
+						
+							
+							//Replac url noticia
+							String tmp=jsonObject.getString(NoticiaTag.URL);
+						     tmp=tmp.replace("./imgnotis/","");
+						     
+						     tmp=url_noticia+tmp;
+						     logger.debug("URL Temporal : "+tmp);
+							noticia.setUrlImageNoticia(tmp);
+							
 							noticia.setCuerpoNoticia(jsonObject
 									.getString(NoticiaTag.CUERPO));
 							listData.add(noticia);

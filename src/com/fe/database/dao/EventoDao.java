@@ -51,6 +51,19 @@ private static final Logger logger = (Logger) LoggerFactory.getLogger(AutoridadD
 	{
 		if(dao!=null)
 		{
+			
+			//verifico si la noticia existe 
+			logger.debug("Id Evento : "+obj.getIdEvento());
+			cursor=dao.get(ConstantDatabase.T_EVENTO,this.columns,ConstantDatabase.EVENTO_ID,Long.parseLong(obj.getIdEvento()));
+			
+			if(cursor!=null)
+			{
+			   logger.debug("existe el evento");
+			   dao.delete(ConstantDatabase.T_EVENTO,ConstantDatabase.EVENTO_ID, Long.parseLong(obj.getIdEvento()));
+			   cursor.close();
+			}	
+			
+			
 			logger.debug("Insert Evento : "+obj.toString());
 			ContentValues values=new ContentValues();
 			values.put(ConstantDatabase.EVENTO_ID, obj.getIdEvento());

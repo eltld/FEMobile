@@ -10,6 +10,7 @@ import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Html;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.DatePicker;
@@ -66,11 +67,11 @@ protected void onCreate(Bundle savedInstanceState) {
  //asigno los valores 
  if(evento!=null)
   {
-	 text_eventoTitulo.setText(evento.getTituloEvento());
-	 text_eventoBajada.setText(evento.getBajadaEvento());
-	 text_eventoFecha.setText(evento.getFechaEvento());
+	 text_eventoTitulo.setText(Html.fromHtml(evento.getTituloEvento()));
+	 text_eventoBajada.setText(Html.fromHtml(evento.getBajadaEvento()));
+	 text_eventoFecha.setText(Html.fromHtml(evento.getFechaEvento()));
 	
-	 text_eventoCuerpo.setText(evento.getCuerpoEvento());
+	 text_eventoCuerpo.setText(Html.fromHtml(evento.getCuerpoEvento()));
 	 //text_eventoUrlWeb.setText(evento.getUrlWebEvento()); 
   }
 

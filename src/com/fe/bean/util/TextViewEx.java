@@ -11,6 +11,7 @@ import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.widget.TextView;
 import android.os.Build;
+import android.text.Spanned;
 import android.util.AttributeSet;
 
 import com.fe.bean.util.TextJustifyUtils;
@@ -93,6 +94,14 @@ public class TextViewEx extends TextView
     {
         wrapEnabled = wrap;
         super.setText(st);
+    }
+    
+    public void setText(Spanned st, boolean wrap)
+    {
+    	wrapEnabled = wrap;
+        super.setText(st);
+    	
+    	
     }
     public void setTextAlign(Align align)
     {

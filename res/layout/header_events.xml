@@ -33,6 +33,7 @@
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
         android:clickable="true"
-        android:src="@drawable/calendar_color" />
+        android:src="@drawable/calendar_color"
+        android:visibility="gone" />
 
 </RelativeLayout>

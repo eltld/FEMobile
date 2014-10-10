@@ -50,6 +50,18 @@ public class NoticiaDao {
 	{
 		if(dao!=null)
 		{
+		   //verifico si la noticia existe 
+			logger.debug("Id Noticia : "+obj.getIdNoticia());
+			cursor=dao.get(ConstantDatabase.T_NOTICIA,this.columns,ConstantDatabase.NOT_ID,Long.parseLong(obj.getIdNoticia()));
+			
+			if(cursor!=null)
+			{
+			   logger.debug("existe la noticia");
+			   dao.delete(ConstantDatabase.T_NOTICIA,ConstantDatabase.NOT_ID, Long.parseLong(obj.getIdNoticia()));
+			   cursor.close();
+			}	
+				
+			
 			logger.debug("Insert Noticia : "+obj.toString());
 			ContentValues values=new ContentValues();
 			values.put(ConstantDatabase.NOT_ID, obj.getIdNoticia());

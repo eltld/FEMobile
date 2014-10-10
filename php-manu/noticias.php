@@ -16,7 +16,7 @@ else
       }else
       {
          
-         $consulta =  "select * from  noticias where publicado <> 0 and (publicado=1 or publicado=2) order by Id limit 5  ";
+         $consulta =  "select * from  noticias where publicado <> 0 and (publicado=1 or publicado=2) order by Id desc limit 5  ";
           
              
 
