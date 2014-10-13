@@ -213,7 +213,7 @@ public class MainActivity extends Activity  implements OnItemClickListener {
 	private List<ItemGrid> loadItemGridPrincipal(Resources res)
 	{
 		ArrayList<ItemGrid> listItemGrid=new ArrayList<ItemGrid>();
-		listItemGrid.add(new ItemGrid("Mapa",res.getDrawable((R.drawable.mapa_comedor))));
+		listItemGrid.add(new ItemGrid("Mapa  ",res.getDrawable((R.drawable.mapa_comedor))));
 		listItemGrid.add(new ItemGrid("Noticias",res.getDrawable(R.drawable.news)));
 		listItemGrid.add(new ItemGrid("Comedor",res.getDrawable((R.drawable.comedor))));
 		listItemGrid.add(new ItemGrid("Secretaria",res.getDrawable(R.drawable.secretaria)));
@@ -221,7 +221,7 @@ public class MainActivity extends Activity  implements OnItemClickListener {
 	    listItemGrid.add(new ItemGrid("Evento",res.getDrawable(R.drawable.evento)));
 	   // listItemGrid.add(new ItemGrid("Calendario",res.getDrawable(R.drawable.ic_launcher)));
 	    listItemGrid.add(new ItemGrid("Autoridades",res.getDrawable(R.drawable.autoridad))); 	
-	    listItemGrid.add(new ItemGrid(" Oferta Academica ",res.getDrawable(R.drawable.university)));
+	    listItemGrid.add(new ItemGrid("Oferta <br> Academica",res.getDrawable(R.drawable.university)));
 	    
 		return listItemGrid;
 	}

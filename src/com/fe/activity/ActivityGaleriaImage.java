@@ -24,6 +24,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 
@@ -40,11 +41,16 @@ public class ActivityGaleriaImage extends ActivityBase {
 
 	ViewPager pager;
 
+	private TextView textHeader;
+	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.gallery_image_content);
 
+		textHeader=(TextView)findViewById(R.id.text_header);
+		textHeader.setText("Foto");
+		
 		Bundle bundle = getIntent().getExtras();
 		assert bundle != null;
 		String[] imageUrls = bundle.getStringArray(Constants.IMAGE);

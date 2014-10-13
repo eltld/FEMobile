@@ -10,6 +10,7 @@ import com.fe.model.ItemGrid;
 
 import android.R.id;
 import android.content.Context;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -64,7 +65,7 @@ public class CustomGridAdapter extends ArrayAdapter<ItemGrid>{
 	      }
 	      
 	      ItemGrid item=data.get(position);
-	      holder.txtItem.setText(item.getText());
+	      holder.txtItem.setText(Html.fromHtml(item.getText()));
 	      holder.imgItem.setImageDrawable(item.getImage());
 	     
 	      
