@@ -15,7 +15,7 @@ import android.text.Html;
 import android.widget.TextView;
 
 import com.fe.R;
-import com.fe.model.Constants;
+import com.fe.model.constant.Constants;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.android.gms.maps.CameraUpdateFactory;

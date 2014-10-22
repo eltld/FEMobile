@@ -1,7 +1,7 @@
 package com.fe.activity;
 
 import com.fe.R;
-import com.fe.model.Constants;
+import com.fe.model.constant.Constants;
 
 import com.nostra13.universalimageloader.cache.disc.naming.Md5FileNameGenerator;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;

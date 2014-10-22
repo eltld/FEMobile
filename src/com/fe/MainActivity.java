@@ -26,8 +26,8 @@ import com.fe.bean.ActivityDbBean;
 import com.fe.bean.adapter.CustomGridAdapter;
 import com.fe.bean.util.ScrollableGridView;
 import com.fe.bean.util.UtilList;
-import com.fe.model.Constants;
 import com.fe.model.ItemGrid;
+import com.fe.model.constant.Constants;
 
 import android.net.Uri;
 import android.os.Bundle;
@@ -78,7 +78,11 @@ public class MainActivity extends Activity  implements OnItemClickListener {
 		logger.info("onCreate MainActivity");
 		activityBean= new ActivityDbBean(getApplicationContext());
 		
-		//
+		
+		//Facebook integration 
+		 // Logs 'install' and 'app activate' App Events.
+		//  AppEventsLogger.activateApp(this);
+		
 		image_sobre=(ImageView)findViewById(R.id.image_about);
 		image_navigator=(ImageView)findViewById(R.id.image_navigator);
 		//load content 

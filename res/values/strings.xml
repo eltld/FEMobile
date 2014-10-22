@@ -29,4 +29,11 @@
 Fortalecer la identidad institucional generando la partisipación activa de todos los integrantes, promoviendo la creatividad y las iniciativas, canalizando los recursos humanos existentes.
 Institucionalizar mecanismos de desarrollo social mediante la propuesta de políticas púplicas con los distintos sectores de la sociedad civil de Jujuy.
 </string>
+
+    <string name="action_search">Search</string>
+    <string name="action_copy">Copy</string>
+    <string name="action_share">Share</string>
+    <string name="facebook_app_id">1480743732189504</string>
+    
+    
 </resources>

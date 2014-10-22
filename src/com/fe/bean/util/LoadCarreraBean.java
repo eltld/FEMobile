@@ -6,7 +6,7 @@ import java.util.List;
 import android.text.Html;
 
 import com.fe.model.Carrera;
-import com.fe.model.Constants;
+import com.fe.model.constant.Constants;
 
 public class LoadCarreraBean {
 

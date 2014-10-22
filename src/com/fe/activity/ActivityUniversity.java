@@ -10,8 +10,8 @@ import com.fe.bean.SecretariaBean;
 import com.fe.bean.UniversityBean;
 import com.fe.bean.adapter.CustomComedorAdapter;
 import com.fe.bean.adapter.CustomUniversityAdapter;
-import com.fe.model.Constants;
 import com.fe.model.Universidad;
+import com.fe.model.constant.Constants;
 
 import android.app.Activity;
 import android.app.AlertDialog;

@@ -30,7 +30,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.fe.R;
-import com.fe.model.ConstantRest;
+import com.fe.model.constant.ConstantRest;
 
 public class ActivitySobreContacto extends Activity{
 

@@ -1,4 +1,4 @@
-package com.fe.model;
+package com.fe.model.constant;
 
 public final class Constants {
     

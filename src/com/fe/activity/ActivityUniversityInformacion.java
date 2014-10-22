@@ -6,8 +6,8 @@ import org.slf4j.LoggerFactory;
 import com.fe.R;
 import com.fe.activity.ActivityComedor.ComedorAsyncTask;
 import com.fe.bean.UniversityBean;
-import com.fe.model.Constants;
 import com.fe.model.Universidad;
+import com.fe.model.constant.Constants;
 
 import android.app.Activity;
 import android.content.Intent;

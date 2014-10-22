@@ -8,8 +8,8 @@ import com.fe.R.id;
 import com.fe.bean.ComedorBean;
 import com.fe.bean.SecretariaBean;
 import com.fe.model.Comedor;
-import com.fe.model.Constants;
 import com.fe.model.Secretaria;
+import com.fe.model.constant.Constants;
 
 import android.app.Activity;
 import android.content.Intent;

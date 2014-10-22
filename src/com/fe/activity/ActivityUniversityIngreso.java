@@ -12,8 +12,8 @@ import android.widget.TextView;
 
 import com.fe.R;
 import com.fe.bean.UniversityBean;
-import com.fe.model.Constants;
 import com.fe.model.Universidad;
+import com.fe.model.constant.Constants;
 
 public class ActivityUniversityIngreso extends Activity{
 

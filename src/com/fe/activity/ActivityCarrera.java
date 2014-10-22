@@ -19,10 +19,10 @@ import com.fe.bean.json.NoticiaTag;
 import com.fe.bean.util.LoadCarreraBean;
 import com.fe.bean.util.UtilList;
 import com.fe.model.Carrera;
-import com.fe.model.ConstantRest;
-import com.fe.model.Constants;
 import com.fe.model.Noticia;
 import com.fe.model.Universidad;
+import com.fe.model.constant.ConstantRest;
+import com.fe.model.constant.Constants;
 import com.fe.service.ServiceHandler;
 import com.google.gson.Gson;
 

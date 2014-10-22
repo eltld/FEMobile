@@ -11,9 +11,9 @@ import android.graphics.drawable.Drawable;
 import com.fe.R;
 import com.fe.model.Carrera;
 import com.fe.model.Comedor;
-import com.fe.model.Constants;
 import com.fe.model.ItemGrid;
 import com.fe.model.Secretaria;
+import com.fe.model.constant.Constants;
 
 /**
  * Clase que permite generar la carga de elementos 

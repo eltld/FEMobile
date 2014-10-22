@@ -21,8 +21,8 @@ import com.fe.R;
 import com.fe.bean.AutoridadBean;
 import com.fe.bean.EventoBean;
 import com.fe.model.Autoridad;
-import com.fe.model.Constants;
 import com.fe.model.Evento;
+import com.fe.model.constant.Constants;
 import com.koushikdutta.ion.Ion;
 
 public class ActivityEventoContent extends Activity {

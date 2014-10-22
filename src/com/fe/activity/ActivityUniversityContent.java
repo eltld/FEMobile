@@ -1,7 +1,7 @@
 package com.fe.activity;
 
 import com.fe.R;
-import com.fe.model.Constants;
+import com.fe.model.constant.Constants;
 
 import android.app.Activity;
 import android.content.Intent;

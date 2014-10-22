@@ -11,7 +11,7 @@ import com.fe.bean.CarreraBean;
 import com.fe.bean.adapter.CustomComedorAdapter;
 import com.fe.bean.util.UtilList;
 import com.fe.model.Carrera;
-import com.fe.model.Constants;
+import com.fe.model.constant.Constants;
 
 import android.app.Activity;
 import android.content.Intent;

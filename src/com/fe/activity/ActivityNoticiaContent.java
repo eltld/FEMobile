@@ -3,27 +3,43 @@ package com.fe.activity;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+
+import com.facebook.UiLifecycleHelper;
+import com.facebook.widget.FacebookDialog;
 import com.fe.R;
 import com.fe.bean.NoticiaBean;
 import com.fe.bean.util.JustifiedTextView;
+import android.annotation.SuppressLint;
+import android.annotation.TargetApi;
+import android.app.ActionBar;
 import com.fe.bean.util.TextViewEx;
-import com.fe.model.Constants;
 import com.fe.model.Noticia;
+import com.fe.model.constant.Constants;
 
 
 import com.koushikdutta.ion.Ion;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Point;
 import android.graphics.Typeface;
+import android.os.Build;
 import android.os.Bundle;
 import android.text.Html;
 import android.util.DisplayMetrics;
 import android.view.Display;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.webkit.WebView;
+import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 /**
@@ -32,8 +48,11 @@ import android.widget.TextView;
  * @Dathe  : 26-08-2014
  *
  */
-public class ActivityNoticiaContent extends Activity {
+@TargetApi(Build.VERSION_CODES.HONEYCOMB)
+public class ActivityNoticiaContent extends Activity 
+ {
 
+	
 	private static final Logger logger = (Logger) LoggerFactory.getLogger(ActivityNoticiaContent.class);
 	
 	private TextView text_noticiaTitulo;
@@ -51,7 +70,13 @@ public class ActivityNoticiaContent extends Activity {
     static float density;
     public static final int FinallwidthDp  = 320 ;
     public static final int widthJustify  = 223 ;
+    final String[] choices = { "Android", "iOS", "RIM" };
+    private ImageView image_facebook;
+    private UiLifecycleHelper uiHelper;
+    
+   
 
+    
 	
 	@Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,7 +86,10 @@ public class ActivityNoticiaContent extends Activity {
 	  
 	 logger.debug("Noticia Content");
 	 
-	 
+
+     ArrayAdapter<String> adapter = new ArrayAdapter<String>(
+             ActivityNoticiaContent.this, android.R.layout.simple_dropdown_item_1line,
+             choices);
 	
      DisplayMetrics metrics = new DisplayMetrics();
      getWindowManager().getDefaultDisplay().getMetrics(metrics);
@@ -70,7 +98,7 @@ public class ActivityNoticiaContent extends Activity {
      float scaleFactor = metrics.density;
      float widthDp = widthPixels / scaleFactor;
 
-     
+    
    
 	 Intent intent=this.getIntent();
 	 String noticia_id=intent.getStringExtra(Constants.NOTICIA_ID);
@@ -81,15 +109,15 @@ public class ActivityNoticiaContent extends Activity {
 	 
 	 text_noticiaTitulo=(TextView)findViewById(R.id.text_noticiaContentTitulo);
 	 text_noticiaBajada=(TextView)findViewById(R.id.text_noticiaContentBajada);
-	 //webView=(WebView)findViewById(R.id.text_noticiaContentCuerpo);
-	 //text_view=(JustifiedTextView)findViewById(R.id.text_noticiaContentCuerpo);
-	 //text_cuerpo=(TextView)findViewById(R.id.text_noticiaContentCuerpo);
-	 //text_justy=(JustifiedWeb)findViewById(R.id.text_noticiaContentCuerpo);
 	 text_noticiaFecha=(TextView)findViewById(R.id.text_noticiaContentFecha);
 	 text_viewEx=(TextView)findViewById(R.id.text_noticiaContentCuerpo);
 	 image_noticia=(ImageView)findViewById(R.id.image_noticiaContentImage);
-	 textHeader=(TextView)findViewById(R.id.text_header);
-	 textHeader.setText("Noticias");
+	 textHeader=(TextView)findViewById(R.id.text_newsHeader);
+	 image_facebook=(ImageView)findViewById(R.id.image_facebook);
+	 
+	 uiHelper = new UiLifecycleHelper(this, null);
+	    uiHelper.onCreate(savedInstanceState);
+	 
 	 
 	 //asigno los valores 
 	 if(noticia!=null)
@@ -119,8 +147,77 @@ public class ActivityNoticiaContent extends Activity {
 		 .error(R.drawable.ic_error)
 		 .intoImageView(image_noticia);
 	   
+		 
+		 //facebook image noticia
+		 image_facebook.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View arg0) {
+				// TODO Auto-generated method stub
+				
+				FacebookDialog shareDialog = new FacebookDialog.ShareDialogBuilder(ActivityNoticiaContent.this)
+		        .setLink("https://developers.facebook.com/android")
+		        .build();
+		uiHelper.trackPendingDialogCall(shareDialog.present());
+			  	
+			}
+		});
+		 
      }
 	}
 	
+	
+	
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+	    // Inflate the menu items for use in the action bar
+	    MenuInflater inflater = getMenuInflater();
+	   // inflater.inflate(com.fe.R.menu.menu
+	   // 		, menu);
+	    return super.onCreateOptionsMenu(menu);
+	}
+
+
+
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+	    super.onActivityResult(requestCode, resultCode, data);
+
+	    uiHelper.onActivityResult(requestCode, resultCode, data, new FacebookDialog.Callback() {
+	        @Override
+	        public void onError(FacebookDialog.PendingCall pendingCall, Exception error, Bundle data) {
+	            logger.debug("Activity", String.format("Error: %s", error.toString()));
+	        }
+
+	        @Override
+	        public void onComplete(FacebookDialog.PendingCall pendingCall, Bundle data) {
+	            logger.debug("Activity", "Success!");
+	        }
+	    });
+	}
+	
+	@Override
+	protected void onResume() {
+	    super.onResume();
+	    uiHelper.onResume();
+	}
+
+	@Override
+	protected void onSaveInstanceState(Bundle outState) {
+	    super.onSaveInstanceState(outState);
+	    uiHelper.onSaveInstanceState(outState);
+	}
+
+	@Override
+	public void onPause() {
+	    super.onPause();
+	    uiHelper.onPause();
+	}
+
+	@Override
+	public void onDestroy() {
+	    super.onDestroy();
+	    uiHelper.onDestroy();
+	}
 	
 }

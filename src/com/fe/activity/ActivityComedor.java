@@ -14,8 +14,8 @@ import com.fe.bean.adapter.CustomSecretariaAdapter;
 import com.fe.bean.util.UtilList;
 import com.fe.database.helper.ComedorDbHelper;
 import com.fe.model.Comedor;
-import com.fe.model.Constants;
 import com.fe.model.Secretaria;
+import com.fe.model.constant.Constants;
 
 import android.app.Activity;
 import android.content.Intent;

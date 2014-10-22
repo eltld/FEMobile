@@ -16,7 +16,7 @@ import com.fe.R;
 import com.fe.bean.CarreraBean;
 import com.fe.bean.util.JustifyTextView;
 import com.fe.model.Carrera;
-import com.fe.model.Constants;
+import com.fe.model.constant.Constants;
 
 public class ActivityCarreraMinas  extends Activity {
 
