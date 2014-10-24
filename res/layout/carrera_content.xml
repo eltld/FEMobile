@@ -134,7 +134,7 @@
                 android:typeface="serif" />
 
       
-              <com.fe.bean.util.JustifyTextView
+              <com.feunju.bean.util.JustifyTextView
                 android:id="@+id/text_carreraContentAcreditacion"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -171,7 +171,7 @@
                 android:typeface="serif" />
 
            
-             <com.fe.bean.util.JustifyTextView
+             <com.feunju.bean.util.JustifyTextView
                 android:id="@+id/text_carreraContentPerfil"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -207,7 +207,7 @@
                 android:textStyle="bold"
                 android:typeface="serif" />
 
-            <com.fe.bean.util.JustifyTextView
+            <com.feunju.bean.util.JustifyTextView
                 android:id="@+id/text_carreraContentAlcance"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
