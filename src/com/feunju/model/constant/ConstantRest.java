@@ -35,5 +35,6 @@ public abstract  class ConstantRest {
 	 
 	 //Version file 
 	 public final static String URL_VERSION_FILE=URL_BASE+"versioninfo.txt";
+	 public final static String URL_APK_FILE=URL_BASE+"UnjuMobile.apk";
 	 
 }

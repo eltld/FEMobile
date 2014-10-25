@@ -28,6 +28,7 @@ import com.feunju.bean.adapter.CustomGridAdapter;
 import com.feunju.bean.util.ScrollableGridView;
 import com.feunju.bean.util.UtilList;
 import com.feunju.model.ItemGrid;
+import com.feunju.model.constant.ConstantRest;
 import com.feunju.model.constant.Constants;
 import com.feunju.task.AppVersion;
 
@@ -94,7 +95,7 @@ public class MainActivity extends Activity  implements OnItemClickListener {
 		if(Integer.parseInt(versionCodeRemote)==versionCodeApp)
 		{
 			Intent updateIntent = new Intent(Intent.ACTION_VIEW,
-				       Uri.parse("http://some-public-url/deploy/MyApplication.apk"));
+				       Uri.parse(ConstantRest.URL_APK_FILE));
 				startActivity(updateIntent);
 		}
 		
