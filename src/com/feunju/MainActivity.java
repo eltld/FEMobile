@@ -20,21 +20,31 @@ import com.feunju.activity.ActivityEvento;
 import com.feunju.activity.ActivityGaleria;
 import com.feunju.activity.ActivityMapUnju;
 import com.feunju.activity.ActivityNoticia;
+import com.feunju.activity.ActivityNoticiaContent;
 import com.feunju.activity.ActivitySecretaria;
 import com.feunju.activity.ActivitySobre;
 import com.feunju.activity.ActivityUniversity;
 import com.feunju.bean.ActivityDbBean;
 import com.feunju.bean.adapter.CustomGridAdapter;
+import com.feunju.bean.adapter.CustomNewsAdapter;
+import com.feunju.bean.json.NoticiaTag;
 import com.feunju.bean.util.ScrollableGridView;
 import com.feunju.bean.util.UtilList;
 import com.feunju.model.ItemGrid;
+import com.feunju.model.Noticia;
 import com.feunju.model.constant.ConstantRest;
 import com.feunju.model.constant.Constants;
+import com.feunju.service.ServiceHandler;
 import com.feunju.task.AppVersion;
+import com.google.gson.Gson;
 
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.AlertDialog.Builder;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.view.Menu;
@@ -45,11 +55,15 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.util.Log;
 
 import android.content.res.Resources;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -72,6 +86,7 @@ public class MainActivity extends Activity  implements OnItemClickListener {
 	  private ActivityDbBean activityBean;
 	  private ImageView image_sobre;
 	  private ImageView image_navigator;
+	  private String versionRemote="";
 	  
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -84,20 +99,6 @@ public class MainActivity extends Activity  implements OnItemClickListener {
 		
 		
 		
-		/****************************/
-		/* Verificar versionamiento */
-		/****************************/
-		AppVersion version=new AppVersion();
-		int versionCodeApp= version.getVersionCode(getApplicationContext());
-	    logger.debug("VersionCode: "+versionCodeApp);
-		String versionCodeRemote=version.downloadText();
-		logger.debug("VersionCodeRemote : "+versionCodeRemote);
-		if(Integer.parseInt(versionCodeRemote)==versionCodeApp)
-		{
-			Intent updateIntent = new Intent(Intent.ACTION_VIEW,
-				       Uri.parse(ConstantRest.URL_APK_FILE));
-				startActivity(updateIntent);
-		}
 		
 		
 		image_sobre=(ImageView)findViewById(R.id.image_about);
@@ -213,6 +214,8 @@ public class MainActivity extends Activity  implements OnItemClickListener {
 				
 			}
 		});
+	    
+	    new MainActivityCliente().execute();
 	
 	}
 
@@ -245,6 +248,97 @@ public class MainActivity extends Activity  implements OnItemClickListener {
 	    listItemGrid.add(new ItemGrid("Oferta <br> Academica",res.getDrawable(R.drawable.university)));
 	    
 		return listItemGrid;
+	}
+	
+	private class MainActivityCliente extends AsyncTask<String, Void, String> {
+
+		private ProgressBar progressBar;
+
+		protected void onPreExecute() {
+			
+
+		}
+
+		@Override
+		protected String doInBackground(String... arg0) {
+			logger.debug("doInBackground NoticiasClient");
+
+			try {
+
+				// TODO Auto-generated method stub
+				ServiceHandler serviceHandler = new ServiceHandler();
+				String jsonString = serviceHandler.makeServiceCall(
+						ConstantRest.URL_VERSION_FILE, serviceHandler.GET);
+				logger.info("json : " + jsonString);
+
+				if(jsonString!=null && jsonString.length()!=0)
+				{	versionRemote=jsonString;
+
+				}
+
+			} catch (Exception ex) {
+				logger.debug("Error :" + ex.toString());
+
+			}
+
+			return null;
+
+		}
+
+		protected void onProgressUpdate(Integer... progress) {
+			
+			
+		}
+		
+		protected void onPostExecute(String result) {
+
+			if(versionRemote!=null && versionRemote!="")
+			{
+				/****************************/
+				/* Verificar versionamiento */
+				/****************************/
+				AppVersion version=new AppVersion();
+				String versionCodeApp=String.valueOf(version.getVersionCode(getApplicationContext()));
+			    
+			    logger.debug("VersionCodeRemote : "+versionRemote);
+				if(Long.parseLong(versionRemote)==Long.parseLong(versionCodeApp))
+				{
+	               DialogInterface.OnClickListener listenerDoesNotAccept = new DialogInterface.OnClickListener() {
+						
+						public void onClick(DialogInterface dialog, int which) {
+							dialog.cancel();
+						}
+					};
+					
+	                DialogInterface.OnClickListener listenerAccept = new DialogInterface.OnClickListener() {
+						
+						public void onClick(DialogInterface dialog, int which) {
+							Intent updateIntent = new Intent(Intent.ACTION_VIEW,
+								       Uri.parse(ConstantRest.URL_APK_FILE));
+								startActivity(updateIntent);
+						}
+					};
+					// TODO Auto-generated method stub
+					Builder builder = new AlertDialog.Builder(MainActivity.this);
+					AlertDialog dialog = builder.create();	
+					dialog.setTitle("Android Version?");
+					dialog.setMessage("Existe una nueva version de Unju Mobile. Desea descargarla.");
+					dialog.setButton("Yes",listenerAccept);
+					dialog.setButton2("No", listenerDoesNotAccept);
+					dialog.setCancelable(false);
+					dialog.show();
+					
+				
+				}		
+					
+					
+				}
+				
+			}
+		
+
+		
+
 	}
 	
 

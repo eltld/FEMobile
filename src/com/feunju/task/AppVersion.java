@@ -45,6 +45,7 @@ public class AppVersion {
 
 		   String str = "";
 		   if (in != null) {
+			   System.out.println("in != null");
 		      InputStreamReader isr = new InputStreamReader(in);
 		      int charRead;
 		      char[] inputBuffer = new char[BUFFER_SIZE];
@@ -67,13 +68,15 @@ public class AppVersion {
 	private  InputStream openHttpConnection() throws IOException {
 	    InputStream in = null;
 	    int response = -1;
+	    System.out.println("URL_VERSION_FILE : "+ConstantRest.URL_VERSION_FILE);
 
 	    URL url = new URL(ConstantRest.URL_VERSION_FILE);
 	    URLConnection conn = url.openConnection();
 
 	    if (!(conn instanceof HttpURLConnection))
-	        throw new IOException("Not an HTTP connection");
-
+	          
+	    	throw new IOException("Not an HTTP connection");
+        
 	    try {
 	        HttpURLConnection httpConn = (HttpURLConnection) conn;
 	        httpConn.setAllowUserInteraction(false);
@@ -86,8 +89,10 @@ public class AppVersion {
 	            in = httpConn.getInputStream();
 	        }
 	    } catch (Exception ex) {
-	        throw new IOException("Error connecting");
+	        System.out.println("Error connecting"+ex.toString());
+	    	throw new IOException("Error connecting");
 	    }
+	        
 	    return in;
 	}
 	

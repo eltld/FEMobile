@@ -15,41 +15,38 @@
      android:contentDescription="@string/descripcion"
      android:src="@drawable/logomovila2" />
  
- 
   <ScrollView
-     android:id="@+id/scro1"
-     android:layout_width="match_parent"
-     android:layout_height="wrap_content"
-     android:layout_alignParentLeft="true"
-     android:layout_below="@+id/image_principal"
-     android:layout_marginTop="10dp" 
-     android:fillViewport="true">
+      android:id="@+id/scro1"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_alignParentLeft="true"
+      android:layout_below="@+id/image_principal"
+      android:layout_marginTop="10dp"
+      android:fillViewport="true" >
 
    <RelativeLayout   
    android:layout_width="match_parent"
   android:layout_height="wrap_content"
   >
+
    <com.feunju.bean.util.ScrollableGridView
-         android:id="@+id/grid_principal"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_margin="6dp"
-         android:columnWidth="80dp"
-         android:gravity="center"
-         android:numColumns="auto_fit"
-         android:stretchMode="columnWidth" 
-         android:layout_marginBottom="40dp"
-         android:scrollbars="none"
-        />
+       android:id="@+id/grid_principal"
+       android:layout_width="wrap_content"
+       android:layout_height="match_parent"
+       android:layout_margin="6dp"
+       android:layout_marginBottom="40dp"
+       android:columnWidth="80dp"
+       android:gravity="center"
+       android:numColumns="auto_fit"
+       android:scrollbars="none"
+       android:stretchMode="columnWidth" />
 
    <RelativeLayout
+       android:id="@+id/footer_principal"
        android:layout_width="match_parent"
-       android:layout_height="100dp"
+       android:layout_height="80dp"
        android:layout_alignParentBottom="true"
        android:layout_alignParentLeft="true"
-       android:layout_alignParentTop="false"
-       android:layout_below="@+id/grid_principal"
-       android:layout_marginTop="30dp"
        android:background="@color/black"
        android:gravity="center" >
 
@@ -79,36 +76,26 @@
            android:layout_alignBottom="@+id/textView2"
            android:layout_alignParentRight="true"
            android:layout_marginRight="35dp"
+           android:layout_marginTop="1dp"
            android:text="Información"
            android:textColor="@color/blanco"
            android:textStyle="bold"
-           android:typeface="normal"
-           android:layout_marginTop="1dp" />
-         
-           <!--  
-           android:layout_alignRight="@+id/image_navigator"
-           android:layout_below="@+id/image_navigator"
-           android:gravity="center_horizontal"
-           android:text="Sitio Web"
-           android:textColor="@color/blanco"
-           android:textColorLink="@color/gray_claro"
-           android:textStyle="bold" />
-           -->
+           android:typeface="normal" />
 
        <TextView
            android:id="@+id/textView2"
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
+           android:layout_alignParentBottom="true"
            android:layout_alignParentLeft="true"
-           android:layout_below="@+id/image_navigator"
            android:layout_marginLeft="40dp"
            android:gravity="center_horizontal"
            android:text="www.unju.edu.ar"
            android:textColor="@color/blanco"
            android:textColorLink="@color/gray_claro"
            android:textStyle="bold" />
+   </RelativeLayout>
 
-  </RelativeLayout>
 </RelativeLayout>  
     
 </ScrollView>

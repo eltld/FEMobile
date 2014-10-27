@@ -18,7 +18,7 @@ public abstract  class ConstantRest {
 	
 	public final static String IP_LOCAL="10.2.0.66";
 	public final static String IP_REMOTE="170.210.240.251";
-	public final static String URL_BASE="http://"+IP_LOCAL+"/php/";
+	public final static String URL_BASE="http://"+IP_REMOTE+"/php/";
 	public final static String URL_BASE_NOTICIAS="http://"+IP_REMOTE+"/noticias/imgnotis/";
 	
 	public final static String URL_NOTICIAS=URL_BASE+"noticias.php";
@@ -34,7 +34,7 @@ public abstract  class ConstantRest {
 
 	 
 	 //Version file 
-	 public final static String URL_VERSION_FILE=URL_BASE+"versioninfo.txt";
+	 public final static String URL_VERSION_FILE=URL_BASE+"versionInfo.php";
 	 public final static String URL_APK_FILE=URL_BASE+"UnjuMobile.apk";
 	 
 }
