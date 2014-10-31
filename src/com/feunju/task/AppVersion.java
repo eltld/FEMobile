@@ -34,6 +34,16 @@ public class AppVersion {
 		}
 	
 	
+	public  String getVersionName(Context context) {
+		   PackageManager pm = context.getPackageManager();
+		   try {
+		      PackageInfo pi = pm.getPackageInfo(context.getPackageName(), 0);
+		      return pi.versionName;
+		   } catch (NameNotFoundException ex) {}
+		   return "";
+		}
+	
+	
 	public String downloadText() {
 		   int BUFFER_SIZE = 2000;
 		   InputStream in = null;

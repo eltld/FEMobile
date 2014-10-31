@@ -167,5 +167,16 @@ public final class ConstantDatabase {
 				"DROP TABLE IF EXISTS "+T_EVENTO;
 	
 	
+	   //APP VERSION 
+		public static final String T_APP="application";
+		public static final String APP_ID="app_id";
+		public static final String APP_VERSION="app_version";
+		
+		public static final String QUERY_CREATE_APPLICATION="CREATE TABLE "+T_APP+"("+
+		         APP_ID +" integer ,"+
+			     APP_VERSION+" text)";
+		public static final String QUERY_DROP_APPLICATION=
+				"DROP TABLE IF EXISTS "+T_APP;
+		
 	
 }

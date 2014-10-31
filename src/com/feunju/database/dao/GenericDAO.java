@@ -113,6 +113,10 @@ public class GenericDAO extends SQLiteOpenHelper {
 	    public int update(String table, long id, ContentValues values) {
 	        return db.update(table, values, KEY_ID + "=" + id, null);
 	    }
+	    
+	    public int update(String table, String columnSearch,long id, ContentValues values) {
+	        return db.update(table, values, columnSearch + "=" + id, null);
+	    }
 	}
 	
 

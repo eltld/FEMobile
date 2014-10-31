@@ -1214,7 +1214,34 @@ public class ActivityCarreraContent extends Activity {
 	};break;
 	case 8:{
 		//TECNICO UNIVERSITARIO EN EXPLOTACION DE MINAS 2007 PERFIL Y ALCANCES
-		materia+="";
+		materia+="<br><b>Primer Año</b>";
+		materia+="<br>Álgebra y Geometría Analítica"; 
+		materia+="<br>Análisis Matemático I";
+		materia+="<br>Física I ";
+		materia+="<br>Introducción a la Informática"; 
+		materia+="<br>Química I ";
+		materia+="<br>Sistemas de Representación"; 
+		materia+="<br>Taller: Introducción a la Minería"; 
+		materia+="<br><b>Segundo Año</b>";
+		materia+="<br>Física II"; 
+		materia+="<br>Topografía ";
+		materia+="<br>Geología ";
+		materia+="<br>Máquinas Mineras y Servicios"; 
+		materia+="<br>Química II ";
+		materia+="<br>Estática y Resistencia de Materiales"; 
+		materia+="<br>Explotación de Minas I ";
+		materia+="<br>Mecánica Aplicada a la Minería"; 
+		materia+="<br>Mecánica de Rocas y Suelos ";
+		materia+="<br><b>Tercer Año</b>";
+		materia+="<br>Electricidad y Electrónica ";
+		materia+="<br>Explotación de Minas II ";
+		materia+="<br>Seminario: Ingeniería de la Calidad y del Medio Ambiente"; 
+		materia+="<br>Taller: Uso del Explosivo. Diseño de Voladuras ";
+		materia+="<br>Yacimientos de Minerales ";
+		materia="<br>Construcciones Mineras ";
+		materia="<br>Seminario: Higiene y Seguridad Ambiental y del Trabajo"; 
+		materia="<br>Taller: Planificación de Explotación Minera";
+
 	};break;
 	case 9:{
 		// TÉCNICO UNIVERSITARIO EN PROCESAMIENTO DE MINERALES

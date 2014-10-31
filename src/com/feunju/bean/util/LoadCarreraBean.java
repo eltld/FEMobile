@@ -488,8 +488,29 @@ carrera.setId_carrera(8);
 carrera.setTitulo_carrera("TECNICO UNIVERSITARIO EN EXPLOTACION DE MINAS");
 carrera.setNivel_carrera("Título de PreGrado");
 carrera.setAcreditacion_carrera("");
-carrera.setPerfil_carrera("");
-carrera.setAlcance_carrera("");
+carrera.setPerfil_carrera("El Profesional egresado de la carrera de Técnico Universitario en Explotación de Minas es un Técnico id óneo en su formación específica y capaz de actuar de modo interdisciplinario con otras áreas involucradas en su actividad."+
+		" <br>Tiene la formación, conocimientos y habilidades para:"+
+        "<br>•	Hacer cumplir y mantener las explotaciones mineras de yacimientos metalíferos, no metalíferos, geotérmicos, rocas de aplicación y de combustibles sólidos, líquidos y gaseosos que para su obtención requiera el uso de tecnología minera."+
+        "<br>•	Controlar la totalidad de las actividades requeridas hasta su efectiva concreción teniendo en cuenta los criterios de seguridad, impacto ambiental y relaciones humanas."+
+        "<br>•	Colaborar con el Ingeniero en el control y ejecución de operaciones relacionadas con el uso de explosivos, la voladura de rocas y el movimiento de suelos."+
+        "<br>•	Desarrollar sus actividades en plena armonía con el medio ambiente. "+
+        "<br>•	Realizar trabajos topográficos y geodésicos necesarios para la ubicación de puntos fijos en superficie. Realizar mensuras de pertenencias mineras y de cateos."+
+        "<br>•	Buscar, seleccionar, aprender y aplicar nuevos conocimientos."+
+        "<br>•	Desempeñarse en el ámbito científico, tecnológico y educativo."+
+        "<br>•	Desempeñarse en aplicaciones tecnológicas relacionadas con su formación profesional en temas referentes a su especialidad y afines."+ 
+        "<br>•	Interpretar e implementar el diseño de una aplicación.");
+carrera.setAlcance_carrera("El Técnico Universitario en Explotación de Minas ejecuta las directivas de sus superiores en tareas" 
+		+" y obras relacionadas con la Exploración y Explotación de yacimientos de minerales de todo tipo, ubicados en el suelo o subsuelo, comprendiendo:"
+        +"<br>•	Estudios minero-geológicos, químicos de yacimientos, minas, minerales y rocas."
+        +"<br>•	Mecánica de Rocas y Suelos. Uso y manejo de Explosivos. Voladura de Rocas. Ejecución de túneles, galerías, pozos y obras de contención y sostén de empujes de terrenos. Métodos y Sistemas de Explotación."
+        +"<br>•	Construcción e instalación de obras mineras civiles, industriales y electromecánicas destinadas a viviendas, depósitos, talleres, salas de motores y máquinas. Sistemas de Extracción y Transporte de rocas y productos minerales."
+        +"<br>•	Provisión de agua, energía, desagües, producción y distribución de aire comprimido, ventilación e iluminación. Evacuación y cerramiento de aguas, galerías de derrame, sistema de bombeo, terraplenes y represas."
+        +"<br>•	Servicios auxiliares para el mantenimiento de máquinas y motores de uso minero, herramientas y lamparería."
+        +"<br>• Higiene y seguridad en las minas y canteras."
+        +"<br>•	Mensuras privadas y judiciales de yacimientos minerales, concesiones de exploración y cateo y de explotación."
+        +"<br>•	Determinación para el cálculo de coordenadas geográficas, rumbos y azimutes."
+        +"<br>•	Relevamiento de superficie y de labores subterráneas de todo tipo."
+        +"<br>•	Operaciones de triangulación necesarias para la ubicación de los distritos mineros y sus yacimientos.");
 carrera.setDuracion_carrera("3 años");
 carrera.setId_grado(Constants.CARRERA_PREGADO);
 carrera.setId_university(Constants.FACU_INGENIERIA_ID);
