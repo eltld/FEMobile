@@ -25,10 +25,9 @@
       android:layout_marginTop="10dp"
       android:fillViewport="true" >
 
-   <RelativeLayout   
-   android:layout_width="match_parent"
-  android:layout_height="wrap_content"
-  >
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent" >
 
    <com.feunju.bean.util.ScrollableGridView
        android:id="@+id/grid_principal"
@@ -46,7 +45,6 @@
        android:id="@+id/footer_principal"
        android:layout_width="match_parent"
        android:layout_height="80dp"
-       android:layout_below="@+id/grid_principal"
        android:layout_alignParentBottom="true"
        android:layout_alignParentLeft="true"
        android:background="@color/black"
@@ -121,22 +119,12 @@
       android:layout_alignParentTop="true"
       android:background="@color/header_principal" >
 
-  </RelativeLayout>
-
-  <RelativeLayout
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_alignBottom="@+id/textView1"
-      android:layout_alignParentLeft="true"
-      android:layout_alignParentRight="true"
-      android:layout_alignParentTop="true" >
-
       <ImageView
           android:id="@+id/image_comedorContentUbicacion"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
+          android:layout_alignParentTop="true"
           android:layout_centerHorizontal="true"
-          android:layout_centerVertical="true"
           android:src="@drawable/logomovila2" />
 
   </RelativeLayout>

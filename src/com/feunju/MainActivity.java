@@ -108,12 +108,7 @@ public class MainActivity extends Activity  implements OnItemClickListener {
 		
 		logger.info("onCreate MainActivity");
 		activityBean= new ActivityDbBean(getApplicationContext());
-		
-		
-		
-		
-		
-		
+
 		image_sobre=(ImageView)findViewById(R.id.image_about);
 		image_navigator=(ImageView)findViewById(R.id.image_navigator);
 		//load content 

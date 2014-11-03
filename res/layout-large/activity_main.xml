@@ -31,7 +31,8 @@
    <com.feunju.bean.util.ScrollableGridView
        android:id="@+id/grid_principal"
        android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_alignParentTop="false"
        android:layout_margin="10dp"
        android:layout_marginBottom="40dp"
        android:columnWidth="80dp"
