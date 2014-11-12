@@ -2,7 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent" 
+    >
 
     
     
@@ -19,6 +20,7 @@
       android:id="@+id/scro1"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
+      android:layout_alignParentBottom="true"
       android:layout_alignParentLeft="true"
       android:layout_below="@+id/image_principal"
       android:layout_marginTop="10dp"
@@ -26,7 +28,7 @@
 
    <RelativeLayout
        android:layout_width="match_parent"
-       android:layout_height="313dp" >
+       android:layout_height="match_parent" >
 
    <com.feunju.bean.util.ScrollableGridView
        android:id="@+id/grid_principal"
@@ -46,9 +48,6 @@
        android:layout_height="80dp"
        android:layout_alignParentBottom="true"
        android:layout_alignParentLeft="true"
-       android:layout_below="@id/grid_principal"
-       android:layout_centerInParent="false"
-       android:layout_marginBottom="10dp"
        android:background="@color/black"
        android:gravity="center|bottom" >
 
@@ -70,7 +69,7 @@
            android:layout_alignParentRight="true"
            android:layout_marginRight="35dp"
            android:layout_marginTop="1dp"
-           android:text="Información"
+           android:text="layout_xlarge"
            android:textColor="@color/blanco"
            android:textStyle="bold"
            android:typeface="normal" />
@@ -92,12 +91,11 @@
        <ImageView
            android:id="@+id/image_navigator"
            android:layout_width="40dp"
-           android:layout_height="60dp"
+           android:layout_height="40dp"
            android:layout_alignLeft="@+id/textView2"
            android:layout_centerVertical="true"
            android:layout_marginLeft="32dp"
            android:src="@drawable/mundo" />
-
    </RelativeLayout>
 
 </RelativeLayout>  
@@ -122,22 +120,12 @@
       android:layout_alignParentTop="true"
       android:background="@color/header_principal" >
 
-  </RelativeLayout>
-
-  <RelativeLayout
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_alignBottom="@+id/textView1"
-      android:layout_alignParentLeft="true"
-      android:layout_alignParentRight="true"
-      android:layout_alignParentTop="true" >
-
       <ImageView
           android:id="@+id/image_comedorContentUbicacion"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
+          android:layout_alignParentTop="true"
           android:layout_centerHorizontal="true"
-          android:layout_centerVertical="true"
           android:src="@drawable/logomovila2" />
 
   </RelativeLayout>

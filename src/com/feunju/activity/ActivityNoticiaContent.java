@@ -115,8 +115,8 @@ public class ActivityNoticiaContent extends Activity
 	 textHeader=(TextView)findViewById(R.id.text_newsHeader);
 	 image_facebook=(ImageView)findViewById(R.id.image_facebook);
 	 
-	 uiHelper = new UiLifecycleHelper(this, null);
-	    uiHelper.onCreate(savedInstanceState);
+	 uiHelper = new UiLifecycleHelper(ActivityNoticiaContent.this, null);
+	 uiHelper.onCreate(savedInstanceState);
 	 
 	 
 	 //asigno los valores 

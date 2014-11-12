@@ -60,6 +60,7 @@ import android.content.Intent;
 import android.content.res.AssetFileDescriptor;
 import android.content.res.AssetManager;
 import android.content.res.Resources;
+import android.view.Display;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -104,6 +105,12 @@ public class MainActivity extends Activity  implements OnItemClickListener {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		
+		Display display = getWindowManager().getDefaultDisplay(); 
+		int width = display.getWidth();
+		int height = display.getHeight();
+		
+		
 		setContentView(R.layout.activity_main);
 		
 		logger.info("onCreate MainActivity");
@@ -217,7 +224,7 @@ public class MainActivity extends Activity  implements OnItemClickListener {
 				// TODO Auto-generated method stub
 			
 					   Intent browserIntent = new Intent("android.intent.action.VIEW",
-					   Uri.parse(ConstantRest.URL_BASE)); // reeemplazar el sitio por el contenido de alguna variable de la clase que contenga en URL o agregando un parámetro más.
+					   Uri.parse(ConstantRest.URL_WEB)); // reeemplazar el sitio por el contenido de alguna variable de la clase que contenga en URL o agregando un parámetro más.
 					   startActivity(browserIntent);
 				
 			}
@@ -253,7 +260,7 @@ public class MainActivity extends Activity  implements OnItemClickListener {
 	    listItemGrid.add(new ItemGrid("Evento",res.getDrawable(R.drawable.evento)));
 	   // listItemGrid.add(new ItemGrid("Calendario",res.getDrawable(R.drawable.ic_launcher)));
 	    listItemGrid.add(new ItemGrid("Autoridades",res.getDrawable(R.drawable.autoridad))); 	
-	    listItemGrid.add(new ItemGrid("Oferta <br> Academica",res.getDrawable(R.drawable.university)));
+	    listItemGrid.add(new ItemGrid("Oferta Académica",res.getDrawable(R.drawable.university)));
 	    
 		return listItemGrid;
 	}

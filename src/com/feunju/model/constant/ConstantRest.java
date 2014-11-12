@@ -20,7 +20,7 @@ public abstract  class ConstantRest {
 	public final static String IP_REMOTE="170.210.240.251";
 	public final static String URL_BASE="http://"+IP_REMOTE+"/php/";
 	public final static String URL_BASE_NOTICIAS="http://"+IP_REMOTE+"/noticias/imgnotis/";
-	
+	public final static String  URL_WEB="http://www.unju.edu.ar";
 	public final static String URL_NOTICIAS=URL_BASE+"noticias.php";
     public final static String URL_AUTORIDADES=URL_BASE+"autoridad.php";
 	public final static String URL_IMAGES=URL_BASE+"fotos.php";
@@ -36,5 +36,6 @@ public abstract  class ConstantRest {
 	 //Version file 
 	 public final static String URL_VERSION_FILE=URL_BASE+"versionInfo.php";
 	 public final static String URL_APK_FILE=URL_BASE+"UnjuMobile.apk";
+	 public final static String URL_APK_PLAY="market://details?id=com.feunju";
 	 
 }
