@@ -12,9 +12,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.feunju.bean.adapter.CustomGridAdapter.RecordHolder;
+import com.feunju.edu.R;
 import com.feunju.model.ItemGrid;
 import com.feunju.model.Secretaria;
-import com.feunju.R;
 
 
 /**

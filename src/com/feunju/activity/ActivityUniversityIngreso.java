@@ -11,9 +11,9 @@ import android.webkit.WebView;
 import android.widget.TextView;
 
 import com.feunju.bean.UniversityBean;
+import com.feunju.edu.R;
 import com.feunju.model.Universidad;
 import com.feunju.model.constant.Constants;
-import com.feunju.R;
 
 public class ActivityUniversityIngreso extends Activity{
 

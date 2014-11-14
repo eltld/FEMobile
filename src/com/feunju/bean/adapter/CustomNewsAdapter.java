@@ -11,10 +11,10 @@ import org.slf4j.LoggerFactory;
 
 
 import com.feunju.activity.ActivityNoticia;
+import com.feunju.edu.R;
 import com.feunju.model.Galeria;
 import com.feunju.model.Noticia;
 import com.feunju.task.ImageDownloaderTask;
-import com.feunju.R;
 
 
 

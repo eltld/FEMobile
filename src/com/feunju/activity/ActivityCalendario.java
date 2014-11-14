@@ -16,8 +16,8 @@ import android.widget.TextView;
 
 import com.feunju.bean.NoticiaBean;
 import com.feunju.bean.adapter.CustomNewsAdapter;
+import com.feunju.edu.R;
 import com.feunju.model.Noticia;
-import com.feunju.R;
 import com.nostra13.universalimageloader.cache.disc.naming.Md5FileNameGenerator;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;

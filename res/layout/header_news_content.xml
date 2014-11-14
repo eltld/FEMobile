@@ -22,9 +22,9 @@
         android:layout_alignParentTop="true"
         android:layout_marginTop="15dp"
         android:layout_toRightOf="@+id/image_newsHeader"
-        android:text="TextView"
-        android:textSize="18dp"
-        android:textColor="@color/header_text" />
+        android:text="Noticia"
+        android:textColor="@color/header_text"
+        android:textSize="18dp" />
 
     <ImageView
         android:id="@+id/image_facebook"
@@ -34,6 +34,6 @@
         android:layout_alignTop="@+id/text_newsHeader"
         android:layout_marginRight="16dp"
         android:src="@drawable/facebook"
-        android:visibility="visible" />
+        android:visibility="invisible" />
 
 </RelativeLayout>

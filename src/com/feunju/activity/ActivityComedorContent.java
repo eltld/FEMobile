@@ -5,11 +5,11 @@ import java.util.List;
 
 import com.feunju.bean.ComedorBean;
 import com.feunju.bean.SecretariaBean;
+import com.feunju.edu.R;
+import com.feunju.edu.R.id;
 import com.feunju.model.Comedor;
 import com.feunju.model.Secretaria;
 import com.feunju.model.constant.Constants;
-import com.feunju.R;
-import com.feunju.R.id;
 
 import android.app.Activity;
 import android.content.Intent;

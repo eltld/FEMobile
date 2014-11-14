@@ -488,7 +488,7 @@ carrera.setId_carrera(8);
 carrera.setTitulo_carrera("TECNICO UNIVERSITARIO EN EXPLOTACION DE MINAS");
 carrera.setNivel_carrera("Título de PreGrado");
 carrera.setAcreditacion_carrera("");
-carrera.setPerfil_carrera("El Profesional egresado de la carrera de Técnico Universitario en Explotación de Minas es un Técnico id óneo en su formación específica y capaz de actuar de modo interdisciplinario con otras áreas involucradas en su actividad."+
+carrera.setPerfil_carrera("El Profesional egresado de la carrera de Técnico Universitario en Explotación de Minas es un Técnico idóneo en su formación específica y capaz de actuar de modo interdisciplinario con otras áreas involucradas en su actividad."+
 		" <br>Tiene la formación, conocimientos y habilidades para:"+
         "<br>•	Hacer cumplir y mantener las explotaciones mineras de yacimientos metalíferos, no metalíferos, geotérmicos, rocas de aplicación y de combustibles sólidos, líquidos y gaseosos que para su obtención requiera el uso de tecnología minera."+
         "<br>•	Controlar la totalidad de las actividades requeridas hasta su efectiva concreción teniendo en cuenta los criterios de seguridad, impacto ambiental y relaciones humanas."+
@@ -614,7 +614,7 @@ carrera.setId_carrera(12);
 carrera.setTitulo_carrera("TECNICATURA UNIVERSITARIA EN PERFORACIONES");
 carrera.setNivel_carrera("Título de PreGrado");
 carrera.setAcreditacion_carrera("Aprobado por la resolución CAFI N° 409/12");
-carrera.setPerfil_carrera("La formación del estudiante, en virtud del programa de estudios de esta carrera y del consenso del cue rpo docente acerca de los objetivos de la educación impartida, está orientada a lograr graduados con las siguientes características:"+
+carrera.setPerfil_carrera("La formación del estudiante, en virtud del programa de estudios de esta carrera y del consenso del cuerpo docente acerca de los objetivos de la educación impartida, está orientada a lograr graduados con las siguientes características:"+
 "<br>Solvencia en la ejecución de tareas profesionales específicas."+
 "<br>Capacidad para la resolución de problemas técnicos utilizan do herramientas científicas."+
 "<br>Capacidad de incorporar permanentemente los avances en los conocimientos técnicos específicos."+
@@ -622,8 +622,8 @@ carrera.setPerfil_carrera("La formación del estudiante, en virtud del programa d
 "<br>Capacidad crítica para la toma de decisiones."+
 "<br>Conocimiento de las disposiciones legales y normativas referentes a su desempeño profesional."+
 "<br>Conciencia de su responsabilidad en la seguridad en el trabajo y de la protección del medio ambiente."+
-"<br>Compromiso y responsabilidad para la seguridad en el trabajo y la protecció n del medio ambiente.");
-carrera.setAlcance_carrera("Alcances del Título (incumbencias): El Título de Técnico Universitario en Pe rforaciones habilita para:"+
+"<br>Compromiso y responsabilidad para la seguridad en el trabajo y la protección del medio ambiente.");
+carrera.setAlcance_carrera("Alcances del Título (incumbencias): El Título de Técnico Universitario en Perforaciones habilita para:"+
 "<br>Asistir en la programación, dirección, ejecución y control de la perforación, terminación y reparación de pozos petrolíferos, de exploración y explotación."+
 "<br>Asistir en la programación, dirección, ejecución y control de la perfora ción y terminación de pozos de exploración minera."+
 "<br>Asistir en la programación, dirección y control de la perforación, diseño y desarrollo de pozos de agua."+
@@ -634,7 +634,7 @@ carrera.setAlcance_carrera("Alcances del Título (incumbencias): El Título de Téc
 "<br>Organizar, dirigir y controlar la documentación de pozos."+
 "<br>Describir las muestras de pozos durante la perforación o ejecución de los mismos."+
 "<br>Utilizar el instrumental necesario para la perforación de pozos y controlar su funcionamiento."+
-"<br>Describir las muestras extraídas de las perforacion es de pozos de exploración minera , petrolíferos y de agua."+
+"<br>Describir las muestras extraídas de las perforaciones de pozos de exploración minera, petrolíferos y de agua."+
 "<br>Operar instrumental topográfico y manejo de software específico.");
 carrera.setDuracion_carrera("3 años");
 carrera.setId_grado(Constants.CARRERA_PREGADO);
@@ -652,15 +652,15 @@ carrera.setPerfil_carrera("La formación del estudiante, en virtud del programa d
 "<br>Capacidad de incorporar permanentemente los avances en los conocimientos técnicos específicos."+
 "<br>Compromiso con la problemática regional en la que desempeña sus tareas."+
 "<br>Capacidad crítica en la toma de decisiones."+
-"<br>Conciencia de su responsabi lidad en la seguridad en el trabajo y de la protección del medio ambiente."+
+"<br>Conciencia de su responsabilidad en la seguridad en el trabajo y de la protección del medio ambiente."+
 "<br>Capacidad para trabajar en equipos disciplinarios e interdisciplinarios."+
 "<br>Competencia en la aplicación del lenguaje informático pertinente.");
-carrera.setAlcance_carrera("Alcance del Título (incumbencias): El Título de Téc nico Universitario en Formaciones Petrolíferas :"+
+carrera.setAlcance_carrera("Alcance del Título (incumbencias): El Título de Técnico Universitario en Formaciones Petrolíferas :"+
 "<br>Realizar tareas técnicas integrando los equipos especializados en exploración de empresas petroleras."+
 "<br>Realizar tarea s auxiliares en el área de la geología en petróleo en archivos, banco de datos informatizados, institutos geológicos."+
 "<br>Colaborar en tareas de arbitraje y peritaje relacionados con la detección y aprovechamiento de recursos geológicos petroleros."+
-"<br>Asistir en estudios de factibilidad, proyectos, cálculos, dirección, construcción, instalación, inspección, operación y mantenim iento de obras de exploración de yacimientos de petróleo y gas."+
-"<br>Asistir en estudios de nivelación, relevamientos, ubicación y ponderación de yacimientos. Selección de máquinas, aparatos e instrument os relacionados con la exploración petrolera.");
+"<br>Asistir en estudios de factibilidad, proyectos, cálculos, dirección, construcción, instalación, inspección, operación y mantenimiento de obras de exploración de yacimientos de petróleo y gas."+
+"<br>Asistir en estudios de nivelación, relevamientos, ubicación y ponderación de yacimientos. Selección de máquinas, aparatos e instrumentos relacionados con la exploración petrolera.");
 carrera.setDuracion_carrera("3 años");
 carrera.setId_grado(Constants.CARRERA_PREGADO);
 carrera.setId_university(Constants.FACU_INGENIERIA_ID);
@@ -946,7 +946,7 @@ return listCarrera;
 "Integrar equipos responsables de los planes de desarrollo comunitario, promoviendo la participación autogestionaria de los diferentes grupos en el planeamiento, ejecución y evaluación de su atención en salud."+
 "Prestar servicios en unidades técnicas tales como: Departamento de Educación para la Salud, Hospitales, cabeceras de áreas programáticas, puestos de salud."+
 "Departamentos Pedagógicos de Servicios Centrales y Descentralizados del Área de Educación, unidades educativas o equivalentes del ámbito nacional, provincial y municipal, así como en gremios, obras sociales y otras instituciones que contemplen la problemática de la salud."+
-"Asesorar a grupos comunitarios formales e informales en cuanto a cuidados de salud promoviendo acciones tendientes a preservar la salud de ñla población."+
+"Asesorar a grupos comunitarios formales e informales en cuanto a cuidados de salud promoviendo acciones tendientes a preservar la salud de la población."+
 "Participar en la elaboración y ejecución de proyectos preventivos sobre la base de un conocimiento integral de la problemática de la región, que ponga de relieve las atenciones priorizadas."+
 "Adecuar con creatividad y juicio crítico las estrategias básicas en su accionar e la ejecución de proyectos y de acuerdo a las características de los destinatarios de los mismos."+
 "Planificar y ejecutar programas de Educación para la Salud en medios de comunicación social utilizando óptimamente el grado de cobertura de los mismos."+

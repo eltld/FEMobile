@@ -16,8 +16,8 @@ public abstract  class ConstantRest {
     //public final static String URL_IMAGES="http://10.2.2.245/WebRest//fotos.php";
     //ip 170.210.240.251 - 10.2.0.66
 	
-	public final static String IP_LOCAL="10.2.0.66";
-	public final static String IP_REMOTE="170.210.240.251";
+	public final static String IP_LOCAL="10.2.0.3";
+	public final static String IP_REMOTE="200.45.224.18";
 	public final static String URL_BASE="http://"+IP_REMOTE+"/php/";
 	public final static String URL_BASE_NOTICIAS="http://"+IP_REMOTE+"/noticias/imgnotis/";
 	public final static String  URL_WEB="http://www.unju.edu.ar";

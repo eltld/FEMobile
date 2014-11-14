@@ -3,7 +3,7 @@ package com.feunju.database.helper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.feunju.MainActivity;
+import com.feunju.edu.MainActivity;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;

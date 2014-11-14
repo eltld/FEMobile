@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.feunju"
+    package="com.feunju.edu"
     android:versionCode="1"
     android:versionName="1.0">
     
@@ -14,8 +14,8 @@
     
     
     <!-- PERMISO DE APLICACION -->
-    <permission android:name="com.fe.permission.MAPS_RECEIVE" android:protectionLevel="signature"/>
-      <uses-permission android:name="com.fe.permission.MAPS_RECEIVE" />
+    <permission android:name="com.feunju.edu.permission.MAPS_RECEIVE" android:protectionLevel="signature"/>
+      <uses-permission android:name="com.feunu.edu.permission.MAPS_RECEIVE" />
      
     <!-- Specify OpenGL ES 2.0 as a requirement -->
     <uses-feature android:glEsVersion="0x00020000" android:required="true"/>
@@ -62,7 +62,7 @@
        -->
         <!--  Activity -->
         <activity
-            android:name="com.feunju.MainActivity"
+            android:name="com.feunju.edu.MainActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
            
@@ -218,7 +218,7 @@
        
        <meta-data 
              android:name="com.google.android.maps.v2.API_KEY"
-             android:value="AIzaSyAMB16CyK_hSmduOhinjYF2npJhiohKCaI"
+             android:value="AIzaSyAOdL2DEie3QEJTRKjtmq5VowPABQe6k1s"
              />
        
          <!-- google play -->

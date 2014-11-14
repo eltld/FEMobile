@@ -10,9 +10,9 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.feunju.bean.adapter.CustomComedorAdapter.RecordHolder;
+import com.feunju.edu.R;
 import com.feunju.model.Comedor;
 import com.feunju.model.Universidad;
-import com.feunju.R;
 
 
 

@@ -11,9 +11,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.feunju.bean.adapter.CustomNewsAdapter.ViewHolder;
+import com.feunju.edu.R;
 import com.feunju.model.Evento;
 import com.feunju.model.Noticia;
-import com.feunju.R;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 

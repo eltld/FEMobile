@@ -14,9 +14,9 @@ import android.widget.TextView;
 
 import com.feunju.bean.CarreraBean;
 import com.feunju.bean.util.JustifyTextView;
+import com.feunju.edu.R;
 import com.feunju.model.Carrera;
 import com.feunju.model.constant.Constants;
-import com.feunju.R;
 
 public class ActivityCarreraMinas  extends Activity {
 

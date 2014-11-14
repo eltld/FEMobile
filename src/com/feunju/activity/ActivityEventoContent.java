@@ -19,10 +19,10 @@ import android.widget.TextView;
 
 import com.feunju.bean.AutoridadBean;
 import com.feunju.bean.EventoBean;
+import com.feunju.edu.R;
 import com.feunju.model.Autoridad;
 import com.feunju.model.Evento;
 import com.feunju.model.constant.Constants;
-import com.feunju.R;
 import com.koushikdutta.ion.Ion;
 
 public class ActivityEventoContent extends Activity {

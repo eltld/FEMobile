@@ -2,8 +2,8 @@ package com.feunju.bean.adapter;
 
 import java.util.ArrayList;
 
+import com.feunju.edu.R;
 import com.feunju.model.Secretaria;
-import com.feunju.R;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.assist.FailReason;

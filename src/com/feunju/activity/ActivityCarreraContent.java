@@ -9,9 +9,9 @@ import org.slf4j.LoggerFactory;
 import com.feunju.bean.CarreraBean;
 import com.feunju.bean.adapter.CustomComedorAdapter;
 import com.feunju.bean.util.UtilList;
+import com.feunju.edu.R;
 import com.feunju.model.Carrera;
 import com.feunju.model.constant.Constants;
-import com.feunju.R;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -264,7 +264,7 @@ public class ActivityCarreraContent extends Activity {
 			materia+="<br>Optativa *";
 			materia+="<br>Legislación y Educación Alimentaria";
 			materia+="<br>Taller de Calidad y Seguridad";
-			materia+="<br>Diseño Expermiental";
+			materia+="<br>Diseño Experimental";
 			materia+="<br>Optativa**";
 			
 			materia+="<br><br><b>MATERIAS OPTATIVAS</b>";
@@ -679,7 +679,7 @@ public class ActivityCarreraContent extends Activity {
 			materia+=" <br>8. Problemática sanitaria";
 			materia+=" <br>9. Comunicación";
 			materia+=" <br>10. Didáctica";
-			materia+=" <br>11. Salud y salud publica";
+			materia+=" <br>11. Salud y salud pública";
 			materia+=" <br>12. Tecnología educativa";
 			materia+=" <br>13. Epidemiología y estadística";
 			materia+=" <br><b>TERCER AÑO</b>";
@@ -715,7 +715,7 @@ public class ActivityCarreraContent extends Activity {
 			materia+=" <br>8. Problemática sanitaria";
 			materia+=" <br>9. Comunicación";
 			materia+=" <br>10. Didáctica";
-			materia+=" <br>11. Salud y salud publica";
+			materia+=" <br>11. Salud y salud pública";
 			materia+=" <br>12. Tecnología educativa";
 			materia+="<br>13. Epidemiología y estadística";
 			materia+="<br><b>TERCER AÑO</b>";
@@ -1274,7 +1274,7 @@ public class ActivityCarreraContent extends Activity {
 	};break;
 	case 10:{
 		//ANALISTA PROGRAMADDOR UNIVERSITARIO
-		materia+="<br><b>PRIMIER AÑO</b>";
+		materia+="<br><b>PRIMER AÑO</b>";
 		materia+="<br>Inglés I ";
 		materia+="<br>Herramientas Informáticas I"; 
 		materia+="<br>Programación Estructurada ";

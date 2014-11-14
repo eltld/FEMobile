@@ -29,8 +29,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.feunju.edu.R;
 import com.feunju.model.constant.ConstantRest;
-import com.feunju.R;
 
 public class ActivitySobreContacto extends Activity{
 

@@ -3,9 +3,9 @@ package com.feunju.bean.adapter;
 import java.util.ArrayList;
 
 import com.feunju.bean.adapter.CustomSecretariaAdapter.RecordHolder;
+import com.feunju.edu.R;
 import com.feunju.model.Comedor;
 import com.feunju.model.Secretaria;
-import com.feunju.R;
 
 import android.content.Context;
 import android.view.LayoutInflater;

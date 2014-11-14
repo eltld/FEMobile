@@ -9,7 +9,7 @@ import android.os.Bundle;
 import android.text.Html;
 import android.widget.TextView;
 
-import com.feunju.R;
+import com.feunju.edu.R;
 
 public class ActivitySobreInformacion extends Activity{
 

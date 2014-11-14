@@ -12,9 +12,9 @@ import android.annotation.TargetApi;
 import com.feunju.bean.NoticiaBean;
 import com.feunju.bean.util.JustifiedTextView;
 import com.feunju.bean.util.TextViewEx;
+import com.feunju.edu.R;
 import com.feunju.model.Noticia;
 import com.feunju.model.constant.Constants;
-import com.feunju.R;
 
 
 import com.koushikdutta.ion.Ion;

@@ -3,7 +3,7 @@
 
 require_once ("config.php");
 
-$dir_fotos="http://10.2.0.66/php/fotos/facebook.jpg";
+$dir_fotos="http://www.unju.edu.ar/php/fotos/facebook.jpg";
 
 
 

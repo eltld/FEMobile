@@ -15,9 +15,9 @@ import android.text.Html;
 import android.widget.TextView;
 
 import com.feunju.bean.UniversityBean;
+import com.feunju.edu.R;
 import com.feunju.model.Universidad;
 import com.feunju.model.constant.Constants;
-import com.feunju.R;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.android.gms.maps.CameraUpdateFactory;

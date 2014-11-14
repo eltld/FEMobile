@@ -3,9 +3,9 @@ package com.feunju.bean.adapter;
 import java.util.ArrayList;
 
 import com.feunju.bean.adapter.CustomUniversityAdapter.RecordHolder;
+import com.feunju.edu.R;
 import com.feunju.model.Carrera;
 import com.feunju.model.Universidad;
-import com.feunju.R;
 
 import android.content.Context;
 import android.view.LayoutInflater;

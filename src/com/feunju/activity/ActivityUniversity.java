@@ -9,9 +9,9 @@ import com.feunju.bean.SecretariaBean;
 import com.feunju.bean.UniversityBean;
 import com.feunju.bean.adapter.CustomComedorAdapter;
 import com.feunju.bean.adapter.CustomUniversityAdapter;
+import com.feunju.edu.R;
 import com.feunju.model.Universidad;
 import com.feunju.model.constant.Constants;
-import com.feunju.R;
 
 import android.app.Activity;
 import android.app.AlertDialog;

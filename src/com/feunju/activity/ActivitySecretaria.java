@@ -7,13 +7,13 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.slf4j.helpers.Util;
 
-import com.feunju.MainActivity;
 import com.feunju.bean.adapter.CustomGridAdapter;
 import com.feunju.bean.adapter.CustomSecretariaAdapter;
 import com.feunju.bean.util.UtilList;
+import com.feunju.edu.MainActivity;
+import com.feunju.edu.R;
+import com.feunju.edu.R.id;
 import com.feunju.model.Secretaria;
-import com.feunju.R;
-import com.feunju.R.id;
 
 import android.app.Activity;
 import android.app.ListActivity;

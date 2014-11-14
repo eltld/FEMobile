@@ -5,8 +5,8 @@ import java.util.List;
 
 
 
+import com.feunju.edu.R;
 import com.feunju.model.ItemGrid;
-import com.feunju.R;
 
 import android.R.id;
 import android.content.Context;

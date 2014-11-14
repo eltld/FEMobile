@@ -7,9 +7,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.feunju.bean.SecretariaBean;
+import com.feunju.edu.R;
+import com.feunju.edu.R.id;
 import com.feunju.model.Secretaria;
-import com.feunju.R;
-import com.feunju.R.id;
 
 import android.app.Activity;
 import android.content.Intent;

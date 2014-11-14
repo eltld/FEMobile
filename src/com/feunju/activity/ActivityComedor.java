@@ -11,11 +11,11 @@ import com.feunju.bean.adapter.CustomComedorAdapter;
 import com.feunju.bean.adapter.CustomSecretariaAdapter;
 import com.feunju.bean.util.UtilList;
 import com.feunju.database.helper.ComedorDbHelper;
+import com.feunju.edu.R;
+import com.feunju.edu.R.id;
 import com.feunju.model.Comedor;
 import com.feunju.model.Secretaria;
 import com.feunju.model.constant.Constants;
-import com.feunju.R;
-import com.feunju.R.id;
 
 import android.app.Activity;
 import android.content.Intent;

@@ -3,7 +3,7 @@ package com.feunju.activity;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.feunju.R;
+import com.feunju.edu.R;
  /* import com.google.android.gms.maps.GoogleMap; */
 
 

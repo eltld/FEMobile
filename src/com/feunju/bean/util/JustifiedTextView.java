@@ -1,6 +1,6 @@
 package com.feunju.bean.util;
 
-import com.feunju.R;
+import com.feunju.edu.R;
 
 import android.annotation.SuppressLint;
 import android.content.Context;

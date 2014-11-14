@@ -2,7 +2,7 @@ package com.feunju.model;
 
 import java.util.HashMap;
 
-import com.feunju.R;
+import com.feunju.edu.R;
 
 /**
  * Clase que contiene elementos definidos

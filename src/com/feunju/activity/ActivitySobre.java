@@ -22,9 +22,9 @@ import android.widget.TextView;
 
 import com.feunju.bean.AutoridadBean;
 import com.feunju.bean.adapter.CustomAutoridadAdapter;
+import com.feunju.edu.R;
+import com.feunju.edu.R.id;
 import com.feunju.model.Autoridad;
-import com.feunju.R;
-import com.feunju.R.id;
 public class ActivitySobre  extends Activity{
 
 	private static final Logger logger = (Logger) LoggerFactory.getLogger(ActivitySobre.class);

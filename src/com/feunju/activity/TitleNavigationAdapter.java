@@ -5,8 +5,8 @@ import android.widget.ImageView;
  
 import java.util.ArrayList;
 
+import com.feunju.edu.R;
 import com.feunju.model.SpinnerNavItemNew;
-import com.feunju.R;
  
 import android.app.Activity;
 import android.content.Context;
@@ -53,8 +53,8 @@ public class TitleNavigationAdapter extends BaseAdapter {
             convertView = mInflater.inflate(R.layout.list_item_shared_nav, null);
         }
          
-        imgIcon = (ImageView) convertView.findViewById(com.feunju.R.id.imgIcon);
-        txtTitle = (TextView) convertView.findViewById(com.feunju.R.id.txtTitle);
+        imgIcon = (ImageView) convertView.findViewById(com.feunju.edu.R.id.imgIcon);
+        txtTitle = (TextView) convertView.findViewById(com.feunju.edu.R.id.txtTitle);
          
         imgIcon.setImageResource(spinnerNavItem.get(position).getIcon());
         imgIcon.setVisibility(View.GONE);
@@ -68,11 +68,11 @@ public class TitleNavigationAdapter extends BaseAdapter {
         if (convertView == null) {
             LayoutInflater mInflater = (LayoutInflater)
                     context.getSystemService(Activity.LAYOUT_INFLATER_SERVICE);
-            convertView = mInflater.inflate(com.feunju.R.layout.list_item_shared_nav, null);
+            convertView = mInflater.inflate(com.feunju.edu.R.layout.list_item_shared_nav, null);
         }
          
-        imgIcon = (ImageView) convertView.findViewById(com.feunju.R.id.imgIcon);
-        txtTitle = (TextView) convertView.findViewById(com.feunju.R.id.txtTitle);
+        imgIcon = (ImageView) convertView.findViewById(com.feunju.edu.R.id.imgIcon);
+        txtTitle = (TextView) convertView.findViewById(com.feunju.edu.R.id.txtTitle);
          
         imgIcon.setImageResource(spinnerNavItem.get(position).getIcon());        
         txtTitle.setText(spinnerNavItem.get(position).getTitle());

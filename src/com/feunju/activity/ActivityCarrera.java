@@ -16,14 +16,14 @@ import com.feunju.bean.adapter.CustomUniversityAdapter;
 import com.feunju.bean.json.NoticiaTag;
 import com.feunju.bean.util.LoadCarreraBean;
 import com.feunju.bean.util.UtilList;
+import com.feunju.edu.R;
+import com.feunju.edu.R.id;
 import com.feunju.model.Carrera;
 import com.feunju.model.Noticia;
 import com.feunju.model.Universidad;
 import com.feunju.model.constant.ConstantRest;
 import com.feunju.model.constant.Constants;
 import com.feunju.service.ServiceHandler;
-import com.feunju.R;
-import com.feunju.R.id;
 import com.google.gson.Gson;
 
 import android.app.Activity;

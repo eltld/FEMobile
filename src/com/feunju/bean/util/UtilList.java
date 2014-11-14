@@ -8,12 +8,12 @@ import android.app.Activity;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 
+import com.feunju.edu.R;
 import com.feunju.model.Carrera;
 import com.feunju.model.Comedor;
 import com.feunju.model.ItemGrid;
 import com.feunju.model.Secretaria;
 import com.feunju.model.constant.Constants;
-import com.feunju.R;
 
 /**
  * Clase que permite generar la carga de elementos 

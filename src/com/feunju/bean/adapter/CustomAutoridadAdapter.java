@@ -12,10 +12,10 @@ import android.widget.TextView;
 
 import com.feunju.bean.adapter.CustomCarreraAdapter.RecordHolder;
 import com.feunju.bean.adapter.CustomNewsAdapter.ViewHolder;
+import com.feunju.edu.R;
 import com.feunju.model.Autoridad;
 import com.feunju.model.Carrera;
 import com.feunju.model.Noticia;
-import com.feunju.R;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 
