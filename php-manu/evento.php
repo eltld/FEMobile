@@ -17,8 +17,9 @@ else
       {
          
          //1 : noticias , 2 :  noticias destacadas 
-         $consulta =  "select * from  noticias where publicado = 3  order by Id desc  limit 5 ";
-          
+         //$consulta =  "select * from  noticias where publicado = 3  order by Id desc  limit 5 ";
+          $consulta="select * from noticias where publicado = 3 and fecha >= DATE(NOW()) order by fecha limit 0, 6";
+		  
              
 
           // Ejecutar la consulta
